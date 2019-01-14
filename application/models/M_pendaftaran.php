@@ -22,10 +22,10 @@ class M_pendaftaran extends CI_Model{
          $query = "DELETE FROM jurusan WHERE id_jurusan = '".$id_jurusan."'";
          return $this->db->query($query);
     }
-    public function getdatamahasiswa()
+    public function getdatasiswa()
     {
         $this->db->select('*');
-        $this->db->from('jurusan');
+        $this->db->from('siswa');
         $query = $this->db->get();
         return $query->result_array();
     }

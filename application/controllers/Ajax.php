@@ -68,7 +68,7 @@ class Ajax extends CI_Controller
         if($search!=""){
             $this->db->like("no_peserta",$search);
             $this->db->or_like('nisn', $search);
-            $this->db->or_like('nama', $search);
+            $this->db->or_like('nama_lengkap', $search);
             $this->db->or_like('asal_sekolah', $search);
             $this->db->or_like('jurusan', $search);
         }
@@ -86,7 +86,7 @@ class Ajax extends CI_Controller
                 $orderby = 'nisn';
                 break;
             case 3 :
-                $orderby = 'nama';
+                $orderby = 'nama_lengkap';
                 break;
             case 4 :
                 $orderby = 'asal_sekolah';
@@ -95,7 +95,7 @@ class Ajax extends CI_Controller
                 $orderby = 'jurusan';
                 break;
             default :
-                $orderby = 'nama';
+                $orderby = 'nama_lengkap';
         }
         $this->db->order_by($orderby,$dir);
         $query=$this->db->get('siswa');
@@ -107,7 +107,7 @@ class Ajax extends CI_Controller
         if($search!=""){
             $this->db->like("no_peserta",$search);
             $this->db->or_like('nisn', $search);
-            $this->db->or_like('nama', $search);
+            $this->db->or_like('nama_lengkap', $search);
             $this->db->or_like('asal_sekolah', $search);
             $this->db->or_like('jurusan', $search);
             $jum=$this->db->get('siswa');
@@ -117,7 +117,7 @@ class Ajax extends CI_Controller
 
         $nomor_urut=$start+1;
         foreach ($query->result_array() as $data) {
-            $output['data'][]=array($nomor_urut,$data['no_peserta'],$data['nisn'],$data['nama'],$data['asal_sekolah'],$data['jurusan']);
+            $output['data'][]=array($nomor_urut,$data['no_peserta'],$data['nisn'],$data['nama_lengkap'],$data['asal_sekolah'],$data['jurusan']);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -127,5 +127,21 @@ class Ajax extends CI_Controller
         $nisn = $this->input->post('nisn');
         $this->m_ajax->hapus_siswa($nisn);
 
+    }
+    public function data_lokasi(){
+        header('Content-type: application/json');
+        $parent_id = $_POST['parent_id'];
+        if ($parent_id != "") {
+            $query = $this->m_ajax->city($parent_id);
+            $data = array();
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    array_push($data,
+                        '<option value='.$row->id.'>'.$row->description.'</option>'
+                    );
+                }
+            }
+            echo json_encode($data);
+        }
     }
 }

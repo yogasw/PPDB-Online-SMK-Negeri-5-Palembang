@@ -44,10 +44,9 @@ if ( ! function_exists('description_lokasi')) {
         } else {
             $ci =& get_instance();
             $ci->db->select('description');
-            $ci->db->from('core_categories');
+            $ci->db->from('core_city');
             $ci->db->where("id", $id);
             $ci->db->limit(1);
-
             $query = $ci->db->get();
             $hasil = $query->row();
             return ($hasil->description);

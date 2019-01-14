@@ -13,4 +13,12 @@ class M_ajax extends CI_Model
              $this->db->delete('siswa');
              return true;
     }
+    public function city($parent_id){
+        $this->db->select('*');
+        $this->db->from('core_city');
+        $this->db->where('parent_id', $parent_id);
+        $this->db->order_by('description', 'Asc');
+        $query = $this->db->get();
+        return $query;
+    }
 }

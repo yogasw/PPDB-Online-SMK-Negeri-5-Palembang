@@ -35,7 +35,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $id=1; foreach ($data->result_array() as $i): ?>
+                                    <?php //$id=1; foreach ($data->result_array() as $i): ?>
                                     <tr>
                                         <td class="text-center"><?php echo($id++); ?></td>
                                         <td class="text-left"><input type="checkbox" name="optionsCheckboxes" checked></td>
@@ -53,7 +53,7 @@
                                             </button>
                                         </td>
                                     </tr>
-                                    <?php endforeach; ?>
+                                    <?php //endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
