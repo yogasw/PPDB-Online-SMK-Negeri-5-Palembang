@@ -861,3 +861,366 @@ ERROR - 2019-01-14 10:26:46 --> Severity: Notice --> Undefined index: jurusan D:
 ERROR - 2019-01-14 10:26:46 --> Severity: Notice --> Undefined index: jurusan D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 120
 ERROR - 2019-01-14 10:26:46 --> Severity: Notice --> Undefined index: jurusan D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 120
 ERROR - 2019-01-14 10:26:46 --> Severity: Notice --> Undefined index: jurusan D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 120
+ERROR - 2019-01-14 10:32:03 --> Severity: Notice --> Undefined variable: data D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 13
+ERROR - 2019-01-14 10:32:03 --> Severity: Warning --> Invalid argument supplied for foreach() D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 13
+ERROR - 2019-01-14 10:32:18 --> Severity: Notice --> Undefined variable: data D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 13
+ERROR - 2019-01-14 10:32:18 --> Severity: Warning --> Invalid argument supplied for foreach() D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 13
+ERROR - 2019-01-14 10:36:10 --> Indonesia
+ERROR - 2019-01-14 10:36:10 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:36:56 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:37:00 --> Indonesia
+ERROR - 2019-01-14 10:37:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:37:03 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:37:10 --> 404 Page Not Found: Pmb/%3C
+ERROR - 2019-01-14 10:37:33 --> Indonesia
+ERROR - 2019-01-14 10:37:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:40:14 --> Severity: Notice --> Undefined index: parent_id D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 133
+ERROR - 2019-01-14 10:42:56 --> Indonesia
+ERROR - 2019-01-14 10:42:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:42:59 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:43:01 --> 404 Page Not Found: Pmb/%3C
+ERROR - 2019-01-14 10:43:29 --> Indonesia
+ERROR - 2019-01-14 10:43:29 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:43:32 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:43:50 --> 404 Page Not Found: Pmb/%3C
+ERROR - 2019-01-14 10:43:54 --> Indonesia
+ERROR - 2019-01-14 10:43:54 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:44:05 --> Indonesia
+ERROR - 2019-01-14 10:44:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:44:14 --> Indonesia
+ERROR - 2019-01-14 10:44:14 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:44:17 --> Indonesia
+ERROR - 2019-01-14 10:44:17 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:44:20 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:49:29 --> Indonesia
+ERROR - 2019-01-14 10:49:29 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:49:32 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:50:28 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:51:53 --> Indonesia
+ERROR - 2019-01-14 10:51:53 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:51:55 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:52:17 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 10:52:21 --> Indonesia
+ERROR - 2019-01-14 10:52:21 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:52:24 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-14 10:52:49 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 10:52:52 --> Indonesia
+ERROR - 2019-01-14 10:52:52 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:54:43 --> Indonesia
+ERROR - 2019-01-14 10:54:43 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:54:43 -->
+ERROR - 2019-01-14 10:54:43 -->
+ERROR - 2019-01-14 10:55:04 --> Indonesia
+ERROR - 2019-01-14 10:55:04 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:55:04 -->
+ERROR - 2019-01-14 10:55:04 -->
+ERROR - 2019-01-14 10:55:49 --> Indonesia
+ERROR - 2019-01-14 10:55:49 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:55:49 -->
+ERROR - 2019-01-14 10:55:49 -->
+ERROR - 2019-01-14 10:56:29 --> Indonesia
+ERROR - 2019-01-14 10:56:29 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:56:29 -->
+ERROR - 2019-01-14 10:56:29 -->
+ERROR - 2019-01-14 10:57:33 --> Indonesia
+ERROR - 2019-01-14 10:57:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:57:33 -->
+ERROR - 2019-01-14 10:57:33 -->
+ERROR - 2019-01-14 10:59:29 --> Indonesia
+ERROR - 2019-01-14 10:59:29 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:59:29 -->
+ERROR - 2019-01-14 10:59:29 -->
+ERROR - 2019-01-14 10:59:50 --> Indonesia
+ERROR - 2019-01-14 10:59:50 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 10:59:50 -->
+ERROR - 2019-01-14 10:59:50 -->
+ERROR - 2019-01-14 11:00:46 --> Indonesia
+ERROR - 2019-01-14 11:00:46 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:00:46 -->
+ERROR - 2019-01-14 11:00:46 -->
+ERROR - 2019-01-14 11:01:58 --> Indonesia
+ERROR - 2019-01-14 11:01:58 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:01:58 -->
+ERROR - 2019-01-14 11:01:58 -->
+ERROR - 2019-01-14 11:02:35 --> Indonesia
+ERROR - 2019-01-14 11:02:35 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:02:35 -->
+ERROR - 2019-01-14 11:02:35 -->
+ERROR - 2019-01-14 11:42:44 --> Indonesia
+ERROR - 2019-01-14 11:42:44 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:42:44 -->
+ERROR - 2019-01-14 11:42:44 -->
+ERROR - 2019-01-14 11:43:14 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 11:43:18 --> Indonesia
+ERROR - 2019-01-14 11:43:18 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:43:18 -->
+ERROR - 2019-01-14 11:43:18 -->
+ERROR - 2019-01-14 11:44:48 --> Indonesia
+ERROR - 2019-01-14 11:44:48 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:44:48 -->
+ERROR - 2019-01-14 11:44:48 -->
+ERROR - 2019-01-14 11:47:43 --> Indonesia
+ERROR - 2019-01-14 11:47:43 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:47:43 -->
+ERROR - 2019-01-14 11:47:43 -->
+ERROR - 2019-01-14 11:48:35 --> Indonesia
+ERROR - 2019-01-14 11:48:35 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:48:35 -->
+ERROR - 2019-01-14 11:48:35 -->
+ERROR - 2019-01-14 11:48:39 --> Indonesia
+ERROR - 2019-01-14 11:48:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:48:39 -->
+ERROR - 2019-01-14 11:48:39 -->
+ERROR - 2019-01-14 11:48:44 --> Indonesia
+ERROR - 2019-01-14 11:48:44 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:48:44 -->
+ERROR - 2019-01-14 11:48:44 -->
+ERROR - 2019-01-14 11:49:10 --> Indonesia
+ERROR - 2019-01-14 11:49:10 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:49:10 -->
+ERROR - 2019-01-14 11:49:10 -->
+ERROR - 2019-01-14 11:49:28 --> Indonesia
+ERROR - 2019-01-14 11:49:28 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:49:28 -->
+ERROR - 2019-01-14 11:49:28 -->
+ERROR - 2019-01-14 11:50:18 --> Indonesia
+ERROR - 2019-01-14 11:50:18 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:50:18 -->
+ERROR - 2019-01-14 11:50:18 -->
+ERROR - 2019-01-14 11:50:41 --> Indonesia
+ERROR - 2019-01-14 11:50:41 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:50:41 -->
+ERROR - 2019-01-14 11:50:41 -->
+ERROR - 2019-01-14 11:51:23 --> Indonesia
+ERROR - 2019-01-14 11:51:23 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:51:23 -->
+ERROR - 2019-01-14 11:51:23 -->
+ERROR - 2019-01-14 11:51:41 --> Indonesia
+ERROR - 2019-01-14 11:51:41 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:51:41 -->
+ERROR - 2019-01-14 11:51:41 -->
+ERROR - 2019-01-14 11:51:45 --> Indonesia
+ERROR - 2019-01-14 11:51:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:51:45 -->
+ERROR - 2019-01-14 11:51:45 -->
+ERROR - 2019-01-14 11:54:09 --> Indonesia
+ERROR - 2019-01-14 11:54:09 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:54:09 -->
+ERROR - 2019-01-14 11:54:09 -->
+ERROR - 2019-01-14 11:54:12 --> Indonesia
+ERROR - 2019-01-14 11:54:12 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 11:54:12 -->
+ERROR - 2019-01-14 11:54:12 -->
+ERROR - 2019-01-14 11:56:42 --> Severity: Notice --> Undefined property: Pmb::$m_pmb D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 22
+ERROR - 2019-01-14 11:56:42 --> Severity: Error --> Call to a member function show_data() on null D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 22
+ERROR - 2019-01-14 11:57:15 --> Severity: Notice --> Undefined property: Pmb::$m_pmb D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 22
+ERROR - 2019-01-14 11:57:15 --> Severity: Error --> Call to a member function show_data() on null D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 22
+ERROR - 2019-01-14 11:59:06 --> Severity: Notice --> Undefined property: Pmb::$m_pendaftaran D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 31
+ERROR - 2019-01-14 11:59:06 --> Severity: Error --> Call to a member function getdatasiswa() on null D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 31
+ERROR - 2019-01-14 12:03:00 --> Severity: Notice --> Undefined property: Pmb::$m_pendaftaran D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 31
+ERROR - 2019-01-14 12:03:00 --> Severity: Error --> Call to a member function getdatasiswa() on null D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 31
+ERROR - 2019-01-14 12:03:27 --> Indonesia
+ERROR - 2019-01-14 12:03:27 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:03:27 -->
+ERROR - 2019-01-14 12:03:27 -->
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: draw D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 25
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: length D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 28
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: start D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 33
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: search D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 36
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: order D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 40
+ERROR - 2019-01-14 12:03:41 --> Severity: Notice --> Undefined index: order D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 41
+ERROR - 2019-01-14 12:07:29 --> Query error: Column 'nisn' in where clause is ambiguous - Invalid query: SELECT *
+FROM `siswa`
+JOIN `nilai_un` ON `nilai_un`.`nisn`=`siswa`.`nisn`
+WHERE `nisn` = '1'
+ERROR - 2019-01-14 12:07:54 --> Indonesia
+ERROR - 2019-01-14 12:07:54 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:07:54 -->
+ERROR - 2019-01-14 12:07:54 -->
+ERROR - 2019-01-14 12:08:27 --> Query error: Column 'nisn' in where clause is ambiguous - Invalid query: SELECT *
+FROM `siswa`
+JOIN `nilai_un` ON `nilai_un`.`nisn`=`siswa`.`nisn`
+WHERE `nisn` = '1'
+ERROR - 2019-01-14 12:09:10 --> Indonesia
+ERROR - 2019-01-14 12:09:10 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:09:10 -->
+ERROR - 2019-01-14 12:09:10 -->
+ERROR - 2019-01-14 12:10:23 --> Indonesia
+ERROR - 2019-01-14 12:10:23 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:10:23 -->
+ERROR - 2019-01-14 12:10:23 -->
+ERROR - 2019-01-14 12:12:09 --> INDONESIA
+ERROR - 2019-01-14 12:12:09 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:12:09 --> JAMBI
+ERROR - 2019-01-14 12:12:09 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:12:09 --> TEBO
+ERROR - 2019-01-14 12:12:09 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:13:22 --> INDONESIA
+ERROR - 2019-01-14 12:13:22 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:13:22 --> JAMBI
+ERROR - 2019-01-14 12:13:22 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:13:22 --> TEBO
+ERROR - 2019-01-14 12:13:22 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\helpers\site_helper.php 52
+ERROR - 2019-01-14 12:15:35 --> 4
+ERROR - 2019-01-14 12:15:35 --> 481
+ERROR - 2019-01-14 12:15:35 --> 514
+ERROR - 2019-01-14 12:16:14 --> 4
+ERROR - 2019-01-14 12:16:14 --> 481
+ERROR - 2019-01-14 12:16:14 --> 514
+ERROR - 2019-01-14 12:17:26 --> 4
+ERROR - 2019-01-14 12:17:26 --> 481
+ERROR - 2019-01-14 12:17:26 --> 514
+ERROR - 2019-01-14 12:19:01 --> 4
+ERROR - 2019-01-14 12:19:01 --> 481
+ERROR - 2019-01-14 12:19:01 --> 514
+ERROR - 2019-01-14 12:20:24 -->
+ERROR - 2019-01-14 12:20:24 -->
+ERROR - 2019-01-14 12:20:24 -->
+ERROR - 2019-01-14 12:22:26 -->
+ERROR - 2019-01-14 12:22:26 -->
+ERROR - 2019-01-14 12:22:26 -->
+ERROR - 2019-01-14 12:22:43 -->
+ERROR - 2019-01-14 12:22:43 -->
+ERROR - 2019-01-14 12:22:43 -->
+ERROR - 2019-01-14 12:28:51 --> Severity: Notice --> Undefined index: sekolah D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 71
+ERROR - 2019-01-14 12:28:51 -->
+ERROR - 2019-01-14 12:28:51 -->
+ERROR - 2019-01-14 12:28:51 -->
+ERROR - 2019-01-14 12:29:22 -->
+ERROR - 2019-01-14 12:29:22 -->
+ERROR - 2019-01-14 12:29:22 -->
+ERROR - 2019-01-14 12:32:09 -->
+ERROR - 2019-01-14 12:32:09 -->
+ERROR - 2019-01-14 12:32:09 -->
+ERROR - 2019-01-14 12:32:56 -->
+ERROR - 2019-01-14 12:32:56 -->
+ERROR - 2019-01-14 12:32:56 -->
+ERROR - 2019-01-14 12:33:29 -->
+ERROR - 2019-01-14 12:33:29 -->
+ERROR - 2019-01-14 12:33:29 -->
+ERROR - 2019-01-14 12:33:51 -->
+ERROR - 2019-01-14 12:33:51 -->
+ERROR - 2019-01-14 12:33:51 -->
+ERROR - 2019-01-14 12:34:01 -->
+ERROR - 2019-01-14 12:34:01 -->
+ERROR - 2019-01-14 12:34:01 -->
+ERROR - 2019-01-14 12:34:20 --> 4
+ERROR - 2019-01-14 12:34:20 --> 481
+ERROR - 2019-01-14 12:34:20 --> 514
+ERROR - 2019-01-14 12:36:35 --> 4
+ERROR - 2019-01-14 12:36:35 --> 481
+ERROR - 2019-01-14 12:36:35 --> 514
+ERROR - 2019-01-14 12:37:02 --> 4
+ERROR - 2019-01-14 12:37:02 --> 481
+ERROR - 2019-01-14 12:37:02 --> 514
+ERROR - 2019-01-14 12:37:49 --> 4
+ERROR - 2019-01-14 12:37:49 --> 481
+ERROR - 2019-01-14 12:37:49 --> 514
+ERROR - 2019-01-14 12:38:30 --> 4
+ERROR - 2019-01-14 12:38:30 --> 481
+ERROR - 2019-01-14 12:38:30 --> 514
+ERROR - 2019-01-14 12:39:51 --> 4
+ERROR - 2019-01-14 12:39:51 --> 481
+ERROR - 2019-01-14 12:39:51 --> 514
+ERROR - 2019-01-14 12:40:09 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 12:40:12 --> 4
+ERROR - 2019-01-14 12:40:12 --> 481
+ERROR - 2019-01-14 12:40:12 --> 514
+ERROR - 2019-01-14 12:41:22 --> Severity: Notice --> Undefined variable: x D:\data\belajar\WEB\skripsi\application\controllers\Pmb.php 40
+ERROR - 2019-01-14 12:41:22 --> Severity: Notice --> Undefined variable: data D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 5
+ERROR - 2019-01-14 12:41:22 --> Severity: Warning --> Invalid argument supplied for foreach() D:\data\belajar\WEB\skripsi\application\views\pmb\data_siswa.php 5
+ERROR - 2019-01-14 12:41:44 --> 4
+ERROR - 2019-01-14 12:41:44 --> 481
+ERROR - 2019-01-14 12:41:44 --> 514
+ERROR - 2019-01-14 12:41:59 --> 4
+ERROR - 2019-01-14 12:41:59 --> 481
+ERROR - 2019-01-14 12:41:59 --> 514
+ERROR - 2019-01-14 12:42:12 --> 404 Page Not Found: Pmb/index
+ERROR - 2019-01-14 12:43:58 --> 404 Page Not Found: Pmb/updatedata
+ERROR - 2019-01-14 12:44:05 --> 4
+ERROR - 2019-01-14 12:44:05 --> 481
+ERROR - 2019-01-14 12:44:05 --> 514
+ERROR - 2019-01-14 12:44:45 --> 4
+ERROR - 2019-01-14 12:44:45 --> 481
+ERROR - 2019-01-14 12:44:45 --> 514
+ERROR - 2019-01-14 12:47:20 --> 404 Page Not Found: Ubahdata/index
+ERROR - 2019-01-14 12:47:34 --> 4
+ERROR - 2019-01-14 12:47:34 --> 481
+ERROR - 2019-01-14 12:47:34 --> 514
+ERROR - 2019-01-14 12:52:05 --> 4
+ERROR - 2019-01-14 12:52:05 --> 481
+ERROR - 2019-01-14 12:52:05 --> 514
+ERROR - 2019-01-14 12:52:05 -->
+ERROR - 2019-01-14 12:52:05 -->
+ERROR - 2019-01-14 12:52:05 -->
+ERROR - 2019-01-14 12:52:16 -->
+ERROR - 2019-01-14 12:52:16 -->
+ERROR - 2019-01-14 12:52:16 -->
+ERROR - 2019-01-14 12:52:27 --> 4
+ERROR - 2019-01-14 12:52:27 --> 481
+ERROR - 2019-01-14 12:52:27 --> 514
+ERROR - 2019-01-14 12:52:27 -->
+ERROR - 2019-01-14 12:52:27 -->
+ERROR - 2019-01-14 12:52:27 -->
+ERROR - 2019-01-14 12:53:27 --> 4
+ERROR - 2019-01-14 12:53:27 --> 481
+ERROR - 2019-01-14 12:53:27 --> 514
+ERROR - 2019-01-14 12:53:27 -->
+ERROR - 2019-01-14 12:53:27 -->
+ERROR - 2019-01-14 12:53:27 -->
+ERROR - 2019-01-14 12:54:51 --> 4
+ERROR - 2019-01-14 12:54:51 --> 481
+ERROR - 2019-01-14 12:54:51 --> 514
+ERROR - 2019-01-14 12:54:51 -->
+ERROR - 2019-01-14 12:54:51 -->
+ERROR - 2019-01-14 12:54:51 -->
+ERROR - 2019-01-14 12:55:19 --> Query error: Unknown column '=nilai_un.nisn' in 'on clause' - Invalid query: SELECT *
+FROM `siswa`
+JOIN `nilai_un` ON `siswa`.`nisn`=`=nilai_un`.`nisn`
+WHERE `siswa`.`nisn` = '141420213'
+ERROR - 2019-01-14 12:57:49 --> Query error: Unknown column '=nilai_un.nisn' in 'on clause' - Invalid query: SELECT *
+FROM `siswa`
+LEFT JOIN `nilai_un` ON `siswa`.`nisn`=`=nilai_un`.`nisn`
+WHERE `siswa`.`nisn` = '141420213'
+ERROR - 2019-01-14 12:57:57 --> 4
+ERROR - 2019-01-14 12:57:57 --> 481
+ERROR - 2019-01-14 12:57:57 --> 514
+ERROR - 2019-01-14 12:58:05 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 12:58:09 --> 4
+ERROR - 2019-01-14 12:58:09 --> 481
+ERROR - 2019-01-14 12:58:09 --> 514
+ERROR - 2019-01-14 12:59:50 --> 404 Page Not Found: Ajax/update_data
+ERROR - 2019-01-14 12:59:53 --> 4
+ERROR - 2019-01-14 12:59:53 --> 481
+ERROR - 2019-01-14 12:59:53 --> 514
+ERROR - 2019-01-14 12:59:53 -->
+ERROR - 2019-01-14 12:59:53 -->
+ERROR - 2019-01-14 12:59:53 -->
+ERROR - 2019-01-14 12:59:53 --> 4
+ERROR - 2019-01-14 12:59:53 --> 481
+ERROR - 2019-01-14 12:59:53 --> 514
+ERROR - 2019-01-14 13:00:02 --> 404 Page Not Found: Pmb/index
+ERROR - 2019-01-14 13:00:18 -->
+ERROR - 2019-01-14 13:00:18 -->
+ERROR - 2019-01-14 13:00:18 -->
+ERROR - 2019-01-14 13:00:31 -->
+ERROR - 2019-01-14 13:00:31 -->
+ERROR - 2019-01-14 13:00:31 -->
+ERROR - 2019-01-14 13:00:43 -->
+ERROR - 2019-01-14 13:00:43 -->
+ERROR - 2019-01-14 13:00:43 -->
+ERROR - 2019-01-14 13:00:50 -->
+ERROR - 2019-01-14 13:00:50 -->
+ERROR - 2019-01-14 13:00:50 -->
+ERROR - 2019-01-14 13:00:59 -->
+ERROR - 2019-01-14 13:00:59 -->
+ERROR - 2019-01-14 13:00:59 -->
+ERROR - 2019-01-14 13:01:16 -->
+ERROR - 2019-01-14 13:01:16 -->
+ERROR - 2019-01-14 13:01:16 -->
+ERROR - 2019-01-14 13:05:00 -->
+ERROR - 2019-01-14 13:05:00 -->
+ERROR - 2019-01-14 13:05:00 -->
+ERROR - 2019-01-14 13:05:13 --> 4
+ERROR - 2019-01-14 13:05:13 --> 481
+ERROR - 2019-01-14 13:05:13 --> 514

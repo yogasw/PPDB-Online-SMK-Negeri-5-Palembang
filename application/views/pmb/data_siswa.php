@@ -1,22 +1,13 @@
-<?php
-header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST');
-
-header("Access-Control-Allow-Headers: X-Requested-With");
-?>
-
-<div class="wrapper">
+<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
     <div class="container">
         <div class="card wizard-card" data-color="rose" id="wizardProfile">
             <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
                 <?php foreach ($data as $u) { ?>
                     <div class="wizard-header">
                         <h3 class="wizard-title">
-                            Update Biodata Anda
+                            FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
                         </h3>
-                        <h5>Untuk persyaratan pembuatan sertifikat.</h5>
-                        <h5><b>No. Reg = : <?php //echo($u['no_reg']) ?></b></h5>
+                        <h5>Tambah Data Baru.</h5>
                     </div>
                     <div class="wizard-navigation">
                         <ul class="nav nav-pills">
@@ -36,9 +27,17 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                         <div class="tab-pane active" id="step1">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h4 class="info-text">Isi data anda dengan teliti</h4>
+                                    <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
                                 </div>
                                 <div class="col-sm-4 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nama Lengkap</label>
+                                        <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
+                                               value="<?php echo($u['nama_lengkap']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">No Peserta</label>
                                         <input name="no_peserta" id="no_peserta" type="text" class="form-control"
@@ -54,7 +53,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Tahun Lulus</label>
                                         <input name="tahun_lulus" id="tahun_lulus" type="text" class="form-control"
@@ -62,15 +61,31 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-4 col-sm-offset-1">
+                                <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nama Lengkap</label>
-                                        <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
-                                               value="<?php echo($u['nama_lengkap']) ?>"
-                                               style="text-transform: uppercase" required="true">
+                                        <label class="label-control">Jurusan Yang di Pilih</label>
+                                        <select name="jurusan" id="jurusan" class="form-control" required="true">
+                                            <option value="<?php echo($u['jurusan']) ?>"
+                                                    selected><?php echo($u['jurusan']) ?></option>
+                                            <option value="akuntansi">Akuntansi</option>
+                                            <option value="administrasiperkantoran">Administrasi Perkantoran</option>
+                                            <option value="pemasaran">Pemasaran</option>
+                                            <option value="animasi">Animasi</option>
+                                            <option value="multimedia">Multimedia</option>
+                                            <option value="tp4">Teknik Produksi dan Penyiaran Program Pertelevisian
+                                            </option>
+                                        </select>
                                         <span class="material-input"></span></div>
                                 </div>
                                 <div class="col-sm-3">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Asal Sekolah</label>
+                                        <input name="asal_sekolah" id="asal_sekolah" type="text" class="form-control"
+                                               value="<?php echo($u['asal_sekolah']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Jenis Kelamin</label>
                                         <select name="jk" id="jk" class="form-control" required="true">
@@ -95,59 +110,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                         </select>
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-10 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Alamat</label>
-                                        <input type="text" name="alamat" id="alamat" class="form-control"
-                                               value="<?php //echo($u['alamat']) ?>"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-
-                                <div class="col-sm-3 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Negara</label>
-                                        <select name="negara" class="form-control" id="negara" required="true">
-                                            <option value="<?php //echo($u['negara']) ?>"
-                                                    selected><?php //echo (description_lokasi($u['negara'])) ?></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Provinsi</label>
-                                        <select id="provinsi" name="provinsi" class="form-control" required="true">
-                                            <option value="<?php //echo($u['provinsi']) ?>"
-                                                    selected><?php //echo (description_lokasi($u['provinsi'])) ?></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Kota</label>
-                                        <select name="kota" id="kota" class="form-control" required="true">
-                                            <option value="<?php echo($u['kota']) ?>"
-                                                    selected><?php //echo (description_lokasi($u['kota'])) ?></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="step2">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h4 class="info-text">Isi data anda dengan teliti</h4>
-                                </div>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Tempat Lahir</label>
-                                        <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
-                                               required="true" style="text-transform: uppercase"
-                                               value="<?php //echo($u['tempat_lahir']) ?>">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5 form-inline">
+                                <div class="col-sm-3 form-inline">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Tempat Lahir</label>
                                         <div class="row">
@@ -155,14 +118,14 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                                 <select name="tanggal" id="tanggal" class="form-control"
                                                         required="true">
                                                     <?php
-                                                    $tl = explode("-",$u['tanggal_lahir']);
-                                                    if($tl[2]!='') {
-                                                        //echo('<option value=' . $tl[2] . '>' . $tl[2] . '</option>');
-                                                    }else{
-                                                        //echo('<option value="">Tanggal</option>');
+                                                    $tl = explode("-", $u['tanggal_lahir']);
+                                                    if ($tl[2] != '') {
+                                                        echo('<option value=' . $tl[2] . '>' . $tl[2] . '</option>');
+                                                    } else {
+                                                        echo('<option value="">Tanggal</option>');
                                                     }
-                                                    for($i=1; $i <= 31; $i++){
-                                                        //echo('<option value='.$i.'>'.$i.'</option>');
+                                                    for ($i = 1; $i <= 31; $i++) {
+                                                        echo('<option value=' . $i . '>' . $i . '</option>');
                                                     }
                                                     ?>
                                                 </select>
@@ -185,15 +148,14 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                                         'November',
                                                         'Desember'
                                                     ];
-                                                    if($tl[1]!='') {
-                                                        //echo('<option value=' . $tl[1] . '>' . $list_months[$tl[1] - 1] . '</option>');
-                                                    }else{
-                                                        //echo('<option value="">Bulan</option>');
+                                                    if ($tl[1] != '') {
+                                                        echo('<option value=' . $tl[1] . '>' . $list_months[$tl[1] - 1] . '</option>');
+                                                    } else {
+                                                        echo('<option value="">Bulan</option>');
                                                     }
-                                                    $bulan=1;
-                                                    for($i=0; $i<count($list_months); $i++)
-                                                    {
-                                                        //echo('<option value='.$bulan.'>'.$list_months[$i].'</option>');
+                                                    $bulan = 1;
+                                                    for ($i = 0; $i < count($list_months); $i++) {
+                                                        echo('<option value=' . $bulan . '>' . $list_months[$i] . '</option>');
                                                         $bulan++;
                                                     }
                                                     ?>
@@ -203,13 +165,13 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                                 <select name="tahun" id="tahun" class="form-control"
                                                         required="true">
                                                     <?php
-                                                    if($tl[0]!='') {
-                                                        //echo('<option value=' . $tl[0] . '>' . $tl[0] . '</option>');
-                                                    }else{
-                                                        //echo('<option value="">Tahun</option>');
+                                                    if ($tl[0] != '') {
+                                                        echo('<option value=' . $tl[0] . '>' . $tl[0] . '</option>');
+                                                    } else {
+                                                        echo('<option value="">Tahun</option>');
                                                     }
-                                                    for($i=2015;$i>=1960;$i--){
-                                                        //echo('<option value='.$i.'>'.$i.'</option>');
+                                                    for ($i = 2015; $i >= 1960; $i--) {
+                                                        echo('<option value=' . $i . '>' . $i . '</option>');
                                                     }
                                                     ?>
                                                 </select>
@@ -217,60 +179,109 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-sm-5 col-sm-offset-1">
+                                <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Agama</label>
-                                        <select name="agama" id="agama" class="form-control" required="true">
-                                            <option value="<?php //echo($u['agama']) ?>"
-                                                    selected><?php //echo($u['agama']) ?></option>
-                                            <option value="Islam">Islam</option>
-                                            <option value="Kristen Protestan">Kristen Protestan</option>
-                                            <option value="Kristen Katolik">Kristen Katolik</option>
-                                            <option value="Hindu">Hindu</option>
-                                            <option value="Budha">Budha</option>
-                                        </select>
+                                        <label class="label-control">Tempat Lahir</label>
+                                        <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
+                                               required="true" style="text-transform: uppercase"
+                                               value="<?php echo($u['tempat_lahir']) ?>">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-5">
+                                <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">No. HP</label>
                                         <input type="text" name="no_hp" id="no_hp" class="form-control" number="true"
-                                               required="true" value="<?php //echo($u['no_hp']) ?>"/>
+                                               required="true" value="<?php echo($u['no_hp']) ?>"/>
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-5 col-sm-offset-1">
+                                <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Email</label>
                                         <input type="text" class="form-control" id="email" email="true" name="email"
                                                required="true" style="text-transform: lowercase"
-                                               value="<?php //echo($u['email']) ?>">
+                                               value="<?php echo($u['email']) ?>">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-5 ">
+                                <div class="col-sm-10 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Instansi atau Perusahaan</label>
-                                        <input type="text" class="form-control" required="true" id="instansi"
-                                               name="instansi" style="text-transform: uppercase"
-                                               value="<?php //echo($u['instansi']) ?>">
+                                        <label class="label-control">Alamat</label>
+                                        <input type="text" name="alamat" id="alamat" class="form-control"
+                                               value="<?php echo($u['alamat']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-4 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Negara</label>
+                                        <select name="negara" class="form-control" id="negara" required="true">
+                                            <option value="<?php echo($u['negara']) ?>"
+                                                    selected><?php echo(description_lokasi($u['negara'])) ?></option>
+                                        </select>
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Provinsi</label>
+                                        <select id="provinsi" name="provinsi" class="form-control" required="true">
+                                            <option value="<?php echo($u['provinsi']) ?>"
+                                                    selected><?php echo(description_lokasi($u['provinsi'])) ?></option>
+                                        </select>
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Kota</label>
+                                        <select name="kota" id="kota" class="form-control" required="true">
+                                            <option value="<?php echo($u['kota']) ?>"
+                                                    selected><?php echo(description_lokasi($u['kota'])) ?></option>
+                                        </select>
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="step2">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="info-text">Form Nilai UN</h4>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai IPA</label>
+                                        <input name="nlai_ipa" id="nlai_ipa" type="text" class="form-control"
+                                               value="<?php echo($u['ipa']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai IPS</label>
+                                        <input name="nilai_ips" id="nilai_ips" type="text" class="form-control"
+                                               value="<?php echo($u['ips']) ?>"
+                                               style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Jabatan</label>
-                                        <input type="text" class="form-control" required="true" name="jabatan"
-                                               id="jabatan" style="text-transform: uppercase"
-                                               value="<?php //echo($u['jabatan']) ?>">
+                                        <label class="label-control">Nilai Bahasa Indonesia</label>
+                                        <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="text"
+                                               class="form-control"
+                                               value="<?php echo($u['bhs_indonesia']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai Bahasa Inggris</label>
+                                        <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="text"
+                                               class="form-control"
+                                               value="<?php echo($u['bhs_inggris']) ?>"
+                                               style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <input type="hidden" id="id" name="id" value="<?php //echo($u['id']) ?>">
-                    <input type="hidden" id="id_event" name="id_event" value="<?php //echo($_GET['id_event']) ?>"/>
-                    <input type="hidden" id="no_reg" name="no_reg" value="<?php //echo($_GET['no_reg']) ?>"/>
-
                     <div class="wizard-footer">
                         <div class="pull-right">
                             <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" value="Next">
@@ -512,7 +523,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
                         nama_lengkap: $('#nama_lengkap').val(),
                         name_tag: $('#name_tag').val(),
                         tempat_lahir: $('#tempat_lahir').val(),
-                        tanggal_lahir: $('#tahun').val()+'-'+$('#bulan').val()+'-'+$('#tanggal').val(),
+                        tanggal_lahir: $('#tahun').val() + '-' + $('#bulan').val() + '-' + $('#tanggal').val(),
                         agama: $('#agama').val(),
                         alamat: $('#alamat').val(),
                         kota: $('#kota').val(),
@@ -553,18 +564,17 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
         });
         $.ajax({
-            url: '<?php //echo(base_url() . "ajax/data_lokasi") ?>',
-            data : {parent_id:'3'},
+            url: '<?php echo(base_url() . "ajax/data_lokasi") ?>',
+            data: {parent_id: '3'},
             type: "post",
             timeout: 10000,
-            success: function(response){
+            success: function (response) {
                 for (var i = 0; i < response.length; i++) {
-                   addElement(response[i],'negara');
+                    addElement(response[i], 'negara');
                 }
             }
         });
-
-        function addElement (str,id) {
+        function addElement(str, id) {
             var el = document.createElement('option');
             el.innerHTML = str;
             var frag = document.getElementById(id);
@@ -573,11 +583,11 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
         $("#negara").change(function () {
             $.ajax({
-                url: '<?php //echo(base_url() . "ajax/data_lokasi") ?>',
-                data : {parent_id:$('#negara').val()},
+                url: '<?php echo(base_url() . "ajax/data_lokasi") ?>',
+                data: {parent_id: $('#negara').val()},
                 type: "post",
                 timeout: 10000,
-                success: function(response){
+                success: function (response) {
                     $('#provinsi').html(response);
                 }
             });
@@ -585,11 +595,11 @@ header("Access-Control-Allow-Headers: X-Requested-With");
         });
         $("#provinsi").change(function () {
             $.ajax({
-                url: '<?php //echo(base_url() . "ajax/data_lokasi") ?>',
-                data : {parent_id:$('#provinsi').val()},
+                url: '<?php echo(base_url() . "ajax/data_lokasi") ?>',
+                data: {parent_id: $('#provinsi').val()},
                 type: "post",
                 timeout: 10000,
-                success: function(response){
+                success: function (response) {
                     $('#kota').html(response);
                 }
             });
@@ -598,4 +608,5 @@ header("Access-Control-Allow-Headers: X-Requested-With");
         $("#kabupaten").change(function () {
         });
     });
+
 </script>

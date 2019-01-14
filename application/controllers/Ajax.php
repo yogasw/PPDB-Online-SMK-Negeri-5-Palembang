@@ -14,7 +14,6 @@ class Ajax extends CI_Controller
         $this->load->helper('site_helper');
         $this->load->model('m_ajax');
     }
-
     function ambil_data_pendaftaran(){
 
         /*Menagkap semua data yang dikirimkan oleh client*/
@@ -122,7 +121,6 @@ class Ajax extends CI_Controller
         }
         echo json_encode($output);
     }
-
     function hapus_siswa(){
         $nisn = $this->input->post('nisn');
         $this->m_ajax->hapus_siswa($nisn);
@@ -143,5 +141,38 @@ class Ajax extends CI_Controller
             }
             echo json_encode($data);
         }
+    }
+
+    public function ubahdata_siswa()
+    {
+        header('Content-type: application/json');
+        $data[] = array(
+            'id' => (string)$_POST['id'],
+            'no_reg' => (string)$_POST['no_reg'],
+            'jk' => (string)$_POST['jk'],
+            'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
+            'name_tag' => strtoupper((string)$_POST['name_tag']),
+            'tempat_lahir' => strtoupper((string)$_POST['tempat_lahir']),
+            'tanggal_lahir' => (string)$_POST['tanggal_lahir'],
+            'agama' => (string)$_POST['agama'],
+            'alamat' => strtoupper((string)$_POST['alamat']),
+            'kota' => strtoupper((string)$_POST['kota']),
+            'provinsi' => strtoupper((string)$_POST['provinsi']),
+            'negara' => strtoupper((string)$_POST['negara']),
+            'no_hp' => (string)$_POST['no_hp'],
+            'email' => strtolower((string)$_POST['email']),
+            'instansi' => strtoupper((string)$_POST['instansi']),
+            'jabatan' => strtoupper((string)$_POST['jabatan']),
+            'id_event' => (string)$_POST['id_event']
+        );
+
+        $this->m_register->update($data);
+        $respon = array(
+            "no_reg" => (string)$_POST['no_reg'],
+            "nama_lengkap" => (string)$_POST['nama_lengkap'],
+            "status" => true
+        );
+
+        echo json_encode($respon);
     }
 }
