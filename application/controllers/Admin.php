@@ -61,10 +61,12 @@ class Admin extends CI_Controller
 
     public function admin_new()
     {
-        $this->load->view('admin/header');
-        $this->load->view('admin/sidebar');
-        $this->load->view('admin/isi');
-        $this->load->view('admin/footer');
+        $this->load->model('m_jurusan');
+        $this->load->view('admin/template_new/header');
+        $this->load->view('admin/template_new/sidebar');
+        $x['data'] = $this->m_jurusan->show_jurusan();
+        $this->load->view('admin/template_new/isi',$x);
+        $this->load->view('admin/template_new/footer');
     }
 
     public function jurusan()
