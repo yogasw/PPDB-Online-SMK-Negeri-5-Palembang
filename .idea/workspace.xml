@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin_new/header.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/demo - Copy.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/material-dashboard - Copy.css" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ujifolder/index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" afterPath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/home.php" afterPath="$PROJECT_DIR$/application/views/admin/home.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +32,7 @@
         <entry file="file://$USER_HOME$/Downloads/Compressed/material-dashboard-pro-master/material-dashboard-pro-master/examples/pages/register.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <caret line="124" column="2" lean-forward="false" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -80,6 +75,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -118,6 +116,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="D:/software/web/AdminLTE-2.4.5/AdminLTE-2.4.5/starter.html" />
         <option value="$PROJECT_DIR$/application/views/admin/home.php" />
+        <option value="$USER_HOME$/Downloads/Compressed/material-dashboard-pro-master/material-dashboard-pro-master/examples/pages/register.html" />
       </list>
     </option>
   </component>
@@ -319,12 +318,20 @@
       <workItem from="1545882584365" duration="1775000" />
       <workItem from="1546476847719" duration="330000" />
       <workItem from="1547290310247" duration="4695000" />
-      <workItem from="1547427033184" duration="7629000" />
+      <workItem from="1547427033184" duration="7860000" />
     </task>
+    <task id="LOCAL-00001" summary="Edit Home">
+      <created>1547436452523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547436452523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95422000" />
+    <option name="totallyTimeSpent" value="95653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -374,6 +381,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Edit Home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,7 +732,7 @@
     <entry file="file://$USER_HOME$/Downloads/Compressed/material-dashboard-pro-master/material-dashboard-pro-master/examples/pages/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <caret line="124" column="2" lean-forward="false" selection-start-line="124" selection-start-column="2" selection-end-line="124" selection-end-column="2" />
           <folding />
         </state>
       </provider>
