@@ -21,3 +21,6 @@ ERROR - 2019-01-14 01:05:00 --> 404 Page Not Found: Admin/assets
 ERROR - 2019-01-14 01:05:00 --> 404 Page Not Found: Admin/assets
 ERROR - 2019-01-14 01:05:00 --> 404 Page Not Found: Admin/assets
 ERROR - 2019-01-14 01:05:00 --> 404 Page Not Found: Admin/assets
+ERROR - 2019-01-14 02:30:11 --> 404 Page Not Found: /index
+ERROR - 2019-01-14 03:07:56 --> TYPE : 
+ERROR - 2019-01-14 03:23:54 --> TYPE : 
