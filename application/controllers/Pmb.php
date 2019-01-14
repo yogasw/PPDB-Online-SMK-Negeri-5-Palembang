@@ -30,16 +30,23 @@ class Pmb extends CI_Controller
         $this->load->view('admin/template_new/header');
         $this->load->view('admin/template_new/sidebar');
         $x['data'] = $this->m_pmb->getdatasiswa($nisn);
-        $this->load->view('pmb/data_siswa', $x);
+        $this->load->view('pmb/ubah_data_siswa', $x);
         $this->load->view('admin/template_new/footer');
     }
 
-    public function tambahdata()
+    public function tambahdata_siswa()
     {
         $this->load->view('admin/template_new/header');
         $this->load->view('admin/template_new/sidebar');
-        //  $x['data'] = $this->m_pmb->getdatasiswa();
-        //$this->load->view('pmb/data_siswa',$x);
+        $this->load->view('pmb/tambah_data_siswa');
+        $this->load->view('admin/template_new/footer');
+    }
+
+    public function quizzes()
+    {
+        $this->load->view('admin/template_new/header');
+        $this->load->view('admin/template_new/sidebar');
+        $this->load->view('pmb/quizzes');
         $this->load->view('admin/template_new/footer');
     }
 }

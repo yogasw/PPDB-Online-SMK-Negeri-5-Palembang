@@ -21,4 +21,19 @@ class M_ajax extends CI_Model
         $query = $this->db->get();
         return $query;
     }
+
+    public function update_siswa($data)
+    {
+        $this->db->update_batch('siswa', $data, 'nisn');
+    }
+
+    public function tambah_siswa($data)
+    {
+        $this->db->insert_batch('siswa', $data);
+    }
+
+    public function tambah_nilai_un($data)
+    {
+        $this->db->insert_batch('nilai_un', $data);
+    }
 }

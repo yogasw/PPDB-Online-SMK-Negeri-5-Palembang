@@ -247,7 +247,7 @@
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai IPA</label>
-                                        <input name="nlai_ipa" id="nlai_ipa" type="text" class="form-control"
+                                        <input name="nilai_ipa" id="nilai_ipa" type="text" class="form-control"
                                                value="<?php echo($u['ipa']) ?>"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -281,7 +281,6 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" id="id" name="id" value="<?php //echo($u['id']) ?>">
                     <div class="wizard-footer">
                         <div class="pull-right">
                             <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" value="Next">
@@ -476,24 +475,34 @@
         }
 
         $('#finish').click(function () {
+            var nama_lengkap = $('#nama_lengkap').val();
+            var no_peserta = $('#no_peserta').val();
+            var nisn = $('#nisn').val();
+            var tahun_lulus = $('#tahun_lulus').val();
+            var jurusan = $('#jurusan').val();
+            var asal_sekolah = $('#asal_sekolah').val();
+            var jk = $('#jk').val();
+            var agama = $('#agama').val();
+            var tempat_lahir = $('#tempat_lahir').val();
+            var tanggal_lahir = $('#tahun').val() + '-' + $('#bulan').val() + '-' + $('#tanggal').val();
+            console.log(tanggal_lahir);
+            var no_hp = $('#no_hp').val();
+            var email = $('#email').val();
+            var alamat = $('#alamat').val();
+            var negara = $('#negara').val();
+            var provinsi = $('#provinsi').val();
+            var negara = $('#negara').val();
+            var kota = $('#kota').val();
+            var nilai_ipa = $('#nilai_ipa').val();
+            var nilai_ips = $('#nilai_ips').val();
+            var nilai_bhs_indonesia = $('#nilai_bhs_indonesia').val();
+            var nilai_bhs_inggris = $('#nilai_bhs_inggris').val();
+
             if (
-                $('#jk').val() == "" ||
-                $('#nama_lengkap').val() == "" ||
-                $('#name_tag').val() == "" ||
-                $('#tempat_lahir').val() == "" ||
-                $('#tanggal').val() == "" ||
-                $('#bulan').val() == "" ||
-                $('#tahun').val() == "" ||
-                $('#agama').val() == "" ||
-                $('#alamat').val() == "" ||
-                $('#kota').val() == "" ||
-                $('#provinsi').val() == "" ||
-                $('#negara').val() == "" ||
-                $('#no_hp').val() == "" ||
-                $('#email').val() == "" ||
-                $('#instansi').val() == "" ||
-                $('#jabatan').val() == "" ||
-                $('#id_event').val() == "") {
+                nilai_ipa == "" ||
+                nilai_ipa == "" ||
+                nilai_bhs_indonesia == "" ||
+                nilai_bhs_inggris == "") {
                 swal({
                     title: 'Maaf Cuy!',
                     text: 'Lengkapi semua datanya dulu ya',
@@ -502,9 +511,6 @@
                     buttonsStyling: false
                 })
             } else {
-                var no_reg = $('#no_reg').val();
-                var id_event = $('#id_event').val();
-
                 swal({
                     title: 'Silahkan Tunggu..',
                     text: 'Data Sedang Di Proses..!',
@@ -515,28 +521,32 @@
                 });
 
                 $.post(
-                    '<?php //echo(base_url() . "ajax/update_data") ?>',
+                    '<?php echo(base_url() . "ajax/ubahdata_siswa") ?>',
                     {
-                        id: $('#id').val(),
-                        no_reg: $('#no_reg').val(),
-                        jk: $('#jk').val(),
-                        nama_lengkap: $('#nama_lengkap').val(),
-                        name_tag: $('#name_tag').val(),
-                        tempat_lahir: $('#tempat_lahir').val(),
-                        tanggal_lahir: $('#tahun').val() + '-' + $('#bulan').val() + '-' + $('#tanggal').val(),
-                        agama: $('#agama').val(),
-                        alamat: $('#alamat').val(),
-                        kota: $('#kota').val(),
-                        provinsi: $('#provinsi').val(),
-                        negara: $('#negara').val(),
-                        no_hp: $('#no_hp').val(),
-                        email: $('#email').val(),
-                        instansi: $('#instansi').val(),
-                        jabatan: $('#jabatan').val(),
-                        id_event: $('#id_event').val()
+                        nama_lengkap: nama_lengkap,
+                        no_peserta: no_peserta,
+                        nisn: nisn,
+                        tahun_lulus: tahun_lulus,
+                        jurusan: jurusan,
+                        asal_sekolah: asal_sekolah,
+                        jk: jk,
+                        agama: agama,
+                        tempat_lahir: tempat_lahir,
+                        tanggal_lahir: tanggal_lahir,
+                        no_hp: no_hp,
+                        email: email,
+                        alamat: alamat,
+                        negara: negara,
+                        provinsi: provinsi,
+                        negara: negara,
+                        kota: kota,
+                        nilai_ipa: nilai_ipa,
+                        nilai_ips: nilai_ips,
+                        nilai_bhs_indonesia: nilai_bhs_indonesia,
+                        nilai_bhs_inggris: nilai_bhs_inggris
+
                     },
                     function (data) {
-                        console.log(data["status"]);
                         if (data["status"]) {
                             (swal({
                                 title: 'Mantap Cuy!',
@@ -546,7 +556,7 @@
                                 showConfirmButton: false,
                                 buttonsStyling: false
                             }))
-                            window.location = '<?php //echo(base_url() . "register?id_event=")?>' + id_event;
+                            window.location = '<?php echo (base_url()) . "pmb/pendaftaran"?>';
                         }
                         else {
                             swal({

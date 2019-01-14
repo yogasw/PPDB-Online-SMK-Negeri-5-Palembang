@@ -8,7 +8,7 @@
             <div class="col-xs-4"></div>
             <div class="col-xs-4"></div>
             <div class="col-xs-4 text-right">
-                <button class="btn" onclick="window.location.href='<?php echo(base_url() . 'pmb/tambahdata') ?>'">
+                <button class="btn" onclick="window.location.href='<?php echo(base_url() . 'pmb/tambahdata_siswa') ?>'">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
@@ -97,44 +97,5 @@
 
 
                 });
-            }
-
-            function edit_jurusan(a, b) {
-                swal({
-                    title: 'Edit Jurusan',
-                    html: '<div class="form-group">' +
-                    '<input id="id_jurusan" type="text" placeholder="ID" class="form-control" value="' + a + '" disabled/>' +
-                    '</div>' + '<input id="nama_jurusan" type="text" placeholder="Nama Jurusan" class="form-control" value="' + b + '"/>' +
-                    '</div>',
-                    showCancelButton: true,
-                    confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',
-                    buttonsStyling: false
-                }).then(function (result) {
-                    var id = $('#id_jurusan').val();
-                    var jurusan = $('#nama_jurusan').val();
-
-                    $.ajax({
-                        url: "<?=base_url('/admin/jurusan')?>",
-                        type: "POST",
-                        data: {id: id, jurusan: jurusan, type: 'editdata'},
-                        dataType: "html",
-                        success: function () {
-                            swal({
-                                type: 'success',
-                                html: 'Jurusan Yang Anda Masukan: <strong>' +
-                                $('#nama_jurusan').val() +
-                                '</strong>',
-                                confirmButtonClass: 'btn btn-success',
-                                buttonsStyling: false,
-                            });
-                            location.reload(true);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            swal("Error!", "Please try again", "error");
-                        }
-                    });
-                }).catch(swal.noop)
-
             }
         </script>
