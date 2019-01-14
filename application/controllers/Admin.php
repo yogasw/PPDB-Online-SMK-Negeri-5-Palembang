@@ -59,6 +59,14 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
+    public function admin_new()
+    {
+        $this->load->view('admin/header');
+        $this->load->view('admin/sidebar');
+        $this->load->view('admin/isi');
+        $this->load->view('admin/footer');
+    }
+
     public function jurusan()
     {
         // didapat dari data ajax
