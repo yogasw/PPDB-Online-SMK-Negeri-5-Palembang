@@ -1,172 +1,235 @@
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
+<link href="<?php echo(base_url()) ?>assets/css/jquery.classycountdown.css" rel="stylesheet" type="text/css">
+<link href="<?php echo(base_url()) ?>assets/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="<?php echo(base_url()) ?>assets/js/jquery.knob.js"></script>
+<script src="<?php echo(base_url()) ?>assets/js/jquery.throttle.js"></script>
+<script src="<?php echo(base_url()) ?>assets/js/jquery.classycountdown.js"></script>
+
+<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg"
+     xmlns="http://www.w3.org/1999/html">
     <div class="container">
         <div class="card wizard-card" data-color="rose" id="wizardProfile">
-            <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
+            <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">
                         FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
                     </h3>
                     <h5>Tambah Data Baru.</h5>
                 </div>
-
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="col-xs-4">
+                                        <h4>Nomor Soal</h4>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div id="timer" class="timer"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="card-content">
+                                        <div class="row">
+                                            <div id="example-basic">
+                                                <?php $jmlh_data = 0 ?>
+                                                <?php foreach ($data as $u) { ?>
+                                                    <?php $jmlh_data = $jmlh_data + 1 ?>
+                                                    <h3><?php echo($u['id']) ?></h3>
+                                                    <section>
+                                                        <h5><?php echo($jmlh_data) ?>. <?php echo($u['soal']) ?></h5>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" value="a"
+                                                                       name="<?php echo($u['id']) ?>"><a>A. <?php echo($u['opsi_a']) ?></a>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" value="b"
+                                                                       name="<?php echo($u['id']) ?>"><a>B. <?php echo($u['opsi_b']) ?></a>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" value="c"
+                                                                       name="<?php echo($u['id']) ?>"><a>C. <?php echo($u['opsi_c']) ?></a>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" value="d"
+                                                                       name="<?php echo($u['id']) ?>"><a>D. <?php echo($u['opsi_d']) ?></a>
+                                                            </label>
+                                                        </div>
+                                                    </section>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="col-xs-8">
+                                        <h4>Nomor Soal</h4>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button onclick="" id="buttton" type="submit" class="btn btn-success selesai">
+                                            Selesai
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <?php $jmlh_data = 0 ?>
+                                    <?php foreach ($data as $u) { ?>
+                                        <div class="col-xs-3 nm_soal">
+                                            <?php $jmlh_data = $jmlh_data + 1; ?>
+                                            <a id="<?php echo("no" . $jmlh_data) ?>"
+                                               onclick="goto(<?php echo($jmlh_data) ?>)" <span
+                                                    class="label label-default"><?php echo($jmlh_data) ?></span></a>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
 </div>
-
 <script type="text/javascript">
-    $(document).ready(function () {
-        var $validator = $('.wizard-card form').validate({
-            rules: {
-                firstname: {
-                    required: true,
-                    minlength: 3
-                },
-                lastname: {
-                    required: true,
-                    minlength: 3
-                },
-                email: {
-                    required: true,
-                    minlength: 3,
-                }
-            },
+    var terjawab;
+    $("#example-basic").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        autoFocus: true,
+        enableFinishButton: false
+    });
+    $('ul[role="tablist"]').hide();
+    $('ul[role="menuitem"]').hide();
 
-            errorPlacement: function (error, element) {
-                $(element).parent('div').addClass('has-error');
+    $(function () {
+        $('input[type="radio"]').click(function () {
+            if ($(this).is(':checked')) {
+                var id = $("#example-basic").steps("getCurrentIndex") + 1;
+                document.getElementById("no" + id).classList.remove('label-default');
+                document.getElementById("no" + id).classList.add('label-danger');
             }
         });
-        // Wizard Initialization
-        $('.wizard-card').bootstrapWizard({
-            'tabClass': 'nav nav-pills',
-            'nextSelector': '.btn-next',
-            'previousSelector': '.btn-previous',
+    });
 
-            onNext: function (tab, navigation, index) {
-                var $valid = $('.wizard-card form').valid();
-                if (!$valid) {
-                    $validator.focusInvalid();
-                    return false;
-                }
-            },
 
-            onInit: function (tab, navigation, index) {
-
-                //check number of tabs and fill the entire row
-                var $total = navigation.find('li').length;
-                $width = 100 / $total;
-                var $wizard = navigation.closest('.wizard-card');
-
-                $display_width = $(document).width();
-
-                if ($display_width < 600 && $total > 3) {
-                    $width = 50;
-                }
-
-                navigation.find('li').css('width', $width + '%');
-                $first_li = navigation.find('li:first-child a').html();
-                $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
-                $('.wizard-card .wizard-navigation').append($moving_div);
-                refreshAnimation($wizard, index);
-                $('.moving-tab').css('transition', 'transform 0s');
-            },
-
-            onTabClick: function (tab, navigation, index) {
-                var $valid = $('.wizard-card form').valid();
-
-                if (!$valid) {
-                    return false;
-                } else {
-                    return true;
-                }
-            },
-
-            onTabShow: function (tab, navigation, index) {
-                var $total = navigation.find('li').length;
-                var $current = index + 1;
-
-                var $wizard = navigation.closest('.wizard-card');
-
-                // If it's the last tab then hide the last button and show the finish instead
-                if ($current >= $total) {
-                    $($wizard).find('.btn-next').hide();
-                    $($wizard).find('.btn-finish').show();
-                } else {
-                    $($wizard).find('.btn-next').show();
-                    $($wizard).find('.btn-finish').hide();
-                }
-
-                button_text = navigation.find('li:nth-child(' + $current + ') a').html();
-
-                setTimeout(function () {
-                    $('.moving-tab').text(button_text);
-                }, 150);
-
-                var checkbox = $('.footer-checkbox');
-
-                if (!index == 0) {
-                    $(checkbox).css({
-                        'opacity': '0',
-                        'visibility': 'hidden',
-                        'position': 'absolute'
-                    });
-                } else {
-                    $(checkbox).css({
-                        'opacity': '1',
-                        'visibility': 'visible'
-                    });
-                }
-
-                refreshAnimation($wizard, index);
+    $.fn.steps.setStep = function (step) {
+        var currentIndex = $(this).steps('getCurrentIndex');
+        for (var i = 0; i < Math.abs(step - currentIndex); i++) {
+            if (step > currentIndex) {
+                $(this).steps('next');
             }
-        });
-
-        $('[data-toggle="wizard-radio"]').click(function () {
-            wizard = $(this).closest('.wizard-card');
-            wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
-            $(this).addClass('active');
-            $(wizard).find('[type="radio"]').removeAttr('checked');
-            $(this).find('[type="radio"]').attr('checked', 'true');
-        });
-
-        $('[data-toggle="wizard-checkbox"]').click(function () {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).find('[type="checkbox"]').removeAttr('checked');
-            } else {
-                $(this).addClass('active');
-                $(this).find('[type="checkbox"]').attr('checked', 'true');
+            else {
+                $(this).steps('previous');
             }
-        });
-
-        $('.set-full-height').css('height', 'auto');
-
-        function refreshAnimation($wizard, index) {
-            total_steps = $wizard.find('li').length;
-            move_distance = $wizard.width() / total_steps;
-            step_width = move_distance;
-            move_distance *= index;
-
-            $current = index + 1;
-
-            if ($current == 1) {
-                move_distance -= 8;
-            } else if ($current == total_steps) {
-                move_distance += 8;
-            }
-
-
-            $wizard.find('.moving-tab').css('width', step_width);
-            $('.moving-tab').css({
-                'transform': 'translate3d(' + move_distance + 'px, 0, 0)',
-                'transition': 'all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1)'
-
-            });
         }
+    };
 
-        $('#finish').click(function () {
+    function goto($id) {
+        $("#example-basic").steps("setStep", ($id - 1));
+    }
 
+    var frm = $('#myform');
+    frm.submit(function (ev) {
 
+        var total = 0;
+        $(":radio:checked").each(function () {
+            total += 1;
         });
+        if (total ==<?php echo($jmlh_data)?>) {
+            kirimjawaban(this);
+        } else {
+            swal({
+                title: 'Jawaban gagal di kirim!!',
+                text: "Maaf jawaban anda gagal di kirim karena soal belum di jawab semuanya!!",
+                type: 'error',
+                showConfirmButton: false,
+                buttonsStyling: false
+            })
+        }
+        ev.preventDefault();
+    });
+
+    function kirimjawaban() {
+        swal({
+            title: 'Kirim Jawaban!!',
+            text: "Apakah Anda yakin untuk mengirim jawaban anda?",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger',
+            confirmButtonText: 'Iya, Kirim!',
+            buttonsStyling: false
+        }).then(function () {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function () {
+                    swal({
+                        title: 'Berhasil!',
+                        text: 'Jawaban Berhasil Di Kirim!!',
+                        type: 'success',
+                        showConfirmButton: false,
+                        buttonsStyling: false
+                    });
+                    //table.ajax.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal("Error!", "Please try again", "error");
+                }
+            });
+        });
+    }
+
+    function disableF5(e) {
+        if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault();
+    };
+
+    $(document).ready(function () {
+        // $(document).on("keydown", disableF5);
+        $('#timer').ClassyCountdown({
+            theme: "flat-colors-black",
+            end: $.now() + 1000,
+            onEndCallback: function () {
+                swal({
+                    title: 'Tunggu!',
+                    text: 'Silahkan Tunggu Sebentar',
+                    type: 'success',
+                    confirmButtonClass: "btn btn-success",
+                    showConfirmButton: false,
+                    buttonsStyling: false
+                }).then(function () {
+                    $.ajax({
+                        type: frm.attr('method'),
+                        url: frm.attr('action'),
+                        data: frm.serialize(),
+                        success: function () {
+                            swal({
+                                title: 'Berhasil!',
+                                text: 'Jawaban Berhasil Di Kirim!!',
+                                type: 'success',
+                                confirmButtonClass: "btn btn-success",
+                                buttonsStyling: false
+                            });
+                            //table.ajax.reload();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            swal("Error!", "Please try again", "error");
+                        }
+                    });
+                });
+            }
+        });
+    });
 
 </script>

@@ -222,4 +222,15 @@ class Ajax extends CI_Controller
 
         echo json_encode($respon);
     }
+
+    public function kirim_quiz()
+    {
+        $answer = array();
+        foreach ($_POST as $key => $value) {
+            array_push($answer, $key . ":" . $value);
+        }
+        $string = rtrim(implode(',', $answer), ',');
+        log_app(print_r($string, true));
+
+    }
 }

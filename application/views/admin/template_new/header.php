@@ -13,7 +13,10 @@
     <link href="<?php echo(base_url())?>assets/css/demo.css" rel="stylesheet" />
     <link href="<?php echo(base_url())?>assets/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo(base_url())?>assets/css/google-roboto-300-700.css" rel="stylesheet" />
+    <link href="<?php echo(base_url()) ?>assets/css/jquery.steps.css" rel="stylesheet"/>
+
     <script src="<?php echo(base_url()) ?>assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="<?php echo(base_url()) ?>assets/js/jquery.steps.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="<?php echo(base_url()) ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo(base_url()) ?>assets/js/material.min.js" type="text/javascript"></script>

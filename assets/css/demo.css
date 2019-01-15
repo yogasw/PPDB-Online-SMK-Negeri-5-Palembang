@@ -422,3 +422,27 @@
     padding-top: 50px;
     padding-right: 20px;
 }
+
+.nm_soal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wizard .content {
+    min-height: 100px;
+}
+
+.wizard .content > .body {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    position: absolute;
+}
+
+.wizard .content .body.current {
+    position: relative;
+}
+
+.content.clearfix {
+    background: bottom;
+}

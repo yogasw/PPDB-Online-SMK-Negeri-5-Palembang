@@ -44,9 +44,10 @@ class Pmb extends CI_Controller
 
     public function quizzes()
     {
+        $x['data'] = $this->m_pmb->getsoal();
         $this->load->view('admin/template_new/header');
         $this->load->view('admin/template_new/sidebar');
-        $this->load->view('pmb/quizzes');
+        $this->load->view('pmb/quizzes', $x);
         $this->load->view('admin/template_new/footer');
     }
 }

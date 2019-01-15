@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery.steps.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Pmb.php" afterPath="$PROJECT_DIR$/application/controllers/Pmb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" afterPath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/M_ajax.php" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" afterPath="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/pmb/data_siswa.php" afterPath="$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/M_pmb.php" afterPath="$PROJECT_DIR$/application/models/M_pmb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/template_new/header.php" afterPath="$PROJECT_DIR$/application/views/admin/template_new/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pmb/quizzes.php" afterPath="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/demo.css" afterPath="$PROJECT_DIR$/assets/css/demo.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,82 +28,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="quizzes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/pmb/quizzes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding>
-                <element signature="e#814#1342#0#HTML" expanded="false" />
-                <element signature="e#1420#4384#0#HTML" expanded="false" />
-                <element signature="e#4448#4768#0#HTML" expanded="false" />
-                <element signature="e#4835#5166#0#HTML" expanded="false" />
-                <element signature="e#5274#5948#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/pmb/pendaftaran.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pmb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Pmb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Ajax.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="165" column="36" lean-forward="true" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
+            <state relative-caret-position="483">
+              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
               <folding>
                 <element signature="n#__construct#0;n#Ajax#0;n#!!top" expanded="false" />
                 <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" expanded="false" />
                 <element signature="n#data_lokasi#0;n#Ajax#0;n#!!top" expanded="false" />
+                <element signature="n#ubahdata_siswa#0;n#Ajax#0;n#!!top" expanded="false" />
+                <element signature="n#tambah_siswa#0;n#Ajax#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="M_ajax.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
+      <file leaf-file-name="log-2019-01-15.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-15.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="49" />
+            <state relative-caret-position="415">
+              <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log-2019-01-14.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-14.php">
+      <file leaf-file-name="M_pmb.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="432">
+              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding>
+                <marker date="1547519439456" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,23 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>show_404</find>
-      <find>error_views_path</find>
-      <find>.htm</find>
-      <find>DataTable</find>
-      <find>overflow</find>
-      <find>log_threshold</find>
-      <find>from</find>
-      <find>skin</find>
-      <find>admin_</find>
-      <find>../../</find>
-      <find>sort</find>
-      <find>asem</find>
-      <find>jrusan</find>
-      <find>search</find>
-      <find>/assets</find>
-      <find>get</find>
-      <find>log</find>
       <find>orde</find>
       <find>delete-jurusan</find>
       <find>echo</find>
@@ -142,6 +83,23 @@
       <find>pos</find>
       <find>data</find>
       <find>nisn</find>
+      <find>Don't</find>
+      <find>update_data</find>
+      <find>form</find>
+      <find>&lt;form action=&quot;&lt;?php //echo base_url(&quot;ajax/update_data&quot;); ?&gt;&quot; method=&quot;post&quot; novalidate=&quot;novalidate&quot;&gt;</find>
+      <find>&lt;/f</find>
+      <find>Soal NO 40</find>
+      <find>Try the keyboard navigation by clicking arrow left or right</find>
+      <find>height</find>
+      <find>stepTitles.eq(state.currentIndex)</find>
+      <find>height: 95%</find>
+      <find>radio</find>
+      <find>sele</find>
+      <find>sel</find>
+      <find>.wizard &gt; .content</find>
+      <find>min-height: 35em;</find>
+      <find>countdown18</find>
+      <find>$jmlh_data$jmlh_data</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;?php echo(base_url())?&gt;assets</replace>
@@ -165,10 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/core.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/core.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/template/data_siswa.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/template/jurusan.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template/kriteria.php" />
         <option value="$PROJECT_DIR$/application/models/M_datasiswa.php" />
         <option value="$PROJECT_DIR$/assets/js/demo.js" />
@@ -198,24 +152,28 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/controllers/pmb.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template_new/sidebar.php" />
-        <option value="$PROJECT_DIR$/assets/css/demo.css" />
         <option value="$PROJECT_DIR$/application/views/pmb/update_data.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/admin/data_siswa.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template_new/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/template_new/header.php" />
         <option value="$PROJECT_DIR$/application/models/M_pendaftaran.php" />
-        <option value="$PROJECT_DIR$/application/models/M_pmb.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/data_siswa.php" />
         <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
-        <option value="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
-        <option value="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php" />
         <option value="$PROJECT_DIR$/application/controllers/Pmb.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/template_new/header.php" />
+        <option value="$PROJECT_DIR$/assets/js/jquery.steps.js" />
+        <option value="$PROJECT_DIR$/assets/css/demo.css" />
+        <option value="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" />
+        <option value="$PROJECT_DIR$/application/models/M_pmb.php" />
+        <option value="$PROJECT_DIR$/assets/css/jquery.steps.css" />
+        <option value="$USER_HOME$/Downloads/Compressed/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/index.html" />
         <option value="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2019-01-15.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
       </list>
     </option>
   </component>
@@ -288,6 +246,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skripsi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,11 +596,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547471166471</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pendaftaran Fix, selanjutnya ujian online">
+      <created>1547479649061</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547479649061</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135468000" />
+    <option name="totallyTimeSpent" value="167378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,7 +627,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1982906" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1982906" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -696,45 +711,25 @@
     <MESSAGE value="Tambah new Admin" />
     <MESSAGE value="Home Fix. Pendaftaran table dan ajax fix, hapus data fix. selanjutnya edit dan tambah data" />
     <MESSAGE value="Form Ubah data Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form Ubah data Fix" />
+    <MESSAGE value="Pendaftaran Fix, selanjutnya ujian online" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pendaftaran Fix, selanjutnya ujian online" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php</url>
+          <line>120</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-notify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="404" column="0" lean-forward="true" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="5" column="1307" lean-forward="true" selection-start-line="5" selection-start-column="1307" selection-end-line="5" selection-end-column="1307" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery-1.10.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery-3.1.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/perfect-scrollbar.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -806,6 +801,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
           <caret line="124" column="56" lean-forward="false" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,14 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="420" column="0" lean-forward="false" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -962,31 +950,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/template_new/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="36" column="69" lean-forward="false" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-          <folding>
-            <marker date="1547471151798" expanded="true" signature="38:122" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <marker date="1547471151727" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,38 +966,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/data_siswa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="165" column="36" lean-forward="true" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
-          <folding>
-            <element signature="n#__construct#0;n#Ajax#0;n#!!top" expanded="false" />
-            <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" expanded="false" />
-            <element signature="n#data_lokasi#0;n#Ajax#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-14.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="36" column="49" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1042,73 +982,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php">
+    <entry file="file://$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="296">
+          <caret line="35" column="87" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-14.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery.steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="873" column="92" lean-forward="true" selection-start-line="873" selection-start-column="92" selection-end-line="873" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="417" column="8" lean-forward="true" selection-start-line="417" selection-start-column="8" selection-end-line="417" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Pmb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="330">
+          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/data_siswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="85" column="34" lean-forward="true" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pmb/pendaftaran.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="432">
+          <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+          <folding>
+            <element signature="e#3047#4473#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="476" column="8" lean-forward="false" selection-start-line="476" selection-start-column="8" selection-end-line="476" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php">
+    <entry file="file://$PROJECT_DIR$/assets/css/jquery.steps.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="486" column="33" lean-forward="false" selection-start-line="486" selection-start-column="33" selection-end-line="486" selection-end-column="104" />
+        <state relative-caret-position="336">
+          <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Compressed/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/template_new/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="47" />
           <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#8;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#9;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#9;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#10;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#11;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#11;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#12;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#13;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#22941#25905#0#HTML" expanded="false" />
-            <element signature="e#25969#26289#0#HTML" expanded="false" />
-            <element signature="e#26356#26687#0#HTML" expanded="false" />
-            <element signature="e#26777#27110#0#HTML" expanded="false" />
+            <marker date="1547498077000" expanded="true" signature="38:122" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pmb/quizzes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="336">
+          <caret line="181" column="23" lean-forward="false" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
           <folding>
-            <element signature="e#814#1342#0#HTML" expanded="false" />
-            <element signature="e#1420#4384#0#HTML" expanded="false" />
-            <element signature="e#4448#4768#0#HTML" expanded="false" />
-            <element signature="e#4835#5166#0#HTML" expanded="false" />
-            <element signature="e#5274#5948#0#HTML" expanded="false" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <marker date="1547525466719" expanded="true" signature="5996:10836" ph="..." />
+            <marker date="1547525466719" expanded="true" signature="6334:10835" ph="..." />
+            <marker date="1547525466719" expanded="true" signature="6384:6542" ph="{&quot;headerTag&quot;: &quot;h3&quot;...}" />
+            <marker date="1547525466719" expanded="true" signature="7054:7097" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <marker date="1547519439456" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding>
+            <element signature="n#__construct#0;n#Ajax#0;n#!!top" expanded="false" />
+            <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" expanded="false" />
+            <element signature="n#data_lokasi#0;n#Ajax#0;n#!!top" expanded="false" />
+            <element signature="n#ubahdata_siswa#0;n#Ajax#0;n#!!top" expanded="false" />
+            <element signature="n#tambah_siswa#0;n#Ajax#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-15.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
