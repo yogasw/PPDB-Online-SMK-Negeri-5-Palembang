@@ -77,3 +77,26 @@ if ( ! function_exists('hash_ci')) {
      return md5(sha1($string));
     }
 }
+
+if (!function_exists('post_to_coma')) {
+    function post_to_coma($string)
+    {
+        $answer = array();
+        foreach ($string as $key => $value) {
+            array_push($answer, $key . ":" . $value);
+        }
+        return rtrim(implode(',', $answer), ',');
+    }
+}
+
+
+if (!function_exists('post_to_array')) {
+    function post_to_array($string)
+    {
+        $answer = array();
+        foreach ($string as $key => $value) {
+            $answer[] = array("key" => $key, "value" => $value);
+        }
+        return $answer;
+    }
+}

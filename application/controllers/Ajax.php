@@ -225,12 +225,32 @@ class Ajax extends CI_Controller
 
     public function kirim_quiz()
     {
-        $answer = array();
-        foreach ($_POST as $key => $value) {
-            array_push($answer, $key . ":" . $value);
-        }
-        $string = rtrim(implode(',', $answer), ',');
-        log_app(print_r($string, true));
+        $nisn = '141420213';
+        $jumlah_benar = 0;
+        $jumlah_bobot = 0;
+        $nilai = 0;
+        $status = "selesai";
+        $jawaban = post_to_array($_POST);
 
+        foreach ($jawaban as $row) {
+            $benar = $this->m_ajax->getjawaban($row['key']);
+            if ((strtolower($benar->jawaban)) == strtolower($row['value'])) {
+                $nilai = $nilai + 1;
+                $jumlah_bobot = $jumlah_bobot + $benar->bobot;
+                $jumlah_benar = $jumlah_benar + 1;
+            }
+        }
+
+        $data = array(
+            'nisn' => $nisn,
+            'list_jawaban' => post_to_coma($_POST),
+            'jml_benar' => $jumlah_benar,
+            'nilai' => $nilai,
+            'nilai_bobot' => $jumlah_bobot,
+            'tgl_mulai' => date('Y-m-d H:i:s'),
+            'tgl_selesai' => $date = date('Y-m-d H:i:s'),
+            'status' => $status
+        );
+        $this->m_ajax->insert_hasil_mb($data, $nisn);
     }
 }

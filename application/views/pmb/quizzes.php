@@ -61,6 +61,12 @@
                                                                        name="<?php echo($u['id']) ?>"><a>D. <?php echo($u['opsi_d']) ?></a>
                                                             </label>
                                                         </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" value="e"
+                                                                       name="<?php echo($u['id']) ?>"><a>E. <?php echo($u['opsi_e']) ?></a>
+                                                            </label>
+                                                        </div>
                                                     </section>
                                                 <?php } ?>
                                             </div>

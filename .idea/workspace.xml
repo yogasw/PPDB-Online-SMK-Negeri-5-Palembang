@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery.steps.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Pmb.php" afterPath="$PROJECT_DIR$/application/controllers/Pmb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" afterPath="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/log-2019-01-15.php" afterPath="$PROJECT_DIR$/application/logs/log-2019-01-15.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/M_ajax.php" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/M_pmb.php" afterPath="$PROJECT_DIR$/application/models/M_pmb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/template_new/header.php" afterPath="$PROJECT_DIR$/application/views/admin/template_new/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pmb/quizzes.php" afterPath="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/demo.css" afterPath="$PROJECT_DIR$/assets/css/demo.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="Ajax.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+            <state relative-caret-position="472">
+              <caret line="231" column="26" lean-forward="false" selection-start-line="231" selection-start-column="19" selection-end-line="231" selection-end-column="26" />
               <folding>
                 <element signature="n#__construct#0;n#Ajax#0;n#!!top" expanded="false" />
                 <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" expanded="false" />
@@ -44,11 +42,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="M_ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="log-2019-01-15.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-15.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,10 +65,10 @@
       <file leaf-file-name="M_pmb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="398">
+              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
               <folding>
-                <marker date="1547519439456" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
+                <marker date="1547535295391" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
               </folding>
             </state>
           </provider>
@@ -70,8 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>orde</find>
-      <find>delete-jurusan</find>
       <find>echo</find>
       <find>description_lokasidescription_lokasi</find>
       <find>indone</find>
@@ -100,6 +106,8 @@
       <find>min-height: 35em;</find>
       <find>countdown18</find>
       <find>$jmlh_data$jmlh_data</find>
+      <find>1414</find>
+      <find>bobot</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;?php echo(base_url())?&gt;assets</replace>
@@ -155,11 +163,9 @@
         <option value="$PROJECT_DIR$/application/views/pmb/update_data.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/admin/data_siswa.php" />
-        <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template_new/footer.php" />
         <option value="$PROJECT_DIR$/application/models/M_pendaftaran.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/data_siswa.php" />
-        <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php" />
         <option value="$PROJECT_DIR$/application/controllers/Pmb.php" />
@@ -168,12 +174,14 @@
         <option value="$PROJECT_DIR$/assets/js/jquery.steps.js" />
         <option value="$PROJECT_DIR$/assets/css/demo.css" />
         <option value="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" />
-        <option value="$PROJECT_DIR$/application/models/M_pmb.php" />
         <option value="$PROJECT_DIR$/assets/css/jquery.steps.css" />
         <option value="$USER_HOME$/Downloads/Compressed/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/index.html" />
-        <option value="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
-        <option value="$PROJECT_DIR$/application/logs/log-2019-01-15.php" />
+        <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
+        <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
+        <option value="$PROJECT_DIR$/application/models/M_pmb.php" />
+        <option value="$PROJECT_DIR$/application/logs/log-2019-01-15.php" />
+        <option value="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
       </list>
     </option>
   </component>
@@ -603,11 +611,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547479649061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Soal fix, selanjutnya jawaban simpan di db">
+      <created>1547526651826</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547526651826</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Soal fix, selanjutnya jawaban simpan di db">
+      <created>1547526715105</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1547526715105</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167378000" />
+    <option name="totallyTimeSpent" value="176178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,26 +674,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42662632" sideWeight="0.52649575" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15885022" sideWeight="0.47350428" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42662632" sideWeight="0.52649575" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -712,7 +714,8 @@
     <MESSAGE value="Home Fix. Pendaftaran table dan ajax fix, hapus data fix. selanjutnya edit dan tambah data" />
     <MESSAGE value="Form Ubah data Fix" />
     <MESSAGE value="Pendaftaran Fix, selanjutnya ujian online" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pendaftaran Fix, selanjutnya ujian online" />
+    <MESSAGE value="Soal fix, selanjutnya jawaban simpan di db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Soal fix, selanjutnya jawaban simpan di db" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -724,19 +727,17 @@
           <line>120</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/helpers/site_helper.php</url>
+          <line>56</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/perfect-scrollbar.jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/demo,false.js" />
     <entry file="file://$PROJECT_DIR$/assets/js/dataTables.bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -926,14 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/template_new/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -962,14 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="36" column="49" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1069,42 +1054,33 @@
         <state relative-caret-position="204">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="47" />
           <folding>
-            <marker date="1547498077000" expanded="true" signature="38:122" ph="..." />
+            <marker date="1547526632770" expanded="true" signature="38:122" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/quizzes.php">
+    <entry file="file://$PROJECT_DIR$/system/helpers/array_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="181" column="23" lean-forward="false" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="23" />
-          <folding>
-            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <marker date="1547525466719" expanded="true" signature="5996:10836" ph="..." />
-            <marker date="1547525466719" expanded="true" signature="6334:10835" ph="..." />
-            <marker date="1547525466719" expanded="true" signature="6384:6542" ph="{&quot;headerTag&quot;: &quot;h3&quot;...}" />
-            <marker date="1547525466719" expanded="true" signature="7054:7097" ph="{...}" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="322">
+          <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
           <folding>
-            <marker date="1547519439456" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
+            <element signature="e#1190#1692#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="472">
+          <caret line="231" column="26" lean-forward="false" selection-start-line="231" selection-start-column="19" selection-end-line="231" selection-end-column="26" />
           <folding>
             <element signature="n#__construct#0;n#Ajax#0;n#!!top" expanded="false" />
             <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" expanded="false" />
@@ -1115,10 +1091,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <marker date="1547535295391" expanded="true" signature="181:200" ph="SELECT * FRO... siswa" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pmb/quizzes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="62" column="62" lean-forward="true" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/logs/log-2019-01-15.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
