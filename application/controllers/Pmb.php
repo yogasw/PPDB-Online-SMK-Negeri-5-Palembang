@@ -24,6 +24,14 @@ class Pmb extends CI_Controller
         $this->load->view('admin/template_new/footer');
     }
 
+    public function wawancara()
+    {
+        $this->load->view('admin/template_new/header');
+        $this->load->view('admin/template_new/sidebar');
+        $x['data'] = $this->m_pmb->show_data();
+        $this->load->view('pmb/wawancara', $x);
+        $this->load->view('admin/template_new/footer');
+    }
     public function ubahdata_siswa()
     {
         $nisn = $this->input->get('nisn');

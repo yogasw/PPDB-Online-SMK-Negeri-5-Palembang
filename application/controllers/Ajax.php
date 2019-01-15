@@ -253,4 +253,12 @@ class Ajax extends CI_Controller
         );
         $this->m_ajax->insert_hasil_mb($data, $nisn);
     }
+
+    public function nilai_wawancara()
+    {
+        $nisn = $this->input->post('nisn');
+        $data = $this->m_ajax->getwawancara($nisn);
+        print_r(json_encode($data));
+    }
+
 }

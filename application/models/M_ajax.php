@@ -72,4 +72,16 @@ class M_ajax extends CI_Model
             $this->db->insert('hasil_mb', $data);
         }
     }
+
+
+    public function getwawancara($nisn)
+    {
+        $this->db->select('*');
+        $this->db->from('nilai_wawancara');
+        $this->db->where('nisn', $nisn);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        log_app(print_r($query, true));
+        return $query->result_array();
+    }
 }

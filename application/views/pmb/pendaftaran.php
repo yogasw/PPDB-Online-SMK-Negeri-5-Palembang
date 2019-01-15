@@ -1,21 +1,23 @@
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url())?>assets/img/register.jpg"><div class="container">
-<div class="col-md-12">
-    <div class="card">
-        <h2 class="card-title text-center">FORM PENDAFTARAN SISWA BARU</h2>
-        <h2 class="card-title text-center">SMK 05 PALEMBANG</h2>
+<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card">
+                <h2 class="card-title text-center">FORM PENDAFTARAN SISWA BARU</h2>
+                <h2 class="card-title text-center">SMK 05 PALEMBANG</h2>
 
-        <div class="row bt-register">
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4 text-right">
-                <button class="btn" onclick="window.location.href='<?php echo(base_url() . 'pmb/tambahdata_siswa') ?>'">
+                <div class="row bt-register">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 text-right">
+                        <button class="btn"
+                                onclick="window.location.href='<?php echo(base_url() . 'pmb/tambahdata_siswa') ?>'">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
-                        Tambah Data
-                    </button>
-            </div>
-        </div>
+                            Tambah Data
+                        </button>
+                    </div>
+                </div>
                 <div class="card-content">
                     <div class="table-responsive">
                         <table id="datatables" class="table table-striped" width="100%">
@@ -36,66 +38,68 @@
             </div>
         </div>
     </div>
-        <script type="text/javascript">
-            var table;
-            window.onload = function () {
-                table = $('#datatables').DataTable( {
-                        "bProcessing": true,
-                        "bServerSide": true,
-                        ajax: {
-                            url: "<?php echo base_url('ajax/ambil_data_pendaftaran') ?>",
-                            type:'POST',
-                        },
-                        "aoColumns": [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            {
-                                "mData": "0",
-                                "mRender": function ( data, type, full ) {
-                                    return '<a href="#" onclick=delete_id("'+full[2]+'","'+full[3]+'")><span class="label label-primary">Hapus<span></a>' +
-                                        '<a href="<?php echo(base_url())?>pmb/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
-                                }
-                            }
-                        ]
-                    } );
-            };
+    <script type="text/javascript">
+        var table;
+        window.onload = function () {
+            table = $('#datatables').DataTable({
+                "bProcessing": true,
+                "bServerSide": true,
+                ajax: {
+                    url: "<?php echo base_url('ajax/ambil_data_pendaftaran') ?>",
+                    type: 'POST',
+                },
+                "aoColumns": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "mData": "0",
+                        "mRender": function (data, type, full) {
 
-            function delete_id(id,nama) {
-                swal({
-                    title: 'Hapus Jurusan!!',
-                    text: "Apakah Anda yakin untuk menghapus data "+nama+" ini?",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonClass: 'btn btn-success',
-                    cancelButtonClass: 'btn btn-danger',
-                    confirmButtonText: 'Iya, Hapus!',
-                    buttonsStyling: false
-                }).then(function () {
-                    $.ajax({
-                        url: "<?php echo(base_url().'ajax/hapus_siswa')?>",
-                        type: "POST",
-                        data: {nisn: id},
-                        dataType: "html",
-                        success: function () {
-                            swal({
-                                title: 'Deleted!',
-                                text: 'Jurusan Berhasil Di Hapus.',
-                                type: 'success',
-                                confirmButtonClass: "btn btn-success",
-                                buttonsStyling: false
-                            });
-                            table.ajax.reload();
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            swal("Error!", "Please try again", "error");
+                            return '<a href="#" onclick=delete_id("' + full[2] + '")' +
+                                '><span class="label label-primary">Hapus<span></a>' +
+                                '<a href="<?php echo(base_url())?>pmb/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
                         }
-                    });
+                    }
+                ]
+            });
+        };
 
-
+        function delete_id(id) {
+            swal({
+                title: 'Hapus Jurusan!!',
+                text: "Apakah Anda yakin untuk menghapus data ini?",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                confirmButtonText: 'Iya, Hapus!',
+                buttonsStyling: false
+            }).then(function () {
+                $.ajax({
+                    url: "<?php echo(base_url() . 'ajax/hapus_siswa')?>",
+                    type: "POST",
+                    data: {nisn: id},
+                    dataType: "html",
+                    success: function () {
+                        swal({
+                            title: 'Deleted!',
+                            text: 'Jurusan Berhasil Di Hapus.',
+                            type: 'success',
+                            confirmButtonClass: "btn btn-success",
+                            buttonsStyling: false
+                        });
+                        table.ajax.reload();
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        swal("Error!", "Please try again", "error");
+                    }
                 });
-            }
-        </script>
+
+
+            });
+        }
+    </script>
