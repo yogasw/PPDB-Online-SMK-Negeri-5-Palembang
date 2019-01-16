@@ -74,7 +74,7 @@
         function edit(data) {
             swal({
                 title: 'Tambah Akun Baru',
-                html: '<form>' +
+                html: ' <form action="" id="my-form">' +
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">NISN</label>' +
                 '<input type="text" name="nisn" value="' + data[0].nisn + '" class="form-control" disabled>' +
@@ -125,10 +125,11 @@
                 '</div></div>' +
                 '<br><br>' +
                 '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button class="btn btn-primary btn-round">' +
+                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
+                '<input type="text"/><input type="submit"/>' +
+                '</form>' +
                 '<i class="material-icons">home</i> ' +
                 'Kirim Data</button></div>' +
-
                 '</form>'
                 ,
                 showConfirmButton: false,
@@ -138,7 +139,7 @@
         function tambah() {
             swal({
                 title: 'Tambah Akun Baru',
-                html: '<form>' +
+                html: '<form id="myform1" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">' +
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">NISN</label>' +
                 '<input type="text" name="nisn" class="form-control" disabled>' +
@@ -191,15 +192,57 @@
                 '<br><br>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button class="btn btn-primary btn-round">' +
+                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
                 '<i class="material-icons">home</i> ' +
                 'Kirim Data</button></div>' +
 
-                '</form>'
+                '</>'
+
                 ,
                 showConfirmButton: false,
                 buttonsStyling: false
             })
 
         }
+
+        function kirimdata() {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function () {
+                    swal({
+                        title: 'Berhasil!',
+                        text: 'Jawaban Berhasil Di Kirim!!',
+                        type: 'success',
+                        showConfirmButton: false,
+                        buttonsStyling: false
+                    });
+                    //table.ajax.reload();
+                }
+            });
+        }
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+
+        $(function () {
+            $('form').submit(function () {
+                $('#result').text(JSON.stringify($('form').serializeObject()));
+                alert("ok");
+                return false;
+            });
+        });
     </script>
