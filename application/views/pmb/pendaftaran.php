@@ -58,7 +58,6 @@
                     {
                         "mData": "0",
                         "mRender": function (data, type, full) {
-
                             return '<a href="#" onclick=delete_id("' + full[2] + '")' +
                                 '><span class="label label-primary">Hapus<span></a>' +
                                 '<a href="<?php echo(base_url())?>pmb/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';

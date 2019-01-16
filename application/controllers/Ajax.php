@@ -251,7 +251,7 @@ class Ajax extends CI_Controller
             'tgl_selesai' => $date = date('Y-m-d H:i:s'),
             'status' => $status
         );
-        $this->m_ajax->insert_hasil_mb($data, $nisn);
+        $this->m_ajax->insert_nilai_mb($data, $nisn);
     }
 
     public function nilai_wawancara()

@@ -57,19 +57,19 @@ class M_ajax extends CI_Model
         return $query->row();
     }
 
-    public function insert_hasil_mb($data, $nisn)
+    public function insert_nilai_mb($data, $nisn)
     {
         $this->db->select("*");
-        $this->db->from('hasil_mb');
+        $this->db->from('nilai_mb');
         $this->db->where('nisn', $nisn);
         $query = $this->db->count_all_results();
 
         if ($query >= 1) {
             unset($data['nisn']);
             $this->db->where('nisn', $nisn);
-            $this->db->update('hasil_mb', $data);
+            $this->db->update('nilai_mb', $data);
         } else {
-            $this->db->insert('hasil_mb', $data);
+            $this->db->insert('nilai_mb', $data);
         }
     }
 
