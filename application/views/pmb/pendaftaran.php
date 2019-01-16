@@ -1,6 +1,4 @@
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
-    <div class="container">
-        <div class="col-md-12">
+<div class="col-md-12">
             <div class="card">
                 <h2 class="card-title text-center">FORM PENDAFTARAN SISWA BARU</h2>
                 <h2 class="card-title text-center">SMK 05 PALEMBANG</h2>
@@ -37,7 +35,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <script type="text/javascript">
         var table;
         window.onload = function () {

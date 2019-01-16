@@ -3,11 +3,7 @@
 <script src="<?php echo(base_url()) ?>assets/js/jquery.knob.js"></script>
 <script src="<?php echo(base_url()) ?>assets/js/jquery.throttle.js"></script>
 <script src="<?php echo(base_url()) ?>assets/js/jquery.classycountdown.js"></script>
-
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg"
-     xmlns="http://www.w3.org/1999/html">
-    <div class="container">
-        <div class="card wizard-card" data-color="rose" id="wizardProfile">
+<div class="card wizard-card" data-color="rose" id="wizardProfile">
             <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">
@@ -97,8 +93,6 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
 <script type="text/javascript">
     var terjawab;
     $("#example-basic").steps({

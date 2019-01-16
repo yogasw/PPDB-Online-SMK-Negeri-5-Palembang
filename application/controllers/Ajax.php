@@ -261,8 +261,22 @@ class Ajax extends CI_Controller
 
     public function kirim_data_wawancara()
     {
+        log_all();
         $nisn = $this->input->post('nisn');
         $this->m_ajax->insert_nilai_wawancara($_POST, $nisn);
+    }
+
+    public function ambil_data_psikologi()
+    {
+        $nisn = $this->input->post('nisn');
+        $data = $this->m_ajax->ambil_data_psikologi($nisn);
+        print_r(json_encode($data));
+    }
+
+    public function kirim_data_psikologi()
+    {
+        $nisn = $this->input->post('nisn');
+        $this->m_ajax->kirim_data_psikologi($_POST, $nisn);
     }
 
 

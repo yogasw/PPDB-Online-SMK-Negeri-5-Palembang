@@ -1,6 +1,4 @@
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
-    <div class="container">
-        <div class="col-md-12">
+<div class="col-md-12">
             <div class="card">
                 <h3 class="card-title text-center">INPUT NILAI WAWANCARA PSB</h3>
                 <h3 class="card-title text-center">SMK 05 PALEMBANG</h3>
@@ -23,8 +21,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
     <script type="text/javascript">
         var table;
         window.onload = function () {
@@ -72,6 +68,7 @@
             swal({
                 title: 'Tambah Akun Baru',
                 html: '<form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_wawancara') ?>" method="post">' +
+                '<input name="nisn" value="' + data[0].nisn + '" hidden>' +
                 '<div class="row">' +
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">NISN</label>' +

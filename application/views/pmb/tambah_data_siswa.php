@@ -1,6 +1,4 @@
-<div class="full-page register-page" filter-color="black" data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
-    <div class="container">
-        <div class="card wizard-card" data-color="rose" id="wizardProfile">
+<div class="card wizard-card" data-color="rose" id="wizardProfile">
             <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
                     <div class="wizard-header">
                         <h3 class="wizard-title">
@@ -297,9 +295,6 @@
                     </div>
             </form>
         </div>
-    </div>
-</div>
-
 <script type="text/javascript">
     $(document).ready(function () {
         // Code for the Validator

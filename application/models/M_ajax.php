@@ -106,4 +106,34 @@ class M_ajax extends CI_Model
             $this->db->insert('nilai_wawancara', $data);
         }
     }
+
+    public function ambil_data_psikologi($nisn)
+    {
+        $this->db->select('siswa.nisn,siswa.nama_lengkap,
+        nilai_psikologi.kecerdasan,nilai_psikologi.kesehatan');
+        $this->db->from('siswa');
+        $this->db->where('siswa.nisn', $nisn);
+        $this->db->join('nilai_psikologi', 'siswa.nisn = nilai_psikologi.nisn', 'left');
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function kirim_data_psikologi($data, $nisn)
+    {
+        $this->db->select("*");
+        $this->db->from('nilai_psikologi');
+        $this->db->where('nisn', $nisn);
+        $query = $this->db->count_all_results();
+        log_all();
+        if ($query >= 1) {
+            unset($data['nisn']);
+            unset($data['nama']);
+            $this->db->where('nisn', $nisn);
+            $this->db->update('nilai_psikologi', $data);
+        } else {
+            unset($data['nama']);
+            $this->db->insert('nilai_psikologi', $data);
+        }
+    }
 }
