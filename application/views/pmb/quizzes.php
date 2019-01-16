@@ -140,7 +140,6 @@
 
     var frm = $('#myform');
     frm.submit(function (ev) {
-
         var total = 0;
         $(":radio:checked").each(function () {
             total += 1;
@@ -175,7 +174,13 @@
                 url: frm.attr('action'),
                 data: frm.serialize(),
                 success: function () {
-
+                    swal({
+                        title: 'Berhasil!',
+                        text: 'Jawaban Berhasil Di Kirim!!',
+                        type: 'success',
+                        showConfirmButton: false,
+                        buttonsStyling: false
+                    });
                     //table.ajax.reload();
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
