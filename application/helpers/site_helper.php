@@ -38,7 +38,6 @@ if ( ! function_exists('log_app'))
 if ( ! function_exists('description_lokasi')) {
     function description_lokasi($id)
     {
-        log_app($id);
         if ($id=="") {
             return ("...");
         } else {
@@ -57,7 +56,6 @@ if ( ! function_exists('description_lokasi')) {
 if ( ! function_exists('bitly')) {
     function bitly($link)
     {
-        log_app($link);
         $api = "http://api.bitly.com/v3/shorten?login=mryoga12345&apiKey=R_68b7f7e7f55c41fcbfbcf9f6c76b5fe0&longUrl=" . $link;
         $result = json_decode(file_get_contents($api), true);
         $status_code = ($result['status_code']);
@@ -65,7 +63,6 @@ if ( ! function_exists('bitly')) {
         if ($status_code == '200') {
             return $url;
         } else {
-            log_app(print_r($result,true));
             return false;
 
         }
@@ -99,4 +96,5 @@ if (!function_exists('post_to_array')) {
         }
         return $answer;
     }
+
 }

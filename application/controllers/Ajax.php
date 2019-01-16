@@ -152,7 +152,6 @@ class Ajax extends CI_Controller
     public function ubahdata_siswa()
     {
         header('Content-type: application/json');
-        log_all();
         $data[] = array(
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
             'no_peserta' => (string)$_POST['no_peserta'],
@@ -185,7 +184,6 @@ class Ajax extends CI_Controller
     public function tambah_siswa()
     {
         header('Content-type: application/json');
-        log_all();
         $data[] = array(
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
             'no_peserta' => (string)$_POST['no_peserta'],
@@ -254,11 +252,18 @@ class Ajax extends CI_Controller
         $this->m_ajax->insert_nilai_mb($data, $nisn);
     }
 
-    public function nilai_wawancara()
+    public function ambil_data_wawancara()
     {
         $nisn = $this->input->post('nisn');
         $data = $this->m_ajax->getwawancara($nisn);
         print_r(json_encode($data));
     }
+
+    public function kirim_data_wawancara()
+    {
+        $nisn = $this->input->post('nisn');
+        $this->m_ajax->insert_nilai_wawancara($_POST, $nisn);
+    }
+
 
 }

@@ -13,6 +13,7 @@ class M_ajax extends CI_Model
              $this->db->delete('siswa');
              return true;
     }
+
     public function city($parent_id){
         $this->db->select('*');
         $this->db->from('core_city');
@@ -85,7 +86,24 @@ class M_ajax extends CI_Model
         $this->db->join('nilai_wawancara', 'siswa.nisn = nilai_wawancara.nisn', 'left');
         $this->db->limit(1);
         $query = $this->db->get();
-        log_app(print_r($query, true));
         return $query->result_array();
+    }
+
+    public function insert_nilai_wawancara($data, $nisn)
+    {
+        $this->db->select("*");
+        $this->db->from('nilai_wawancara');
+        $this->db->where('nisn', $nisn);
+        $query = $this->db->count_all_results();
+
+        if ($query >= 1) {
+            unset($data['nisn']);
+            unset($data['nama']);
+            $this->db->where('nisn', $nisn);
+            $this->db->update('nilai_wawancara', $data);
+        } else {
+            unset($data['nama']);
+            $this->db->insert('nilai_wawancara', $data);
+        }
     }
 }
