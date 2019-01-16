@@ -24,6 +24,7 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript">
         var table;
         window.onload = function () {
@@ -50,7 +51,6 @@
                 ]
             });
         };
-
         function newswal(id) {
             $.ajax({
                 url: "<?php echo(base_url() . 'ajax/nilai_wawancara')?>",
@@ -59,34 +59,32 @@
                 success: function (data) {
                     data = JSON.parse(data);
                     try {
-                        edit(data);
-                    } catch{
-                        tambah
-                    ();
-                }
+                        edit(data)
+                    } catch{}
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     swal("Error!", "Please try again", "error");
                 }
             });
         }
-
         function edit(data) {
+            console.dir(data);
             swal({
                 title: 'Tambah Akun Baru',
-                html: ' <form action="" id="my-form">' +
+                html: '<div class="row">' +
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">NISN</label>' +
                 '<input type="text" name="nisn" value="' + data[0].nisn + '" class="form-control" disabled>' +
                 '</div></div>' +
+
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Nama</label>' +
-                '<input type="text" name="nama" value="' + data[0].penampilan_fisik + '" class="form-control" disabled>' +
+                '<input type="text" name="nama" value="' + data[0].nama_lengkap + '" class="form-control" disabled>' +
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Penampian Fisik</label>' +
-                '<input type="number" value="' + data[0].penampilan_fisik + '" name="penampilan_fisik" class="form-control" required>' +
+                '<input type="number" name="penampilan_fisik" class="form-control" required>' +
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
@@ -122,127 +120,60 @@
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Emosi</label>' +
                 '<input type="number" value="' + data[0].emosi + '" name="emosi" class="form-control"  required>' +
-                '</div></div>' +
-                '<br><br>' +
+                '</div></div></div>' +
+
                 '<div class="col-md-6 col-md-offset-3"> ' +
                 '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
-                '<input type="text"/><input type="submit"/>' +
-                '</form>' +
+                'Kirim Data</button>' +
+                '</div>'
+                ,
+                showConfirmButton: false,
+                buttonsStyling: false
+            })
+        }
+
+    </script>
+    <script type="text/javascript">
+        function tambah(nisn) {
+            swal({
+                title: 'Tambah Akun Baru',
+                html: '<form id="myform" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">' +
+                '<div class="row">' +
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">NISN</label>' +
+                '<input type="text" value="' + nisn + '"name="nisn" class="form-control">' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">Nama</label>' +
+                '<input type="text" name="nama" class="form-control">' +
+                '</div></div>' +
+                '</div>' +
+
+                '<div class="col-md-6 col-md-offset-3"> ' +
+                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
                 '<i class="material-icons">home</i> ' +
                 'Kirim Data</button></div>' +
                 '</form>'
                 ,
                 showConfirmButton: false,
                 buttonsStyling: false
-            })
+            });
         }
-        function tambah() {
-            swal({
-                title: 'Tambah Akun Baru',
-                html: '<form id="myform1" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">' +
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">NISN</label>' +
-                '<input type="text" name="nisn" class="form-control" disabled>' +
-                '</div></div>' +
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Nama</label>' +
-                '<input type="text" name="nama" class="form-control" disabled>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Penampian Fisik</label>' +
-                '<input type="number"  name="penampilan_fisik" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Sopan Santun</label>' +
-                '<input type="number" name="sopan_santun" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Prestasi Akademin</label>' +
-                '<input type="number" name="prestasi_akademin" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Daya Tangkap</label>' +
-                '<input type="number"  name="daya_tangkap" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Percaya Diri</label>' +
-                '<input type="number" name="percaya_diri" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Motivasi</label>' +
-                '<input type="number" name="motivasi"  class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Prestasi Kerja</label>' +
-                '<input type="number" name="prestasi_kerja" class="form-control" required>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Emosi</label>' +
-                '<input type="number"  name="emosi" class="form-control"  required>' +
-                '</div></div>' +
-
-                '<br><br>' +
-
-                '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
-                '<i class="material-icons">home</i> ' +
-                'Kirim Data</button></div>' +
-
-                '</>'
-
-                ,
-                showConfirmButton: false,
-                buttonsStyling: false
-            })
-
-        }
-
-        function kirimdata() {
+        var frm = $('#myform');
+        frm.submit(function (ev) {
+            ev.preventDefault();
             $.ajax({
                 type: frm.attr('method'),
                 url: frm.attr('action'),
                 data: frm.serialize(),
                 success: function () {
-                    swal({
-                        title: 'Berhasil!',
-                        text: 'Jawaban Berhasil Di Kirim!!',
-                        type: 'success',
-                        showConfirmButton: false,
-                        buttonsStyling: false
-                    });
-                    //table.ajax.reload();
-                }
-            });
-        }
-        $.fn.serializeObject = function () {
-            var o = {};
-            var a = this.serializeArray();
-            $.each(a, function () {
-                if (o[this.name] !== undefined) {
-                    if (!o[this.name].push) {
-                        o[this.name] = [o[this.name]];
-                    }
-                    o[this.name].push(this.value || '');
-                } else {
-                    o[this.name] = this.value || '';
-                }
-            });
-            return o;
-        };
 
-        $(function () {
-            $('form').submit(function () {
-                $('#result').text(JSON.stringify($('form').serializeObject()));
-                alert("ok");
-                return false;
+                    //table.ajax.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal("Error!", "Please try again", "error");
+                }
             });
         });
     </script>

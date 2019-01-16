@@ -1701,3 +1701,1283 @@ ERROR - 2019-01-15 17:27:01 --> CI_DB_mysqli_result Object
 [row_data] =>
 )
 
+ERROR - 2019-01-15 17:28:39 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 8544  Threads: 4  Questions: 1651  Slow queries: 0  Opens: 165  Flush tables: 1  Open tables: 158  Queries per second avg: 0.193
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 351
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:35:57 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:36:46 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:37:00 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:37:13 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:38:03 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:38:46 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:38:50 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9155  Threads: 4  Questions: 1685  Slow queries: 0  Opens: 165  Flush tables: 1  Open tables: 158  Queries per second avg: 0.184
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 359
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:38:56 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9161  Threads: 4  Questions: 1690  Slow queries: 0  Opens: 165  Flush tables: 1  Open tables: 158  Queries per second avg: 0.184
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 360
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:00 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:39:00 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:39:12 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:39:18 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9183  Threads: 4  Questions: 1716  Slow queries: 0  Opens: 166  Flush tables: 1  Open tables: 159  Queries per second avg: 0.186
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 364
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:39:33 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:39:33 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:39:40 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:41:39 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:41:42 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9327  Threads: 4  Questions: 1751  Slow queries: 0  Opens: 166  Flush tables: 1  Open tables: 159  Queries per second avg: 0.187
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 370
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:41:45 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:41:45 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:41:52 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:43:41 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:43:44 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9449  Threads: 4  Questions: 1786  Slow queries: 0  Opens: 167  Flush tables: 1  Open tables: 160  Queries per second avg: 0.189
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 376
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:43:48 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9453  Threads: 4  Questions: 1791  Slow queries: 0  Opens: 167  Flush tables: 1  Open tables: 160  Queries per second avg: 0.189
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 377
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:43:53 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9458  Threads: 4  Questions: 1796  Slow queries: 0  Opens: 167  Flush tables: 1  Open tables: 160  Queries per second avg: 0.189
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 378
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:43:56 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:43:56 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:47:04 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:04 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:04 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:47:05 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:47:05 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:47:08 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:47:33 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:47:42 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:48:03 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:48:06 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9711  Threads: 4  Questions: 1846  Slow queries: 0  Opens: 167  Flush tables: 1  Open tables: 160  Queries per second avg: 0.190
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 386
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:48:13 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9718  Threads: 4  Questions: 1851  Slow queries: 0  Opens: 167  Flush tables: 1  Open tables: 160  Queries per second avg: 0.190
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 387
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:16 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:48:16 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:48:49 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:48:53 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9758  Threads: 4  Questions: 1877  Slow queries: 0  Opens: 168  Flush tables: 1  Open tables: 161  Queries per second avg: 0.192
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 391
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:48:55 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:55 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:55 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:55 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:48:56 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 239
+ERROR - 2019-01-15 17:48:56 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:48:56 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:49:16 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:49:25 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9790  Threads: 4  Questions: 1904  Slow queries: 0  Opens: 169  Flush tables: 1  Open tables: 162  Queries per second avg: 0.194
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 395
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:49:51 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:49:54 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9819  Threads: 4  Questions: 1918  Slow queries: 0  Opens: 169  Flush tables: 1  Open tables: 162  Queries per second avg: 0.195
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 398
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:50:19 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9844  Threads: 4  Questions: 1923  Slow queries: 0  Opens: 169  Flush tables: 1  Open tables: 162  Queries per second avg: 0.195
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 399
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:06 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 239
+ERROR - 2019-01-15 17:51:06 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:51:06 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 237
+ERROR - 2019-01-15 17:51:39 --> Severity: Notice --> Trying to get property of non-object D:\data\belajar\WEB\skripsi\application\controllers\Ajax.php 239
+ERROR - 2019-01-15 17:51:39 --> Query error: Table 'skripsi.hasil_mb' doesn't exist - Invalid query: SELECT COUNT(*) AS `numrows`
+FROM `hasil_mb`
+WHERE `nisn` = '141420213'
+ERROR - 2019-01-15 17:51:39 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at D:\data\belajar\WEB\skripsi\system\core\Exceptions.php:272) D:\data\belajar\WEB\skripsi\system\core\Common.php 570
+ERROR - 2019-01-15 17:51:44 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:51:48 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 9933  Threads: 4  Questions: 1963  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.197
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 404
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:51:53 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:55:04 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:55:08 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10133  Threads: 4  Questions: 1990  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.196
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 410
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:55:12 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10137  Threads: 4  Questions: 1995  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.196
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 411
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:55:17 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:57:16 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:57:20 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10265  Threads: 4  Questions: 2022  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.196
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 417
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 17:57:25 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:57:58 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:58:42 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:58:52 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:59:20 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 17:59:43 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 18:01:33 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 18:01:36 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 0
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10521  Threads: 4  Questions: 2090  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.198
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 432
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 0
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 18:01:40 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10525  Threads: 4  Questions: 2095  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.199
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 433
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 18:01:46 --> 404 Page Not Found: Assets/js
+ERROR - 2019-01-15 18:01:49 --> CI_DB_mysqli_result Object
+(
+[conn_id] => mysqli Object
+(
+[affected_rows] => 1
+[client_info] => mysqlnd 5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a $
+[client_version] => 50011
+[connect_errno] => 0
+[connect_error] =>
+[errno] => 0
+[error] =>
+[error_list] => Array
+(
+)
+
+[field_count] => 9
+[host_info] => localhost via TCP/IP
+[info] =>
+[insert_id] => 0
+[server_info] => 5.7.14
+[server_version] => 50714
+[stat] => Uptime: 10534  Threads: 4  Questions: 2109  Slow queries: 0  Opens: 171  Flush tables: 1  Open tables: 164  Queries per second avg: 0.200
+[sqlstate] => 00000
+[protocol_version] => 10
+[thread_id] => 436
+[warning_count] => 0
+)
+
+[result_id] => mysqli_result Object
+(
+[current_field] => 0
+[field_count] => 9
+[lengths] =>
+[num_rows] => 1
+[type] => 0
+)
+
+[result_array] => Array
+(
+)
+
+[result_object] => Array
+(
+)
+
+[custom_result_object] => Array
+(
+)
+
+[current_row] => 0
+[num_rows] =>
+[row_data] =>
+)
+
+ERROR - 2019-01-15 18:01:56 --> 404 Page Not Found: Assets/js

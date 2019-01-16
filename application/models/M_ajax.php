@@ -73,12 +73,16 @@ class M_ajax extends CI_Model
         }
     }
 
-
     public function getwawancara($nisn)
     {
-        $this->db->select('*');
-        $this->db->from('nilai_wawancara');
-        $this->db->where('nisn', $nisn);
+        $this->db->select('siswa.nisn,siswa.nama_lengkap,
+        nilai_wawancara.penampilan_fisik,nilai_wawancara.sopan_santun,
+        nilai_wawancara.prestasi_akademin,nilai_wawancara.daya_tangkap,
+        nilai_wawancara.percaya_diri,,nilai_wawancara.motivasi,
+        nilai_wawancara.prestasi_kerja,nilai_wawancara.emosi');
+        $this->db->from('siswa');
+        $this->db->where('siswa.nisn', $nisn);
+        $this->db->join('nilai_wawancara', 'siswa.nisn = nilai_wawancara.nisn', 'left');
         $this->db->limit(1);
         $query = $this->db->get();
         log_app(print_r($query, true));

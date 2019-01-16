@@ -61,12 +61,6 @@
                                                                        name="<?php echo($u['id']) ?>"><a>D. <?php echo($u['opsi_d']) ?></a>
                                                             </label>
                                                         </div>
-                                                        <div class="radio">
-                                                            <label>
-                                                                <input type="radio" value="e"
-                                                                       name="<?php echo($u['id']) ?>"><a>E. <?php echo($u['opsi_e']) ?></a>
-                                                            </label>
-                                                        </div>
                                                     </section>
                                                 <?php } ?>
                                             </div>
@@ -181,13 +175,7 @@
                 url: frm.attr('action'),
                 data: frm.serialize(),
                 success: function () {
-                    swal({
-                        title: 'Berhasil!',
-                        text: 'Jawaban Berhasil Di Kirim!!',
-                        type: 'success',
-                        showConfirmButton: false,
-                        buttonsStyling: false
-                    });
+
                     //table.ajax.reload();
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
