@@ -421,8 +421,6 @@ class Ajax extends CI_Controller
         }
         log_all();
         echo json_encode($output);
-
-
     }
 
 }
