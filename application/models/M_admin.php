@@ -32,4 +32,15 @@ class M_admin extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    public function get_all_soal()
+    {
+        $this->db->select('*');
+        $this->db->from('core_soal');
+        $this->db->order_by('id', 'asc');
+        $this->db->limit(2);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
 }

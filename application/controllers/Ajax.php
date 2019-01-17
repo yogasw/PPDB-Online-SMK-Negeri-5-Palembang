@@ -309,4 +309,118 @@ class Ajax extends CI_Controller
 
     }
 
+    function get_all_soal()
+    {
+
+        /*Menagkap semua data yang dikirimkan oleh client*/
+
+        /*Sebagai token yang yang dikrimkan oleh client, dan nantinya akan
+        server kirimkan balik. Gunanya untuk memastikan bahwa user mengklik paging
+        sesuai dengan urutan yang sebenarnya */
+        $draw = $_REQUEST['draw'];
+
+        /*Jumlah baris yang akan ditampilkan pada setiap page*/
+        $length = $_REQUEST['length'];
+
+        /*Offset yang akan digunakan untuk memberitahu database
+        dari baris mana data yang harus ditampilkan untuk masing masing page
+        */
+        $start = $_REQUEST['start'];
+
+        /*Keyword yang diketikan oleh user pada field pencarian*/
+        $search = $_REQUEST['search']["value"];
+
+        /*order yang di klik user*/
+
+        $order = $_REQUEST['order'][0]["column"];
+        $dir = $_REQUEST['order'][0]["dir"];
+
+        switch ($order) {
+            case 5 :
+                $orderby = 'id';
+                break;
+            case 6 :
+                $orderby = 'soal';
+                break;
+            default :
+                $orderby = 'soal';
+        }
+
+        /*Menghitung total desa didalam database*/
+        $total = $this->db->count_all_results("core_soal");
+        /*Mempersiapkan array tempat kita akan menampung semua data
+        yang nantinya akan server kirimkan ke client*/
+        $output = array();
+
+        /*Token yang dikrimkan client, akan dikirim balik ke client*/
+        $output['draw'] = $draw;
+
+        /*
+        $output['recordsTotal'] adalah total data sebelum difilter
+        $output['recordsFiltered'] adalah total data ketika difilter
+        Biasanya kedua duanya bernilai sama, maka kita assignment
+        keduaduanya dengan nilai dari $total
+        */
+        $output['recordsTotal'] = $output['recordsFiltered'] = $total;
+
+        /*disini nantinya akan memuat data yang akan kita tampilkan
+        pada table client*/
+        $output['data'] = array();
+
+
+        /*Jika $search mengandung nilai, berarti user sedang telah
+        memasukan keyword didalam filed pencarian */
+        if ($search != "") {
+            $this->db->like("id", $search);
+            $this->db->or_like('soal', $search);
+
+        }
+        /*Lanjutkan pencarian ke database*/
+        $this->db->limit($length, $start);
+        /*Urutkan dari alphabet paling terkahir*/
+
+        $this->db->order_by($order, $dir);
+        $query = $this->db->get('core_soal');
+
+        /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
+        dari 'recordsTotal' dan 'recordsFiltered' sesuai dengan jumlah baris
+        yang mengandung keyword tertentu */
+
+        if ($search != "") {
+            $this->db->like("id", $search);
+            $this->db->or_like('soal', $search);
+            $jum = $this->db->get('core_soal');
+            $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
+        }
+
+
+        $nomor_urut = $start + 1;
+        foreach ($query->result_array() as $data) {
+            switch ($data['id_mapel']) {
+                case 1 :
+                    $mapel = "IPA";
+                    break;
+                case 2 :
+                    $mapel = "IPS";
+                    break;
+                case 3 :
+                    $mapel = "Bahasa Indonesia";
+                    break;
+                case 4 :
+                    $mapel = "Bahasa Inggris";
+                    break;
+                case 5 :
+                    $mapel = "Matematika";
+                    break;
+                default:
+                    $mapel = "Dll";
+                    break;
+            }
+            $output['data'][] = array($data['id'], $nomor_urut, $mapel, $data['soal'], $data['bobot'], $data['gambar']);
+            $nomor_urut++;
+        }
+        log_all();
+        echo json_encode($output);
+    }
+
 }

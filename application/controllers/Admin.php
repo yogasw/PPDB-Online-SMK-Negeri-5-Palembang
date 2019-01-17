@@ -90,4 +90,14 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
+    public function edit_soal()
+    {
+        $nisn = $this->input->get('nisn');
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $x['data'] = $this->m_admin->get_all_soal($nisn);
+        $this->load->view('admin/edit_soal', $x);
+        $this->load->view('admin/template/footer');
+    }
+
 }
