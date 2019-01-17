@@ -47,7 +47,7 @@
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">NISN</label>
                                         <input name="nisn" id="nisn" type="text" class="form-control"
-                                               value="<?php echo($u['nisn']) ?>"
+                                               value="<?php echo($u['nisnsiswa']) ?>"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>

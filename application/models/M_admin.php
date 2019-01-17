@@ -6,11 +6,13 @@
  * Date: 03/09/2018
  * Time: 14.25
  */
-class M_pmb extends CI_Model
+class M_admin extends CI_Model
 {
-    function show_data(){
+    function show_data()
+    {
         return $this->db->query("SELECT * FROM siswa");
     }
+
     public function getdatasiswa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisnsiswa');
@@ -20,6 +22,7 @@ class M_pmb extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
     public function getsoal()
     {
         $this->db->select('*');

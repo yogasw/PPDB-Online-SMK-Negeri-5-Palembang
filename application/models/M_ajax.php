@@ -14,6 +14,15 @@ class M_ajax extends CI_Model
              return true;
     }
 
+    function multi_delete($data)
+    {
+        foreach ($data as $val) {
+            $this->db->where('nisn', $val);
+            $this->db->delete('siswa');
+        }
+        return true;
+    }
+
     public function city($parent_id){
         $this->db->select('*');
         $this->db->from('core_city');
@@ -76,7 +85,7 @@ class M_ajax extends CI_Model
 
     public function getwawancara($nisn)
     {
-        $this->db->select('siswa.nisn,siswa.nama_lengkap,
+        $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
         nilai_wawancara.penampilan_fisik,nilai_wawancara.sopan_santun,
         nilai_wawancara.prestasi_akademin,nilai_wawancara.daya_tangkap,
         nilai_wawancara.percaya_diri,,nilai_wawancara.motivasi,
@@ -109,7 +118,7 @@ class M_ajax extends CI_Model
 
     public function ambil_data_psikologi($nisn)
     {
-        $this->db->select('siswa.nisn,siswa.nama_lengkap,
+        $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
         nilai_psikologi.kecerdasan,nilai_psikologi.kesehatan');
         $this->db->from('siswa');
         $this->db->where('siswa.nisn', $nisn);
@@ -135,5 +144,41 @@ class M_ajax extends CI_Model
             unset($data['nama']);
             $this->db->insert('nilai_psikologi', $data);
         }
+    }
+
+    public function ambil_data_minat_bakat($nisn)
+    {
+        $this->db->select('*,siswa.nisn as nisn_siswa,siswa.nama_lengkap');
+        $this->db->from('siswa');
+        $this->db->where('siswa.nisn', $nisn);
+        $this->db->join('nilai_mb', 'siswa.nisn = nilai_mb.nisn', 'left');
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function kirim_data_minat_bakat($data, $nisn)
+    {
+        $this->db->select("*");
+        $this->db->from('nilai_mb');
+        $this->db->where('nisn', $nisn);
+        $query = $this->db->count_all_results();
+        log_all();
+        if ($query >= 1) {
+            unset($data['nisn']);
+            unset($data['nama']);
+            $this->db->where('nisn', $nisn);
+            $this->db->update('nilai_mb', $data);
+        } else {
+            unset($data['nama']);
+            $this->db->insert('nilai_mb', $data);
+        }
+    }
+
+    function reset_nilai_minat_bakat($nisn)
+    {
+        $this->db->where('nisn', $nisn);
+        $this->db->delete('nilai_mb');
+        return true;
     }
 }

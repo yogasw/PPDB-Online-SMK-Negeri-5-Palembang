@@ -31,6 +31,9 @@
                     url: "<?php echo base_url('ajax/ambil_data_pendaftaran') ?>",
                     type: 'POST',
                 },
+                "columnDefs": [
+                    {"orderable": false, "targets": 0}
+                ],
                 "aoColumns": [
                     null,
                     null,
@@ -66,13 +69,13 @@
         function edit(data) {
             var btn = "button";
             swal({
-                title: 'Tambah Akun Baru',
+                title: 'Edit Data',
                 html: '<form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_wawancara') ?>" method="post">' +
-                '<input name="nisn" value="' + data[0].nisn + '" hidden>' +
+                    '<input name="nisn" value="' + data[0].nisn_siswa + '" hidden>' +
                 '<div class="row">' +
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">NISN</label>' +
-                '<input type="text" name="nisn" value="' + data[0].nisn + '" class="form-control" disabled>' +
+                    '<input type="text" name="nisn" value="' + data[0].nisn_siswa + '" class="form-control" disabled>' +
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +

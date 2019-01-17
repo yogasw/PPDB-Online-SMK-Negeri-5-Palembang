@@ -279,5 +279,34 @@ class Ajax extends CI_Controller
         $this->m_ajax->kirim_data_psikologi($_POST, $nisn);
     }
 
+    public function multi_delete()
+    {
+        $answer = $_POST;
+        $answer = array();
+        foreach ($_POST as $key => $value) {
+            $this->m_ajax->multi_delete($value);
+        }
+
+    }
+
+    public function ambil_data_minat_bakat()
+    {
+        $nisn = $this->input->post('nisn');
+        $data = $this->m_ajax->ambil_data_minat_bakat($nisn);
+        print_r(json_encode($data));
+    }
+
+    public function kirim_data_minat_bakat()
+    {
+        $nisn = $this->input->post('nisn');
+        $this->m_ajax->kirim_data_minat_bakat($_POST, $nisn);
+    }
+
+    function reset_nilai_minat_bakat()
+    {
+        $nisn = $this->input->post('nisn');
+        $this->m_ajax->reset_nilai_minat_bakat($nisn);
+
+    }
 
 }

@@ -22,6 +22,7 @@ class Pmb extends CI_Controller
         $x['data'] = $this->m_pmb->show_data();
         $this->load->view('pmb/pendaftaran',$x);
         $this->load->view('admin/template/footer');
+        log_all();
     }
 
     public function wawancara()
@@ -49,14 +50,6 @@ class Pmb extends CI_Controller
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_pmb->getdatasiswa($nisn);
         $this->load->view('pmb/ubah_data_siswa', $x);
-        $this->load->view('admin/template/footer');
-    }
-
-    public function tambahdata_siswa()
-    {
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $this->load->view('pmb/tambah_data_siswa');
         $this->load->view('admin/template/footer');
     }
 

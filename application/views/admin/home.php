@@ -10,7 +10,7 @@
                     <p class="card-description">
                         input data calon siswa baru 2019
                     </p>
-                    <a href="#pablo" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/pendaftaran") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                     <p class="card-description">
                         lihat hasil tes minat dan bakat
                     </p>
-                    <a href="#pablo" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/minat_bakat") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <p class="card-description">
                         input nilai tes wawancara
                     </p>
-                    <a href="#pablo" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/wawancara") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                     <p class="card-description">
                         input nilai tes psikologi
                     </p>
-                    <a href="#pablo" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/psikologi") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
                     <p class="card-description">
                         lihat hasil semua perhitungan
                     </p>
-                    <a href="#pablo" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/report") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
             </div>
