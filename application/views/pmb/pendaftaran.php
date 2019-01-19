@@ -95,6 +95,30 @@
                     }
                 });
 
+                $("#nisn").change(function () {
+                    $.ajax({
+                        url: '<?php echo(base_url() . "ajax/cek_nisn") ?>',
+                        data: {nisn: $('#nisn').val()},
+                        type: "post",
+                        respontype: "json",
+                        timeout: 10000,
+                        success: function (response) {
+                            if (response == "true") {
+                                document.getElementById("next").disabled = true;
+                                swal({
+                                    title: 'Mantap Cuy!',
+                                    text: 'Data NISN Sudah di pakai',
+                                    type: 'error',
+                                    confirmButtonClass: "btn btn-success",
+                                    showConfirmButton: false,
+                                    buttonsStyling: false
+                                })
+                            } else {
+                                document.getElementById("next").disabled = false;
+                            }
+                        }
+                    });
+                });
 
             });
         }

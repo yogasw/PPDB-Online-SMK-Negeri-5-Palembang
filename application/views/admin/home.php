@@ -62,11 +62,11 @@
                     <div class="icon icon-rose">
                         <i class="material-icons">present_to_all</i>
                     </div>
-                    <h3 class="card-title">Report Data</h3>
+                    <h3 class="card-title">Edit Soal</h3>
                     <p class="card-description">
-                        Lihat hasil semua perhitungan
+                        Edit Daftar Soal Minat Dan Bakat
                     </p>
-                    <a href="<?php echo(base_url() . "admin/report") ?>" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/edit_soal") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -76,11 +76,25 @@
                     <div class="icon icon-rose">
                         <i class="material-icons">present_to_all</i>
                     </div>
-                    <h3 class="card-title">Edit Soal</h3>
+                    <h3 class="card-title">Kelola Admin</h3>
                     <p class="card-description">
-                        Edit Daftar Soal Minat Dan Bakat
+                        Kelola Akun Admin
                     </p>
-                    <a href="<?php echo(base_url() . "admin/edit_soal") ?>" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/kelola_admin") ?>" class="btn btn-rose btn-round">go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-pricing ">
+                <div class="card-content">
+                    <div class="icon icon-rose">
+                        <i class="material-icons">present_to_all</i>
+                    </div>
+                    <h3 class="card-title">Report Data</h3>
+                    <p class="card-description">
+                        Lihat hasil semua perhitungan
+                    </p>
+                    <a href="<?php echo(base_url() . "admin/report") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>

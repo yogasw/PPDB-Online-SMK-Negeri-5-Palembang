@@ -23,7 +23,8 @@ class M_ajax extends CI_Model
         return true;
     }
 
-    public function city($parent_id){
+    function city($parent_id)
+    {
         $this->db->select('*');
         $this->db->from('core_city');
         $this->db->where('parent_id', $parent_id);
@@ -32,22 +33,22 @@ class M_ajax extends CI_Model
         return $query;
     }
 
-    public function update_siswa($data)
+    function update_siswa($data)
     {
         $this->db->update_batch('siswa', $data, 'nisn');
     }
 
-    public function tambah_siswa($data)
+    function tambah_siswa($data)
     {
         $this->db->insert_batch('siswa', $data);
     }
 
-    public function tambah_nilai_un($data)
+    function tambah_nilai_un($data)
     {
         $this->db->insert_batch('nilai_un', $data);
     }
 
-    public function getsoal()
+    function getsoal()
     {
         $this->db->select('*');
         $this->db->from('m_soal');
@@ -57,7 +58,7 @@ class M_ajax extends CI_Model
         return $query->result_array();
     }
 
-    public function getjawaban($id)
+    function getjawaban($id)
     {
         $this->db->select('id,bobot,jawaban');
         $this->db->from('core_soal');
@@ -67,7 +68,7 @@ class M_ajax extends CI_Model
         return $query->row();
     }
 
-    public function insert_nilai_mb($data, $nisn)
+    function insert_nilai_mb($data, $nisn)
     {
         $this->db->select("*");
         $this->db->from('nilai_mb');
@@ -83,7 +84,7 @@ class M_ajax extends CI_Model
         }
     }
 
-    public function getwawancara($nisn)
+    function getwawancara($nisn)
     {
         $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
         nilai_wawancara.penampilan_fisik,nilai_wawancara.sopan_santun,
@@ -98,7 +99,7 @@ class M_ajax extends CI_Model
         return $query->result_array();
     }
 
-    public function insert_nilai_wawancara($data, $nisn)
+    function insert_nilai_wawancara($data, $nisn)
     {
         $this->db->select("*");
         $this->db->from('nilai_wawancara');
@@ -116,7 +117,7 @@ class M_ajax extends CI_Model
         }
     }
 
-    public function ambil_data_psikologi($nisn)
+    function ambil_data_psikologi($nisn)
     {
         $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
         nilai_psikologi.kecerdasan,nilai_psikologi.kesehatan');
@@ -128,7 +129,7 @@ class M_ajax extends CI_Model
         return $query->result_array();
     }
 
-    public function kirim_data_psikologi($data, $nisn)
+    function kirim_data_psikologi($data, $nisn)
     {
         $this->db->select("*");
         $this->db->from('nilai_psikologi');
@@ -146,7 +147,7 @@ class M_ajax extends CI_Model
         }
     }
 
-    public function ambil_data_minat_bakat($nisn)
+    function ambil_data_minat_bakat($nisn)
     {
         $this->db->select('*,siswa.nisn as nisn_siswa,siswa.nama_lengkap');
         $this->db->from('siswa');
@@ -157,7 +158,7 @@ class M_ajax extends CI_Model
         return $query->result_array();
     }
 
-    public function kirim_data_minat_bakat($data, $nisn)
+    function kirim_data_minat_bakat($data, $nisn)
     {
         $this->db->select("*");
         $this->db->from('nilai_mb');
@@ -180,5 +181,67 @@ class M_ajax extends CI_Model
         $this->db->where('nisn', $nisn);
         $this->db->delete('nilai_mb');
         return true;
+    }
+
+    function cek_nisn($nisn)
+    {
+        $this->db->select("nisn");
+        $this->db->from('siswa');
+        $this->db->where('nisn', $nisn);
+        $query = $this->db->count_all_results();
+        if ($query >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function hapus_soal($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('core_soal');
+        return true;
+    }
+
+    function multi_delete_soal($values)
+    {
+        if (is_array($values) || is_object($values)) {
+            foreach ($values as $value) {
+                $this->db->where('id', $value);
+                $this->db->delete('core_soal');
+            }
+        }
+
+        return true;
+    }
+
+    function kirim_data_soal($data, $id)
+    {
+
+
+        $this->db->select("*");
+        $this->db->from('core_soal');
+        $this->db->where('id', $id);
+        $query = $this->db->count_all_results();
+
+        log_app($query);
+
+        if ($query >= 1) {
+            unset($data['id']);
+            $this->db->where('id', $id);
+            $this->db->update('core_soal', $data);
+        } else {
+            $this->db->insert('core_soal', $data);
+        }
+    }
+
+    function ambil_data_soal($id)
+    {
+        $this->db->select('*');
+        $this->db->from('core_soal');
+        $this->db->where('id', $id);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 }

@@ -8,7 +8,7 @@
  */
 class Ajax extends CI_Controller
 {
-    public function __construct()
+    function __construct()
     {
         parent::__construct();
         $this->load->helper('site_helper');
@@ -131,7 +131,7 @@ class Ajax extends CI_Controller
 
     }
 
-    public function data_lokasi()
+    function data_lokasi()
     {
         header('Content-type: application/json');
         $parent_id = $_POST['parent_id'];
@@ -149,7 +149,7 @@ class Ajax extends CI_Controller
         }
     }
 
-    public function ubahdata_siswa()
+    function ubahdata_siswa()
     {
         header('Content-type: application/json');
         $data[] = array(
@@ -181,7 +181,7 @@ class Ajax extends CI_Controller
         echo json_encode($respon);
     }
 
-    public function tambah_siswa()
+    function tambah_siswa()
     {
         header('Content-type: application/json');
         $data[] = array(
@@ -221,7 +221,7 @@ class Ajax extends CI_Controller
         echo json_encode($respon);
     }
 
-    public function kirim_quiz()
+    function kirim_quiz()
     {
         $nisn = '141420213';
         $jumlah_benar = 0;
@@ -252,34 +252,34 @@ class Ajax extends CI_Controller
         $this->m_ajax->insert_nilai_mb($data, $nisn);
     }
 
-    public function ambil_data_wawancara()
+    function ambil_data_wawancara()
     {
         $nisn = $this->input->post('nisn');
         $data = $this->m_ajax->getwawancara($nisn);
         print_r(json_encode($data));
     }
 
-    public function kirim_data_wawancara()
+    function kirim_data_wawancara()
     {
         log_all();
         $nisn = $this->input->post('nisn');
         $this->m_ajax->insert_nilai_wawancara($_POST, $nisn);
     }
 
-    public function ambil_data_psikologi()
+    function ambil_data_psikologi()
     {
         $nisn = $this->input->post('nisn');
         $data = $this->m_ajax->ambil_data_psikologi($nisn);
         print_r(json_encode($data));
     }
 
-    public function kirim_data_psikologi()
+    function kirim_data_psikologi()
     {
         $nisn = $this->input->post('nisn');
         $this->m_ajax->kirim_data_psikologi($_POST, $nisn);
     }
 
-    public function multi_delete()
+    function multi_delete()
     {
         $answer = $_POST;
         $answer = array();
@@ -289,14 +289,14 @@ class Ajax extends CI_Controller
 
     }
 
-    public function ambil_data_minat_bakat()
+    function ambil_data_minat_bakat()
     {
         $nisn = $this->input->post('nisn');
         $data = $this->m_ajax->ambil_data_minat_bakat($nisn);
         print_r(json_encode($data));
     }
 
-    public function kirim_data_minat_bakat()
+    function kirim_data_minat_bakat()
     {
         $nisn = $this->input->post('nisn');
         $this->m_ajax->kirim_data_minat_bakat($_POST, $nisn);
@@ -416,11 +416,61 @@ class Ajax extends CI_Controller
                     $mapel = "Dll";
                     break;
             }
-            $output['data'][] = array($data['id'], $nomor_urut, $mapel, $data['soal'], $data['bobot'], $data['gambar']);
+            $output['data'][] = array($nomor_urut, $data['id'], $mapel, $data['soal'], $data['bobot'], $data['gambar']);
             $nomor_urut++;
         }
-        log_all();
         echo json_encode($output);
     }
 
+    function cek_nisn()
+    {
+        $nisn = $this->input->post("nisn");
+        $hasil = $this->m_ajax->cek_nisn($nisn);
+        log_app($nisn . " " . $hasil);
+        if ($hasil) {
+            print_r("true");
+        } else {
+            print_r("false");
+        }
+    }
+
+    function hapus_soal()
+    {
+        $id = $this->input->post('id');
+        $this->m_ajax->hapus_soal($id);
+
+    }
+
+    function multi_delete_soal()
+    {
+
+        foreach ($_POST as $key => $value) {
+            $this->m_ajax->multi_delete_soal($value);
+        }
+
+    }
+
+    function kirim_data_soal()
+    {
+        $id = $this->input->post('id');
+        $this->m_ajax->kirim_data_soal($_POST, $id);
+    }
+
+    function cek_no_soal()
+    {
+        $id = $this->input->post("id");
+        $hasil = $this->m_ajax->cek_no_soal($id);
+        if ($hasil) {
+            print_r("true");
+        } else {
+            print_r("false");
+        }
+    }
+
+    function ambil_data_soal()
+    {
+        $id = $this->input->post('id');
+        $data = $this->m_ajax->ambil_data_soal($id);
+        print_r(json_encode($data));
+    }
 }

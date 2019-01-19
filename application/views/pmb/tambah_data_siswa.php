@@ -282,7 +282,8 @@
                     </div>
                     <div class="wizard-footer">
                         <div class="pull-right">
-                            <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" value="Next">
+                            <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" id="next"
+                                   value="Next">
                             <input type="button" class="btn btn-finish btn-fill btn-rose btn-wd" name="finish"
                                    id="finish"
                                    value="Finish" style="display: none;">
@@ -609,6 +610,31 @@
         });
 
         $("#kabupaten").change(function () {
+        });
+
+        $("#nisn").change(function () {
+            $.ajax({
+                url: '<?php echo(base_url() . "ajax/cek_nisn") ?>',
+                data: {nisn: $('#nisn').val()},
+                type: "post",
+                respontype: "json",
+                timeout: 10000,
+                success: function (response) {
+                    if (response == "true") {
+                        document.getElementById("next").disabled = true;
+                        swal({
+                            title: 'Mantap Cuy!',
+                            text: 'Data NISN Sudah di pakai',
+                            type: 'error',
+                            confirmButtonClass: "btn btn-success",
+                            showConfirmButton: false,
+                            buttonsStyling: false
+                        })
+                    } else {
+                        document.getElementById("next").disabled = false;
+                    }
+                }
+            });
         });
     });
 
