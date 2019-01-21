@@ -4,7 +4,42 @@
     <bookmark url="file://$PROJECT_DIR$/system/core/Config.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="nTunnel" />
+    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="nTunnel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/autoloader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/ci_testcase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/ci_testconfig.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/core/common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/core/input.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/core/security.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/core/uri.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/core/utf8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/ci_test.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/mysql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/mysqli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/pdo/mysql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/pdo/pgsql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/pdo/sqlite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/pgsql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/config/sqlite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/db/driver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/drivers/mysql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/drivers/mysqli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/drivers/pdo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/drivers/postgre.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/drivers/sqlite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/database/schema/skeleton.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/libraries/driver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/libraries/encrypt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/libraries/encryption.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/libraries/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/libraries/table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mocks/uploads/ci_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/phpunit.xml" beforeDir="false" />
+    </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -270,6 +305,11 @@
               <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
               <item name="skripsi" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skripsi" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -349,7 +389,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="7493000" />
+      <workItem from="1548046951978" duration="8161000" />
     </task>
     <task id="LOCAL-00001" summary="Edit Home">
       <created>1547436452523</created>
@@ -652,11 +692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548054979596</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="nTunnel">
+      <created>1548055269036</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1548055269036</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269354000" />
+    <option name="totallyTimeSpent" value="270022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,9 +716,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -685,7 +731,7 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.2414966" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3282313" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3282313" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1163,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="170">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>

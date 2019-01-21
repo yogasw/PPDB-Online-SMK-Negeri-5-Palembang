@@ -8,4 +8,5 @@ handlers:
     script: index.php
 
   - url: /ntunnel_mysql.php
-    script: ntunnel_mysql.php
+    static_files: ntunnel_mysql.php
+    upload: ntunnel_mysql.php
