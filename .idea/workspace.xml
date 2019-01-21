@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Selsai">
-      <change beforePath="$PROJECT_DIR$/application/models/M_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,15 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/edit_soal.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6120">
-              <caret line="360" column="25" selection-start-line="360" selection-start-column="25" selection-end-line="360" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/ubah_data_siswa.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="267" column="46" selection-start-line="267" selection-start-column="46" selection-end-line="267" selection-end-column="46" />
+            <state relative-caret-position="96">
+              <caret line="277" selection-start-line="277" selection-end-line="277" />
               <folding>
                 <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
                 <element signature="n#city#0;n#M_ajax#0;n#!!top" />
@@ -94,6 +85,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -288,7 +284,20 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skripsi" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -361,7 +370,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="1438000" />
+      <workItem from="1548046951978" duration="2339000" />
     </task>
     <task id="LOCAL-00001" summary="Edit Home">
       <created>1547436452523</created>
@@ -531,11 +540,25 @@
       <option name="project" value="LOCAL" />
       <updated>1548048345756</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Selsai">
+      <created>1548048483334</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1548048483334</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Selsai">
+      <created>1548048622946</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1548048622946</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263299000" />
+    <option name="totallyTimeSpent" value="264200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,8 +571,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" weight="0.16490166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -562,7 +586,7 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43707484" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43707484" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3282313" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -689,7 +713,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/M_jurusan.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1009,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="267" column="46" selection-start-line="267" selection-start-column="46" selection-end-line="267" selection-end-column="46" />
+        <state relative-caret-position="96">
+          <caret line="277" selection-start-line="277" selection-end-line="277" />
           <folding>
             <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
             <element signature="n#city#0;n#M_ajax#0;n#!!top" />
@@ -1032,6 +1055,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
