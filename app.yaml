@@ -2,10 +2,6 @@ runtime: php55
 api_version: 1
 threadsafe: false
 handlers:
-  - url: /static/(.*)
-    static_files: static/\1
-    upload: static/(.*)
-
   - url: /
     script: index.php
 
