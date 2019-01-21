@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/system/core/Config.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Edit Soal Selesai">
-      <change afterPath="$PROJECT_DIR$/application/views/admin/kelola_akun_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/M_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" afterDir="false" />
-    </list>
+    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Terahir" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3604">
-              <caret line="582" column="27" selection-start-line="582" selection-start-column="27" selection-end-line="582" selection-end-column="27" />
+              <caret line="584" column="27" selection-start-line="584" selection-start-column="27" selection-end-line="584" selection-end-column="27" />
               <folding>
                 <element signature="n#__construct#0;n#Ajax#0;n#!!top" />
                 <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" />
@@ -75,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="263" column="36" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+            <state relative-caret-position="183">
+              <caret line="265" column="36" selection-start-line="265" selection-start-column="36" selection-end-line="265" selection-end-column="36" />
               <folding>
                 <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
                 <element signature="n#city#0;n#M_ajax#0;n#!!top" />
@@ -402,7 +396,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="605000" />
+      <workItem from="1548046951978" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="Edit Home">
       <created>1547436452523</created>
@@ -558,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547858070381</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Terahir">
+      <created>1548047727083</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1548047727085</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262466000" />
+    <option name="totallyTimeSpent" value="262747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,8 +590,8 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43707484" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3282313" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43707484" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3282313" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -693,7 +694,8 @@
     <MESSAGE value="admin minat bakat fix" />
     <MESSAGE value="Edit Soal Tamble Fix" />
     <MESSAGE value="Edit Soal Selesai" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Soal Selesai" />
+    <MESSAGE value="Terahir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terahir" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -960,7 +962,7 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3604">
-          <caret line="582" column="27" selection-start-line="582" selection-start-column="27" selection-end-line="582" selection-end-column="27" />
+          <caret line="584" column="27" selection-start-line="584" selection-start-column="27" selection-end-line="584" selection-end-column="27" />
           <folding>
             <element signature="n#__construct#0;n#Ajax#0;n#!!top" />
             <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" />
@@ -1034,8 +1036,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="263" column="36" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+        <state relative-caret-position="183">
+          <caret line="265" column="36" selection-start-line="265" selection-start-column="36" selection-end-line="265" selection-end-column="36" />
           <folding>
             <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
             <element signature="n#city#0;n#M_ajax#0;n#!!top" />
