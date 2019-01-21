@@ -266,6 +266,9 @@ class M_ajax extends CI_Model
             $this->db->update('admin', $data);
         } else {
             $this->db->insert('admin', $data);
+
+
+
         }
     }
 
