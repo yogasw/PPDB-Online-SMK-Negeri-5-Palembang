@@ -266,9 +266,6 @@ class M_ajax extends CI_Model
             $this->db->update('admin', $data);
         } else {
             $this->db->insert('admin', $data);
-
-
-
         }
     }
 
@@ -278,7 +275,9 @@ class M_ajax extends CI_Model
         $this->db->from('admin');
         $this->db->where('username', $username);
         $this->db->limit(1);
+
         $query = $this->db->get();
+
         return $query->result_array();
     }
 }

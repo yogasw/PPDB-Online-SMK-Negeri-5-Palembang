@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/system/core/Config.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Terahir" />
+    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Selsai">
+      <change beforePath="$PROJECT_DIR$/application/models/M_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" afterDir="false" />
+    </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="270" lean-forward="true" selection-start-line="270" selection-end-line="270" />
+            <state relative-caret-position="217">
+              <caret line="267" column="46" selection-start-line="267" selection-start-column="46" selection-end-line="267" selection-end-column="46" />
               <folding>
                 <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
                 <element signature="n#city#0;n#M_ajax#0;n#!!top" />
@@ -359,7 +361,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="1194000" />
+      <workItem from="1548046951978" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="Edit Home">
       <created>1547436452523</created>
@@ -522,11 +524,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548047727085</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Selsai">
+      <created>1548048345756</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1548048345756</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263055000" />
+    <option name="totallyTimeSpent" value="263299000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,8 +562,8 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43707484" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3282313" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43707484" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3282313" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -658,7 +667,8 @@
     <MESSAGE value="Edit Soal Tamble Fix" />
     <MESSAGE value="Edit Soal Selesai" />
     <MESSAGE value="Terahir" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terahir" />
+    <MESSAGE value="Selsai" />
+    <option name="LAST_COMMIT_MESSAGE" value="Selsai" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -999,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="270" lean-forward="true" selection-start-line="270" selection-end-line="270" />
+        <state relative-caret-position="217">
+          <caret line="267" column="46" selection-start-line="267" selection-start-column="46" selection-end-line="267" selection-end-column="46" />
           <folding>
             <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
             <element signature="n#city#0;n#M_ajax#0;n#!!top" />
