@@ -244,4 +244,38 @@ class M_ajax extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    function hapus_admin($username)
+    {
+        $this->db->where('username', $username);
+        $this->db->delete('admin');
+        return true;
+    }
+
+    function kirim_data_admin($data, $username)
+    {
+        $this->db->select("*");
+        $this->db->from('admin');
+        $this->db->where('username', $username);
+        $query = $this->db->count_all_results();
+
+
+        if ($query >= 1) {
+            unset($data['username']);
+            $this->db->where('username', $username);
+            $this->db->update('admin', $data);
+        } else {
+            $this->db->insert('admin', $data);
+        }
+    }
+
+    function ambil_data_admin($username)
+    {
+        $this->db->select('*');
+        $this->db->from('admin');
+        $this->db->where('username', $username);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }

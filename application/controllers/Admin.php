@@ -107,4 +107,12 @@ class Admin extends CI_Controller
         $this->load->view('pmb/tambah_data_siswa');
         $this->load->view('admin/template/footer');
     }
+
+    public function kelola_admin()
+    {
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/kelola_akun_admin');
+        $this->load->view('admin/template/footer');
+    }
 }
