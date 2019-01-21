@@ -1,0 +1,3 @@
+dispatch:
+  - url: "ppdb-smk5palembang.appspot.com/*"
+    service: default
