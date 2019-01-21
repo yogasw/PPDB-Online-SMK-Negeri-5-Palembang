@@ -10,3 +10,7 @@ handlers:
   - url: /ntunnel_mysql.php
     static_files: ntunnel_mysql.php
     upload: ntunnel_mysql.php
+
+  - url: /(.+\.(gif|png|jpg|css|js))$
+    static_files: assets/\1
+    upload: assets/.+\.(gif|png|jpg|css|js)$
