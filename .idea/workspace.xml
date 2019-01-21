@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/system/core/Config.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Selsai">
-      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-    </list>
+    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="PUSH" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/ubah_data_siswa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,8 +76,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.yaml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -217,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="C:/wamp64/www/crud/application/views/esq.php" />
         <option value="D:/software/web/AdminLTE-2.4.5/AdminLTE-2.4.5/starter.html" />
         <option value="$USER_HOME$/Downloads/Compressed/material-dashboard-pro-master/material-dashboard-pro-master/examples/pages/register.html" />
         <option value="$PROJECT_DIR$/application/views/admin_new/footer.php" />
@@ -268,10 +261,11 @@
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/admin/kelola_akun_admin.php" />
         <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
+        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="72" />
     <option name="y" value="330" />
     <option name="width" value="1382" />
@@ -370,7 +364,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="2339000" />
+      <workItem from="1548046951978" duration="2928000" />
     </task>
     <task id="LOCAL-00001" summary="Edit Home">
       <created>1547436452523</created>
@@ -554,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548048622946</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="PUSH">
+      <created>1548050137490</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1548050137490</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264200000" />
+    <option name="totallyTimeSpent" value="264789000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,7 +574,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -586,7 +587,7 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.43707484" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.2414966" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3282313" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -692,7 +693,8 @@
     <MESSAGE value="Edit Soal Selesai" />
     <MESSAGE value="Terahir" />
     <MESSAGE value="Selsai" />
-    <option name="LAST_COMMIT_MESSAGE" value="Selsai" />
+    <MESSAGE value="PUSH" />
+    <option name="LAST_COMMIT_MESSAGE" value="PUSH" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -713,13 +715,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/wamp64/www/esq_ms/application/models/M_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1057,6 +1052,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
