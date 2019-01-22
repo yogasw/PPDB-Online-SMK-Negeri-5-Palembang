@@ -1,16 +1,14 @@
 runtime: php55
 api_version: 1
-threadsafe: false
+threadsafe: true
+
 handlers:
   - url: /
     script: index.php
   - url: /(.+)
     script: index.php
+  - url: /assets
+    static_dir: assets
 
-  - url: /ntunnel_mysql.php
-    static_files: ntunnel_mysql.php
-    upload: ntunnel_mysql.php
-
-  - url: /(.+\.(gif|png|jpg|css|js))$
-    static_files: assets/\1
-    upload: assets/.+\.(gif|png|jpg|css|js)$
+beta_settings:
+  cloud_sql_instances: ppdb-smk5palembang:us-central1:ppdb-smk5-palembang
