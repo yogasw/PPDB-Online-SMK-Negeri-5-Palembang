@@ -1,0 +1,16 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+handlers:
+
+  - url: /assets
+    static_dir: assets
+
+  - url: /
+    script: index.php
+
+  - url: /(.+)
+    script: index.php
+
+beta_settings:
+  cloud_sql_instances: ppdb-smk5palembang:us-central1:ppdb-smk5-palembang
