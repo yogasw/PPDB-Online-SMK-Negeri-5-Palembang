@@ -261,7 +261,6 @@ class Ajax extends CI_Controller
 
     function kirim_data_wawancara()
     {
-        log_all();
         $nisn = $this->input->post('nisn');
         $this->m_ajax->insert_nilai_wawancara($_POST, $nisn);
     }
@@ -523,7 +522,6 @@ class Ajax extends CI_Controller
     {
         $nisn = $this->input->post("nisn");
         $hasil = $this->m_ajax->cek_nisn($nisn);
-        log_app($nisn . " " . $hasil);
         if ($hasil) {
             print_r("true");
         } else {
@@ -581,8 +579,6 @@ class Ajax extends CI_Controller
     function ambil_data_admin()
     {
         $username = $this->input->post('username');
-        log_all();
-        log_app($username);
         $data = $this->m_ajax->ambil_data_admin($username);
         print_r(json_encode($data));
     }

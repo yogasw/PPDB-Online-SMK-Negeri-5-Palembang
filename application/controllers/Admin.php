@@ -35,7 +35,6 @@ class Admin extends CI_Controller
 
     public function pendaftaran()
     {
-        log_all();
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_admin->show_data();

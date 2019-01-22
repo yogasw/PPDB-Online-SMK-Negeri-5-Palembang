@@ -135,7 +135,6 @@ class M_ajax extends CI_Model
         $this->db->from('nilai_psikologi');
         $this->db->where('nisn', $nisn);
         $query = $this->db->count_all_results();
-        log_all();
         if ($query >= 1) {
             unset($data['nisn']);
             unset($data['nama']);
@@ -164,7 +163,6 @@ class M_ajax extends CI_Model
         $this->db->from('nilai_mb');
         $this->db->where('nisn', $nisn);
         $query = $this->db->count_all_results();
-        log_all();
         if ($query >= 1) {
             unset($data['nisn']);
             unset($data['nama']);
@@ -217,14 +215,10 @@ class M_ajax extends CI_Model
 
     function kirim_data_soal($data, $id)
     {
-
-
         $this->db->select("*");
         $this->db->from('core_soal');
         $this->db->where('id', $id);
         $query = $this->db->count_all_results();
-
-        log_app($query);
 
         if ($query >= 1) {
             unset($data['id']);
@@ -275,9 +269,7 @@ class M_ajax extends CI_Model
         $this->db->from('admin');
         $this->db->where('username', $username);
         $this->db->limit(1);
-
         $query = $this->db->get();
-
         return $query->result_array();
     }
 }

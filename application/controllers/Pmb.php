@@ -22,7 +22,6 @@ class Pmb extends CI_Controller
         $x['data'] = $this->m_pmb->show_data();
         $this->load->view('pmb/pendaftaran',$x);
         $this->load->view('admin/template/footer');
-        log_all();
     }
 
     public function wawancara()
