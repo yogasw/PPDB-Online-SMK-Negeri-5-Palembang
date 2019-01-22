@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery. datatables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.dataTables.js" beforeDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -175,8 +173,8 @@
         <option value="$PROJECT_DIR$/application/config/testing/database.php" />
         <option value="$PROJECT_DIR$/application/config/testing/config.php" />
         <option value="$PROJECT_DIR$/dispatch.yaml" />
-        <option value="$PROJECT_DIR$/app.yaml" />
         <option value="$PROJECT_DIR$/application/views/admin/home.php" />
+        <option value="$PROJECT_DIR$/app.yaml" />
       </list>
     </option>
   </component>
@@ -205,6 +203,12 @@
               <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
               <item name="skripsi" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skripsi" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -285,14 +289,7 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="29793000" />
-    </task>
-    <task id="LOCAL-00001" summary="Edit Home">
-      <created>1547436452523</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1547436452523</updated>
+      <workItem from="1548046951978" duration="30042000" />
     </task>
     <task id="LOCAL-00002" summary="Ujie Tambah dan hapus">
       <created>1547436687404</created>
@@ -623,11 +620,25 @@
       <option name="project" value="LOCAL" />
       <updated>1548115948313</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="file">
+      <created>1548121657182</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1548121657182</updated>
+    </task>
+    <task id="LOCAL-00050" summary="file">
+      <created>1548121702232</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1548121702235</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291654000" />
+    <option name="totallyTimeSpent" value="291903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -641,7 +652,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -1156,7 +1167,7 @@
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>
