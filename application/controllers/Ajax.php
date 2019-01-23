@@ -569,7 +569,6 @@ class Ajax extends CI_Controller
         print_r(json_encode($data));
     }
 
-
     function kirim_data_admin()
     {
         $id = $this->input->post('username');
@@ -589,4 +588,30 @@ class Ajax extends CI_Controller
         $this->m_ajax->hapus_admin($id);
 
     }
+
+    function login()
+    {
+        $username = $this->input->post("username");
+        $password = $this->input->post("password");
+
+        if ($this->m_ajax->login_admin($username, $password)['status']) {
+            $output = ($this->m_ajax->login_admin($username, $password));
+            $this->session->set_userdata($output);
+        } else {
+            if ($this->m_ajax->login_siswa($username, $password)['status']) {
+                $output = ($this->m_ajax->login_siswa($username, $password));
+                $this->session->set_userdata($output);
+            } else {
+                $output = array("status" => false);
+            }
+        }
+        echo json_encode($output);
+    }
+
+    function logout()
+    {
+        $this->session->sess_destroy();
+        Redirect(base_url() . "login", false);
+    }
+
 }

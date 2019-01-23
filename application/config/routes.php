@@ -51,4 +51,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['default_controller'] = 'Pmb/pendaftaran';
+$route['default_controller'] = 'admin/login';
+
+//Keluar Masuk
+$route['keluar'] = 'ajax/logout';
+$route['login'] = 'admin/login';
+
+$route['ppdb/pendaftaran'] = 'Ppdb/tambahdata_siswa';
+$route['minat_bakat'] = 'Ppdb/minat_bakat';
+
+$route['ppdb/([a-z]+)'] = "ppdb/$1";

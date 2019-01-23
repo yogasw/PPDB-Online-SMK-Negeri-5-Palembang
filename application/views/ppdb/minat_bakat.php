@@ -175,7 +175,7 @@
                         showConfirmButton: false,
                         buttonsStyling: false
                     });
-                    //table.ajax.reload();
+                    window.location = '<?php echo (base_url()) . "keluar"?>';
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     swal("Error!", "Please try again", "error");
@@ -214,7 +214,6 @@
                                 confirmButtonClass: "btn btn-success",
                                 buttonsStyling: false
                             });
-                            //table.ajax.reload();
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             swal("Error!", "Please try again", "error");

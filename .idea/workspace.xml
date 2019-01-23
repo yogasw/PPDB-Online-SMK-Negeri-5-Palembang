@@ -4,9 +4,36 @@
     <bookmark url="file://$PROJECT_DIR$/system/core/Config.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="file">
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery. datatables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery.dataTables.js" beforeDir="false" />
+    <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="Hapus Log_app dan Log_All &#10;fix google app engine dan google clound sql">
+      <change afterPath="$PROJECT_DIR$/application/views/admin/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/testing/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/testing/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Pmb.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ppdb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/M_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/M_pmb.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ppdb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/template/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/template/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/pendaftaran.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/psikologi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/psikologi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/quizzes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/minat_bakat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/tambah_data_siswa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/ubah_data_siswa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pmb/wawancara.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/wawancara.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/welcome_message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/faces/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/faces/card-profile1-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/faces/marc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/AU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/BR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/DE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/GB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/RO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/flags/US.png" beforeDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +41,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="skripsi">
@@ -23,38 +53,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/testing/config.php">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/application/views/admin/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Ppdb.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="59" column="51" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/ppdb/tambah_data_siswa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="552" column="86" lean-forward="true" selection-start-line="552" selection-start-column="28" selection-end-line="552" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/img/login.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/minat_bakat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="148" column="16" lean-forward="true" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.yaml">
+        <entry file="file://$PROJECT_DIR$/application/views/ppdb/minat_bakat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="472">
+              <caret line="177" column="77" selection-start-line="177" selection-start-column="77" selection-end-line="177" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispatch.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/application/views/admin/template/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/home.php">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/template/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/ppdb/pendaftaran.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/demo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -63,17 +142,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clic</find>
-      <find>log_</find>
-      <find>log_app</find>
-      <find>l</find>
-      <find>lo</find>
-      <find>log</find>
-      <find>waw</find>
-      <find>main-panel</find>
       <find>pmb/</find>
       <find>pmb</find>
-      <find>log_all</find>
       <find>chec</find>
       <find>all</find>
       <find>nisn</find>
@@ -93,6 +163,15 @@
       <find>de</find>
       <find>data</find>
       <find>sess</find>
+      <find>log_app</find>
+      <find>log_all</find>
+      <find>base</find>
+      <find>base_</find>
+      <find>compo</find>
+      <find>comp</find>
+      <find>status</find>
+      <find>json</find>
+      <find>m_pmb</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;?php echo(base_url())?&gt;assets</replace>
@@ -103,6 +182,7 @@
       <replace>admin</replace>
       <replace>Edit Data</replace>
       <replace>data[0].nisn_siswa</replace>
+      <replace>m_ppdb</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\data\belajar\WEB\skripsi</dir>
@@ -124,20 +204,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/admin/data_siswa.php" />
-        <option value="$PROJECT_DIR$/application/models/M_pendaftaran.php" />
-        <option value="$PROJECT_DIR$/application/views/pmb/data_siswa.php" />
-        <option value="$PROJECT_DIR$/application/logs/log-2019-01-14.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/template_new/header.php" />
-        <option value="$PROJECT_DIR$/assets/js/jquery.steps.js" />
-        <option value="$PROJECT_DIR$/assets/css/demo.css" />
         <option value="$PROJECT_DIR$/assets/css/jquery.steps.css" />
         <option value="$USER_HOME$/Downloads/Compressed/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/Slick-Circular-jQuery-Countdown-Plugin-Classy-Countdown/index.html" />
         <option value="$PROJECT_DIR$/application/logs/log-2019-01-15.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/quizzes.php" />
         <option value="$PROJECT_DIR$/application/views/welcome_message.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/template/sidebar.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template_new/footer.php" />
         <option value="$PROJECT_DIR$/application/views/admin/template_new/sidebar.php" />
         <option value="$PROJECT_DIR$/application/models/M_datasiswa.php" />
@@ -148,39 +220,47 @@
         <option value="$PROJECT_DIR$/application/views/admin/psikologi.php" />
         <option value="$PROJECT_DIR$/application/views/admin/wawancara.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/wawancara.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/minat_bakat.php" />
         <option value="$PROJECT_DIR$/application/models/M_admin.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2019-01-17.php" />
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Pmb.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/pendaftaran.php" />
         <option value="$PROJECT_DIR$/application/models/M_pmb.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2019-01-18.php" />
         <option value="$PROJECT_DIR$/application/views/pmb/psikologi.php" />
         <option value="$PROJECT_DIR$/application/views/admin/edit_soal.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/logs/log-2019-01-19.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/admin/kelola_akun_admin.php" />
-        <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
         <option value="$PROJECT_DIR$/ntunnel_mysql.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/development/config.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/config/testing/database.php" />
-        <option value="$PROJECT_DIR$/application/config/testing/config.php" />
         <option value="$PROJECT_DIR$/dispatch.yaml" />
-        <option value="$PROJECT_DIR$/application/views/admin/home.php" />
         <option value="$PROJECT_DIR$/app.yaml" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/application/config/testing/config.php" />
+        <option value="$PROJECT_DIR$/application/views/login.php" />
+        <option value="$PROJECT_DIR$/application/models/M_ajax.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/template/sidebar.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Pmb.php" />
+        <option value="$PROJECT_DIR$/application/models/M_ppdb.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/login.php" />
+        <option value="$PROJECT_DIR$/application/views/ppdb/tambah_data_siswa.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/minat_bakat.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Ppdb.php" />
+        <option value="$PROJECT_DIR$/application/views/ppdb/minat_bakat.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="198" />
+    <option name="x" value="133" />
+    <option name="y" value="214" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -192,6 +272,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,24 +283,36 @@
             <path>
               <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
               <item name="skripsi" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
               <item name="skripsi" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skripsi" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skripsi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skripsi" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ppdb" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/workspace.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -231,9 +324,9 @@
       <recent name="D:\data\belajar\WEB\skripsi\application\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\data\belajar\WEB\skripsi\application\views\admin" />
       <recent name="D:\data\belajar\WEB\skripsi\application\views\pmb" />
       <recent name="D:\data\belajar\WEB\skripsi\application\views\admin\pmb" />
-      <recent name="D:\data\belajar\WEB\skripsi\application\views\admin" />
       <recent name="D:\data\belajar\WEB\skripsi\application\views\admin\template" />
     </key>
   </component>
@@ -266,7 +359,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="" />
-      <changelist id="" name="Revert: nTunnel" comment="" />
       <created>1535478483037</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -289,28 +381,11 @@
       <workItem from="1547658453347" duration="417000" />
       <workItem from="1547658951181" duration="11168000" />
       <workItem from="1547802259864" duration="23046000" />
-      <workItem from="1548046951978" duration="30042000" />
-    </task>
-    <task id="LOCAL-00002" summary="Ujie Tambah dan hapus">
-      <created>1547436687404</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1547436687404</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Ujie Tambah dan hapus">
-      <created>1547436761625</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1547436761625</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Tambah new Admin">
-      <created>1547437125438</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1547437125438</updated>
+      <workItem from="1548046951978" duration="46164000" />
+      <workItem from="1548181868820" duration="2846000" />
+      <workItem from="1548231119605" duration="50000" />
+      <workItem from="1548231171780" duration="5598000" />
+      <workItem from="1548241756522" duration="3196000" />
     </task>
     <task id="LOCAL-00005" summary="Home Fix. Pendaftaran table dan ajax fix, hapus data fix. selanjutnya edit dan tambah data">
       <created>1547456083929</created>
@@ -634,11 +709,32 @@
       <option name="project" value="LOCAL" />
       <updated>1548121702235</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="file">
+      <created>1548121959072</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1548121959072</updated>
+    </task>
+    <task id="LOCAL-00052" summary="file">
+      <created>1548122071007</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1548122071007</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Hapus Log_app dan Log_All &#10;fix google app engine dan google clound sql">
+      <created>1548123811897</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1548123811897</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291903000" />
+    <option name="totallyTimeSpent" value="319715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,8 +747,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -664,8 +761,8 @@
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.2414966" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.2414966" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.2414966" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.22278911" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -675,7 +772,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -687,9 +784,9 @@
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.2414966" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22278911" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.2414966" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.2414966" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.22278911" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -777,7 +874,8 @@
     <MESSAGE value="Revert: nTunnel" />
     <MESSAGE value="nTunnel" />
     <MESSAGE value="file" />
-    <option name="LAST_COMMIT_MESSAGE" value="file" />
+    <MESSAGE value="Hapus Log_app dan Log_All &#10;fix google app engine dan google clound sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hapus Log_app dan Log_All &#10;fix google app engine dan google clound sql" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -785,7 +883,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php</url>
+          <url>file://$PROJECT_DIR$/application/views/ppdb/tambah_data_siswa.php</url>
           <line>118</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -798,15 +896,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/admin/akun.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/admin/data_siswa.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -837,14 +926,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/wawancara.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/wawancara.php">
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/wawancara.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
@@ -865,19 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/minat_bakat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="e#1759#2237#0#HTML" />
-            <element signature="e#2262#4098#0#HTML" />
-            <element signature="e#4153#4252#0#HTML" />
-            <element signature="e#4280#4938#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -893,52 +962,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="50" column="2" lean-forward="true" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/template/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/template/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Pmb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/quizzes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/ubah_data_siswa.php">
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/ubah_data_siswa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="612" column="44" lean-forward="true" selection-start-line="612" selection-start-column="44" selection-end-line="612" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_pmb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -949,85 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/tambah_data_siswa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="94" column="82" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="94" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/pendaftaran.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/edit_soal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6120">
           <caret line="360" column="25" selection-start-line="360" selection-start-column="25" selection-end-line="360" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/ubah_data_siswa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3604">
-          <caret line="584" column="27" selection-start-line="584" selection-start-column="27" selection-end-line="584" selection-end-column="27" />
-          <folding>
-            <element signature="n#__construct#0;n#Ajax#0;n#!!top" />
-            <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" />
-            <element signature="n#hapus_siswa#0;n#Ajax#0;n#!!top" />
-            <element signature="n#data_lokasi#0;n#Ajax#0;n#!!top" />
-            <element signature="n#ubahdata_siswa#0;n#Ajax#0;n#!!top" />
-            <element signature="n#kirim_quiz#0;n#Ajax#0;n#!!top" />
-            <element signature="n#ambil_data_wawancara#0;n#Ajax#0;n#!!top" />
-            <element signature="n#kirim_data_wawancara#0;n#Ajax#0;n#!!top" />
-            <element signature="n#ambil_data_psikologi#0;n#Ajax#0;n#!!top" />
-            <element signature="n#kirim_data_psikologi#0;n#Ajax#0;n#!!top" />
-            <element signature="n#multi_delete#0;n#Ajax#0;n#!!top" />
-            <element signature="n#ambil_data_minat_bakat#0;n#Ajax#0;n#!!top" />
-            <element signature="n#kirim_data_minat_bakat#0;n#Ajax#0;n#!!top" />
-            <element signature="n#reset_nilai_minat_bakat#0;n#Ajax#0;n#!!top" />
-            <element signature="n#get_all_soal#0;n#Ajax#0;n#!!top" />
-            <element signature="n#cek_nisn#0;n#Ajax#0;n#!!top" />
-            <element signature="n#multi_delete_soal#0;n#Ajax#0;n#!!top" />
-            <element signature="n#cek_no_soal#0;n#Ajax#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="n#pendaftaran#0;n#Admin#0;n#!!top" />
-            <element signature="n#wawancara#0;n#Admin#0;n#!!top" />
-            <element signature="n#psikologi#0;n#Admin#0;n#!!top" />
-            <element signature="n#ubahdata_siswa#0;n#Admin#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/kelola_akun_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2924">
-          <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/pendaftaran.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1038,36 +990,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pmb/psikologi.php">
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/psikologi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
           <caret line="74" column="70" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="277" selection-start-line="277" selection-end-line="277" />
-          <folding>
-            <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#city#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#update_siswa#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#tambah_nilai_un#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#getsoal#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#getjawaban#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#insert_nilai_mb#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#getwawancara#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#insert_nilai_wawancara#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#ambil_data_psikologi#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#kirim_data_psikologi#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#ambil_data_minat_bakat#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#kirim_data_minat_bakat#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#reset_nilai_minat_bakat#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#cek_nisn#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#hapus_soal#0;n#M_ajax#0;n#!!top" />
-            <element signature="n#multi_delete_soal#0;n#M_ajax#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,27 +1018,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="67" column="26" lean-forward="true" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-          <folding>
-            <element signature="e#6#1666#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2117">
-          <caret line="225" column="28" selection-start-line="225" selection-start-column="28" selection-end-line="225" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1130,9 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/testing/config.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/demo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1143,31 +1049,230 @@
     <entry file="file://$PROJECT_DIR$/dispatch.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml_backup">
+    <entry file="file://$PROJECT_DIR$/app.yaml_backup" />
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="330">
+          <caret line="225" column="7" selection-start-line="225" selection-start-column="7" selection-end-line="225" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml_backup">
+    <entry file="file://$PROJECT_DIR$/application/config/testing/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="73" />
+        <state relative-caret-position="310">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/home.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/ubah_data_siswa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
+        <state relative-caret-position="10387">
+          <caret line="611" selection-start-line="611" selection-end-line="611" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/wawancara.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="164" selection-start-line="138" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="340">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="287" column="19" selection-start-line="287" selection-start-column="19" selection-end-line="287" selection-end-column="50" />
+          <folding>
+            <element signature="n#hapus_siswa#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#multi_delete#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#city#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#update_siswa#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#tambah_siswa#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#tambah_nilai_un#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#getsoal#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#getjawaban#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#insert_nilai_mb#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#getwawancara#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#insert_nilai_wawancara#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#kirim_data_psikologi#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#ambil_data_minat_bakat#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#kirim_data_minat_bakat#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#reset_nilai_minat_bakat#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#cek_nisn#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#hapus_soal#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#multi_delete_soal#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#kirim_data_soal#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#ambil_data_soal#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#hapus_admin#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#kirim_data_admin#0;n#M_ajax#0;n#!!top" />
+            <element signature="n#login_siswa#0;n#M_ajax#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pendaftaran.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="59" />
+          <folding>
+            <element signature="n#wawancara#0;n#Admin#0;n#!!top" />
+            <element signature="n#psikologi#0;n#Admin#0;n#!!top" />
+            <element signature="n#ubahdata_siswa#0;n#Admin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="n#__construct#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_pendaftaran#0;n#Ajax#0;n#!!top" />
+            <element signature="n#hapus_siswa#0;n#Ajax#0;n#!!top" />
+            <element signature="n#data_lokasi#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ubahdata_siswa#0;n#Ajax#0;n#!!top" />
+            <element signature="n#tambah_siswa#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_quiz#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_wawancara#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_data_wawancara#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_psikologi#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_data_psikologi#0;n#Ajax#0;n#!!top" />
+            <element signature="n#multi_delete#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_minat_bakat#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_data_minat_bakat#0;n#Ajax#0;n#!!top" />
+            <element signature="n#reset_nilai_minat_bakat#0;n#Ajax#0;n#!!top" />
+            <element signature="n#get_all_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#get_all_admin#0;n#Ajax#0;n#!!top" />
+            <element signature="n#cek_nisn#0;n#Ajax#0;n#!!top" />
+            <element signature="n#hapus_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#multi_delete_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_data_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#cek_no_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_soal#0;n#Ajax#0;n#!!top" />
+            <element signature="n#kirim_data_admin#0;n#Ajax#0;n#!!top" />
+            <element signature="n#ambil_data_admin#0;n#Ajax#0;n#!!top" />
+            <element signature="n#hapus_admin#0;n#Ajax#0;n#!!top" />
+            <element signature="n#login#0;n#Ajax#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/kelola_akun_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_ppdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/login.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/template/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/template/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/pendaftaran.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/tambah_data_siswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="552" column="86" lean-forward="true" selection-start-line="552" selection-start-column="28" selection-end-line="552" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/minat_bakat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="148" column="16" lean-forward="true" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Ppdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/minat_bakat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="177" column="77" selection-start-line="177" selection-start-column="77" selection-end-line="177" selection-end-column="77" />
         </state>
       </provider>
     </entry>

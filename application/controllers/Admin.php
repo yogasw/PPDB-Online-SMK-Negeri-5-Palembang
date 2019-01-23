@@ -103,7 +103,7 @@ class Admin extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('pmb/tambah_data_siswa');
+        $this->load->view('ppdb/tambah_data_siswa');
         $this->load->view('admin/template/footer');
     }
 
@@ -112,6 +112,19 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/kelola_akun_admin');
+        $this->load->view('admin/template/footer');
+    }
+
+    public function login()
+    {
+        if ($this->session->userdata('level') == "admin") {
+            Redirect(base_url() . "admin", false);
+        } else if ($this->session->userdata('level') == "siswa") {
+            Redirect(base_url() . "ppdb/minat_bakat", false);
+        }
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/login');
         $this->load->view('admin/template/footer');
     }
 }

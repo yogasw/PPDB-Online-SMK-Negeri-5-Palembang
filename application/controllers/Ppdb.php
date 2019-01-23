@@ -6,12 +6,12 @@
  * Date: 14/01/2019
  * Time: 11.46
  */
-class Pmb extends CI_Controller
+class Ppdb extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_pmb');
+        $this->load->model('m_ppdb');
         $this->load->helper('site_helper');
     }
 
@@ -19,8 +19,8 @@ class Pmb extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_pmb->show_data();
-        $this->load->view('pmb/pendaftaran',$x);
+        $x['data'] = $this->m_ppdb->show_data();
+        $this->load->view('ppdb/pendaftaran', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -28,8 +28,8 @@ class Pmb extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_pmb->show_data();
-        $this->load->view('pmb/wawancara', $x);
+        $x['data'] = $this->m_ppdb->show_data();
+        $this->load->view('ppdb/wawancara', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -37,8 +37,8 @@ class Pmb extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_pmb->show_data();
-        $this->load->view('pmb/psikologi', $x);
+        $x['data'] = $this->m_ppdb->show_data();
+        $this->load->view('ppdb/psikologi', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -47,17 +47,17 @@ class Pmb extends CI_Controller
         $nisn = $this->input->get('nisn');
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_pmb->getdatasiswa($nisn);
-        $this->load->view('pmb/ubah_data_siswa', $x);
+        $x['data'] = $this->m_ppdb->getdatasiswa($nisn);
+        $this->load->view('ppdb/ubah_data_siswa', $x);
         $this->load->view('admin/template/footer');
     }
 
-    public function quizzes()
+    public function minat_bakat()
     {
-        $x['data'] = $this->m_pmb->getsoal();
+        $x['data'] = $this->m_ppdb->getsoal();
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('pmb/quizzes', $x);
+        $this->load->view('ppdb/minat_bakat', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -65,7 +65,7 @@ class Pmb extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('pmb/tambah_data_siswa');
+        $this->load->view('ppdb/tambah_data_siswa');
         $this->load->view('admin/template/footer');
     }
 

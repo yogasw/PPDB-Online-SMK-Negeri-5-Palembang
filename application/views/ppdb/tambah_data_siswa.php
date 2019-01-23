@@ -544,13 +544,13 @@
                         if (data["status"]) {
                             (swal({
                                 title: 'Mantap Cuy!',
-                                text: 'Data berhasil di perbarui',
+                                text: 'Data berhasil di kirim',
                                 type: 'success',
                                 confirmButtonClass: "btn btn-success",
                                 showConfirmButton: false,
                                 buttonsStyling: false
                             }))
-                            window.location = '<?php echo (base_url()) . "pmb/pendaftaran"?>';
+                            window.location = '<?php echo (base_url()) . "/keluar"?>';
                         }
                         else {
                             swal({

@@ -8,7 +8,7 @@
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4 text-right">
                         <button class="btn"
-                                onclick="window.location.href='<?php echo(base_url() . 'pmb/tambahdata_siswa') ?>'">
+                                onclick="window.location.href='<?php echo(base_url() . 'ppdb/tambahdata_siswa') ?>'">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
@@ -57,7 +57,7 @@
                         "mRender": function (data, type, full) {
                             return '<a href="#" onclick=delete_id("' + full[2] + '")' +
                                 '><span class="label label-primary">Hapus<span></a>' +
-                                '<a href="<?php echo(base_url())?>pmb/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
+                                '<a href="<?php echo(base_url())?>ppdb/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
                         }
                     }
                 ]

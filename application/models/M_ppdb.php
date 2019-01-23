@@ -6,7 +6,7 @@
  * Date: 03/09/2018
  * Time: 14.25
  */
-class M_pmb extends CI_Model
+class M_ppdb extends CI_Model
 {
     function show_data(){
         return $this->db->query("SELECT * FROM siswa");

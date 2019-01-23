@@ -14,3 +14,9 @@ handlers:
 
 beta_settings:
   cloud_sql_instances: ppdb-smk5palembang:us-central1:ppdb-smk5-palembang
+
+runtime_config:
+  document_root: .
+  # [START enabling_stackdriver_integration]
+  enable_stackdriver_integration: true
+  # [END enabling_stackdriver_integration]

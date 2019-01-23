@@ -1,4 +1,3 @@
-<?php echo($ss) ?>
 <div class="col-md-12">
     <div class="card">
         <div class="col-md-4">
@@ -43,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" hidden>
             <div class="card card-pricing ">
                 <div class="card-content">
                     <div class="icon icon-rose">

@@ -13,12 +13,12 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">
+                    <a href="<?php echo(base_url()) ?>">
                         <i class="material-icons">home</i>Home
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo(base_url() . "keluar") ?>">
                         <i class="material-icons">home</i>Keluar
                     </a>
                 </li>

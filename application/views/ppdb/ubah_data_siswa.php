@@ -551,7 +551,7 @@
                                 showConfirmButton: false,
                                 buttonsStyling: false
                             }))
-                            window.location = '<?php echo (base_url()) . "pmb/pendaftaran"?>';
+                            window.location = '<?php echo (base_url()) . "ppdb/pendaftaran"?>';
                         }
                         else {
                             swal({
