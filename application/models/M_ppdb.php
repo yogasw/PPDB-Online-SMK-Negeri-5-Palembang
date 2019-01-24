@@ -20,12 +20,12 @@ class M_ppdb extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+
     public function getsoal()
     {
         $this->db->select('*');
         $this->db->from('core_soal');
         $this->db->order_by('id', 'RANDOM');
-        //$this->db->limit(2);
         $query = $this->db->get();
         return $query->result_array();
     }

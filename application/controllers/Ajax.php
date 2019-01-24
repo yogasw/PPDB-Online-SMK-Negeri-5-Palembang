@@ -223,7 +223,7 @@ class Ajax extends CI_Controller
 
     function kirim_quiz()
     {
-        $nisn = '141420213';
+        $nisn = $this->session->userdata('username');
         $jumlah_benar = 0;
         $jumlah_bobot = 0;
         $nilai = 0;

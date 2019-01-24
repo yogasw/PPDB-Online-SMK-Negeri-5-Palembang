@@ -36,7 +36,9 @@
                                                         <div class="radio">
                                                             <label>
                                                                 <input type="radio" value="a"
-                                                                       name="<?php echo($u['id']) ?>"><a>A. <?php echo($u['opsi_a']) ?></a>
+                                                                       name="<?php echo($u['id']) ?>">
+                                                                <a>A. <?php echo($u['opsi_a']) ?></a>
+                                                                </input>
                                                             </label>
                                                         </div>
                                                         <div class="radio">
@@ -148,6 +150,7 @@
                 showConfirmButton: false,
                 buttonsStyling: false
             })
+            kirimjawaban(this);
         }
         ev.preventDefault();
     });
@@ -189,7 +192,7 @@
     };
 
     $(document).ready(function () {
-        // $(document).on("keydown", disableF5);
+        //$(document).on("keydown", disableF5);
         $('#timer').ClassyCountdown({
             theme: "flat-colors-black",
             end: $.now() + 1000,
@@ -214,6 +217,7 @@
                                 confirmButtonClass: "btn btn-success",
                                 buttonsStyling: false
                             });
+                            window.location = '<?php echo (base_url()) . "keluar"?>';
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             swal("Error!", "Please try again", "error");

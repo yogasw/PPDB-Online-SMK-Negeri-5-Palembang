@@ -54,7 +54,15 @@ class Ppdb extends CI_Controller
 
     public function minat_bakat()
     {
+        $nisn = $this->session->userdata('username');
         $x['data'] = $this->m_ppdb->getsoal();
+
+        $answer = array();
+        foreach ($x['data'] as $u) {
+            array_push($answer, $u['id']);
+        }
+
+        log_app(print_r($answer, true));
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('ppdb/minat_bakat', $x);

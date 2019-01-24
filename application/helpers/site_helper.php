@@ -7,38 +7,44 @@
  * Time: 23.03
  */
 
-if ( ! function_exists('log_all'))
-{
+if (!function_exists('log_all')) {
     function log_all()
     {
-        log_message('error', "________________________________________________ START LOG ________________________________________________");
-        $log1 = print_r(apache_request_headers(), true);
-        $log2 = ($_SERVER['REQUEST_METHOD']);
-        $log3 = print_r($_REQUEST, true);
-        $log4 = print_r(apache_response_headers(), true);
-        log_message('error', "________________________________________________  REQUEST   ________________________________________________");
-        log_message('error', $log1);
-        log_message('error', $log2 . " = " . $log3 . " ");
-        log_message('error', "________________________________________________  REPONSE   ________________________________________________");
-        log_message('error', $log4);
-        log_message('error', '________________________________________________  END LOG  ________________________________________________');
+        if (ENVIRONMENT == 'testing') {
 
+        } else {
+            log_message('error', "________________________________________________ START LOG ________________________________________________");
+            $log1 = print_r(apache_request_headers(), true);
+            $log2 = ($_SERVER['REQUEST_METHOD']);
+            $log3 = print_r($_REQUEST, true);
+            $log4 = print_r(apache_response_headers(), true);
+            log_message('error', "________________________________________________  REQUEST   ________________________________________________");
+            log_message('error', $log1);
+            log_message('error', $log2 . " = " . $log3 . " ");
+            log_message('error', "________________________________________________  REPONSE   ________________________________________________");
+            log_message('error', $log4);
+            log_message('error', '________________________________________________  END LOG  ________________________________________________');
+
+        }
     }
 }
 
-if ( ! function_exists('log_app'))
-{
+if (!function_exists('log_app')) {
     function log_app($string)
     {
-       log_message('error',$string);
+        if (ENVIRONMENT == 'testing') {
+
+        } else {
+            log_message('error', $string);
+        }
 
     }
 }
 
-if ( ! function_exists('description_lokasi')) {
+if (!function_exists('description_lokasi')) {
     function description_lokasi($id)
     {
-        if ($id=="") {
+        if ($id == "") {
             return ("...");
         } else {
             $ci =& get_instance();
@@ -53,7 +59,7 @@ if ( ! function_exists('description_lokasi')) {
     }
 }
 
-if ( ! function_exists('bitly')) {
+if (!function_exists('bitly')) {
     function bitly($link)
     {
         $api = "http://api.bitly.com/v3/shorten?login=mryoga12345&apiKey=R_68b7f7e7f55c41fcbfbcf9f6c76b5fe0&longUrl=" . $link;
@@ -68,10 +74,10 @@ if ( ! function_exists('bitly')) {
         }
     }
 }
-if ( ! function_exists('hash_ci')) {
+if (!function_exists('hash_ci')) {
     function hash_ci($string)
     {
-     return md5(sha1($string));
+        return md5(sha1($string));
     }
 }
 

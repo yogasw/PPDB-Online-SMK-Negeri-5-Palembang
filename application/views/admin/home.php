@@ -28,8 +28,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-pricing ">
+        <div class="col-md-4" hidden>
+            <div class="card card-pricing">
                 <div class="card-content">
                     <div class="icon icon-rose">
                         <i class="material-icons">airline_seat_recline_normal</i>
