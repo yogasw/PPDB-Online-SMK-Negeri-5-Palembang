@@ -1,5 +1,5 @@
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-            <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
+    <form action="<?php echo base_url("ajax/tambah_siswa"); ?>" method="post" novalidate="novalidate">
                     <div class="wizard-header">
                         <h3 class="wizard-title">
                             FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
