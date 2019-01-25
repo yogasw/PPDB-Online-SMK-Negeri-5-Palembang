@@ -8,9 +8,11 @@
  */
 class M_ppdb extends CI_Model
 {
-    function show_data(){
+    function show_data()
+    {
         return $this->db->query("SELECT * FROM siswa");
     }
+
     public function getdatasiswa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisnsiswa');
@@ -21,12 +23,34 @@ class M_ppdb extends CI_Model
         return $query->result_array();
     }
 
-    public function getsoal()
+    public function getsoal($nisn)
     {
-        $this->db->select('*');
-        $this->db->from('core_soal');
-        $this->db->order_by('id', 'RANDOM');
-        $query = $this->db->get();
-        return $query->result_array();
+        if ($this->cek_nilai_mb($nisn)) {
+            $this->load->model('M_ajax', 'ajax');
+            $daftar_soal = $this->ajax->ambil_data_minat_bakat($nisn)[0]['list_soal'];
+            $q = "SELECT * FROM core_soal WHERE id IN (" . $daftar_soal . ") ORDER BY FIELD(id," . $daftar_soal . ")";
+            $query = $this->db->query($q);
+            return $query->result_array();
+        } else {
+            $this->db->select('*');
+            $this->db->from('core_soal');
+            $this->db->order_by('id', 'RANDOM');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+    }
+
+    function cek_nilai_mb($nisn)
+    {
+        $this->db->select("*");
+        $this->db->from('nilai_mb');
+        $this->db->where('nisn', $nisn);
+        $query = $this->db->count_all_results();
+
+        if ($query >= 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

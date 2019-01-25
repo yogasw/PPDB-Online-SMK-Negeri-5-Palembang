@@ -1,8 +1,4 @@
-<link href="<?php echo(base_url()) ?>assets/css/jquery.classycountdown.css" rel="stylesheet" type="text/css">
-<link href="<?php echo(base_url()) ?>assets/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script src="<?php echo(base_url()) ?>assets/js/jquery.knob.js"></script>
-<script src="<?php echo(base_url()) ?>assets/js/jquery.throttle.js"></script>
-<script src="<?php echo(base_url()) ?>assets/js/jquery.classycountdown.js"></script>
+<script src="<?php echo(base_url()) ?>assets/js/jquery.simple.timer.js"></script>
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
             <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">
                 <div class="wizard-header">
@@ -20,7 +16,10 @@
                                         <h4>Nomor Soal</h4>
                                     </div>
                                     <div class="col-xs-8">
-                                        <div id="timer" class="timer"></div>
+                                        <?php
+                                        //ambil sisa waktu
+                                        echo('<h5 class="timer" data-minutes-left=' . $waktu . "></h5>");
+                                        ?>
                                     </div>
                                     <br>
                                     <br>
@@ -193,37 +192,9 @@
 
     $(document).ready(function () {
         //$(document).on("keydown", disableF5);
-        $('#timer').ClassyCountdown({
-            theme: "flat-colors-black",
-            end: $.now() + 1000,
-            onEndCallback: function () {
-                swal({
-                    title: 'Tunggu!',
-                    text: 'Silahkan Tunggu Sebentar',
-                    type: 'success',
-                    confirmButtonClass: "btn btn-success",
-                    showConfirmButton: false,
-                    buttonsStyling: false
-                }).then(function () {
-                    $.ajax({
-                        type: frm.attr('method'),
-                        url: frm.attr('action'),
-                        data: frm.serialize(),
-                        success: function () {
-                            swal({
-                                title: 'Berhasil!',
-                                text: 'Jawaban Berhasil Di Kirim!!',
-                                type: 'success',
-                                confirmButtonClass: "btn btn-success",
-                                buttonsStyling: false
-                            });
-                            window.location = '<?php echo (base_url()) . "keluar"?>';
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            swal("Error!", "Please try again", "error");
-                        }
-                    });
-                });
+        $('.timer').startTimer({
+            onComplete: function (element) {
+                alert("STOP");
             }
         });
     });

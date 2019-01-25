@@ -54,6 +54,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 
+date_default_timezone_set('Asia/Jakarta');
 switch ($_SERVER['HTTP_HOST']) {
     case 'localhost':
         $env = 'development';

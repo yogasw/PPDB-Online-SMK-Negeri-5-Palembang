@@ -30,6 +30,12 @@ if (!function_exists('log_all')) {
 }
 
 if (!function_exists('log_app')) {
+    /**
+     * Menampilkan Log
+     *
+     *
+     * @param   String $string Input Text
+     */
     function log_app($string)
     {
         if (ENVIRONMENT == 'testing') {
@@ -44,6 +50,7 @@ if (!function_exists('log_app')) {
 if (!function_exists('description_lokasi')) {
     function description_lokasi($id)
     {
+
         if ($id == "") {
             return ("...");
         } else {
@@ -92,6 +99,16 @@ if (!function_exists('post_to_coma')) {
     }
 }
 
+if (!function_exists('array_to_coma')) {
+    function array_to_coma($string)
+    {
+        $answer = array();
+        foreach ($string as $key => $value) {
+            array_push($answer, $value);
+        }
+        return rtrim(implode(',', $answer), ',');
+    }
+}
 
 if (!function_exists('post_to_array')) {
     function post_to_array($string)
@@ -104,3 +121,28 @@ if (!function_exists('post_to_array')) {
     }
 
 }
+
+if (!function_exists('sisa_waktu')) {
+
+    function sisa_waktu($tgl_selesai)
+        /**
+         * Menampilkan Log
+         *
+         *
+         * @param   DateTime $tgl_mulai Waktu Mulai
+         * @param   DateTime $tgl_selesai Waktu Selesai
+         * @return  int
+         */
+    {
+
+        //Menghitung waktu selesai jika data sudah ada
+        $tgl_mulai = date('Y-m-d H:i:s');
+        $d1 = new DateTime($tgl_mulai);
+        $d2 = new DateTime($tgl_selesai);
+        $interval = $d2->diff($d1);
+        $hours = $interval->format('%h');
+        $minutes = $interval->format('%i');
+        return ($hours * 60) + $minutes;
+    }
+}
+
