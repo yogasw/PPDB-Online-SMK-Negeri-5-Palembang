@@ -142,7 +142,7 @@
     function kirimdata() {
         $.ajax({
             type: "POST",
-            url: "<?php echo(base_url() . 'ajax/kirim_data_minat_bakat')?>",
+            url: "<?php echo(base_url() . 'ajax/kirim_data_minat_bakat_admin')?>",
             data: datastring,
             success: function () {
                 swal({

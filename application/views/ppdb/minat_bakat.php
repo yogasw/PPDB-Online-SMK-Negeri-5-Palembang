@@ -1,6 +1,6 @@
 <script src="<?php echo(base_url()) ?>assets/js/jquery.simple.timer.js"></script>
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-            <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_quiz') ?>" method="post">
+    <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_minat_bakat') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">
                         FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
@@ -33,28 +33,52 @@
                                                     <section>
                                                         <h5><?php echo($jmlh_data) ?>. <?php echo($u['soal']) ?></h5>
                                                         <div class="radio">
+
                                                             <label>
-                                                                <input type="radio" value="a"
-                                                                       name="<?php echo($u['id']) ?>">
+                                                                <input type="radio" value="a" <?php
+                                                                if (isset($jawaban[$u['id']])) {
+                                                                    if ($jawaban[$u['id']] == 'a') {
+                                                                        echo('checked="checked"');
+                                                                    }
+                                                                }
+                                                                ?> name="<?php echo($u['id']) ?>">
                                                                 <a>A. <?php echo($u['opsi_a']) ?></a>
                                                                 </input>
                                                             </label>
                                                         </div>
                                                         <div class="radio">
                                                             <label>
-                                                                <input type="radio" value="b"
+                                                                <input type="radio" value="b"<?php
+                                                                if (isset($jawaban[$u['id']])) {
+                                                                    if ($jawaban[$u['id']] == 'b') {
+                                                                        echo('checked="checked"');
+                                                                    }
+                                                                }
+                                                                ?>
                                                                        name="<?php echo($u['id']) ?>"><a>B. <?php echo($u['opsi_b']) ?></a>
                                                             </label>
                                                         </div>
                                                         <div class="radio">
                                                             <label>
-                                                                <input type="radio" value="c"
+                                                                <input type="radio" value="c"<?php
+                                                                if (isset($jawaban[$u['id']])) {
+                                                                    if ($jawaban[$u['id']] == 'c') {
+                                                                        echo('checked="checked"');
+                                                                    }
+                                                                }
+                                                                ?>
                                                                        name="<?php echo($u['id']) ?>"><a>C. <?php echo($u['opsi_c']) ?></a>
                                                             </label>
                                                         </div>
                                                         <div class="radio">
                                                             <label>
-                                                                <input type="radio" value="d"
+                                                                <input type="radio" value="d" <?php
+                                                                if (isset($jawaban[$u['id']])) {
+                                                                    if ($jawaban[$u['id']] == 'd') {
+                                                                        echo('checked="checked"');
+                                                                    }
+                                                                }
+                                                                ?>
                                                                        name="<?php echo($u['id']) ?>"><a>D. <?php echo($u['opsi_d']) ?></a>
                                                             </label>
                                                         </div>
@@ -84,7 +108,15 @@
                                             <?php $jmlh_data = $jmlh_data + 1; ?>
                                             <a id="<?php echo("no" . $jmlh_data) ?>"
                                                onclick="goto(<?php echo($jmlh_data) ?>)" <span
-                                                    class="label label-default"><?php echo($jmlh_data) ?></span></a>
+                                                <?php
+                                                if (isset($jawaban[$u['id']])) {
+                                                    echo('class="label label-danger"');
+                                                } else {
+                                                    echo('class="label label-default"');
+                                                } ?>
+                                                ?>
+
+                                                <?php echo($jmlh_data) ?></span></a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -186,6 +218,26 @@
         });
     }
 
+    function waktuHabis() {
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function () {
+                window.location = '<?php echo (base_url()) . "keluar"?>';
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal("Error!", "Please try again", "error");
+            }
+        });
+        swal({
+            title: 'Waktu habis!!',
+            text: "Jawaban akan di kirim automatis",
+            type: 'error',
+            showConfirmButton: false,
+            buttonsStyling: false
+        });
+    }
     function disableF5(e) {
         if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault();
     };
@@ -194,8 +246,9 @@
         //$(document).on("keydown", disableF5);
         $('.timer').startTimer({
             onComplete: function (element) {
-                alert("STOP");
+                waktuHabis();
             }
+
         });
     });
 

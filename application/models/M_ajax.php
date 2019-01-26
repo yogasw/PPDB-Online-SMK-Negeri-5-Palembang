@@ -281,6 +281,8 @@ class M_ajax extends CI_Model
         $this->db->where('password', $password);
         if ($this->db->count_all_results() >= 1) {
             $this->db->from('admin');
+            $this->db->where('username', $username);
+            $this->db->where('password', $password);
             $query = $this->db->get();
             $hasil = $query->result_array();
             return $output = array("status" => true, "level" => "admin", "username" => $hasil[0]['username'], "name" => $hasil[0]['name'], "jurusan" => $hasil[0]['jurusan']);
@@ -296,6 +298,7 @@ class M_ajax extends CI_Model
         $this->db->where('nisn', $username);
         if ($this->db->count_all_results() >= 1) {
             $this->db->from('siswa');
+            $this->db->where('nisn', $username);
             $query = $this->db->get();
             $hasil = $query->result_array();
             return $output = array("status" => true, "level" => "siswa", "username" => $hasil[0]['nisn'], "name" => $hasil[0]['nama_lengkap'], "jurusan" => $hasil[0]['jurusan']);

@@ -221,23 +221,37 @@ class Ajax extends CI_Controller
         echo json_encode($respon);
     }
 
-    function kirim_quiz()
+    function kirim_data_minat_bakat()
     {
+        //Deklarasi variable
         $nisn = $this->session->userdata('username');
         $jumlah_benar = 0;
         $jumlah_bobot = 0;
         $nilai = 0;
         $status = "selesai";
-        $jawaban = post_to_array($_POST);
+        $jawaban = $_POST;
 
-        foreach ($jawaban as $row) {
-            $benar = $this->m_ajax->getjawaban($row['key']);
-            if ((strtolower($benar->jawaban)) == strtolower($row['value'])) {
+        //mengambil id soal, id mapel, bobot, jawaban
+        $this->load->model('m_ppdb');
+        $soal = $this->m_ppdb->getsoal($nisn);
+        foreach ($soal as $value) {
+            $kunci_jawaban[$value['id']] = array(
+                'id_mapel' => $value['id_mapel'],
+                'bobot' => $value['bobot'],
+                'jawaban' => $value['jawaban']
+            );
+        }
+
+        //mencocokan jawaban dengan kuci jawaban
+        foreach ($jawaban as $key => $value) {
+            log_app($key . " " . $kunci_jawaban[$key]['jawaban'] . " " . strtolower($value));
+            if ((strtolower($kunci_jawaban[$key]['jawaban'])) == strtolower($value)) {
                 $nilai = $nilai + 1;
-                $jumlah_bobot = $jumlah_bobot + $benar->bobot;
                 $jumlah_benar = $jumlah_benar + 1;
+                //$jumlah_bobot = $jumlah_bobot + $benar->bobot;
             }
         }
+
 
         $data = array(
             'nisn' => $nisn,
@@ -249,6 +263,7 @@ class Ajax extends CI_Controller
             'tgl_selesai' => $date = date('Y-m-d H:i:s'),
             'status' => $status
         );
+
         $this->m_ajax->insert_nilai_mb($data, $nisn);
     }
 
@@ -295,7 +310,7 @@ class Ajax extends CI_Controller
         print_r(json_encode($data));
     }
 
-    function kirim_data_minat_bakat()
+    function kirim_data_minat_bakat_admin()
     {
         $nisn = $this->input->post('nisn');
         $this->m_ajax->kirim_data_minat_bakat($_POST, $nisn);
@@ -593,7 +608,6 @@ class Ajax extends CI_Controller
     {
         $username = $this->input->post("username");
         $password = $this->input->post("password");
-
         if ($this->m_ajax->login_admin($username, $password)['status']) {
             $output = ($this->m_ajax->login_admin($username, $password));
             $this->session->set_userdata($output);

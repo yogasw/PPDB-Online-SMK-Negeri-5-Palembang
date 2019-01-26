@@ -58,9 +58,15 @@ class Ppdb extends CI_Controller
             Redirect(base_url() . "login", false);
         }
 
+        $this->load->model('m_ajax');
+
         $nisn = $this->session->userdata("username");
 
         $x['data'] = $this->m_ppdb->getsoal($nisn);
+
+        if (($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']) != "") {
+            $x['jawaban'] = jawaban_to_array($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']);
+        }
 
         //mengambil daftar soal yang sudah di acak serta isi waktu selesai dan mulai
         if (!$this->m_ppdb->cek_nilai_mb($nisn)) {
@@ -84,17 +90,18 @@ class Ppdb extends CI_Controller
                 'tgl_selesai' => $tgl_selesai
             ];
 
-            $this->load->model('m_ajax');
-
             $this->m_ajax->insert_nilai_mb($data, $nisn);
         }
 
         //ambil sisa waktu dari database
         $this->load->model('M_ajax', 'ajax');
         $data = $this->ajax->ambil_data_minat_bakat($nisn)[0];
-        $selesai = $data['tgl_selesai'];
 
-        $x['waktu'] = sisa_waktu($selesai);
+        $selesai = $data['tgl_selesai'];
+        $mulai = $data['tgl_mulai'];
+
+        //log_app("Waktu Mulai : ".$data['tgl_mulai']." Waktu Selesai : ".$data['tgl_selesai']." Siswa Waktu : ".sisa_waktu($selesai));
+        $x['waktu'] = sisa_waktu($mulai, $selesai);
 
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');

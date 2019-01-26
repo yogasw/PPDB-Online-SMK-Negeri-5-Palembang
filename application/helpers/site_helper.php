@@ -110,6 +110,20 @@ if (!function_exists('array_to_coma')) {
     }
 }
 
+if (!function_exists('jawaban_to_array')) {
+    function jawaban_to_array($data)
+    {
+        $hasil = explode(",", $data);
+        foreach ($hasil as $value) {
+            $text = explode(":", $value);
+            $answer[$text[0]] = $text[1];
+        }
+
+        return $answer;
+    }
+}
+
+
 if (!function_exists('post_to_array')) {
     function post_to_array($string)
     {
@@ -124,7 +138,7 @@ if (!function_exists('post_to_array')) {
 
 if (!function_exists('sisa_waktu')) {
 
-    function sisa_waktu($tgl_selesai)
+    function sisa_waktu($tgl_mulai, $tgl_selesai)
         /**
          * Menampilkan Log
          *
@@ -135,14 +149,29 @@ if (!function_exists('sisa_waktu')) {
          */
     {
 
-        //Menghitung waktu selesai jika data sudah ada
-        $tgl_mulai = date('Y-m-d H:i:s');
+
+        //Menghitung waktu yang di berikan
         $d1 = new DateTime($tgl_mulai);
         $d2 = new DateTime($tgl_selesai);
         $interval = $d2->diff($d1);
         $hours = $interval->format('%h');
         $minutes = $interval->format('%i');
-        return ($hours * 60) + $minutes;
+        $waktu1 = $hours * 60 + $minutes;
+
+
+        //Menghitung waktu kelewat
+        $d11 = new DateTime($tgl_mulai);
+        $d22 = new DateTime(date('Y-m-d H:i:s'));
+        $interval2 = $d22->diff($d11);
+        $hours2 = $interval2->format('%h');
+        $minutes2 = $interval2->format('%i');
+        $waktu2 = $hours2 * 60 + $minutes2;
+
+        if ($waktu2 > $waktu1) {
+            return 0;
+        } else {
+            return $waktu1 - $waktu2;
+        }
     }
 }
 
