@@ -8,11 +8,6 @@
  */
 class M_ppdb extends CI_Model
 {
-    function show_data()
-    {
-        return $this->db->query("SELECT * FROM siswa");
-    }
-
     public function getdatasiswa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisnsiswa');
@@ -35,6 +30,7 @@ class M_ppdb extends CI_Model
             $this->db->select('*');
             $this->db->from('core_soal');
             $this->db->order_by('id', 'RANDOM');
+            $this->db->limit(2);
             $query = $this->db->get();
             return $query->result_array();
         }

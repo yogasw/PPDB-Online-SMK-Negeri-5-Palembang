@@ -90,12 +90,12 @@
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Daftar Soal</label>' +
-                '<input type="number" value="' + data[0].list_soal + '" name="list_soal" class="form-control" disabled>' +
+                '<input type="text" value="' + data[0].list_soal + '" name="list_soal" class="form-control" disabled>' +
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Daftar Jawaban</label>' +
-                '<input type="number" value="' + data[0].list_jawaban + '" name="list_jawaban" class="form-control" disabled>' +
+                '<input type="text" value="' + data[0].list_jawaban + '" name="list_jawaban" class="form-control" disabled>' +
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
@@ -109,11 +109,6 @@
                 '</div></div>' +
 
                 '<div class="col-xs-6"><div class="form-group label-floating">' +
-                '<label class="control-label">Total Bobot</label>' +
-                '<input type="number" value="' + data[0].nilai_bobot + '" name="nilai_bobot" class="form-control" disabled>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
                 '<label class="control-label">Waktu Mulai Menjawab</label>' +
                 '<input type="date-time" value="' + data[0].tgl_mulai + '" name="tgl_mulai" class="form-control" disabled>' +
                 '</div></div>' +
@@ -123,10 +118,16 @@
                 '<input type="date-time" value="' + data[0].tgl_selesai + '" name="tgl_selesai" class="form-control" disabled>' +
                 '</div></div>' +
 
-                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<div class="col-xs-6"><div class="form-group label-floating" hidden>' +
                 '<label class="control-label">Status</label>' +
                 '<input type="text" value="' + data[0].status + '" name="status" class="form-control" disabled>' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating" hidden>' +
+                '<label class="control-label">Total Bobot</label>' +
+                '<input type="number" value="' + data[0].nilai_bobot + '" name="nilai_bobot" class="form-control" disabled>' +
                 '</div></div>'
+
             ,
             showConfirmButton: false,
             buttonsStyling: false

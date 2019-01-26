@@ -28,10 +28,9 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
-
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/home');
@@ -40,9 +39,10 @@ class Admin extends CI_Controller
 
     public function pendaftaran()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
+
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_admin->show_data();
@@ -52,7 +52,7 @@ class Admin extends CI_Controller
 
     public function wawancara()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $this->load->view('admin/template/header');
@@ -64,7 +64,7 @@ class Admin extends CI_Controller
 
     public function psikologi()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $this->load->view('admin/template/header');
@@ -76,7 +76,7 @@ class Admin extends CI_Controller
 
     public function ubahdata_siswa()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $nisn = $this->input->get('nisn');
@@ -89,7 +89,7 @@ class Admin extends CI_Controller
 
     public function minat_bakat()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $nisn = $this->input->get('nisn');
@@ -102,7 +102,7 @@ class Admin extends CI_Controller
 
     public function report()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $nisn = $this->input->get('nisn');
@@ -114,7 +114,7 @@ class Admin extends CI_Controller
 
     public function edit_soal()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $nisn = $this->input->get('nisn');
@@ -127,7 +127,7 @@ class Admin extends CI_Controller
 
     public function tambahdata_siswa()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $this->load->view('admin/template/header');
@@ -138,7 +138,7 @@ class Admin extends CI_Controller
 
     public function kelola_admin()
     {
-        if (($this->session->userdata('level') == "admin") == null) {
+        if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
         $this->load->view('admin/template/header');
@@ -153,7 +153,7 @@ class Admin extends CI_Controller
         if ($this->session->userdata('level') == "admin") {
             Redirect(base_url() . "admin", false);
         } else if ($this->session->userdata('level') == "siswa") {
-            Redirect(base_url() . "ppdb/minat_bakat", false);
+            Redirect(base_url() . "home", false);
         }
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');

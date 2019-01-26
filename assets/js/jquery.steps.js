@@ -896,6 +896,7 @@
      **/
     function render(wizard, options, state) {
         // Create a content wrapper and copy HTML from the intial wizard structure
+
         var wrapperTemplate = "<{0} class=\"{1}\">{2}</{0}>",
             orientation = getValidEnumValue(stepsOrientation, options.stepsOrientation),
             verticalCssClass = (orientation === stepsOrientation.vertical) ? " vertical" : "",
@@ -903,22 +904,20 @@
             stepsWrapper = $(wrapperTemplate.format(options.stepsContainerTag, "steps " + options.clearFixCssClass, "<ul role=\"tablist\"></ul>")),
             stepTitles = contentWrapper.children(options.headerTag),
             stepContents = contentWrapper.children(options.bodyTag);
-
         // Transform the wizard wrapper and remove the inner HTML
         wizard.attr("role", "application").empty().append(stepsWrapper).append(contentWrapper)
             .addClass(options.cssClass + " " + options.clearFixCssClass + verticalCssClass);
-
         // Add WIA-ARIA support
+
         stepContents.each(function (index) {
             renderBody(wizard, state, $(this), index);
         });
-
         stepTitles.each(function (index) {
             renderTitle(wizard, options, state, $(this), index);
         });
 
-        refreshStepNavigation(wizard, options, state);
         renderPagination(wizard, options, state);
+        refreshStepNavigation(wizard, options, state);
     }
 
     /**
@@ -970,7 +969,7 @@
                 buttons += buttonTemplate.format("cancel", options.labels.cancel);
             }
 
-            wizard.append(pagination.format(options.actionContainerTag, options.clearFixCssClass,
+            wizard.prepend(pagination.format(options.actionContainerTag, options.clearFixCssClass,
                 options.labels.pagination, buttons));
 
             refreshPagination(wizard, options, state);

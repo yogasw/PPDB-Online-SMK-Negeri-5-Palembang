@@ -19,11 +19,20 @@ class Ppdb extends CI_Controller
     {
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_ppdb->show_data();
-        $this->load->view('ppdb/pendaftaran', $x);
+        $this->load->view('ppdb/pendaftaran');
         $this->load->view('admin/template/footer');
     }
 
+    function home()
+    {
+        if ($this->session->userdata('level') != "siswa") {
+            Redirect(base_url() . "login", false);
+        }
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('ppdb/home');
+        $this->load->view('admin/template/footer');
+    }
     function wawancara()
     {
         $this->load->view('admin/template/header');
@@ -44,7 +53,11 @@ class Ppdb extends CI_Controller
 
     function ubahdata_siswa()
     {
-        $nisn = $this->input->get('nisn');
+        if ($this->session->userdata('level') != "siswa") {
+            Redirect(base_url() . "login", false);
+        }
+
+        $nisn = $this->session->userdata('username');
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_ppdb->getdatasiswa($nisn);
@@ -54,7 +67,7 @@ class Ppdb extends CI_Controller
 
     function minat_bakat()
     {
-        if (($this->session->userdata('level') == "siswa") == null) {
+        if ($this->session->userdata('level') != "siswa") {
             Redirect(base_url() . "login", false);
         }
 
@@ -103,6 +116,9 @@ class Ppdb extends CI_Controller
         //log_app("Waktu Mulai : ".$data['tgl_mulai']." Waktu Selesai : ".$data['tgl_selesai']." Siswa Waktu : ".sisa_waktu($selesai));
         $x['waktu'] = sisa_waktu($mulai, $selesai);
 
+        if ($x['waktu'] == 0) {
+            Redirect(base_url() . "home", false);
+        }
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('ppdb/minat_bakat', $x);

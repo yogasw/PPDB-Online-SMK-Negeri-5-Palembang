@@ -3,9 +3,8 @@
     <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_minat_bakat') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">
-                        FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
+                        UJIAN ONLINE CALON SISWA BARU <br>SMK 05 PALEMBANG
                     </h3>
-                    <h5>Tambah Data Baru.</h5>
                 </div>
                 <div class="content">
                     <div class="container-fluid">
@@ -13,12 +12,12 @@
                             <div class="col-md-8">
                                 <div class="card">
                                     <div class="col-xs-4">
-                                        <h4>Nomor Soal</h4>
+                                        <!-- <h4>Nomor Soal</h4> -->
                                     </div>
                                     <div class="col-xs-8">
                                         <?php
                                         //ambil sisa waktu
-                                        echo('<h5 class="timer" data-minutes-left=' . $waktu . "></h5>");
+                                        echo('<h1 class="timer" data-minutes-left=' . $waktu . "></h1>");
                                         ?>
                                     </div>
                                     <br>
@@ -92,9 +91,9 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="col-xs-8">
-                                        <h4>Nomor Soal</h4>
+                                        <h4>Daftar Soal</h4>
                                     </div>
-                                    <div class="col-xs-2">
+                                    <div class="col-xs-2" hidden>
                                         <button onclick="" id="buttton" type="submit" class="btn btn-success selesai">
                                             Selesai
                                         </button>
@@ -127,17 +126,19 @@
             </form>
         </div>
 <script type="text/javascript">
-    var terjawab;
+    var frm = $('#myform');
     $("#example-basic").steps({
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
         autoFocus: true,
-        enableFinishButton: false
+        enableFinishButton: true,
+        onFinished: function (event, currentIndex) {
+            frm.submit();
+        }
     });
     $('ul[role="tablist"]').hide();
     $('ul[role="menuitem"]').hide();
-
     $(function () {
         $('input[type="radio"]').click(function () {
             if ($(this).is(':checked')) {
@@ -147,8 +148,6 @@
             }
         });
     });
-
-
     $.fn.steps.setStep = function (step) {
         var currentIndex = $(this).steps('getCurrentIndex');
         for (var i = 0; i < Math.abs(step - currentIndex); i++) {
@@ -160,12 +159,9 @@
             }
         }
     };
-
     function goto($id) {
         $("#example-basic").steps("setStep", ($id - 1));
     }
-
-    var frm = $('#myform');
     frm.submit(function (ev) {
         var total = 0;
         $(":radio:checked").each(function () {
@@ -181,11 +177,9 @@
                 showConfirmButton: false,
                 buttonsStyling: false
             })
-            kirimjawaban(this);
         }
         ev.preventDefault();
     });
-
     function kirimjawaban() {
         swal({
             title: 'Kirim Jawaban!!',
@@ -209,7 +203,7 @@
                         showConfirmButton: false,
                         buttonsStyling: false
                     });
-                    window.location = '<?php echo (base_url()) . "keluar"?>';
+                    window.location = '<?php echo (base_url()) . "home"?>';
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     swal("Error!", "Please try again", "error");
@@ -217,14 +211,13 @@
             });
         });
     }
-
     function waktuHabis() {
         $.ajax({
             type: frm.attr('method'),
             url: frm.attr('action'),
             data: frm.serialize(),
             success: function () {
-                window.location = '<?php echo (base_url()) . "keluar"?>';
+                window.location = '<?php echo (base_url()) . "home"?>';
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal("Error!", "Please try again", "error");
@@ -241,7 +234,6 @@
     function disableF5(e) {
         if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault();
     };
-
     $(document).ready(function () {
         //$(document).on("keydown", disableF5);
         $('.timer').startTimer({
@@ -251,5 +243,4 @@
 
         });
     });
-
 </script>

@@ -33,7 +33,7 @@
                 </div>
                 <div class="footer text-center">
                     <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Login</button>
-                    <a href="<?php echo(base_url()) ?>ppdb/pendaftaran">
+                    <a href="<?php echo(base_url()) ?>pendaftaran">
                         <button type="button" name="daftar" class="btn btn-rose btn-simple btn-wd btn-lg">Daftar
                         </button>
                     </a>
