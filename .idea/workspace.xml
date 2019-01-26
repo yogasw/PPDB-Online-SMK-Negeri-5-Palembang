@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3877c0-431e-4087-85c5-b440c01b4c33" name="Default" comment="gambar tidak di gunakan di hapus&#10;perhitungan soal fix&#10;batas waktu di aktifkan">
-      <change afterPath="$PROJECT_DIR$/application/views/ppdb/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Ppdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Ppdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/M_ppdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_ppdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/minat_bakat.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/minat_bakat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ppdb/minat_bakat.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/minat_bakat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ppdb/ubah_data_siswa.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/ppdb/ubah_data_siswa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery.bootstrap-wizard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.bootstrap-wizard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery.steps.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.steps.js" afterDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/application/controllers/Ppdb.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
-              <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+              <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
               <folding>
                 <element signature="n#__construct#0;n#Ppdb#0;n#!!top" />
                 <element signature="n#psikologi#0;n#Ppdb#0;n#!!top" />
@@ -68,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/M_ppdb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="118" selection-start-line="25" selection-start-column="118" selection-end-line="25" selection-end-column="118" />
+            <state relative-caret-position="315">
+              <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
                 <element signature="n#getdatasiswa#0;n#M_ppdb#0;n#!!top" />
                 <element signature="n#cek_nilai_mb#0;n#M_ppdb#0;n#!!top" />
@@ -104,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/ppdb/minat_bakat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="93" column="50" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="e#1661#6290#0#PHP" />
                 <element signature="e#8866#9237#0#HTML" />
@@ -152,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form</find>
       <find>$data</find>
       <find>soal</find>
       <find>update_data</find>
@@ -182,6 +170,7 @@
       <find>renderPagination</find>
       <find>wizard.append</find>
       <find>actions clearfix</find>
+      <find>nomor</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;?php echo(base_url())?&gt;assets</replace>
@@ -260,14 +249,14 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/admin/login.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/views/ppdb/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ppdb.php" />
         <option value="$PROJECT_DIR$/application/views/admin/minat_bakat.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
         <option value="$PROJECT_DIR$/assets/js/jquery.bootstrap-wizard.js" />
         <option value="$PROJECT_DIR$/assets/js/jquery.steps.js" />
-        <option value="$PROJECT_DIR$/application/models/M_ppdb.php" />
         <option value="$PROJECT_DIR$/application/views/ppdb/minat_bakat.php" />
+        <option value="$PROJECT_DIR$/application/views/ppdb/home.php" />
+        <option value="$PROJECT_DIR$/application/models/M_ppdb.php" />
       </list>
     </option>
   </component>
@@ -404,14 +393,7 @@
       <workItem from="1548231119605" duration="50000" />
       <workItem from="1548231171780" duration="5598000" />
       <workItem from="1548241756522" duration="15433000" />
-      <workItem from="1548375457583" duration="37773000" />
-    </task>
-    <task id="LOCAL-00011" summary="cadanggkan">
-      <created>1547599737133</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1547599737134</updated>
+      <workItem from="1548375457583" duration="38345000" />
     </task>
     <task id="LOCAL-00012" summary="fix quiz">
       <created>1547600338716</created>
@@ -749,11 +731,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548461999597</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="gambar tidak di gunakan di hapus&#10;perhitungan soal fix&#10;batas waktu di aktifkan">
+      <created>1548468071482</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1548468071482</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369725000" />
+    <option name="totallyTimeSpent" value="370297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,12 +755,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16717096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47350428" visible="true" weight="0.16717096" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.52649575" side_tool="true" weight="0.42662632" />
-      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32993197" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="1" weight="0.3282313" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3282313" />
@@ -781,7 +769,7 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3282313" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.2414966" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" weight="0.23809524" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" visible="true" weight="0.23809524" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.22278911" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -1222,13 +1210,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/ppdb/home.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ppdb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
           <folding>
             <element signature="n#__construct#0;n#Ppdb#0;n#!!top" />
             <element signature="n#psikologi#0;n#Ppdb#0;n#!!top" />
@@ -1285,21 +1270,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_ppdb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="118" selection-start-line="25" selection-start-column="118" selection-end-line="25" selection-end-column="118" />
-          <folding>
-            <element signature="n#getdatasiswa#0;n#M_ppdb#0;n#!!top" />
-            <element signature="n#cek_nilai_mb#0;n#M_ppdb#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ppdb/minat_bakat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="93" column="50" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
             <element signature="e#1661#6290#0#PHP" />
             <element signature="e#8866#9237#0#HTML" />
@@ -1310,6 +1284,20 @@
             <element signature="e#11495#12115#0#HTML" />
             <element signature="e#12142#12244#0#HTML" />
             <element signature="e#12281#12471#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ppdb/home.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_ppdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <element signature="n#getdatasiswa#0;n#M_ppdb#0;n#!!top" />
+            <element signature="n#cek_nilai_mb#0;n#M_ppdb#0;n#!!top" />
           </folding>
         </state>
       </provider>
