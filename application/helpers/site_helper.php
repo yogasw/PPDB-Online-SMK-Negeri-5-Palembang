@@ -176,3 +176,57 @@ if (!function_exists('sisa_waktu')) {
     }
 }
 
+/**
+ * indo_date
+ * @return string
+ */
+if (!function_exists('indo_date')) {
+    function indo_date($date)
+    {
+        if (is_valid_date($date)) {
+            $parts = explode("-", $date);
+            $result = $parts[2] . ' ' . bulan($parts[1]) . ' ' . $parts[0];
+            return $result;
+        }
+        return '';
+    }
+}
+
+/**
+ * is_valid_date
+ * @return string
+ */
+if (!function_exists('is_valid_date')) {
+    function is_valid_date($date)
+    {
+        if (preg_match("/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/", $date, $parts)) {
+            return checkdate($parts[2], $parts[3], $parts[1]) ? true : false;
+        }
+        return false;
+    }
+}
+
+/**
+ * bulan
+ * @return string
+ */
+if (!function_exists('bulan')) {
+    function bulan($key = '')
+    {
+        $data = [
+            '01' => 'Januari',
+            '02' => 'Februari',
+            '03' => 'Maret',
+            '04' => 'April',
+            '05' => 'Mei',
+            '06' => 'Juni',
+            '07' => 'Juli',
+            '08' => 'Agustus',
+            '09' => 'September',
+            '10' => 'Oktober',
+            '11' => 'Nopember',
+            '12' => 'Desember',
+        ];
+        return $key === '' ? $data : $data[$key];
+    }
+}

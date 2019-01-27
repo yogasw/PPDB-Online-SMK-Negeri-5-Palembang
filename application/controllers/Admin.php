@@ -147,6 +147,17 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
+    public function pengaturan()
+    {
+        if ($this->session->userdata('level') != "admin") {
+            Redirect(base_url() . "login", false);
+        }
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/pengaturan');
+        $this->load->view('admin/template/footer');
+    }
+
     public function login()
     {
 

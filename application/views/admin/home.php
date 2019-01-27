@@ -98,5 +98,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card card-pricing ">
+                <div class="card-content">
+                    <div class="icon icon-rose">
+                        <i class="material-icons">present_to_all</i>
+                    </div>
+                    <h3 class="card-title">Pengaturan</h3>
+                    <p class="card-description">
+                        Pengaturan Umum
+                    </p>
+                    <a href="<?php echo(base_url() . "admin/report") ?>" class="btn btn-rose btn-round">go</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

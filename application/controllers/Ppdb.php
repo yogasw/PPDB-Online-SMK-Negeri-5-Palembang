@@ -13,6 +13,7 @@ class Ppdb extends CI_Controller
         parent::__construct();
         $this->load->model('m_ppdb');
         $this->load->helper('site_helper');
+        $this->load->library('Pdf');
     }
 
     function pendaftaran()
@@ -133,4 +134,8 @@ class Ppdb extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
+    function cetak_bukti()
+    {
+        $this->pdf->blank_pdf();
+    }
 }
