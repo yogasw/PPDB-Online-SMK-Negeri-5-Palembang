@@ -243,3 +243,68 @@ if (!function_exists('get_setting')) {
         return $CI->m_ajax->ambil_data_pengaturan($string)[0]['isi'];
     }
 }
+
+/**
+ * get_setting
+ * @return string
+ */
+if (!function_exists('sort_arr_of_obj')) {
+    function sort_arr_of_obj($array, $sortby, $direction = 'asc')
+    {
+
+        $sortedArr = array();
+        $tmp_Array = array();
+
+        foreach ($array as $k => $v) {
+            $tmp_Array[] = strtolower($v->$sortby);
+        }
+
+        if ($direction == 'asc') {
+            asort($tmp_Array);
+        } else {
+            arsort($tmp_Array);
+        }
+
+        foreach ($tmp_Array as $k => $tmp) {
+            $sortedArr[] = $array[$k];
+        }
+
+        return $sortedArr;
+
+    }
+}
+
+
+/**
+ * get_setting
+ * @return array
+ */
+if (!function_exists('spk_smart')) {
+    function spk_smart($array_nilai, $array_bobot)
+    {
+        /** kriteria Nilai Rapot, Nilai Minat Bakat */
+
+        /**
+         * Bobot Yang di tentukan,
+         */
+
+        /**
+         * Menormalisasi Bobot
+         */
+        $normalisasi = [];
+        foreach ($array_bobot as $isi) {
+            array_push($normalisasi, ($isi / array_sum($array_bobot)));
+        }
+
+
+        /**
+         * Menghitung Total Nilai
+         */
+        $hasil = 0;
+        foreach ($array_nilai as $key => $val) {
+            $hasil = $hasil + ($val * $normalisasi[$key]);
+        }
+
+        return $hasil;
+    }
+}

@@ -67,11 +67,11 @@ class Ajax extends CI_Controller
         /*Jika $search mengandung nilai, berarti user sedang telah
         memasukan keyword didalam filed pencarian*/
         if ($search != "") {
-            $this->db->like("no_peserta", $search);
-            $this->db->or_like('nisn', $search);
-            $this->db->or_like('nama_lengkap', $search);
-            $this->db->or_like('asal_sekolah', $search);
-            $this->db->or_like('jurusan', $search);
+            $this->db->like("siswa.no_peserta", $search);
+            $this->db->or_like('siswa.nisn', $search);
+            $this->db->or_like('siswa.nama_lengkap', $search);
+            $this->db->or_like('siswa.asal_sekolah', $search);
+            $this->db->or_like('siswa.jurusan', $search);
         }
 
 
@@ -81,24 +81,26 @@ class Ajax extends CI_Controller
 
         switch ($order) {
             case 1 :
-                $orderby = 'no_peserta';
+                $orderby = 'siswa.no_peserta';
                 break;
             case 2 :
-                $orderby = 'nisn';
+                $orderby = 'siswa.nisn';
                 break;
             case 3 :
-                $orderby = 'nama_lengkap';
+                $orderby = 'siswa.nama_lengkap';
                 break;
             case 4 :
-                $orderby = 'asal_sekolah';
+                $orderby = 'siswa.asal_sekolah';
                 break;
             case 5 :
-                $orderby = 'jurusan';
+                $orderby = 'siswa.jurusan';
                 break;
             default :
-                $orderby = 'nama_lengkap';
+                $orderby = 'siswa.nama_lengkap';
         }
         $this->db->order_by($orderby, $dir);
+        $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
+        //$this->db->where('siswa.nisn', $nisn);
         $query = $this->db->get('siswa');
 
         /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
@@ -106,11 +108,11 @@ class Ajax extends CI_Controller
         yang mengandung keyword tertentu
         */
         if ($search != "") {
-            $this->db->like("no_peserta", $search);
-            $this->db->or_like('nisn', $search);
-            $this->db->or_like('nama_lengkap', $search);
-            $this->db->or_like('asal_sekolah', $search);
-            $this->db->or_like('jurusan', $search);
+            $this->db->like("siswa.no_peserta", $search);
+            $this->db->or_like('siswa.nisn', $search);
+            $this->db->or_like('siswa.nama_lengkap', $search);
+            $this->db->or_like('siswa.asal_sekolah', $search);
+            $this->db->or_like('siswa.jurusan', $search);
             $jum = $this->db->get('siswa');
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
@@ -118,7 +120,8 @@ class Ajax extends CI_Controller
 
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
-            $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan']);
+            $un = ($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4;
+            $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -209,7 +212,7 @@ class Ajax extends CI_Controller
         $nilai_un[] = array(
             'nisn' => (string)$_POST['nisn'],
             'ipa' => (string)$_POST['nilai_ipa'],
-            'ips' => (string)$_POST['nilai_ips'],
+            'matematika' => (string)$_POST['nilai_matematika'],
             'bhs_indonesia' => (string)$_POST['nilai_bhs_indonesia'],
             'bhs_inggris' => (string)$_POST['nilai_bhs_inggris']
         );
@@ -750,4 +753,65 @@ class Ajax extends CI_Controller
         $id = $this->input->post('nama_pengaturan');
         $this->m_ajax->kirim_data_pengaturan($_POST, $id);
     }
+
+    function ambil_data_hasil()
+    {
+
+        $output = array();
+        $output['data'] = array();
+        $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
+        $this->db->join("nilai_mb", 'siswa.nisn=nilai_mb.nisn', 'left');
+        $query = $this->db->get('siswa');
+        $nomor_urut = 1;
+
+        $bobot_spk = ['60', '40'];
+
+        foreach ($query->result_array() as $data) {
+            $rapot = (($data['ipa'] + $data['matematika'] + $data['bhs_inggris']) * 3) + $data['bhs_indonesia'];
+            $minat_bakat = $data['nilai'];
+
+            if (isset($rapot) && isset($minat_bakat)) {
+                $nilai_spk = [$rapot, $minat_bakat];
+                $total = spk_smart($nilai_spk, $bobot_spk);
+            } else {
+                $total = 0;
+            }
+
+            $output['data'][] = array(
+                $nomor_urut,
+                $data['no_peserta'],
+                $data['nisn'],
+                $data['nama_lengkap'],
+                $data['asal_sekolah'],
+                $data['jurusan'],
+                $rapot,
+                $minat_bakat,
+                $total
+            );
+            $nomor_urut++;
+        }
+
+        foreach ($output as $hasil) {
+            foreach ($hasil as $key => $isi) {
+                $sort_nomor_urut[$key] = $isi[0];
+                $sort_no_peserta[$key] = $isi[1];
+                $sort_nisn[$key] = $isi[2];
+                $sort_nama_lengkap[$key] = $isi[3];
+                $sort_asal_sekolah[$key] = $isi[4];
+                $sort_jurusan[$key] = $isi[5];
+                $sort_rapot[$key] = $isi[6];
+                $sort_minat_bakat[$key] = $isi[7];
+                $sort_total[$key] = $isi[8];
+            }
+        }
+        array_multisort($sort_total, SORT_DESC, $hasil);
+
+        foreach ($hasil as $i => $ii) {
+            $hasil[$i][0] = $i + 1;
+        }
+
+        $newhasil['data'] = $hasil;
+        echo json_encode($newhasil);
+    }
+
 }

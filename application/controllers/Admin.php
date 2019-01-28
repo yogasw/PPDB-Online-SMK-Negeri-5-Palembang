@@ -100,18 +100,6 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
-    public function report()
-    {
-        if ($this->session->userdata('level') != "admin") {
-            Redirect(base_url() . "login", false);
-        }
-        $nisn = $this->input->get('nisn');
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $this->load->view('admin/home');
-        $this->load->view('admin/template/footer');
-    }
-
     public function edit_soal()
     {
         if ($this->session->userdata('level') != "admin") {
@@ -169,6 +157,18 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/login');
+        $this->load->view('admin/template/footer');
+    }
+
+    public function report()
+    {
+        if ($this->session->userdata('level') != "admin") {
+            Redirect(base_url() . "login", false);
+        }
+
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/report');
         $this->load->view('admin/template/footer');
     }
 }

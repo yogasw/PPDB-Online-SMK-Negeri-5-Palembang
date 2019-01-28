@@ -29,6 +29,7 @@ class M_ppdb extends CI_Model
         } else {
             $this->db->select('*');
             $this->db->from('core_soal');
+            $this->db->limit(5);
             $this->db->order_by('id', 'RANDOM');
             $query = $this->db->get();
             return $query->result_array();

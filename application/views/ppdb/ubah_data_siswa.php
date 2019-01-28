@@ -254,9 +254,10 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai IPS</label>
-                                        <input name="nilai_ips" id="nilai_ips" type="text" class="form-control"
-                                               value="<?php echo($u['ips']) ?>"
+                                        <label class="label-control">Nilai Matematika</label>
+                                        <input name="nilai_matematika" id="nilai_matematika" type="text"
+                                               class="form-control"
+                                               value="<?php echo($u['matematika']) ?>"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -492,12 +493,12 @@
             var negara = $('#negara').val();
             var kota = $('#kota').val();
             var nilai_ipa = $('#nilai_ipa').val();
-            var nilai_ips = $('#nilai_ips').val();
+            var nilai_matematika = $('#nilai_matematika').val();
             var nilai_bhs_indonesia = $('#nilai_bhs_indonesia').val();
             var nilai_bhs_inggris = $('#nilai_bhs_inggris').val();
 
             if (
-                nilai_ipa == "" ||
+                nilai_matematika == "" ||
                 nilai_ipa == "" ||
                 nilai_bhs_indonesia == "" ||
                 nilai_bhs_inggris == "") {
@@ -540,7 +541,7 @@
                         negara: negara,
                         kota: kota,
                         nilai_ipa: nilai_ipa,
-                        nilai_ips: nilai_ips,
+                        nilai_matematika: nilai_matematika,
                         nilai_bhs_indonesia: nilai_bhs_indonesia,
                         nilai_bhs_inggris: nilai_bhs_inggris
 
