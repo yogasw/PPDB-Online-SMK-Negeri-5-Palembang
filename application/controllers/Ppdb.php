@@ -136,6 +136,11 @@ class Ppdb extends CI_Controller
 
     function cetak_bukti()
     {
-        $this->pdf->blank_pdf();
+        if ($this->session->userdata('level') != "siswa") {
+            Redirect(base_url() . "login", false);
+        }
+
+        $nisn = $this->session->userdata('username');
+        $this->pdf->cetak_bukti($this->m_ppdb->getdatasiswa($nisn)[0]);
     }
 }

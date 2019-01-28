@@ -59,7 +59,7 @@ $route['login'] = 'admin/login';
 
 $route['pendaftaran'] = 'Ppdb/tambahdata_siswa';
 $route['minat_bakat'] = 'Ppdb/minat_bakat';
-$route['cetakkartu'] = 'Ppdb/cetakkartu';
+$route['cetak_bukti'] = 'Ppdb/cetak_bukti';
 $route['home'] = 'Ppdb/home';
 $route['ubahdata'] = 'Ppdb/ubahdata_siswa';
 

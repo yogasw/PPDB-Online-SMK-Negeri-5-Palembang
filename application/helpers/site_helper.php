@@ -168,10 +168,9 @@ if (!function_exists('sisa_waktu')) {
         $waktu2 = $hours2 * 60 + $minutes2;
 
         if ($waktu2 > $waktu1) {
-            return 60;
+            return 0;
         } else {
-            //return $waktu1 - $waktu2;
-            return 60;
+            return $waktu1 - $waktu2;
         }
     }
 }

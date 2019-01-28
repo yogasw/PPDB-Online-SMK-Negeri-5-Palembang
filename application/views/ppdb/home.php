@@ -34,11 +34,11 @@
                     <div class="icon icon-rose">
                         <i class="material-icons">sentiment_satisfied_alt</i>
                     </div>
-                    <h3 class="card-title">Cetak Kartu Pendaftaran</h3>
+                    <h3 class="card-title">Cetak Bukti Pendaftaran</h3>
                     <p class="card-description">
-                        Cetak Pendaftaran sebagai bukti anda sudah mendaftar
+                        Cetak Bukti Pendaftaran sebagai bukti anda sudah mendaftar
                     </p>
-                    <a href="" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "cetak_bukti") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
