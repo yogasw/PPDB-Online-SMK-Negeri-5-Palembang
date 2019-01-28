@@ -155,6 +155,7 @@ class Ajax extends CI_Controller
         $data[] = array(
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
             'no_peserta' => (string)$_POST['no_peserta'],
+            'tahun_ajaran' => (string)$_POST['tahun_ajaran'],
             'nisn' => (string)$_POST['nisn'],
             'tahun_lulus' => (string)$_POST['tahun_lulus'],
             'jurusan' => strtoupper((string)$_POST['jurusan']),
@@ -188,6 +189,7 @@ class Ajax extends CI_Controller
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
             'no_peserta' => (string)$_POST['no_peserta'],
             'nisn' => (string)$_POST['nisn'],
+            'tahun_ajaran' => (string)$_POST['tahun_ajaran'],
             'tahun_lulus' => (string)$_POST['tahun_lulus'],
             'jurusan' => strtoupper((string)$_POST['jurusan']),
             'asal_sekolah' => strtoupper((string)$_POST['asal_sekolah']),
@@ -628,4 +630,124 @@ class Ajax extends CI_Controller
         Redirect(base_url() . "login", false);
     }
 
+    function get_pengaturan()
+    {
+
+        /*Menagkap semua data yang dikirimkan oleh client*/
+
+        /*Sebagai token yang yang dikrimkan oleh client, dan nantinya akan
+        server kirimkan balik. Gunanya untuk memastikan bahwa user mengklik paging
+        sesuai dengan urutan yang sebenarnya */
+        $draw = $_REQUEST['draw'];
+
+        /*Jumlah baris yang akan ditampilkan pada setiap page*/
+        $length = $_REQUEST['length'];
+
+        /*Offset yang akan digunakan untuk memberitahu database
+        dari baris mana data yang harus ditampilkan untuk masing masing page
+        */
+        $start = $_REQUEST['start'];
+
+        /*Keyword yang diketikan oleh user pada field pencarian*/
+        $search = $_REQUEST['search']["value"];
+
+        /*order yang di klik user*/
+
+        $order = $_REQUEST['order'][0]["column"];
+        $dir = $_REQUEST['order'][0]["dir"];
+
+        switch ($order) {
+            case 1 :
+                $orderby = 'nama_pengaturan';
+                break;
+            case 2 :
+                $orderby = 'isi';
+                break;
+            default :
+                $orderby = 'nama_pengaturan';
+        }
+
+        /*Menghitung total desa didalam database*/
+        $total = $this->db->count_all_results("pengaturan");
+        /*Mempersiapkan array tempat kita akan menampung semua data
+        yang nantinya akan server kirimkan ke client*/
+        $output = array();
+
+        /*Token yang dikrimkan client, akan dikirim balik ke client*/
+        $output['draw'] = $draw;
+
+        /*
+        $output['recordsTotal'] adalah total data sebelum difilter
+        $output['recordsFiltered'] adalah total data ketika difilter
+        Biasanya kedua duanya bernilai sama, maka kita assignment
+        keduaduanya dengan nilai dari $total
+        */
+        $output['recordsTotal'] = $output['recordsFiltered'] = $total;
+
+        /*disini nantinya akan memuat data yang akan kita tampilkan
+        pada table client*/
+        $output['data'] = array();
+
+
+        /*Jika $search mengandung nilai, berarti user sedang telah
+        memasukan keyword didalam filed pencarian */
+        if ($search != "") {
+            $this->db->like("nama_pengaturan", $search);
+            $this->db->or_like('isi', $search);
+
+        }
+        /*Lanjutkan pencarian ke database*/
+        $this->db->limit($length, $start);
+        /*Urutkan dari alphabet paling terkahir*/
+
+        $this->db->order_by($order, $dir);
+        $query = $this->db->get('pengaturan');
+
+        /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
+        dari 'recordsTotal' dan 'recordsFiltered' sesuai dengan jumlah baris
+        yang mengandung keyword tertentu */
+
+        if ($search != "") {
+            $this->db->like("nama_pengaturan", $search);
+            $this->db->or_like('isi', $search);
+            $jum = $this->db->get('pengaturan');
+            $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
+        }
+
+
+        $nomor_urut = $start + 1;
+        foreach ($query->result_array() as $data) {
+            $output['data'][] = array($nomor_urut, $data['nama_pengaturan'], $data['isi']);
+            $nomor_urut++;
+        }
+        echo json_encode($output);
+    }
+
+    function ambil_data_pengaturan()
+    {
+        $id = $this->input->post('nama_pengaturan');
+        $data = $this->m_ajax->ambil_data_pengaturan($id);
+        switch ($data[0]['nama_pengaturan']) {
+            case 'ahir_ppdb' :
+                $data[0] += ['tipe' => "date"];
+                break;
+            case 'mulai_ppdb' :
+                $data[0] += ['tipe' => "date"];
+                break;
+            case 'tahun_ajaran_ppdb':
+                $data[0] += ['tipe' => "number"];
+                break;
+            default :
+                $data[0] += ['tipe' => "text"];
+                break;
+        };
+        log_app(print_r($data, true));
+        print_r(json_encode($data));
+    }
+
+    function kirim_data_pengaturan()
+    {
+        $id = $this->input->post('nama_pengaturan');
+        $this->m_ajax->kirim_data_pengaturan($_POST, $id);
+    }
 }

@@ -230,3 +230,16 @@ if (!function_exists('bulan')) {
         return $key === '' ? $data : $data[$key];
     }
 }
+
+/**
+ * get_setting
+ * @return string
+ */
+if (!function_exists('get_setting')) {
+    function get_setting($string)
+    {
+        $CI = get_instance();
+        $CI->load->model('m_ajax');
+        return $CI->m_ajax->ambil_data_pengaturan($string)[0]['isi'];
+    }
+}

@@ -27,6 +27,8 @@
                                 <div class="col-sm-12">
                                     <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
                                 </div>
+                                <input name="tahun_ajaran" id="tahun_ajaran"
+                                       value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
                                 <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nama Lengkap</label>
@@ -470,6 +472,7 @@
         }
 
         $('#finish').click(function () {
+            var tahun_ajaran = $('#tahun_ajaran').val();
             var nama_lengkap = $('#nama_lengkap').val();
             var no_peserta = $('#no_peserta').val();
             var nisn = $('#nisn').val();
@@ -521,6 +524,7 @@
                         nama_lengkap: nama_lengkap,
                         no_peserta: no_peserta,
                         nisn: nisn,
+                        tahun_ajaran: tahun_ajaran,
                         tahun_lulus: tahun_lulus,
                         jurusan: jurusan,
                         asal_sekolah: asal_sekolah,

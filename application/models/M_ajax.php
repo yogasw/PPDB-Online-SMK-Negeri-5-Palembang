@@ -10,8 +10,14 @@ class M_ajax extends CI_Model
 {
     function hapus_siswa($nisn){
             $this->db->where('nisn', $nisn);
-             $this->db->delete('siswa');
-             return true;
+        $this->db->delete('siswa');
+
+        $this->db->where('nisn', $nisn);
+        $this->db->delete('nilai_un');
+
+        $this->db->where('nisn', $nisn);
+        $this->db->delete('nilai_mb');
+        return true;
     }
 
     function multi_delete($data)
@@ -19,6 +25,12 @@ class M_ajax extends CI_Model
         foreach ($data as $val) {
             $this->db->where('nisn', $val);
             $this->db->delete('siswa');
+
+            $this->db->where('nisn', $val);
+            $this->db->delete('nilai_un');
+
+            $this->db->where('nisn', $val);
+            $this->db->delete('nilai_mb');
         }
         return true;
     }
@@ -306,4 +318,30 @@ class M_ajax extends CI_Model
             return $output = array("status" => false);
         }
     }
+
+    function ambil_data_pengaturan($id)
+    {
+        $this->db->select('*');
+        $this->db->from('pengaturan');
+        $this->db->where('nama_pengaturan', $id);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function kirim_data_pengaturan($data, $id)
+    {
+        $this->db->select("*");
+        $this->db->from('pengaturan');
+        $this->db->where('nama_pengaturan', $id);
+
+        $query = $this->db->count_all_results();
+        if ($query >= 1) {
+            $this->db->where('nama_pengaturan', $id);
+            $this->db->update('pengaturan', $data);
+        } else {
+            $this->db->insert('pengaturan', $data);
+        }
+    }
+
 }

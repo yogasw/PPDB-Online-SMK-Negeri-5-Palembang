@@ -71,7 +71,7 @@ class Pdf extends TCPDF
         $this->SetFont('freesans', '', 10);
 
         // Get HTML Template
-        $content = file_get_contents(VIEWPATH . 'admission/pdf_admission_template.html');
+        $content = file_get_contents(VIEWPATH . 'admission/pdf_template.html');
         // Header
         $content = str_replace('[LOGO]', base_url('media_library/images/' . $this->CI->session->logo), $content);
         $content = str_replace('[SCHOOL_NAME]', strtoupper($this->CI->session->school_name), $content);
@@ -162,7 +162,7 @@ class Pdf extends TCPDF
         $this->SetFont('freesans', '', 10);
 
         // Get HTML Template
-        $content = file_get_contents(VIEWPATH . 'ppdb/pdf_admission_template.html');
+        $content = file_get_contents(VIEWPATH . 'ppdb/pdf_template.html');
         // Header
         /**
          * $content = str_replace('[LOGO]', base_url('media_library/images/'.$this->CI->session->logo), $content);

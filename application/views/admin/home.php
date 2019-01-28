@@ -108,7 +108,7 @@
                     <p class="card-description">
                         Pengaturan Umum
                     </p>
-                    <a href="<?php echo(base_url() . "admin/report") ?>" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "admin/pengaturan") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
