@@ -21,10 +21,19 @@
                             <th>NISN</th>
                             <th>Nama Lengkap</th>
                             <th>Asal Sekolah</th>
-                            <th>Jurusan</th>
-                            <th>Nilai UN</th>
-                            <th>Nilai Minat Bakat</th>
-                            <th>Total</th>
+                            <th>Kopetensi Keahlian</th>
+                            <th>L/P</th>
+                            <th>Nilai UN Bahasa Indonesia</th>
+                            <th>Nilai UN Bahasa Inggris</th>
+                            <th>Nilai UN Matematika</th>
+                            <th>Nilai UN IPA</th>
+                            <th>Rata-Rata UN (a)</th>
+                            <th>Nilai USBN PAI</th>
+                            <th>Nilai USBN PKN</th>
+                            <th>Nilai USBN IPS</th>
+                            <th>Rata-Rata Nilai USBN (b)</th>
+                            <th>Nilai Minat Bakat (c)</th>
+                            <th>Total Nilai</th>
                         </tr>
                         </thead>
                     </form>
@@ -41,24 +50,22 @@
             responsive: true,
             dom: 'lBfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'print'
             ],
             ajax: {
                 url: '<?php echo(base_url() . 'ajax/ambil_data_hasil')?>',
                 method: "POST"
             },
-            columns: [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
         });
+        $('#datatables').DataTable().column(2).visible(false);
+        $('#datatables').DataTable().column(6).visible(false);
+        $('#datatables').DataTable().column(7).visible(false);
+        $('#datatables').DataTable().column(8).visible(false);
+        $('#datatables').DataTable().column(9).visible(false);
+        $('#datatables').DataTable().column(10).visible(false);
+        $('#datatables').DataTable().column(12).visible(false);
+        $('#datatables').DataTable().column(13).visible(false);
+        $('#datatables').DataTable().column(14).visible(false);
     };
 
     function reload_table(string) {

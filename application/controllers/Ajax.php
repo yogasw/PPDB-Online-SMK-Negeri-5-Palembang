@@ -100,6 +100,7 @@ class Ajax extends CI_Controller
         }
         $this->db->order_by($orderby, $dir);
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
+        $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         //$this->db->where('siswa.nisn', $nisn);
         $query = $this->db->get('siswa');
 
@@ -120,8 +121,9 @@ class Ajax extends CI_Controller
 
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
-            $un = ($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4;
-            $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un);
+            $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+            $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+            $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -143,9 +145,7 @@ class Ajax extends CI_Controller
             $data = array();
             if ($query->num_rows() > 0) {
                 foreach ($query->result() as $row) {
-                    array_push($data,
-                        '<option value=' . $row->id . '>' . $row->description . '</option>'
-                    );
+                    array_push($data, '<option value=' . $row->id . '>' . $row->description . '</option>');
                 }
             }
             echo json_encode($data);
@@ -172,7 +172,6 @@ class Ajax extends CI_Controller
             'alamat' => strtoupper((string)$_POST['alamat']),
             'negara' => (string)$_POST['negara'],
             'provinsi' => (string)$_POST['provinsi'],
-            'negara' => (string)$_POST['negara'],
             'kota' => (string)$_POST['kota'],
         );
 
@@ -206,7 +205,7 @@ class Ajax extends CI_Controller
             'negara' => (string)$_POST['negara'],
             'provinsi' => (string)$_POST['provinsi'],
             'negara' => (string)$_POST['negara'],
-            'kota' => (string)$_POST['kota'],
+            'kota' => (string)$_POST['kota']
         );
 
         $nilai_un[] = array(
@@ -216,6 +215,16 @@ class Ajax extends CI_Controller
             'bhs_indonesia' => (string)$_POST['nilai_bhs_indonesia'],
             'bhs_inggris' => (string)$_POST['nilai_bhs_inggris']
         );
+
+        $nilai_usbn[] = array(
+            'nisn' => (string)$_POST['nisn'],
+            'pai' => (string)$_POST['nilai_pai'],
+            'pkn' => (string)$_POST['nilai_pkn'],
+            'ips' => (string)$_POST['nilai_ips']
+        );
+
+
+        $this->m_ajax->tambah_nilai_usbn($nilai_usbn);
         $this->m_ajax->tambah_nilai_un($nilai_un);
         $this->m_ajax->tambah_siswa($data);
         $respon = array(
@@ -761,17 +770,19 @@ class Ajax extends CI_Controller
         $output['data'] = array();
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_mb", 'siswa.nisn=nilai_mb.nisn', 'left');
+        $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         $query = $this->db->get('siswa');
         $nomor_urut = 1;
 
-        $bobot_spk = ['60', '40'];
+        $bobot_spk = ['20', '10', '70'];
 
         foreach ($query->result_array() as $data) {
-            $rapot = (($data['ipa'] + $data['matematika'] + $data['bhs_inggris']) * 3) + $data['bhs_indonesia'];
+            $un = (($data['ipa'] + $data['matematika'] + $data['bhs_inggris'] + $data['bhs_indonesia']) / 4);
+            $usbn = (($data['pai'] + $data['pkn'] + $data['ips']) / 3);
             $minat_bakat = $data['nilai'];
 
-            if (isset($rapot) && isset($minat_bakat)) {
-                $nilai_spk = [$rapot, $minat_bakat];
+            if (isset($usbn) && isset($minat_bakat)) {
+                $nilai_spk = [$un, $usbn, $minat_bakat];
                 $total = spk_smart($nilai_spk, $bobot_spk);
             } else {
                 $total = 0;
@@ -779,13 +790,32 @@ class Ajax extends CI_Controller
 
             $output['data'][] = array(
                 $nomor_urut,
+                /** Data Diri */
                 $data['no_peserta'],
                 $data['nisn'],
                 $data['nama_lengkap'],
                 $data['asal_sekolah'],
                 $data['jurusan'],
-                $rapot,
-                $minat_bakat,
+                $data['jk'],
+                //$data['tahun_lulus']
+
+                /** Nilai UN */
+                $data['bhs_indonesia'],
+                $data['bhs_inggris'],
+                $data['matematika'],
+                $data['ipa'],
+                round($un, 4),
+
+                /** Nilai USBN */
+                $data['pai'],
+                $data['pkn'],
+                $data['ips'],
+                round($usbn, 4),
+
+                /** NIlai Minat Bakat */
+                round($minat_bakat, 4),
+
+                /**total hasil perhitungan metode SMART*/
                 $total
             );
             $nomor_urut++;
@@ -799,15 +829,24 @@ class Ajax extends CI_Controller
                 $sort_nama_lengkap[$key] = $isi[3];
                 $sort_asal_sekolah[$key] = $isi[4];
                 $sort_jurusan[$key] = $isi[5];
-                $sort_rapot[$key] = $isi[6];
-                $sort_minat_bakat[$key] = $isi[7];
-                $sort_total[$key] = $isi[8];
+                $sort_jk[$key] = $isi[6];
+                $sort_bhs_indonesia[$key] = $isi[7];
+                $sort_bhs_inggris[$key] = $isi[8];
+                $sort_matematika[$key] = $isi[9];
+                $sort_ipa[$key] = $isi[10];
+                $sort_rata_rata_un[$key] = $isi[11];
+                $sort_pai[$key] = $isi[12];
+                $sort_pkn[$key] = $isi[13];
+                $sort_ips[$key] = $isi[14];
+                $sort_rata_rata_usbn[$key] = $isi[15];
+                $sort_minat_bakat[$key] = $isi[16];
+                $sort_hasil[$key] = $isi[17];
             }
         }
-        array_multisort($sort_total, SORT_DESC, $hasil);
-
+        array_multisort($sort_hasil, SORT_DESC, $hasil);
         foreach ($hasil as $i => $ii) {
             $hasil[$i][0] = $i + 1;
+            $hasil[$i][17] = round($hasil[$i][17], 4);
         }
 
         $newhasil['data'] = $hasil;

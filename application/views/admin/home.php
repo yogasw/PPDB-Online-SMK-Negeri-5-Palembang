@@ -8,7 +8,7 @@
                     </div>
                     <h3 class="card-title">Pendaftaran</h3>
                     <p class="card-description">
-                        Input data calon siswa baru 2019
+                        Input data calon siswa baru Tahun <?php echo(get_setting("tahun_ajaran_ppdb")) ?>
                     </p>
                     <a href="<?php echo(base_url() . "admin/pendaftaran") ?>" class="btn btn-rose btn-round">go</a>
                 </div>

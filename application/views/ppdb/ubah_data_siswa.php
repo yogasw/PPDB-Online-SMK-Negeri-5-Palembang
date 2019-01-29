@@ -1,5 +1,5 @@
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-            <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
+    <form action="" method="post" novalidate="novalidate">
                 <?php foreach ($data as $u) { ?>
                     <div class="wizard-header">
                         <h3 class="wizard-title">
@@ -280,6 +280,37 @@
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="info-text">Nilai USBN</h4>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai PAI</label>
+                                        <input name="nilai_pai" id="nilai_pai" type="text" class="form-control"
+                                               value="<?php echo($u['pai']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai PKN</label>
+                                        <input name="nilai_pkn" id="nilai_pkn" type="text"
+                                               class="form-control"
+                                               value="<?php echo($u['pkn']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai IPS</label>
+                                        <input name="nilai_ips" id="nilai_ips" type="text"
+                                               class="form-control"
+                                               value="<?php echo($u['ips']) ?>"
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="wizard-footer">
@@ -488,7 +519,6 @@
             var no_hp = $('#no_hp').val();
             var email = $('#email').val();
             var alamat = $('#alamat').val();
-            var negara = $('#negara').val();
             var provinsi = $('#provinsi').val();
             var negara = $('#negara').val();
             var kota = $('#kota').val();
@@ -497,11 +527,20 @@
             var nilai_bhs_indonesia = $('#nilai_bhs_indonesia').val();
             var nilai_bhs_inggris = $('#nilai_bhs_inggris').val();
 
+            var nilai_pai = $('#nilai_pai').val();
+            var nilai_pkn = $('#nilai_pkn').val();
+            var nilai_ips = $('#nilai_ips').val();
+
             if (
                 nilai_matematika == "" ||
                 nilai_ipa == "" ||
                 nilai_bhs_indonesia == "" ||
-                nilai_bhs_inggris == "") {
+                nilai_bhs_inggris == "" ||
+                nilai_pai == "" ||
+                nilai_pkn == "" ||
+                nilai_ips == ""
+
+            ) {
                 swal({
                     title: 'Maaf Cuy!',
                     text: 'Lengkapi semua datanya dulu ya',
@@ -538,12 +577,14 @@
                         alamat: alamat,
                         negara: negara,
                         provinsi: provinsi,
-                        negara: negara,
                         kota: kota,
                         nilai_ipa: nilai_ipa,
                         nilai_matematika: nilai_matematika,
                         nilai_bhs_indonesia: nilai_bhs_indonesia,
-                        nilai_bhs_inggris: nilai_bhs_inggris
+                        nilai_bhs_inggris: nilai_bhs_inggris,
+                        nilai_pai: nilai_pai,
+                        nlai_pkn: nilai_pkn,
+                        nilai_ips: nilai_ips
 
                     },
                     function (data) {

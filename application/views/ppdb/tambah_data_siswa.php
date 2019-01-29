@@ -243,7 +243,7 @@
                         <div class="tab-pane" id="step2">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h4 class="info-text">Form Nilai UN</h4>
+                                    <h4 class="info-text">Nilai UN</h4>
                                 </div>
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
@@ -275,6 +275,37 @@
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai Bahasa Inggris</label>
                                         <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="text"
+                                               class="form-control"
+                                               value=""
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="info-text">Nilai USBN</h4>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai PAI</label>
+                                        <input name="nilai_pai" id="nilai_pai" type="text" class="form-control"
+                                               value=""
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai PKN</label>
+                                        <input name="nilai_pkn" id="nilai_pkn" type="text"
+                                               class="form-control"
+                                               value=""
+                                               style="text-transform: uppercase" required="true">
+                                        <span class="material-input"></span></div>
+                                </div>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="label-control">Nilai IPS</label>
+                                        <input name="nilai_ips" id="nilai_ips" type="text"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
@@ -314,7 +345,7 @@
                 },
                 email: {
                     required: true,
-                    minlength: 3,
+                    minlength: 3
                 }
             },
 
@@ -496,12 +527,19 @@
             var nilai_matematika = $('#nilai_matematika').val();
             var nilai_bhs_indonesia = $('#nilai_bhs_indonesia').val();
             var nilai_bhs_inggris = $('#nilai_bhs_inggris').val();
+            var nilai_pai = $('#nilai_pai').val();
+            var nilai_pkn = $('#nilai_pkn').val();
+            var nilai_ips = $('#nilai_ips').val();
 
             if (
                 nilai_ipa == "" ||
                 nilai_matematika == "" ||
                 nilai_bhs_indonesia == "" ||
-                nilai_bhs_inggris == "") {
+                nilai_bhs_inggris == "" ||
+                nilai_pai == "" ||
+                nilai_pkn == "" ||
+                nilai_ips == ""
+            ) {
                 swal({
                     title: 'Maaf Cuy!',
                     text: 'Lengkapi semua datanya dulu ya',
@@ -543,7 +581,10 @@
                         nilai_matematika: nilai_matematika,
                         tahun_ajaran: tahun_ajaran,
                         nilai_bhs_indonesia: nilai_bhs_indonesia,
-                        nilai_bhs_inggris: nilai_bhs_inggris
+                        nilai_bhs_inggris: nilai_bhs_inggris,
+                        nilai_pai: nilai_pai,
+                        nilai_pkn: nilai_pkn,
+                        nilai_ips: nilai_ips
                     },
                     function (data) {
                         if (data["status"]) {

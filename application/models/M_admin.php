@@ -18,6 +18,7 @@ class M_admin extends CI_Model
         $this->db->select('*,siswa.nisn as nisnsiswa');
         $this->db->from('siswa');
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
+        $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         $this->db->where('siswa.nisn', $nisn);
         $query = $this->db->get();
         return $query->result_array();

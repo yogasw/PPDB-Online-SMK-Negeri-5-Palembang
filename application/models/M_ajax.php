@@ -60,6 +60,11 @@ class M_ajax extends CI_Model
         $this->db->insert_batch('nilai_un', $data);
     }
 
+    function tambah_nilai_usbn($data)
+    {
+        $this->db->insert_batch('nilai_usbn', $data);
+    }
+
     function getsoal()
     {
         $this->db->select('*');

@@ -42,8 +42,9 @@
                             <th>NISN</th>
                             <th>Nama Lengkap</th>
                             <th>Asal Sekolah</th>
-                            <th>Jurusan</th>
+                            <th>Kopetensi Keahlian</th>
                             <th>Nilai UN</th>
+                            <th>Nilai USBN</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -78,6 +79,7 @@
                         return '<input type="checkbox" class="select-row" data-id="' + full[2] + '" />'
                     }
                 },
+                null,
                 null,
                 null,
                 null,
