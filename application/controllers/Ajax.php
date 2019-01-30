@@ -777,7 +777,7 @@ class Ajax extends CI_Controller
         $bobot_spk = ['20', '10', '70'];
 
         foreach ($query->result_array() as $data) {
-            $un = (($data['ipa'] + $data['matematika'] + $data['bhs_inggris'] + $data['bhs_indonesia']) / 4);
+            $un = (($data['ipa'] * 3) + ($data['matematika'] * 4) + ($data['bhs_inggris'] * 3) + ($data['bhs_indonesia'] *1)) / 11;
             $usbn = (($data['pai'] + $data['pkn'] + $data['ips']) / 3);
             $minat_bakat = $data['nilai'];
 
