@@ -39,11 +39,23 @@ class M_ppdb extends CI_Model
 
     function cek_nilai_mb($nisn)
     {
-        $this->db->select("*");
+        $q = "SELECT COUNT(list_soal) AS numrows FROM nilai_mb WHERE nisn = " . $nisn;
+        $query = $this->db->query($q);
+        $hasil = $query->result_array()[0]['numrows'];
+        if ($hasil >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function cek_soal_status($nisn)
+    {
+        $this->db->select("status");
         $this->db->from('nilai_mb');
         $this->db->where('nisn', $nisn);
+        $this->db->where('status', "1");
         $query = $this->db->count_all_results();
-
         if ($query >= 1) {
             return true;
         } else {

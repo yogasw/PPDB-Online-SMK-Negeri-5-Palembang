@@ -198,6 +198,12 @@ class M_ajax extends CI_Model
         return true;
     }
 
+    function aktifkan_nilai_minat_bakat($nisn, $data)
+    {
+        $this->db->insert('nilai_mb', $data);
+        return true;
+    }
+
     function cek_nisn($nisn)
     {
         $this->db->select("nisn");

@@ -242,7 +242,7 @@ class Ajax extends CI_Controller
         $jumlah_benar = 0;
         $jumlah_bobot = 0;
         $nilai = 0;
-        $status = "selesai";
+        $status = "1";
         $jawaban = $_POST;
 
         //mengambil id soal, id mapel, bobot, jawaban
@@ -334,6 +334,13 @@ class Ajax extends CI_Controller
     {
         $nisn = $this->input->post('nisn');
         $this->m_ajax->reset_nilai_minat_bakat($nisn);
+
+    }
+
+    function aktifkan_nilai_minat_bakat()
+    {
+        $nisn = $this->input->post('nisn');
+        $this->m_ajax->aktifkan_nilai_minat_bakat($nisn, $_POST);
 
     }
 

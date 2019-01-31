@@ -46,6 +46,7 @@
                     "mData": "0",
                     "mRender": function (data, type, full) {
                         return '<a href="#" onclick=newswal("' + full[2] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
+                            '<a href="#" onclick=aktifkan("' + full[2] + '")><span class="label label-primary">Aktifkan<span></a>' +
                             '<a href="#" onclick=reset("' + full[2] + '")><span class="label label-primary">Reset<span></a>'
                     }
                 }
@@ -189,6 +190,41 @@
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     swal("Error!", "Please try again", "error");
+                }
+            });
+
+
+        });
+    }
+
+    function aktifkan(id) {
+        swal({
+            title: 'Aktifkan soal!!',
+            text: "Apakah Anda mengaktifkan soal?",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger',
+            confirmButtonText: 'Iya!',
+            buttonsStyling: false
+        }).then(function () {
+            $.ajax({
+                url: "<?php echo(base_url() . 'ajax/aktifkan_nilai_minat_bakat')?>",
+                type: "POST",
+                data: {nisn: id, status: '1'},
+                dataType: "html",
+                success: function () {
+                    swal({
+                        title: 'Aktif!',
+                        text: 'Soal Berhasil Di Aktifkan.',
+                        type: 'success',
+                        confirmButtonClass: "btn btn-success",
+                        buttonsStyling: false
+                    });
+                    table.ajax.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal("Error!", "Sepertinya sudah aktif", "error");
                 }
             });
 

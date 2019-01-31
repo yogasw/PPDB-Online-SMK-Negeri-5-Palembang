@@ -34,6 +34,7 @@ class Ppdb extends CI_Controller
         $this->load->view('ppdb/home');
         $this->load->view('admin/template/footer');
     }
+
     function wawancara()
     {
         $this->load->view('admin/template/header');
@@ -77,34 +78,35 @@ class Ppdb extends CI_Controller
         $nisn = $this->session->userdata("username");
 
         $x['data'] = $this->m_ppdb->getsoal($nisn);
-
         if (($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']) != "") {
             $x['jawaban'] = jawaban_to_array($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']);
         }
 
         //mengambil daftar soal yang sudah di acak serta isi waktu selesai dan mulai
-        if (!$this->m_ppdb->cek_nilai_mb($nisn)) {
-            $soal = array();
-            foreach ($x['data'] as $u) {
-                array_push($soal, $u['id']);
+        if ($this->m_ppdb->cek_soal_status($nisn)) {
+            if (!$this->m_ppdb->cek_nilai_mb($nisn)) {
+                $soal = array();
+                foreach ($x['data'] as $u) {
+                    array_push($soal, $u['id']);
+                }
+                $list_soal = array_to_coma($soal);
+
+                //Mengambil waktu mulai dan waktu selesai
+                $tgl_mulai = date('Y-m-d H:i:s');
+                $tgl_selesai = date("Y-m-d H:i:s", strtotime(date("Y-m-d H:i:s") . " +10 minutes"));
+
+                //Menghitung waktu selesai jika data sudah ada
+                //$hasil = selisih_waktu($tgl_mulai, $tgl_selesai);
+
+                $data = [
+                    'nisn' => $nisn,
+                    'list_soal' => $list_soal,
+                    'tgl_mulai' => $tgl_mulai,
+                    'tgl_selesai' => $tgl_selesai
+                ];
+
+                $this->m_ajax->insert_nilai_mb($data, $nisn);
             }
-            $list_soal = array_to_coma($soal);
-
-            //Mengambil waktu mulai dan waktu selesai
-            $tgl_mulai = date('Y-m-d H:i:s');
-            $tgl_selesai = date("Y-m-d H:i:s", strtotime(date("Y-m-d H:i:s") . " +10 minutes"));
-
-            //Menghitung waktu selesai jika data sudah ada
-            //$hasil = selisih_waktu($tgl_mulai, $tgl_selesai);
-
-            $data = [
-                'nisn' => $nisn,
-                'list_soal' => $list_soal,
-                'tgl_mulai' => $tgl_mulai,
-                'tgl_selesai' => $tgl_selesai
-            ];
-
-            $this->m_ajax->insert_nilai_mb($data, $nisn);
         }
 
         //ambil sisa waktu dari database
