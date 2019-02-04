@@ -235,23 +235,21 @@ class Ajax extends CI_Controller
         echo json_encode($respon);
     }
 
-    function kirim_data_minat_bakat()
+    function kirim_data_tpa()
     {
         //Deklarasi variable
         $nisn = $this->session->userdata('username');
         $jumlah_benar = 0;
-        $jumlah_bobot = 0;
         $nilai = 0;
         $status = "1";
         $jawaban = $_POST;
 
-        //mengambil id soal, id mapel, bobot, jawaban
+        //mengambil id soal, id mapel, jawaban
         $this->load->model('m_ppdb');
         $soal = $this->m_ppdb->getsoal($nisn);
         foreach ($soal as $value) {
             $kunci_jawaban[$value['id']] = array(
                 'id_mapel' => $value['id_mapel'],
-                'bobot' => $value['bobot'],
                 'jawaban' => $value['jawaban']
             );
         }
@@ -272,13 +270,13 @@ class Ajax extends CI_Controller
             'list_jawaban' => post_to_coma($_POST),
             'jml_benar' => $jumlah_benar,
             'nilai' => $nilai,
-            'nilai_bobot' => $jumlah_bobot,
+            //'nilai_bobot' => $jumlah_bobot,
             'tgl_mulai' => date('Y-m-d H:i:s'),
             'tgl_selesai' => $date = date('Y-m-d H:i:s'),
             'status' => $status
         );
 
-        $this->m_ajax->insert_nilai_mb($data, $nisn);
+        $this->m_ajax->insert_nilai_tpa($data, $nisn);
     }
 
     function ambil_data_wawancara()
@@ -317,30 +315,30 @@ class Ajax extends CI_Controller
 
     }
 
-    function ambil_data_minat_bakat()
+    function ambil_data_tpa()
     {
         $nisn = $this->input->post('nisn');
-        $data = $this->m_ajax->ambil_data_minat_bakat($nisn);
+        $data = $this->m_ajax->ambil_data_tpa($nisn);
         print_r(json_encode($data));
     }
 
-    function kirim_data_minat_bakat_admin()
+    function kirim_data_tpa_admin()
     {
         $nisn = $this->input->post('nisn');
-        $this->m_ajax->kirim_data_minat_bakat($_POST, $nisn);
+        $this->m_ajax->kirim_data_tpa($_POST, $nisn);
     }
 
-    function reset_nilai_minat_bakat()
+    function reset_nilai_tpa()
     {
         $nisn = $this->input->post('nisn');
-        $this->m_ajax->reset_nilai_minat_bakat($nisn);
+        $this->m_ajax->reset_nilai_tpa($nisn);
 
     }
 
-    function aktifkan_nilai_minat_bakat()
+    function aktifkan_nilai_tpa()
     {
         $nisn = $this->input->post('nisn');
-        $this->m_ajax->aktifkan_nilai_minat_bakat($nisn, $_POST);
+        $this->m_ajax->aktifkan_nilai_tpa($nisn, $_POST);
 
     }
 
@@ -451,7 +449,7 @@ class Ajax extends CI_Controller
                     $mapel = "Dll";
                     break;
             }
-            $output['data'][] = array($nomor_urut, $data['id'], $mapel, $data['soal'], $data['bobot'], $data['gambar']);
+            $output['data'][] = array($nomor_urut, $data['id'], $mapel, $data['soal'],/** $data['bobot'] , $data['gambar']*/);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -540,7 +538,6 @@ class Ajax extends CI_Controller
         if ($search != "") {
             $this->db->like("username", $search);
             $this->db->or_like('name', $search);
-            $this->db->or_like('jurusan', $search);
             $jum = $this->db->get('admin');
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
@@ -548,7 +545,7 @@ class Ajax extends CI_Controller
 
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
-            $output['data'][] = array($nomor_urut, $data['name'], $data['username'], $data['jurusan']);
+            $output['data'][] = array($nomor_urut, $data['name'], $data['username']);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -776,7 +773,7 @@ class Ajax extends CI_Controller
         $output = array();
         $output['data'] = array();
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
-        $this->db->join("nilai_mb", 'siswa.nisn=nilai_mb.nisn', 'left');
+        $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         $query = $this->db->get('siswa');
         $nomor_urut = 1;
@@ -786,10 +783,10 @@ class Ajax extends CI_Controller
         foreach ($query->result_array() as $data) {
             $un = (($data['ipa'] * 3) + ($data['matematika'] * 4) + ($data['bhs_inggris'] * 3) + ($data['bhs_indonesia'] *1)) / 11;
             $usbn = (($data['pai'] + $data['pkn'] + $data['ips']) / 3);
-            $minat_bakat = $data['nilai'];
+            $tpa = $data['nilai'];
 
-            if (isset($usbn) && isset($minat_bakat)) {
-                $nilai_spk = [$un, $usbn, $minat_bakat];
+            if (isset($usbn) && isset($tpa)) {
+                $nilai_spk = [$un, $usbn, $tpa];
                 $total = spk_smart($nilai_spk, $bobot_spk);
             } else {
                 $total = 0;
@@ -819,8 +816,8 @@ class Ajax extends CI_Controller
                 $data['ips'],
                 round($usbn, 4),
 
-                /** NIlai Minat Bakat */
-                round($minat_bakat, 4),
+                /** NIlai Potensial Akademik */
+                round($tpa, 4),
 
                 /**total hasil perhitungan metode SMART*/
                 $total
@@ -846,7 +843,7 @@ class Ajax extends CI_Controller
                 $sort_pkn[$key] = $isi[13];
                 $sort_ips[$key] = $isi[14];
                 $sort_rata_rata_usbn[$key] = $isi[15];
-                $sort_minat_bakat[$key] = $isi[16];
+                $sort_tpa[$key] = $isi[16];
                 $sort_hasil[$key] = $isi[17];
             }
         }

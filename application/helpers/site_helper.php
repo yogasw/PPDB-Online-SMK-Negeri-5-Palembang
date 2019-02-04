@@ -281,7 +281,7 @@ if (!function_exists('sort_arr_of_obj')) {
 if (!function_exists('spk_smart')) {
     function spk_smart($array_nilai, $array_bobot)
     {
-        /** kriteria Nilai Rapot, Nilai Minat Bakat */
+        /** kriteria Nilai Rapot, Nilai Potensial Akademik */
 
         /**
          * Bobot Yang di tentukan,

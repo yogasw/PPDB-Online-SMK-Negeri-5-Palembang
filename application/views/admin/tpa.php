@@ -1,7 +1,5 @@
 <div class="col-md-12">
     <div class="card">
-        <h3 class="card-title text-center">NILAI TES MINAT DAN BAKAT PSB</h3>
-        <h3 class="card-title text-center">SMK 05 PALEMBANG</h3>
         <div class="card-content">
             <div class="table-responsive">
                 <table id="datatables" class="table table-striped" width="100%">
@@ -56,7 +54,7 @@
 
     function newswal(id) {
         $.ajax({
-            url: "<?php echo(base_url() . 'ajax/ambil_data_minat_bakat')?>",
+            url: "<?php echo(base_url() . 'ajax/ambil_data_tpa')?>",
             type: "POST",
             data: {nisn: id},
             success: function (data) {
@@ -122,13 +120,7 @@
                 '<div class="col-xs-6"><div class="form-group label-floating" hidden>' +
                 '<label class="control-label">Status</label>' +
                 '<input type="text" value="' + data[0].status + '" name="status" class="form-control" disabled>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6"><div class="form-group label-floating" hidden>' +
-                '<label class="control-label">Total Bobot</label>' +
-                '<input type="number" value="' + data[0].nilai_bobot + '" name="nilai_bobot" class="form-control" disabled>' +
                 '</div></div>'
-
             ,
             showConfirmButton: false,
             buttonsStyling: false
@@ -144,7 +136,7 @@
     function kirimdata() {
         $.ajax({
             type: "POST",
-            url: "<?php echo(base_url() . 'ajax/kirim_data_minat_bakat_admin')?>",
+            url: "<?php echo(base_url() . 'ajax/kirim_data_tpa_admin')?>",
             data: datastring,
             success: function () {
                 swal({
@@ -174,7 +166,7 @@
             buttonsStyling: false
         }).then(function () {
             $.ajax({
-                url: "<?php echo(base_url() . 'ajax/reset_nilai_minat_bakat')?>",
+                url: "<?php echo(base_url() . 'ajax/reset_nilai_tpa')?>",
                 type: "POST",
                 data: {nisn: id},
                 dataType: "html",
@@ -209,7 +201,7 @@
             buttonsStyling: false
         }).then(function () {
             $.ajax({
-                url: "<?php echo(base_url() . 'ajax/aktifkan_nilai_minat_bakat')?>",
+                url: "<?php echo(base_url() . 'ajax/aktifkan_nilai_tpa')?>",
                 type: "POST",
                 data: {nisn: id, status: '1'},
                 dataType: "html",

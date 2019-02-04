@@ -22,7 +22,6 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Username</th>
-                            <th>Jurusan</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -43,7 +42,6 @@
                 type: 'POST'
             },
             "aoColumns": [
-                null,
                 null,
                 null,
                 null,

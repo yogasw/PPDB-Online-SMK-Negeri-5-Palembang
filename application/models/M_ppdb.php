@@ -21,9 +21,9 @@ class M_ppdb extends CI_Model
 
     public function getsoal($nisn)
     {
-        if ($this->cek_nilai_mb($nisn)) {
+        if ($this->cek_nilai_tpa($nisn)) {
             $this->load->model('M_ajax', 'ajax');
-            $daftar_soal = $this->ajax->ambil_data_minat_bakat($nisn)[0]['list_soal'];
+            $daftar_soal = $this->ajax->ambil_data_tpa($nisn)[0]['list_soal'];
             $q = "SELECT * FROM core_soal WHERE id IN (" . $daftar_soal . ") ORDER BY FIELD(id," . $daftar_soal . ")";
             $query = $this->db->query($q);
             return $query->result_array();
@@ -37,9 +37,9 @@ class M_ppdb extends CI_Model
         }
     }
 
-    function cek_nilai_mb($nisn)
+    function cek_nilai_tpa($nisn)
     {
-        $q = "SELECT COUNT(list_soal) AS numrows FROM nilai_mb WHERE nisn = " . $nisn;
+        $q = "SELECT COUNT(list_soal) AS numrows FROM nilai_tpa WHERE nisn = " . $nisn;
         $query = $this->db->query($q);
         $hasil = $query->result_array()[0]['numrows'];
         if ($hasil >= 1) {
@@ -52,7 +52,7 @@ class M_ppdb extends CI_Model
     function cek_soal_status($nisn)
     {
         $this->db->select("status");
-        $this->db->from('nilai_mb');
+        $this->db->from('nilai_tpa');
         $this->db->where('nisn', $nisn);
         $this->db->where('status', "1");
         $query = $this->db->count_all_results();

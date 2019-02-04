@@ -1,9 +1,9 @@
 <script src="<?php echo(base_url()) ?>assets/js/jquery.simple.timer.js"></script>
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-    <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_minat_bakat') ?>" method="post">
+    <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_tpa') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">
-                        UJIAN ONLINE CALON SISWA BARU <br>SMK 05 PALEMBANG
+                        UJIAN ONLINE TPA PESERTA DIDIK BARU <br>SMK N 5 PALEMBANG
                     </h3>
                 </div>
                 <div class="content">

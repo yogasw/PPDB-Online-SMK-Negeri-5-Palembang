@@ -58,7 +58,7 @@ $route['keluar'] = 'ajax/logout';
 $route['login'] = 'admin/login';
 
 $route['pendaftaran'] = 'Ppdb/tambahdata_siswa';
-$route['minat_bakat'] = 'Ppdb/minat_bakat';
+$route['tpa'] = 'Ppdb/tpa';
 $route['cetak_bukti'] = 'Ppdb/cetak_bukti';
 $route['home'] = 'Ppdb/home';
 $route['ubahdata'] = 'Ppdb/ubahdata_siswa';

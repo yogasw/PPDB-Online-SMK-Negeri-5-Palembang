@@ -24,7 +24,7 @@
                     <p class="card-description">
                         Ikuti Ujian Online, Ketika sudah di buka oleh admin
                     </p>
-                    <a href="<?php echo(base_url() . "minat_bakat") ?>" class="btn btn-rose btn-round">go</a>
+                    <a href="<?php echo(base_url() . "tpa") ?>" class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>

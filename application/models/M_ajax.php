@@ -16,7 +16,7 @@ class M_ajax extends CI_Model
         $this->db->delete('nilai_un');
 
         $this->db->where('nisn', $nisn);
-        $this->db->delete('nilai_mb');
+        $this->db->delete('nilai_tpa');
         return true;
     }
 
@@ -30,7 +30,7 @@ class M_ajax extends CI_Model
             $this->db->delete('nilai_un');
 
             $this->db->where('nisn', $val);
-            $this->db->delete('nilai_mb');
+            $this->db->delete('nilai_tpa');
         }
         return true;
     }
@@ -85,19 +85,19 @@ class M_ajax extends CI_Model
         return $query->row();
     }
 
-    function insert_nilai_mb($data, $nisn)
+    function insert_nilai_tpa($data, $nisn)
     {
         $this->db->select("*");
-        $this->db->from('nilai_mb');
+        $this->db->from('nilai_tpa');
         $this->db->where('nisn', $nisn);
         $query = $this->db->count_all_results();
 
         if ($query >= 1) {
             unset($data['nisn']);
             $this->db->where('nisn', $nisn);
-            $this->db->update('nilai_mb', $data);
+            $this->db->update('nilai_tpa', $data);
         } else {
-            $this->db->insert('nilai_mb', $data);
+            $this->db->insert('nilai_tpa', $data);
         }
     }
 
@@ -163,44 +163,44 @@ class M_ajax extends CI_Model
         }
     }
 
-    function ambil_data_minat_bakat($nisn)
+    function ambil_data_tpa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisn_siswa,siswa.nama_lengkap');
         $this->db->from('siswa');
         $this->db->where('siswa.nisn', $nisn);
-        $this->db->join('nilai_mb', 'siswa.nisn = nilai_mb.nisn', 'left');
+        $this->db->join('nilai_tpa', 'siswa.nisn = nilai_tpa.nisn', 'left');
         $this->db->limit(1);
         $query = $this->db->get();
         return $query->result_array();
     }
 
-    function kirim_data_minat_bakat($data, $nisn)
+    function kirim_data_tpa($data, $nisn)
     {
         $this->db->select("*");
-        $this->db->from('nilai_mb');
+        $this->db->from('nilai_tpa');
         $this->db->where('nisn', $nisn);
         $query = $this->db->count_all_results();
         if ($query >= 1) {
             unset($data['nisn']);
             unset($data['nama']);
             $this->db->where('nisn', $nisn);
-            $this->db->update('nilai_mb', $data);
+            $this->db->update('nilai_tpa', $data);
         } else {
             unset($data['nama']);
-            $this->db->insert('nilai_mb', $data);
+            $this->db->insert('nilai_tpa', $data);
         }
     }
 
-    function reset_nilai_minat_bakat($nisn)
+    function reset_nilai_tpa($nisn)
     {
         $this->db->where('nisn', $nisn);
-        $this->db->delete('nilai_mb');
+        $this->db->delete('nilai_tpa');
         return true;
     }
 
-    function aktifkan_nilai_minat_bakat($nisn, $data)
+    function aktifkan_nilai_tpa($nisn, $data)
     {
-        $this->db->insert('nilai_mb', $data);
+        $this->db->insert('nilai_tpa', $data);
         return true;
     }
 
@@ -308,7 +308,7 @@ class M_ajax extends CI_Model
             $this->db->where('password', $password);
             $query = $this->db->get();
             $hasil = $query->result_array();
-            return $output = array("status" => true, "level" => "admin", "username" => $hasil[0]['username'], "name" => $hasil[0]['name'], "jurusan" => $hasil[0]['jurusan']);
+            return $output = array("status" => true, "level" => "admin", "username" => $hasil[0]['username'], "name" => $hasil[0]['name'], "jurusan" => "");
         } else {
             return $output = array("status" => false);
         }

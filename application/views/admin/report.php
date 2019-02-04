@@ -32,7 +32,7 @@
                             <th>Nilai USBN PKN</th>
                             <th>Nilai USBN IPS</th>
                             <th>Rata-Rata Nilai USBN (b)</th>
-                            <th>Nilai Minat Bakat (c)</th>
+                            <th>Nilai Potensial Akademik (c)</th>
                             <th>Total Nilai</th>
                         </tr>
                         </thead>

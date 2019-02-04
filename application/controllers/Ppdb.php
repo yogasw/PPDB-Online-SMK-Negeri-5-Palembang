@@ -67,7 +67,7 @@ class Ppdb extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
-    function minat_bakat()
+    function tpa()
     {
         if ($this->session->userdata('level') != "siswa") {
             Redirect(base_url() . "login", false);
@@ -78,13 +78,13 @@ class Ppdb extends CI_Controller
         $nisn = $this->session->userdata("username");
 
         $x['data'] = $this->m_ppdb->getsoal($nisn);
-        if (($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']) != "") {
-            $x['jawaban'] = jawaban_to_array($this->m_ajax->ambil_data_minat_bakat($nisn)[0]['list_jawaban']);
+        if (($this->m_ajax->ambil_data_tpa($nisn)[0]['list_jawaban']) != "") {
+            $x['jawaban'] = jawaban_to_array($this->m_ajax->ambil_data_tpa($nisn)[0]['list_jawaban']);
         }
 
         //mengambil daftar soal yang sudah di acak serta isi waktu selesai dan mulai
         if ($this->m_ppdb->cek_soal_status($nisn)) {
-            if (!$this->m_ppdb->cek_nilai_mb($nisn)) {
+            if (!$this->m_ppdb->cek_nilai_tpa($nisn)) {
                 $soal = array();
                 foreach ($x['data'] as $u) {
                     array_push($soal, $u['id']);
@@ -105,13 +105,13 @@ class Ppdb extends CI_Controller
                     'tgl_selesai' => $tgl_selesai
                 ];
 
-                $this->m_ajax->insert_nilai_mb($data, $nisn);
+                $this->m_ajax->insert_nilai_tpa($data, $nisn);
             }
         }
 
         //ambil sisa waktu dari database
         $this->load->model('M_ajax', 'ajax');
-        $data = $this->ajax->ambil_data_minat_bakat($nisn)[0];
+        $data = $this->ajax->ambil_data_tpa($nisn)[0];
 
         $selesai = $data['tgl_selesai'];
         $mulai = $data['tgl_mulai'];
@@ -124,7 +124,7 @@ class Ppdb extends CI_Controller
         }
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('ppdb/minat_bakat', $x);
+        $this->load->view('ppdb/tpa', $x);
         $this->load->view('admin/template/footer');
     }
 

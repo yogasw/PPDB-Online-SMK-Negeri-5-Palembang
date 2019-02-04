@@ -87,7 +87,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
-    public function minat_bakat()
+    public function tpa()
     {
         if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
@@ -96,7 +96,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_admin->getdatasiswa($nisn);
-        $this->load->view('admin/minat_bakat', $x);
+        $this->load->view('admin/tpa', $x);
         $this->load->view('admin/template/footer');
     }
 

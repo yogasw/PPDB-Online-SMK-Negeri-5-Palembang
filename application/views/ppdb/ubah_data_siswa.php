@@ -3,9 +3,9 @@
                 <?php foreach ($data as $u) { ?>
                     <div class="wizard-header">
                         <h3 class="wizard-title">
-                            FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
+                            PENDAFTARAN PESERTA DIDIK BARU <br>SMK 05 PALEMBANG
                         </h3>
-                        <h5>Tambah Data Baru.</h5>
+                        <h5>Ubah Data.</h5>
                     </div>
                     <div class="wizard-navigation">
                         <ul class="nav nav-pills">

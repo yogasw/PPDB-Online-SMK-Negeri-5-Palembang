@@ -30,8 +30,6 @@
                             <th>No</th>
                             <th>Mata Pelajaran</th>
                             <th>Soal</th>
-                            <th>Bobot</th>
-                            <th>Gambar</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -61,8 +59,6 @@
                         return '<input type="checkbox" class="select-row" data-id="' + full[1] + '" />'
                     }
                 },
-                null,
-                null,
                 null,
                 null,
                 null,
@@ -176,12 +172,6 @@
 
                 '<div class="col-xs-6">' +
                 '<div class="form-group label-floating">' +
-                '<label class="control-label">Bobot Soal</label>' +
-                '<input type="number" name="bobot" class="form-control" required="true">' +
-                '</div></div>' +
-
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
                 '<label class="control-label">jawaban</label>' +
                 '<select name="Jawaban" id="jawaban" class="form-control" required="true">' +
                 '<option value="" selected>----</option>' +
@@ -284,12 +274,6 @@
                 '<option value="4"> B. Inggris</option>' +
                 '<option value="5">Matematika</option>' +
                 '</select>' +
-                '</div></div>' +
-
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
-                '<label class="control-label">Bobot Soal</label>' +
-                '<input type="number" name="bobot" value="' + data[0].bobot + '"  class="form-control" required="true">' +
                 '</div></div>' +
 
                 '<div class="col-xs-6">' +
