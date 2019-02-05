@@ -1,5 +1,5 @@
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-    <form action="<?php echo base_url("ajax/tambah_siswa"); ?>" method="post" novalidate="novalidate">
+    <form action="#" method="post" novalidate="novalidate">
                     <div class="wizard-header">
                         <h3 class="wizard-title">
                             FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
@@ -13,6 +13,9 @@
                             </li>
                             <li style="width: 33.3333%;">
                                 <a href="#step2" data-toggle="tab">Step II</a>
+                            </li>
+                            <li style="width: 33.3333%;">
+                                <a href="#step3" data-toggle="tab">Step III</a>
                             </li>
                         </ul>
                         <div class="moving-tab"
@@ -28,7 +31,7 @@
                                 </div>
                                 <input name="tahun_ajaran" id="tahun_ajaran"
                                        value=" <?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
-                                <div class="col-sm-4 col-sm-offset-1">
+                                <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nama Lengkap</label>
                                         <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
@@ -36,18 +39,10 @@
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">No Peserta</label>
-                                        <input name="no_peserta" id="no_peserta" type="text" class="form-control"
-                                               value=""
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">NISN</label>
-                                        <input name="nisn" id="nisn" type="text" class="form-control"
+                                        <input name="nisn" id="nisn" type="number" class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -55,7 +50,7 @@
                                 <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Tahun Lulus</label>
-                                        <input name="tahun_lulus" id="tahun_lulus" type="text" class="form-control"
+                                        <input name="tahun_lulus" id="tahun_lulus" type="number" class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -111,73 +106,13 @@
                                         </select>
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-3 form-inline">
+                                <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Tanggal Lahir</label>
-                                        <div class="row">
-                                            <div class="col-xs-4">
-                                                <select name="tanggal" id="tanggal" class="form-control"
-                                                        required="true">
-                                                    <?php
-                                                    $tl = explode("-", $u['tanggal_lahir']);
-                                                    if ($tl[2] != '') {
-                                                        echo('<option value=' . $tl[2] . '>' . $tl[2] . '</option>');
-                                                    } else {
-                                                        echo('<option value="">Tanggal</option>');
-                                                    }
-                                                    for ($i = 1; $i <= 31; $i++) {
-                                                        echo('<option value=' . $i . '>' . $i . '</option>');
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-4">
-                                                <select name="bulan" id="bulan" class="form-control"
-                                                        required="true">
-                                                    <?php
-                                                    $list_months = [
-                                                        'Januari',
-                                                        'Febuari',
-                                                        'Maret',
-                                                        'April',
-                                                        'Mei',
-                                                        'Juni',
-                                                        'Juli',
-                                                        'Augustus',
-                                                        'September',
-                                                        'October',
-                                                        'November',
-                                                        'Desember'
-                                                    ];
-                                                    if ($tl[1] != '') {
-                                                        echo('<option value=' . $tl[1] . '>' . $list_months[$tl[1] - 1] . '</option>');
-                                                    } else {
-                                                        echo('<option value="">Bulan</option>');
-                                                    }
-                                                    $bulan = 1;
-                                                    for ($i = 0; $i < count($list_months); $i++) {
-                                                        echo('<option value=' . $bulan . '>' . $list_months[$i] . '</option>');
-                                                        $bulan++;
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-4">
-                                                <select name="tahun" id="tahun" class="form-control"
-                                                        required="true">
-                                                    <?php
-                                                    if ($tl[0] != '') {
-                                                        echo('<option value=' . $tl[0] . '>' . $tl[0] . '</option>');
-                                                    } else {
-                                                        echo('<option value="">Tahun</option>');
-                                                    }
-                                                    for ($i = 2015; $i >= 1960; $i--) {
-                                                        echo('<option value=' . $i . '>' . $i . '</option>');
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control"
+                                               required="true" style="text-transform: uppercase"
+                                               value="">
+                                        <span class="material-input"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-sm-offset-1">
@@ -186,12 +121,13 @@
                                         <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
                                                required="true" style="text-transform: uppercase"
                                                value="">
-                                        <span class="material-input"></span></div>
+                                        <span class="material-input"></span>
+                                    </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">No. HP</label>
-                                        <input type="text" name="no_hp" id="no_hp" class="form-control" number="true"
+                                        <input type="number" name="no_hp" id="no_hp" class="form-control" number="true"
                                                required="true" value=""/>
                                         <span class="material-input"></span></div>
                                 </div>
@@ -248,7 +184,7 @@
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai IPA</label>
-                                        <input name="nilai_ipa" id="nilai_ipa" type="text" class="form-control"
+                                        <input name="nilai_ipa" id="nilai_ipa" type="number" class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -256,7 +192,7 @@
                                 <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai matematika</label>
-                                        <input name="nilai_matematika" id="nilai_matematika" type="text"
+                                        <input name="nilai_matematika" id="nilai_matematika" type="number"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
@@ -265,7 +201,7 @@
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai Bahasa Indonesia</label>
-                                        <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="text"
+                                        <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="number"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
@@ -274,7 +210,7 @@
                                 <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai Bahasa Inggris</label>
-                                        <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="text"
+                                        <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="number"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
@@ -288,7 +224,7 @@
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai PAI</label>
-                                        <input name="nilai_pai" id="nilai_pai" type="text" class="form-control"
+                                        <input name="nilai_pai" id="nilai_pai" type="number" class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -296,7 +232,7 @@
                                 <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai PKN</label>
-                                        <input name="nilai_pkn" id="nilai_pkn" type="text"
+                                        <input name="nilai_pkn" id="nilai_pkn" type="number"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
@@ -305,13 +241,30 @@
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nilai IPS</label>
-                                        <input name="nilai_ips" id="nilai_ips" type="text"
+                                        <input name="nilai_ips" id="nilai_ips" type="number"
                                                class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="tab-pane" id="step3">
+                            <div class="col-sm-12">
+                                <h3 class="info-text">Pernyataan</h3>
+                            </div>
+                            <p>Saya menyatakan dengan sesungguhnya bahwa isian data dalam formulir ini adalah benar.
+                                Apabila ternyata data tersebut tidak benar / palsu, maka saya bersedia menerima sanksi
+                                berupa Pembatalan sebagai Calon Peserta Didik SMA Negeri 5 Palembang
+                            </p>
+                            <row class="text-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="terms" class="label-control" id="terms"
+                                               required="true"><a>Saya Setuju</a>
+                                    </label>
+                                </div>
+                            </row>
                         </div>
                     </div>
                     <div class="wizard-footer">
@@ -328,10 +281,17 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-            </form>
+    </form>
         </div>
 <script type="text/javascript">
     $(document).ready(function () {
+        $('#nama_lengkap').keypress(function (e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
+
         // Code for the Validator
         var $validator = $('.wizard-card form').validate({
             rules: {
@@ -359,14 +319,6 @@
             'nextSelector': '.btn-next',
             'previousSelector': '.btn-previous',
 
-            onNext: function (tab, navigation, index) {
-                var $valid = $('.wizard-card form').valid();
-                if (!$valid) {
-                    $validator.focusInvalid();
-                    return false;
-                }
-            },
-
             onInit: function (tab, navigation, index) {
 
                 //check number of tabs and fill the entire row
@@ -386,16 +338,6 @@
                 $('.wizard-card .wizard-navigation').append($moving_div);
                 refreshAnimation($wizard, index);
                 $('.moving-tab').css('transition', 'transform 0s');
-            },
-
-            onTabClick: function (tab, navigation, index) {
-                var $valid = $('.wizard-card form').valid();
-
-                if (!$valid) {
-                    return false;
-                } else {
-                    return true;
-                }
             },
 
             onTabShow: function (tab, navigation, index) {
@@ -515,7 +457,7 @@
             var jk = $('#jk').val();
             var agama = $('#agama').val();
             var tempat_lahir = $('#tempat_lahir').val();
-            var tanggal_lahir = $('#tahun').val() + '-' + $('#bulan').val() + '-' + $('#tanggal').val();
+            var tanggal_lahir = $('#tanggal_lahir').val();
             var no_hp = $('#no_hp').val();
             var email = $('#email').val();
             var alamat = $('#alamat').val();
@@ -530,24 +472,8 @@
             var nilai_pai = $('#nilai_pai').val();
             var nilai_pkn = $('#nilai_pkn').val();
             var nilai_ips = $('#nilai_ips').val();
-
-            if (
-                nilai_ipa == "" ||
-                nilai_matematika == "" ||
-                nilai_bhs_indonesia == "" ||
-                nilai_bhs_inggris == "" ||
-                nilai_pai == "" ||
-                nilai_pkn == "" ||
-                nilai_ips == ""
-            ) {
-                swal({
-                    title: 'Maaf Cuy!',
-                    text: 'Lengkapi semua datanya dulu ya',
-                    type: 'error',
-                    confirmButtonClass: "btn btn-success",
-                    buttonsStyling: false
-                })
-            } else {
+            var term = $('#terms').is(':checked');
+            if (term) {
                 swal({
                     title: 'Silahkan Tunggu..',
                     text: 'Data Sedang Di Proses..!',
@@ -556,7 +482,6 @@
                         swal.showLoading()
                     }
                 });
-
                 $.post(
                     '<?php echo(base_url() . "ajax/tambah_siswa") ?>',
                     {
@@ -589,7 +514,7 @@
                     function (data) {
                         if (data["status"]) {
                             (swal({
-                                title: 'Mantap Cuy!',
+                                title: 'Sukses',
                                 text: 'Data berhasil di kirim',
                                 type: 'success',
                                 confirmButtonClass: "btn btn-success",
@@ -600,7 +525,7 @@
                         }
                         else {
                             swal({
-                                title: 'Maaf Cuy!',
+                                title: 'Maaf',
                                 text: 'Data gagal di perbarui, silahkan hub panitia',
                                 type: 'error',
                                 confirmButtonClass: "btn btn-success",
@@ -610,6 +535,15 @@
                         }
                     }
                 );
+            } else {
+                $('.wizard-card form').valid();
+                swal({
+                    title: 'Maaf!',
+                    text: 'Setujui Formuir ini terlebih dahulu',
+                    type: 'error',
+                    confirmButtonClass: "btn btn-success",
+                    buttonsStyling: false
+                })
             }
 
         });
@@ -669,7 +603,7 @@
                     if (response == "true") {
                         document.getElementById("next").disabled = true;
                         swal({
-                            title: 'Mantap Cuy!',
+                            title: 'Maaf',
                             text: 'Data NISN Sudah di pakai',
                             type: 'error',
                             confirmButtonClass: "btn btn-success",
