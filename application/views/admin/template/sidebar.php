@@ -12,16 +12,22 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="<?php echo(base_url()) ?>">
-                        <i class="material-icons">home</i>Home
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo(base_url() . "keluar") ?>">
-                        <i class="material-icons">home</i>Keluar
-                    </a>
-                </li>
+                <?php
+                $CI = get_instance();
+                $username = $CI->session->userdata('username');
+                if (isset($username)) {
+                    ?>
+                    <li>
+                        <a href="<?php echo(base_url()) ?>">
+                            <i class="material-icons">home</i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo(base_url() . "keluar") ?>">
+                            <i class="material-icons">home</i>Keluar
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>

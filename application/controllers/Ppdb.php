@@ -22,27 +22,29 @@ class Ppdb extends CI_Controller
         if ($this->session->userdata('level') != "siswa") {
             Redirect(base_url() . "login", false);
         }
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $this->load->view('ppdb/home');
-        $this->load->view('admin/template/footer');
-    }
 
-    function wawancara()
-    {
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_ppdb->show_data();
-        $this->load->view('ppdb/wawancara', $x);
-        $this->load->view('admin/template/footer');
-    }
+        $nisn = $this->session->userdata('username');
 
-    function psikologi()
-    {
+        /** Nilai TPA */
+        $nilai = $this->m_ppdb->lihat_nilai($nisn);
+        if (isset($nilai->nilai)) {
+            $jumlah_soal = count(explode(",", $nilai->list_soal));
+            $x['nilai_tpa'] = array(
+                "nisn" => $nilai->nisn,
+                "jumlah_benar" => $nilai->jml_benar,
+                "nilai" => $nilai->nilai,
+                "jumlah_salah" => $jumlah_soal - $nilai->jml_benar,
+                "jumlah_soal" => $jumlah_soal
+            );
+        } else {
+            $x['nilai_tpa'] = false;
+        }
+
+        $x['error'] = $this->input->get('error');
+
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_ppdb->show_data();
-        $this->load->view('ppdb/psikologi', $x);
+        $this->load->view('ppdb/home', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -137,5 +139,9 @@ class Ppdb extends CI_Controller
 
         $nisn = $this->session->userdata('username');
         $this->pdf->cetak_bukti($this->m_ppdb->getdatasiswa($nisn)[0]);
+    }
+
+    function test($nisn)
+    {
     }
 }

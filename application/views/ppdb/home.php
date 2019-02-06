@@ -24,7 +24,13 @@
                     <p class="card-description">
                         Ikuti Ujian Online, Ketika sudah di buka oleh admin
                     </p>
-                    <a href="<?php echo(base_url() . "tpa") ?>" class="btn btn-rose btn-round">go</a>
+                    <?php
+                    if (!$nilai_tpa) {
+                        ?>
+                        <a href="<?php echo(base_url() . "tpa") ?>" class="btn btn-rose btn-round">go</a>
+                    <?php } else { ?>
+                        <a href="#" onclick="lihat_nilai()" class="btn btn-rose btn-round">Lihat Nilai</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -38,14 +44,7 @@
                     <p class="card-description">
                         Cetak Bukti Pendaftaran sebagai bukti anda sudah mendaftar
                     </p>
-                    <a <?php
-                    $CI = get_instance();
-                    $CI->load->model('m_ajax');
-                    if ($CI->m_ajax->cek_verifikasi($this->session->userdata('username'))) {
-                        echo 'href="' . base_url() . 'cetak_bukti"';
-                    } else {
-                        echo 'href="#" onclick=cetak_gagal()';
-                    } ?> class="btn btn-rose btn-round">go</a>
+                    <a <?php echo 'href="' . base_url() . 'cetak_bukti"' ?> class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
@@ -55,7 +54,7 @@
 
 <script type="text/javascript">
     <?php
-    $error = $CI->input->get('error');
+
     if ($error == "soal") {
         echo "soal_error();";
     }
@@ -80,4 +79,41 @@
             buttonsStyling: false
         });
     }
+    <?php if ($nilai_tpa) { ?>
+    function lihat_nilai() {
+        swal({
+            title: 'Lihat Nilai',
+            html:
+                '<div class="row">' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">NISN</label>' +
+                '<input type="text" name="nisn" value="' + <?php echo $nilai_tpa['nisn'] ?>+'" class="form-control" disabled>' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">Jumlah Benar</label>' +
+                '<input type="number" value="' + <?php echo $nilai_tpa['jumlah_benar'] ?>+'" name="jml_benar" class="form-control" disabled>' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">Total Nilai</label>' +
+                '<input type="number" value="' + <?php echo $nilai_tpa['nilai'] ?>+'" name="nilai" class="form-control" disabled>' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">Jumlah Salah</label>' +
+                '<input type="text" value="' + <?php echo $nilai_tpa['jumlah_salah'] ?> +'" name="jumlah_salah" class="form-control" disabled>' +
+                '</div></div>' +
+
+                '<div class="col-xs-6"><div class="form-group label-floating">' +
+                '<label class="control-label">Total Soal</label>' +
+                '<input type="text" value="' + <?php echo $nilai_tpa['jumlah_soal'] ?> +'" name="jumlah_soal" class="form-control" disabled>' +
+                '</div></div>'
+            ,
+            showConfirmButton: false,
+            buttonsStyling: false
+        });
+    }
+    <?php } ?>
 </script>

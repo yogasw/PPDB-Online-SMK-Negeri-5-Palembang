@@ -43,34 +43,11 @@ class Admin extends CI_Controller
             Redirect(base_url() . "login", false);
         }
 
+        $x['filter'] = $this->session->userdata("filter_jurusan");
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
         $x['data'] = $this->m_admin->show_data();
         $this->load->view('admin/pendaftaran', $x);
-        $this->load->view('admin/template/footer');
-    }
-
-    public function wawancara()
-    {
-        if ($this->session->userdata('level') != "admin") {
-            Redirect(base_url() . "login", false);
-        }
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_admin->show_data();
-        $this->load->view('admin/wawancara', $x);
-        $this->load->view('admin/template/footer');
-    }
-
-    public function psikologi()
-    {
-        if ($this->session->userdata('level') != "admin") {
-            Redirect(base_url() . "login", false);
-        }
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_admin->show_data();
-        $this->load->view('admin/psikologi', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -92,10 +69,10 @@ class Admin extends CI_Controller
         if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
-        $nisn = $this->input->get('nisn');
+        $x['filter'] = $this->session->userdata("filter_jurusan");
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('admin/tpa');
+        $this->load->view('admin/tpa', $x);
         $this->load->view('admin/template/footer');
     }
 
@@ -169,5 +146,10 @@ class Admin extends CI_Controller
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/report');
         $this->load->view('admin/template/footer');
+    }
+
+    function filter($jurusan)
+    {
+        $this->session->set_userdata('filter_jurusan', $jurusan);
     }
 }

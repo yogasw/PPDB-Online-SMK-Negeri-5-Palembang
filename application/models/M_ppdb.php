@@ -8,7 +8,7 @@
  */
 class M_ppdb extends CI_Model
 {
-    public function getdatasiswa($nisn)
+    function getdatasiswa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisnsiswa');
         $this->db->from('siswa');
@@ -19,7 +19,7 @@ class M_ppdb extends CI_Model
         return $query->result_array();
     }
 
-    public function getsoal($nisn)
+    function getsoal($nisn)
     {
         if ($this->cek_nilai_tpa($nisn)) {
             $this->load->model('M_ajax', 'ajax');
@@ -63,4 +63,12 @@ class M_ppdb extends CI_Model
         }
     }
 
+    function lihat_nilai($nisn)
+    {
+        $this->db->select('*');
+        $this->db->from('nilai_tpa');
+        $this->db->where('nisn', $nisn);
+        $this->db->limit(1);
+        return $nilai = $this->db->get()->row();
+    }
 }

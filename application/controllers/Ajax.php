@@ -101,7 +101,11 @@ class Ajax extends CI_Controller
         $this->db->order_by($orderby, $dir);
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
-        //$this->db->where('siswa.nisn', $nisn);
+        $filter = $this->session->userdata("filter_jurusan");
+        if (isset($filter)) {
+            $this->db->where("siswa.jurusan", $filter);
+        }
+
         $query = $this->db->get('siswa');
 
         /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
@@ -109,7 +113,8 @@ class Ajax extends CI_Controller
         yang mengandung keyword tertentu
         */
         if ($search != "") {
-            $this->db->like("siswa.no_peserta", $search);
+            $this->db->where("siswa.jurusan", $search);
+            $this->db->or_like("siswa.no_peserta", $search);
             $this->db->or_like('siswa.nisn', $search);
             $this->db->or_like('siswa.nama_lengkap', $search);
             $this->db->or_like('siswa.asal_sekolah', $search);
@@ -118,6 +123,7 @@ class Ajax extends CI_Controller
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
 
+        log_app(print_r($this->db->last_query(), true));
 
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
@@ -177,7 +183,6 @@ class Ajax extends CI_Controller
         pada table client*/
         $output['data'] = array();
 
-
         /*Jika $search mengandung nilai, berarti user sedang telah
         memasukan keyword didalam filed pencarian*/
         if ($search != "") {
@@ -186,6 +191,9 @@ class Ajax extends CI_Controller
             $this->db->or_like('siswa.nama_lengkap', $search);
             $this->db->or_like('siswa.asal_sekolah', $search);
             $this->db->or_like('siswa.jurusan', $search);
+            if (isset($filter)) {
+                $this->db->where("siswa.jurusan", $filter);
+            }
         }
 
 
@@ -217,6 +225,10 @@ class Ajax extends CI_Controller
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
+        $filter = $this->session->userdata("filter_jurusan");
+        if (isset($filter)) {
+            $this->db->where("siswa.jurusan", $filter);
+        }
         $query = $this->db->get('siswa');
 
         /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
@@ -229,6 +241,9 @@ class Ajax extends CI_Controller
             $this->db->or_like('siswa.nama_lengkap', $search);
             $this->db->or_like('siswa.asal_sekolah', $search);
             $this->db->or_like('siswa.jurusan', $search);
+            if (isset($filter)) {
+                $this->db->where("siswa.jurusan", $filter);
+            }
             $jum = $this->db->get('siswa');
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
@@ -1046,19 +1061,6 @@ class Ajax extends CI_Controller
 
         $newhasil['data'] = $hasil;
         echo json_encode($newhasil);
-    }
-
-    function test()
-    {
-        $strung = "2 ";
-
-        if (is_text($strung)) {
-            echo "ini string";
-        } elseif (is_nomor($strung)) {
-            echo "ini nomor";
-        } else {
-            echo "ini bukan apa2";
-        }
     }
 
 }
