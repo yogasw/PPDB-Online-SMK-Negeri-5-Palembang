@@ -996,6 +996,10 @@ class Ajax extends CI_Controller
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
+        $filter = strtoupper($this->session->userdata("filter_jurusan"));
+        if ($filter != "") {
+            $this->db->where("siswa.jurusan", $filter);
+        }
         $query = $this->db->get('siswa');
         $nomor_urut = 1;
 
@@ -1068,12 +1072,13 @@ class Ajax extends CI_Controller
                 $sort_hasil[$key] = $isi[17];
             }
         }
-        array_multisort($sort_hasil, SORT_DESC, $hasil);
+        if (count($hasil) >= 1) {
+            array_multisort($sort_hasil, SORT_DESC, $hasil);
+        }
         foreach ($hasil as $i => $ii) {
             $hasil[$i][0] = $i + 1;
             $hasil[$i][17] = round($hasil[$i][17], 4);
         }
-
         $newhasil['data'] = $hasil;
         echo json_encode($newhasil);
     }
