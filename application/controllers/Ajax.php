@@ -101,8 +101,8 @@ class Ajax extends CI_Controller
         $this->db->order_by($orderby, $dir);
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
-        $filter = $this->session->userdata("filter_jurusan");
-        if (isset($filter)) {
+        $filter = strtoupper($this->session->userdata("filter_jurusan"));
+        if ($filter != "") {
             $this->db->where("siswa.jurusan", $filter);
         }
 
@@ -123,20 +123,29 @@ class Ajax extends CI_Controller
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
 
-        log_app(print_r($this->db->last_query(), true));
-
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
-            $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
-            $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
-            $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
-            $nomor_urut++;
+            if ($filter != "") {
+                log_app($filter);
+                if ($data['jurusan'] == $filter) {
+                    $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+                    $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+                    $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                    $nomor_urut++;
+                }
+            } else {
+                $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+                $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+                $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                $nomor_urut++;
+            }
         }
         echo json_encode($output);
     }
 
     function ambil_data_pendaftaran_tpa()
     {
+        $filter = strtoupper($this->session->userdata("filter_jurusan"));
 
         /*Menagkap semua data yang dikirimkan oleh client*/
 
@@ -191,9 +200,6 @@ class Ajax extends CI_Controller
             $this->db->or_like('siswa.nama_lengkap', $search);
             $this->db->or_like('siswa.asal_sekolah', $search);
             $this->db->or_like('siswa.jurusan', $search);
-            if (isset($filter)) {
-                $this->db->where("siswa.jurusan", $filter);
-            }
         }
 
 
@@ -225,8 +231,7 @@ class Ajax extends CI_Controller
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
         $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
-        $filter = $this->session->userdata("filter_jurusan");
-        if (isset($filter)) {
+        if ($filter != "") {
             $this->db->where("siswa.jurusan", $filter);
         }
         $query = $this->db->get('siswa');
@@ -241,9 +246,6 @@ class Ajax extends CI_Controller
             $this->db->or_like('siswa.nama_lengkap', $search);
             $this->db->or_like('siswa.asal_sekolah', $search);
             $this->db->or_like('siswa.jurusan', $search);
-            if (isset($filter)) {
-                $this->db->where("siswa.jurusan", $filter);
-            }
             $jum = $this->db->get('siswa');
             $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
         }
@@ -251,10 +253,23 @@ class Ajax extends CI_Controller
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
             if (isset($data['no_peserta'])) {
-                $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
-                $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
-                $output['data'][] = array($data['status'], $nomor_urut, $data['no_peserta'], $data['nisn_siswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
-                $nomor_urut++;
+                {
+                    if ($filter != "") {
+                        if ($filter == $data['jurusan']) {
+                            $this->db->where("siswa.jurusan", $filter);
+                            $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+                            $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+                            $output['data'][] = array($data['status'], $nomor_urut, $data['no_peserta'], $data['nisn_siswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                            $nomor_urut++;
+                        }
+                    } else {
+                        $this->db->where("siswa.jurusan", $filter);
+                        $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+                        $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+                        $output['data'][] = array($data['status'], $nomor_urut, $data['no_peserta'], $data['nisn_siswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                        $nomor_urut++;
+                    }
+                }
             }
         }
         echo json_encode($output);

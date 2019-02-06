@@ -173,7 +173,7 @@
             showCancelButton: true,
             confirmButtonClass: 'btn btn-success',
             cancelButtonClass: 'btn btn-danger',
-            confirmButtonText: 'Iya, Hapus!',
+            confirmButtonText: 'Iya!',
             buttonsStyling: false
         }).then(function () {
             $.ajax({
@@ -204,7 +204,7 @@
 
     function deletemultiple() {
         swal({
-            title: 'Hapus Jurusan!!',
+            title: 'Hapus Data!!',
             text: "Apakah Anda yakin untuk menghapus semua data yang di pilih?",
             type: 'warning',
             showCancelButton: true,

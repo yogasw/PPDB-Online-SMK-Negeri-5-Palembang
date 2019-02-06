@@ -11,6 +11,38 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-content">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 table-bordered">
+                    <div class="form-group">
+                        <select name="filter_jurusan" id="filter_jurusan" class="form-control" required>
+                            <option value="" <?php if (isset($filter) && $filter == "") echo "selected" ?>>Semua
+                                Jurusan
+                            </option>
+                            <option value="akuntansi" <?php if (isset($filter) && $filter == "akuntansi") echo "selected" ?>>
+                                Akuntansi
+                            </option>
+                            <option value="administrasiperkantoran" <?php if (isset($filter) && $filter == "administrasiperkantoran") echo "selected" ?>>
+                                Administrasi Perkantoran
+                            </option>
+                            <option value="pemasaran" <?php if (isset($filter) && $filter == "pemasaran") echo "selected" ?>>
+                                Pemasaran
+                            </option>
+                            <option value="animasi" <?php if (isset($filter) && $filter == "animasi") echo "selected" ?>>
+                                Animasi
+                            </option>
+                            <option value="multimedia" <?php if (isset($filter) && $filter == "multimedia") echo "selected" ?>>
+                                Multimedia
+                            </option>
+                            <option value="tp4" <?php if (isset($filter) && $filter == "tp4") echo "selected" ?>>Teknik
+                                Produksi dan Penyiaran Program Pertelevisian
+                        </select>
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="button" name="filter" id="filter" class="btn btn-info">Filter</button>
+                    </div>
+                </div>
+            </div>
             <div class="table-responsive">
                 <table id="datatables" class="table table-striped" width="100%">
                     <form id="myform" action="" method="post">
@@ -45,7 +77,6 @@
 <script type="text/javascript">
     var table;
     window.onload = function () {
-        var no = 0;
         table = $('#datatables').DataTable({
             responsive: true,
             dom: 'lBfrtip',
@@ -68,9 +99,19 @@
         $('#datatables').DataTable().column(14).visible(false);
     };
 
-    function reload_table(string) {
-        table.ajax.reload();
-    }
+    $('#filter').click(function () {
+        var filter = $('#filter_jurusan').val();
+        $.ajax({
+            url: '<?php echo(base_url() . 'admin/filter/')?>' + filter,
+            type: "GET",
+            success: function (data) {
+                location.reload();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal("Error!", "Please try again", "error");
+            }
+        });
+    });
 </script>
 
 <style>

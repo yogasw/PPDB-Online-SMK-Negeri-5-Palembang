@@ -141,15 +141,19 @@ class Admin extends CI_Controller
         if ($this->session->userdata('level') != "admin") {
             Redirect(base_url() . "login", false);
         }
-
+        $x['filter'] = $this->session->userdata("filter_jurusan");
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $this->load->view('admin/report');
+        $this->load->view('admin/report', $x);
         $this->load->view('admin/template/footer');
     }
 
     function filter($jurusan)
     {
-        $this->session->set_userdata('filter_jurusan', $jurusan);
+        if (isset($jurusan)) {
+            $this->session->set_userdata('filter_jurusan', $jurusan);
+        } else {
+            $this->session->set_userdata('filter_jurusan', "");
+        }
     }
 }
