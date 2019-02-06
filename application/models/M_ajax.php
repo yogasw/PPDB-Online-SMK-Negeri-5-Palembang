@@ -8,8 +8,9 @@
  */
 class M_ajax extends CI_Model
 {
-    function hapus_siswa($nisn){
-            $this->db->where('nisn', $nisn);
+    function hapus_siswa($nisn)
+    {
+        $this->db->where('nisn', $nisn);
         $this->db->delete('siswa');
 
         $this->db->where('nisn', $nisn);
@@ -354,5 +355,33 @@ class M_ajax extends CI_Model
             $this->db->insert('pengaturan', $data);
         }
     }
+
+    function cek_verifikasi($nisn)
+    {
+        $this->db->select("no_peserta");
+        $this->db->from('siswa');
+        $this->db->where('nisn', $nisn);
+        if ($this->db->get()->row()->no_peserta == "") {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
+    function no_peserta_terahir()
+    {
+        $this->db->select('no_peserta');
+        $this->db->from('siswa');
+        $this->db->order_by("no_peserta", "DESC");
+        $this->db->limit(1);
+        $no = $this->db->get()->row();
+        if ($no->no_peserta == "") {
+            return get_setting("tahun_ajaran_ppdb") . '0000';
+        } else {
+            return $no->no_peserta;
+        }
+    }
+
 
 }

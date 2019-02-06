@@ -29,7 +29,7 @@
                                 </div>
                                 <input name="tahun_ajaran" id="tahun_ajaran"
                                        value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
-                                <div class="col-sm-4 col-sm-offset-1">
+                                <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nama Lengkap</label>
                                         <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
@@ -37,15 +37,7 @@
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">No Peserta</label>
-                                        <input name="no_peserta" id="no_peserta" type="text" class="form-control"
-                                               value="<?php echo($u['no_peserta']) ?>"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">NISN</label>
                                         <input name="nisn" id="nisn" type="text" class="form-control"

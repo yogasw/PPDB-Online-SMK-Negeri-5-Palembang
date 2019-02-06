@@ -38,9 +38,46 @@
                     <p class="card-description">
                         Cetak Bukti Pendaftaran sebagai bukti anda sudah mendaftar
                     </p>
-                    <a href="<?php echo(base_url() . "cetak_bukti") ?>" class="btn btn-rose btn-round">go</a>
+                    <a <?php
+                    $CI = get_instance();
+                    $CI->load->model('m_ajax');
+                    if ($CI->m_ajax->cek_verifikasi($this->session->userdata('username'))) {
+                        echo 'href="' . base_url() . 'cetak_bukti"';
+                    } else {
+                        echo 'href="#" onclick=cetak_gagal()';
+                    } ?> class="btn btn-rose btn-round">go</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    <?php
+    $error = $CI->input->get('error');
+    if ($error == "soal") {
+        echo "soal_error();";
+    }
+    ?>
+
+    function cetak_gagal() {
+        swal({
+            title: 'Maaf!',
+            text: 'Akun anda belum di Verifikasi oleh admin, Silahkan tunggu.',
+            type: 'error',
+            confirmButtonClass: "btn btn-success",
+            buttonsStyling: false
+        });
+    }
+
+    function soal_error() {
+        swal({
+            title: 'Maaf!',
+            text: 'Soal anda belum di aktifkan atau waktu anda sudah habis',
+            type: 'error',
+            confirmButtonClass: "btn btn-success",
+            buttonsStyling: false
+        });
+    }
+</script>

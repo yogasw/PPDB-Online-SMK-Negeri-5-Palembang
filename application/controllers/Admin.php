@@ -95,8 +95,7 @@ class Admin extends CI_Controller
         $nisn = $this->input->get('nisn');
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
-        $x['data'] = $this->m_admin->getdatasiswa($nisn);
-        $this->load->view('admin/tpa', $x);
+        $this->load->view('admin/tpa');
         $this->load->view('admin/template/footer');
     }
 

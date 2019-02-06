@@ -89,18 +89,24 @@
                 {
                     "mData": "0",
                     "mRender": function (data, type, full) {
-                        return '<a href="#" onclick=delete_id("' + full[2] + '")' +
-                            '><span class="label label-primary">Hapus<span></a>' +
+                        if (full[1] == "" || full[1] == null) {
+                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-primary">Hapus<span></a>' +
+                                '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>' +
+                                '<a href="#" onclick=verifikasi("' + full[2] + '")><span class="label label-primary">Verifikasi<span></a>';
+                        } else {
+                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-primary">Hapus<span></a>' +
                             '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
+                        }
                     }
                 }
             ]
         });
+        $('#datatables').DataTable().column(1).visible(false);
     };
 
     function delete_id(id) {
         swal({
-            title: 'Hapus Jurusan!!',
+            title: 'Hapus Data!!',
             text: "Apakah Anda yakin untuk menghapus data ini?",
             type: 'warning',
             showCancelButton: true,
@@ -118,6 +124,38 @@
                     swal({
                         title: 'Deleted!',
                         text: 'Jurusan Berhasil Di Hapus.',
+                        type: 'success',
+                        confirmButtonClass: "btn btn-success",
+                        buttonsStyling: false
+                    });
+                    table.ajax.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal("Error!", "Please try again", "error");
+                }
+            });
+        });
+    }
+
+    function verifikasi(id) {
+        swal({
+            title: 'Verifikasi Data',
+            text: "Apakah Anda yakin untuk Verifikasi data ini?",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger',
+            confirmButtonText: 'Iya, Hapus!',
+            buttonsStyling: false
+        }).then(function () {
+            $.ajax({
+                url: "<?php echo(base_url() . 'ajax/verifikasi/')?>" + id,
+                type: "GET",
+                dataType: "html",
+                success: function () {
+                    swal({
+                        title: 'Verifikasi Data',
+                        text: 'Verifikasi Data Berhasil',
                         type: 'success',
                         confirmButtonClass: "btn btn-success",
                         buttonsStyling: false

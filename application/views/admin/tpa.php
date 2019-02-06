@@ -6,6 +6,7 @@
                     <thead>
                     <tr>
                         <th></th>
+                        <th></th>
                         <th>No. Peserta</th>
                         <th>NISN</th>
                         <th>Nama Lengkap</th>
@@ -27,7 +28,7 @@
             "bProcessing": true,
             "bServerSide": true,
             ajax: {
-                url: "<?php echo base_url('ajax/ambil_data_pendaftaran') ?>",
+                url: "<?php echo base_url('ajax/ambil_data_pendaftaran_tpa') ?>",
                 type: 'POST',
             },
             "columnDefs": [
@@ -40,16 +41,22 @@
                 null,
                 null,
                 null,
+                null,
                 {
                     "mData": "0",
                     "mRender": function (data, type, full) {
-                        return '<a href="#" onclick=newswal("' + full[2] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
-                            '<a href="#" onclick=aktifkan("' + full[2] + '")><span class="label label-primary">Aktifkan<span></a>' +
-                            '<a href="#" onclick=reset("' + full[2] + '")><span class="label label-primary">Reset<span></a>'
+                        if (full[0] == "" || full[0] == null) {
+                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
+                                '<a href="#" onclick=aktifkan("' + full[3] + '")><span class="label label-primary">Aktifkan<span></a>'
+                        } else {
+                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
+                                '<a href="#" onclick=reset("' + full[3] + '")><span class="label label-primary">Reset<span></a>'
+                        }
                     }
                 }
             ]
         });
+
     };
 
     function newswal(id) {

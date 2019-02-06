@@ -244,6 +244,44 @@ if (!function_exists('get_setting')) {
 }
 
 /**
+ * is_text
+ * @return boolean
+ */
+
+if (!function_exists('is_text')) {
+    function is_text($string)
+    {
+        $myString = str_replace(' ', '', $string);
+        if (!isset($string)) {
+            return false;
+        } elseif (ctype_alpha($myString)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+/**
+ * is_text
+ * @return boolean
+ */
+
+if (!function_exists('is_nomor')) {
+    function is_nomor($string)
+    {
+        log_app("masuk" . $string);
+        if ($string == "" || $string == " ") {
+            return false;
+        } elseif (ctype_digit($string)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+/**
  * get_setting
  * @return string
  */

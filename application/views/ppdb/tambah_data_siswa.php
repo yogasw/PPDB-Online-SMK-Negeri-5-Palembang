@@ -1,5 +1,5 @@
 <div class="card wizard-card" data-color="rose" id="wizardProfile">
-    <form action="#" method="post" novalidate="novalidate">
+    <form>
                     <div class="wizard-header">
                         <h3 class="wizard-title">
                             FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
@@ -29,12 +29,13 @@
                                 <div class="col-sm-12">
                                     <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
                                 </div>
-                                <input name="tahun_ajaran" id="tahun_ajaran"
-                                       value=" <?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
+                                <input name="tahun_ajaran" id="tahun_ajaran" type="number"
+                                       value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Nama Lengkap</label>
-                                        <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
+                                        <input name="nama_lengkap" id="nama_lengkap" type="text" rel="tooltip"
+                                               title="Isi Nama dengan Huruf" class="form-control"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -44,6 +45,7 @@
                                         <label class="label-control">NISN</label>
                                         <input name="nisn" id="nisn" type="number" class="form-control"
                                                value=""
+                                               rel="tooltip" title="Isi NISN dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -52,15 +54,18 @@
                                         <label class="label-control">Tahun Lulus</label>
                                         <input name="tahun_lulus" id="tahun_lulus" type="number" class="form-control"
                                                value=""
+                                               rel="tooltip" title="Isi Tahun Lulus dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Jurusan Yang di Pilih</label>
-                                        <select name="jurusan" id="jurusan" class="form-control" required="true">
-                                            <option value="..."
-                                                    selected></option>
+                                        <select name="jurusan" rel="tooltip" title="Pilih salah satu" id="jurusan"
+                                                class="form-control" required="true">
+                                            <option value=""
+                                                    selected>...
+                                            </option>
                                             <option value="akuntansi">Akuntansi</option>
                                             <option value="administrasiperkantoran">Administrasi Perkantoran</option>
                                             <option value="pemasaran">Pemasaran</option>
@@ -76,13 +81,15 @@
                                         <label class="label-control">Asal Sekolah</label>
                                         <input name="asal_sekolah" id="asal_sekolah" type="text" class="form-control"
                                                value=""
+                                               rel="tooltip" title="Isi Asal Sekolah dengan Huruf"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                                 <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Jenis Kelamin</label>
-                                        <select name="jk" id="jk" class="form-control" required="true">
+                                        <select name="jk" id="jk" class="form-control" rel="tooltip"
+                                                title="Pilih salah satu" required="true">
                                             <option value=""
                                                     selected>...
                                             </option>
@@ -94,7 +101,8 @@
                                 <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Agama</label>
-                                        <select name="agama" id="agama" class="form-control" required="true">
+                                        <select name="agama" id="agama" class="form-control" rel="tooltip"
+                                                title="Pilih salah satu" required="true">
                                             <option value=""
                                                     selected>...
                                             </option>
@@ -111,6 +119,7 @@
                                         <label class="label-control">Tanggal Lahir</label>
                                         <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control"
                                                required="true" style="text-transform: uppercase"
+                                               rel="tooltip" title="Input Tanggal"
                                                value="">
                                         <span class="material-input"></span>
                                     </div>
@@ -120,6 +129,7 @@
                                         <label class="label-control">Tempat Lahir</label>
                                         <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
                                                required="true" style="text-transform: uppercase"
+                                               rel="tooltip" title="Input Tempat Lahir dengan Huruf"
                                                value="">
                                         <span class="material-input"></span>
                                     </div>
@@ -128,6 +138,7 @@
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">No. HP</label>
                                         <input type="number" name="no_hp" id="no_hp" class="form-control" number="true"
+                                               rel="tooltip" title="Input No. HP dengan Angka"
                                                required="true" value=""/>
                                         <span class="material-input"></span></div>
                                 </div>
@@ -136,6 +147,7 @@
                                         <label class="label-control">Email</label>
                                         <input type="text" class="form-control" id="email" email="true" name="email"
                                                required="true" style="text-transform: lowercase"
+                                               rel="tooltip" title="Input Email contoh: example@example.com"
                                                value="">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -143,6 +155,7 @@
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Alamat</label>
                                         <input type="text" name="alamat" id="alamat" class="form-control"
+                                               rel="tooltip" title="Input Alamat Lengkap anda"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -150,7 +163,8 @@
                                 <div class="col-sm-4 col-sm-offset-1">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Negara</label>
-                                        <select name="negara" class="form-control" id="negara" required="true">
+                                        <select name="negara" class="form-control" id="negara" required="true"
+                                                rel="tooltip" title="Pilih Negara anda">
                                             <option value=""
                                                     selected></option>
                                         </select>
@@ -159,7 +173,8 @@
                                 <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Provinsi</label>
-                                        <select id="provinsi" name="provinsi" class="form-control" required="true">
+                                        <select id="provinsi" name="provinsi" class="form-control" rel="tooltip"
+                                                title="Pilih Provinsi anda" required="true">
                                             <option value=""
                                                     selected></option>
                                         </select>
@@ -168,7 +183,8 @@
                                 <div class="col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="label-control">Kota</label>
-                                        <select name="kota" id="kota" class="form-control" required="true">
+                                        <select name="kota" id="kota" class="form-control" rel="tooltip"
+                                                title="Pilih Kota anda" required="true">
                                             <option value=""
                                                     selected></option>
                                         </select>
@@ -186,15 +202,17 @@
                                         <label class="label-control">Nilai IPA</label>
                                         <input name="nilai_ipa" id="nilai_ipa" type="number" class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai IPA dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai matematika</label>
+                                        <label class="label-control">Nilai Matematika</label>
                                         <input name="nilai_matematika" id="nilai_matematika" type="number"
                                                class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai Matematika dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -204,6 +222,7 @@
                                         <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="number"
                                                class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai Bahasa Indonesia dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -212,6 +231,7 @@
                                         <label class="label-control">Nilai Bahasa Inggris</label>
                                         <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="number"
                                                class="form-control"
+                                               rel="tooltip" title="Input Nilai Bahasa Inggris dengan Angka"
                                                value=""
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
@@ -226,6 +246,7 @@
                                         <label class="label-control">Nilai PAI</label>
                                         <input name="nilai_pai" id="nilai_pai" type="number" class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai PAI dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -235,6 +256,7 @@
                                         <input name="nilai_pkn" id="nilai_pkn" type="number"
                                                class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai PKN dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -244,6 +266,7 @@
                                         <input name="nilai_ips" id="nilai_ips" type="number"
                                                class="form-control"
                                                value=""
+                                               rel="tooltip" title="Input Nilai IPS dengan Angka"
                                                style="text-transform: uppercase" required="true">
                                         <span class="material-input"></span></div>
                                 </div>
@@ -320,7 +343,6 @@
             'previousSelector': '.btn-previous',
 
             onInit: function (tab, navigation, index) {
-
                 //check number of tabs and fill the entire row
                 var $total = navigation.find('li').length;
                 $width = 100 / $total;
@@ -339,7 +361,12 @@
                 refreshAnimation($wizard, index);
                 $('.moving-tab').css('transition', 'transform 0s');
             },
-
+            onNext: function (tab, navigation, index) {
+                var $valid = $('.wizard-card form').valid();
+            },
+            onTabClick: function (tab, navigation, index) {
+                var $valid = $('.wizard-card form').valid();
+            },
             onTabShow: function (tab, navigation, index) {
                 var $total = navigation.find('li').length;
                 var $current = index + 1;
@@ -380,25 +407,6 @@
             }
         });
 
-        $('[data-toggle="wizard-radio"]').click(function () {
-            wizard = $(this).closest('.wizard-card');
-            wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
-            $(this).addClass('active');
-            $(wizard).find('[type="radio"]').removeAttr('checked');
-            $(this).find('[type="radio"]').attr('checked', 'true');
-        });
-
-        $('[data-toggle="wizard-checkbox"]').click(function () {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).find('[type="checkbox"]').removeAttr('checked');
-            } else {
-                $(this).addClass('active');
-                $(this).find('[type="checkbox"]').attr('checked', 'true');
-            }
-        });
-
-        $('.set-full-height').css('height', 'auto');
 
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -526,12 +534,13 @@
                         else {
                             swal({
                                 title: 'Maaf',
-                                text: 'Data gagal di perbarui, silahkan hub panitia',
+                                text: 'Data Gagal Cek Kembali Data Anda',
                                 type: 'error',
                                 confirmButtonClass: "btn btn-success",
                                 showConfirmButton: false,
                                 buttonsStyling: false
-                            })
+                            });
+                            showNotification('bottom', 'left', data["log"])
                         }
                     }
                 );
@@ -616,6 +625,24 @@
                 }
             });
         });
+
     });
 
+    function showNotification(from, align, message) {
+        type = ['', 'info', 'success', 'warning', 'danger', 'rose', 'primary'];
+
+        color = Math.floor((Math.random() * 6) + 1);
+
+        $.notify({
+            icon: "notifications",
+            message: message
+        }, {
+            type: type[color],
+            timer: 3000,
+            placement: {
+                from: from,
+                align: align
+            }
+        });
+    }
 </script>

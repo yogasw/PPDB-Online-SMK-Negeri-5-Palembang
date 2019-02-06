@@ -129,6 +129,122 @@ class Ajax extends CI_Controller
         echo json_encode($output);
     }
 
+    function ambil_data_pendaftaran_tpa()
+    {
+
+        /*Menagkap semua data yang dikirimkan oleh client*/
+
+        /*Sebagai token yang yang dikrimkan oleh client, dan nantinya akan
+        server kirimkan balik. Gunanya untuk memastikan bahwa user mengklik paging
+        sesuai dengan urutan yang sebenarnya */
+        $draw = $_REQUEST['draw'];
+
+        /*Jumlah baris yang akan ditampilkan pada setiap page*/
+        $length = $_REQUEST['length'];
+
+        /*Offset yang akan digunakan untuk memberitahu database
+        dari baris mana data yang harus ditampilkan untuk masing masing page
+        */
+        $start = $_REQUEST['start'];
+
+        /*Keyword yang diketikan oleh user pada field pencarian*/
+        $search = $_REQUEST['search']["value"];
+
+        /*order yang di klik user*/
+
+        $order = $_REQUEST['order'][0]["column"];
+        $dir = $_REQUEST['order'][0]["dir"];
+
+        /*Menghitung total desa didalam database*/
+        $total = $this->db->count_all_results("siswa");
+
+        /*Mempersiapkan array tempat kita akan menampung semua data
+        yang nantinya akan server kirimkan ke client*/
+        $output = array();
+
+        /*Token yang dikrimkan client, akan dikirim balik ke client*/
+        $output['draw'] = $draw;
+
+        /*
+        $output['recordsTotal'] adalah total data sebelum difilter
+        $output['recordsFiltered'] adalah total data ketika difilter
+        Biasanya kedua duanya bernilai sama, maka kita assignment
+        keduaduanya dengan nilai dari $total
+        */
+        $output['recordsTotal'] = $output['recordsFiltered'] = $total;
+
+        /*disini nantinya akan memuat data yang akan kita tampilkan
+        pada table client*/
+        $output['data'] = array();
+
+
+        /*Jika $search mengandung nilai, berarti user sedang telah
+        memasukan keyword didalam filed pencarian*/
+        if ($search != "") {
+            $this->db->like("siswa.no_peserta", $search);
+            $this->db->or_like('siswa.nisn', $search);
+            $this->db->or_like('siswa.nama_lengkap', $search);
+            $this->db->or_like('siswa.asal_sekolah', $search);
+            $this->db->or_like('siswa.jurusan', $search);
+        }
+
+
+        /*Lanjutkan pencarian ke database*/
+        $this->db->limit($length, $start);
+        /*Urutkan dari alphabet paling terkahir*/
+
+        switch ($order) {
+            case 1 :
+                $orderby = 'siswa.no_peserta';
+                break;
+            case 2 :
+                $orderby = 'siswa.nisn';
+                break;
+            case 3 :
+                $orderby = 'siswa.nama_lengkap';
+                break;
+            case 4 :
+                $orderby = 'siswa.asal_sekolah';
+                break;
+            case 5 :
+                $orderby = 'siswa.jurusan';
+                break;
+            default :
+                $orderby = 'siswa.nama_lengkap';
+        }
+        $this->db->select("*,siswa.nisn as nisn_siswa");
+        $this->db->order_by($orderby, $dir);
+        $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
+        $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
+        $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
+        $query = $this->db->get('siswa');
+
+        /*Ketika dalam mode pencarian, berarti kita harus mengatur kembali nilai
+        dari 'recordsTotal' dan 'recordsFiltered' sesuai dengan jumlah baris
+        yang mengandung keyword tertentu
+        */
+        if ($search != "") {
+            $this->db->like("siswa.no_peserta", $search);
+            $this->db->or_like('siswa.nisn', $search);
+            $this->db->or_like('siswa.nama_lengkap', $search);
+            $this->db->or_like('siswa.asal_sekolah', $search);
+            $this->db->or_like('siswa.jurusan', $search);
+            $jum = $this->db->get('siswa');
+            $output['recordsTotal'] = $output['recordsFiltered'] = $jum->num_rows();
+        }
+
+        $nomor_urut = $start + 1;
+        foreach ($query->result_array() as $data) {
+            if (isset($data['no_peserta'])) {
+                $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
+                $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
+                $output['data'][] = array($data['status'], $nomor_urut, $data['no_peserta'], $data['nisn_siswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                $nomor_urut++;
+            }
+        }
+        echo json_encode($output);
+    }
+
     function hapus_siswa()
     {
         $nisn = $this->input->post('nisn');
@@ -184,12 +300,28 @@ class Ajax extends CI_Controller
         echo json_encode($respon);
     }
 
+    function verifikasi($id)
+    {
+        header('Content-type: application/json');
+
+        $no_peserta = $this->m_ajax->cek_verifikasi($id);
+        if ($no_peserta) {
+            echo("Sudah");
+        } else {
+            $data[] = array(
+                'nisn' => $id,
+                'no_peserta' => $this->m_ajax->no_peserta_terahir() + 1
+            );
+            $this->m_ajax->update_siswa($data);
+        }
+    }
+
     function tambah_siswa()
     {
         header('Content-type: application/json');
         $data[] = array(
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
-            'no_peserta' => (string)$_POST['no_peserta'],
+            //'no_peserta' => (string)$_POST['no_peserta'],
             'nisn' => (string)$_POST['nisn'],
             'tahun_ajaran' => (string)$_POST['tahun_ajaran'],
             'tahun_lulus' => (string)$_POST['tahun_lulus'],
@@ -204,10 +336,8 @@ class Ajax extends CI_Controller
             'alamat' => strtoupper((string)$_POST['alamat']),
             'negara' => (string)$_POST['negara'],
             'provinsi' => (string)$_POST['provinsi'],
-            'negara' => (string)$_POST['negara'],
             'kota' => (string)$_POST['kota']
         );
-
         $nilai_un[] = array(
             'nisn' => (string)$_POST['nisn'],
             'ipa' => (string)$_POST['nilai_ipa'],
@@ -215,22 +345,84 @@ class Ajax extends CI_Controller
             'bhs_indonesia' => (string)$_POST['nilai_bhs_indonesia'],
             'bhs_inggris' => (string)$_POST['nilai_bhs_inggris']
         );
-
         $nilai_usbn[] = array(
             'nisn' => (string)$_POST['nisn'],
             'pai' => (string)$_POST['nilai_pai'],
             'pkn' => (string)$_POST['nilai_pkn'],
             'ips' => (string)$_POST['nilai_ips']
         );
+        $error = [];
 
+        foreach ($data[0] as $data_key => $data_isi) {
+            if ($data_key == "nama_lengkap" && !is_text($data_isi)) {
+                $error[] = "Isi Form Nama huruf a-z";
+            } elseif ($data_key == "nisn" && !is_nomor($data_isi)) {
+                $error[] = "Isi Form NISN dengan angka";
+            } elseif ($data_key == "tahun_ajaran" && !is_nomor($data_isi)) {
+                $error[] = "Isi Form Tahun Ajaran dengan angka";
+            } elseif ($data_key == "tahun_lulus" && !is_nomor($data_isi)) {
+                $error[] = "Isi Form NISN dengan angka";
+            } elseif ($data_key == "jurusan" && $data_isi == "") {
+                $error[] = "Isi Form Terlebih dahulu jurusan";
+            } elseif ($data_key == "asal_sekolah" && $data_isi == "") {
+                $error[] = "Isi Form Asal Sekolah";
+            } elseif ($data_key == "jk" && $data_isi == "") {
+                $error[] = "Isi Form Jenis Kelamin";
+            } elseif ($data_key == "agama" && $data_isi == "") {
+                $error[] = "isi Form Agama";
+            } elseif ($data_key == "tempat_lahir" && $data_isi == "") {
+                $error[] = "Isi Form Tempat Lahir";
+            } elseif ($data_key == "no_hp" && !is_nomor($data_isi)) {
+                $error[] = "Isi Form No HP. dengan angka";
+            } elseif ($data_key == "alamat" && $data_isi == "") {
+                $error[] = "Isi Form Alamat";
+            } elseif ($data_key == "provinsi" && $data_isi == "") {
+                $error[] = "Isi Form Provinsi";
+            } elseif ($data_key == "negara" && $data_isi == "") {
+                $error[] = "Isi Form Negara";
+            } elseif ($data_key == "kota" && $data_isi == "") {
+                $error[] = "Isi Form Kota";
+            }
+        }
+        foreach ($nilai_un[0] as $un_key => $un_isi) {
+            if ($un_key == "ipa" && !is_nomor($un_isi)) {
+                $error[] = "Isi Form Nilai IPA dengan angka";
+            } elseif ($un_key == "matematika" && !is_nomor($un_isi)) {
+                $error[] = "Isi Form Nilai Matematika dengan angka";
+            } elseif ($un_key == "bhs_indonesia" && !is_nomor($un_isi)) {
+                $error[] = "Isi Form Nilai Bahasa Indonesia dengan angka";
+            } elseif ($un_key == "bhs_inggris" && !is_nomor($un_isi)) {
+                $error[] = "Isi Form Nilai Bahasa Inggris dengan angka";
+            }
+        }
+        foreach ($nilai_usbn[0] as $usbn_key => $usbn_isi) {
+            if ($usbn_key == "pai" && !is_nomor($usbn_isi)) {
+                $error[] = "Isi Form Nilai PAI dengan angka";
+            } elseif ($usbn_key == "pkn" && !is_nomor($usbn_isi)) {
+                $error[] = "Isi Form Nilai PKN dengan angka";
+            } elseif ($usbn_key == "ips" && !is_nomor($usbn_isi)) {
+                $error[] = "Isi Form Nilai IPS dengan angka";
+            }
+        }
 
-        $this->m_ajax->tambah_nilai_usbn($nilai_usbn);
-        $this->m_ajax->tambah_nilai_un($nilai_un);
-        $this->m_ajax->tambah_siswa($data);
-        $respon = array(
-            "nama_lengkap" => (string)$_POST['nama_lengkap'],
-            "status" => true
-        );
+        if (count($error) >= 1) {
+
+            $respon = array(
+                "status" => false,
+                "log" => implode("<br>", $error)
+
+            );
+        } else {
+            $respon = array(
+                "nama_lengkap" => (string)$_POST['nama_lengkap'],
+                "status" => true,
+                "log" => "Berhasil"
+            );
+            $this->m_ajax->tambah_nilai_usbn($nilai_usbn);
+            $this->m_ajax->tambah_nilai_un($nilai_un);
+            $this->m_ajax->tambah_siswa($data);
+        }
+
 
         echo json_encode($respon);
     }
@@ -243,7 +435,6 @@ class Ajax extends CI_Controller
         $nilai = 0;
         $status = "1";
         $jawaban = $_POST;
-
         //mengambil id soal, id mapel, jawaban
         $this->load->model('m_ppdb');
         $soal = $this->m_ppdb->getsoal($nisn);
@@ -781,7 +972,7 @@ class Ajax extends CI_Controller
         $bobot_spk = ['20', '10', '70'];
 
         foreach ($query->result_array() as $data) {
-            $un = (($data['ipa'] * 3) + ($data['matematika'] * 4) + ($data['bhs_inggris'] * 3) + ($data['bhs_indonesia'] *1)) / 11;
+            $un = (($data['ipa'] * 3) + ($data['matematika'] * 4) + ($data['bhs_inggris'] * 3) + ($data['bhs_indonesia'] * 1)) / 11;
             $usbn = (($data['pai'] + $data['pkn'] + $data['ips']) / 3);
             $tpa = $data['nilai'];
 
@@ -855,6 +1046,19 @@ class Ajax extends CI_Controller
 
         $newhasil['data'] = $hasil;
         echo json_encode($newhasil);
+    }
+
+    function test()
+    {
+        $strung = "2 ";
+
+        if (is_text($strung)) {
+            echo "ini string";
+        } elseif (is_nomor($strung)) {
+            echo "ini nomor";
+        } else {
+            echo "ini bukan apa2";
+        }
     }
 
 }

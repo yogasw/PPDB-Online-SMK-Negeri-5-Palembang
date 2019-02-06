@@ -16,13 +16,6 @@ class Ppdb extends CI_Controller
         $this->load->library('Pdf');
     }
 
-    function pendaftaran()
-    {
-        $this->load->view('admin/template/header');
-        $this->load->view('admin/template/sidebar');
-        $this->load->view('ppdb/pendaftaran');
-        $this->load->view('admin/template/footer');
-    }
 
     function home()
     {
@@ -120,7 +113,7 @@ class Ppdb extends CI_Controller
         $x['waktu'] = sisa_waktu($mulai, $selesai);
 
         if ($x['waktu'] == 0) {
-            Redirect(base_url() . "home", false);
+            Redirect(base_url() . "home?error=soal", false);
         }
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');
