@@ -22,7 +22,6 @@
                         <span class="input-group-addon">
                         </span>
                     </div>
-
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">lock_outline</i>
@@ -67,10 +66,11 @@
     };
     $(document).on('submit', "#form_login", function (ev) {
         datastring = $(this).serialize();
-        kirimdata();
+        login();
         ev.preventDefault();
     });
-    function kirimdata() {
+
+    function login() {
         $.ajax({
             type: "POST",
             url: "<?php echo(base_url() . 'ajax/login')?>",

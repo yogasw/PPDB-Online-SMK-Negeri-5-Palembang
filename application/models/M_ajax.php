@@ -102,67 +102,7 @@ class M_ajax extends CI_Model
         }
     }
 
-    function getwawancara($nisn)
-    {
-        $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
-        nilai_wawancara.penampilan_fisik,nilai_wawancara.sopan_santun,
-        nilai_wawancara.prestasi_akademin,nilai_wawancara.daya_tangkap,
-        nilai_wawancara.percaya_diri,,nilai_wawancara.motivasi,
-        nilai_wawancara.prestasi_kerja,nilai_wawancara.emosi');
-        $this->db->from('siswa');
-        $this->db->where('siswa.nisn', $nisn);
-        $this->db->join('nilai_wawancara', 'siswa.nisn = nilai_wawancara.nisn', 'left');
-        $this->db->limit(1);
-        $query = $this->db->get();
-        return $query->result_array();
-    }
 
-    function insert_nilai_wawancara($data, $nisn)
-    {
-        $this->db->select("*");
-        $this->db->from('nilai_wawancara');
-        $this->db->where('nisn', $nisn);
-        $query = $this->db->count_all_results();
-
-        if ($query >= 1) {
-            unset($data['nisn']);
-            unset($data['nama']);
-            $this->db->where('nisn', $nisn);
-            $this->db->update('nilai_wawancara', $data);
-        } else {
-            unset($data['nama']);
-            $this->db->insert('nilai_wawancara', $data);
-        }
-    }
-
-    function ambil_data_psikologi($nisn)
-    {
-        $this->db->select('siswa.nisn as nisn_siswa,siswa.nama_lengkap,
-        nilai_psikologi.kecerdasan,nilai_psikologi.kesehatan');
-        $this->db->from('siswa');
-        $this->db->where('siswa.nisn', $nisn);
-        $this->db->join('nilai_psikologi', 'siswa.nisn = nilai_psikologi.nisn', 'left');
-        $this->db->limit(1);
-        $query = $this->db->get();
-        return $query->result_array();
-    }
-
-    function kirim_data_psikologi($data, $nisn)
-    {
-        $this->db->select("*");
-        $this->db->from('nilai_psikologi');
-        $this->db->where('nisn', $nisn);
-        $query = $this->db->count_all_results();
-        if ($query >= 1) {
-            unset($data['nisn']);
-            unset($data['nama']);
-            $this->db->where('nisn', $nisn);
-            $this->db->update('nilai_psikologi', $data);
-        } else {
-            unset($data['nama']);
-            $this->db->insert('nilai_psikologi', $data);
-        }
-    }
 
     function ambil_data_tpa($nisn)
     {
@@ -266,14 +206,14 @@ class M_ajax extends CI_Model
     function hapus_admin($username)
     {
         $this->db->where('username', $username);
-        $this->db->delete('admin');
+        $this->db->delete('user');
         return true;
     }
 
     function kirim_data_admin($data, $username)
     {
         $this->db->select("*");
-        $this->db->from('admin');
+        $this->db->from('user');
         $this->db->where('username', $username);
         $query = $this->db->count_all_results();
 
@@ -290,7 +230,7 @@ class M_ajax extends CI_Model
     function ambil_data_admin($username)
     {
         $this->db->select('*');
-        $this->db->from('admin');
+        $this->db->from('user');
         $this->db->where('username', $username);
         $this->db->limit(1);
         $query = $this->db->get();
@@ -300,32 +240,44 @@ class M_ajax extends CI_Model
     function login_admin($username, $password)
     {
         $this->db->select('*');
-        $this->db->from('admin');
+        $this->db->from('user');
         $this->db->where('username', $username);
-        $this->db->where('password', $password);
         if ($this->db->count_all_results() >= 1) {
-            $this->db->from('admin');
+            $this->db->from('user');
             $this->db->where('username', $username);
             $this->db->where('password', $password);
             $query = $this->db->get();
             $hasil = $query->result_array();
-            return $output = array("status" => true, "level" => "admin", "username" => $hasil[0]['username'], "name" => $hasil[0]['name'], "jurusan" => "");
+            if (count($hasil) == 0) {
+                return $output = array("status" => false, "msg" => "ada");
+            } else {
+                return $output = array("status" => true, "level" => $hasil[0]['level'], "username" => $hasil[0]['username'], "name" => $hasil[0]['name']);
+            }
+
         } else {
-            return $output = array("status" => false);
+            return $output = array("status" => false, "msg" => "none");
         }
     }
 
     function login_siswa($username, $password)
     {
         $this->db->select('*');
-        $this->db->from('siswa');
-        $this->db->where('nisn', $username);
-        if ($this->db->count_all_results() >= 1) {
             $this->db->from('siswa');
             $this->db->where('nisn', $username);
+        $this->db->where('tanggal_lahir', $password);
             $query = $this->db->get();
             $hasil = $query->result_array();
+        if (count($hasil) >= 1) {
+            $data = array(
+                'username' => $hasil[0]['nisn'],
+                'password' => $hasil[0]['tanggal_lahir'],
+                'name' => $hasil[0]['nama_lengkap'],
+                'level' => 'siswa'
+            );
+
+            $this->db->insert("user", $data);
             return $output = array("status" => true, "level" => "siswa", "username" => $hasil[0]['nisn'], "name" => $hasil[0]['nama_lengkap'], "jurusan" => $hasil[0]['jurusan']);
+
         } else {
             return $output = array("status" => false);
         }
@@ -383,5 +335,20 @@ class M_ajax extends CI_Model
         }
     }
 
+    function ganti_password($username, $password, $passowrd_baru)
+    {
+        $this->db->where('username', $username);
+        $this->db->where('password', $password);
+        $this->db->set('password', $passowrd_baru);
+        $this->db->update('user');
+        if ($this->db->affected_rows()) {
+            return true;
+            log_app("berhasil");
+        } else {
+            log_app("gagal");
+            return false;
+        }
 
+
+    }
 }

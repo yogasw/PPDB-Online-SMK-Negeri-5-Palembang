@@ -850,13 +850,10 @@ class Ajax extends CI_Controller
         if ($this->m_ajax->login_admin($username, $password)['status']) {
             $output = ($this->m_ajax->login_admin($username, $password));
             $this->session->set_userdata($output);
+        } else if ($output = ($this->m_ajax->login_siswa($username, $password))) {
+            $this->session->set_userdata($output);
         } else {
-            if ($this->m_ajax->login_siswa($username, $password)['status']) {
-                $output = ($this->m_ajax->login_siswa($username, $password));
-                $this->session->set_userdata($output);
-            } else {
-                $output = array("status" => false);
-            }
+            $output = array("status" => false);
         }
         echo json_encode($output);
     }
@@ -1083,4 +1080,17 @@ class Ajax extends CI_Controller
         echo json_encode($newhasil);
     }
 
+    function ganti_password()
+    {
+        $username = $this->session->userdata("username");
+        $password_lama = $this->input->post('password_lama');
+        $password_baru = $this->input->post('password_baru_1');
+        if ($this->m_ajax->ganti_password($username, $password_lama, $password_baru)) {
+            $output = array("status" => true);
+        } else {
+            $output = array("status" => false);
+        }
+
+        echo json_encode($output);
+    }
 }
