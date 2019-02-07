@@ -19,16 +19,21 @@
                             <label class="control-label">Username atau NISN</label>
                             <input type="text" class="form-control" name="username" id="username">
                         </div>
+                        <span class="input-group-addon">
+                        </span>
                     </div>
 
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">lock_outline</i>
                         </span>
-                        <div class="form-group label-floating">
+                        <div class="form-group label-floating password">
                             <label class="control-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password">
+                            <input type="password" class="form-control" name="password" id="passwordfield">
                         </div>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </span>
                     </div>
                 </div>
                 <div class="footer text-center">
@@ -44,12 +49,27 @@
 </div>
 
 <script type="text/javascript">
+    window.onload = function () {
+        $(".glyphicon-eye-open").hide();
+        $("#passwordfield").on("keyup", function () {
+            if ($(this).val())
+                $(".glyphicon-eye-open").show();
+            else
+                $(".glyphicon-eye-open").hide();
+        });
+        $(".glyphicon-eye-open").mousedown(function () {
+            $("#passwordfield").attr('type', 'text');
+        }).mouseup(function () {
+            $("#passwordfield").attr('type', 'password');
+        }).mouseout(function () {
+            $("#passwordfield").attr('type', 'password');
+        });
+    };
     $(document).on('submit', "#form_login", function (ev) {
         datastring = $(this).serialize();
         kirimdata();
         ev.preventDefault();
     });
-
     function kirimdata() {
         $.ajax({
             type: "POST",

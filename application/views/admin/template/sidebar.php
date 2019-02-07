@@ -23,6 +23,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#" onclick="ganti_pasword()">
+                            <i class="material-icons">home</i>Ganti Password
+                        </a>
+                    </li>
+                    <li>
                         <a href="<?php echo(base_url() . "keluar") ?>">
                             <i class="material-icons">home</i>Keluar
                         </a>
@@ -37,4 +42,3 @@
          data-image="<?php echo(base_url()) ?>assets/img/register.jpg">
         <div class="container">
             <div class="container-fluid">
-
