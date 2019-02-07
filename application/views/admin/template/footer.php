@@ -86,7 +86,7 @@
                 '</div>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button onclick="" id="buttton btn_kirim" value="b" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
+                '<button onclick="" id="buttton btn_kirim_password" value="b" name="btn_kirim_password" type="submit" class="btn btn-primary btn-round btn_kirim_password">' +
                 'Ganti Password</button>' +
                 '</div>' +
                 '</form>'
@@ -103,17 +103,17 @@
                 $(".glyphicon-eye-open").hide();
         });
 
-        $('.btn_kirim').attr('disabled', 'disabled');
+        $('.btn_kirim_password').attr('disabled', 'disabled');
         var password_baru_1;
         var password_baru_2;
         $("#password_baru_1").on("keyup", function () {
             password_baru_1 = $(this).val();
             if (password_baru_1 == password_baru_2) {
                 $(".icon_done").show();
-                $('.btn_kirim').removeAttr('disabled');
+                $('.btn_kirim_password').removeAttr('disabled');
             } else {
                 $(".icon_done").hide();
-                $('.btn_kirim').attr('disabled', 'disabled');
+                $('.btn_kirim_password').attr('disabled', 'disabled');
             }
         });
 
@@ -121,10 +121,10 @@
             password_baru_2 = $(this).val();
             if (password_baru_1 == password_baru_2) {
                 $(".icon_done").show();
-                $('.btn_kirim').removeAttr('disabled');
+                $('.btn_kirim_password').removeAttr('disabled');
             } else {
                 $(".icon_done").hide();
-                $('.btn_kirim').attr('disabled', 'disabled');
+                $('.btn_kirim_password').attr('disabled', 'disabled');
             }
         });
 
@@ -139,11 +139,11 @@
 
     $(document).on('submit', "#ganti_password", function (ev) {
         datastring = $(this).serialize();
-        kirimdata();
+        kirimdata_password();
         ev.preventDefault();
     });
 
-    function kirimdata() {
+    function kirimdata_password() {
         $.ajax({
             type: "POST",
             url: "<?php echo(base_url() . 'ajax/ganti_password')?>",
