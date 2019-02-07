@@ -40,6 +40,9 @@
                     </div>
                     <div class="form-group" align="center">
                         <button type="button" name="filter" id="filter" class="btn btn-info">Filter</button>
+                        <button type="button" onclick="umumkan()" name="umumkan" id="umumkan" class="btn btn-info">
+                            Umumkan
+                        </button>
                     </div>
                 </div>
             </div>
@@ -66,6 +69,7 @@
                             <th>Rata-Rata Nilai USBN (b)</th>
                             <th>Nilai Potensial Akademik (c)</th>
                             <th>Total Nilai</th>
+                            <th>Status</th>
                         </tr>
                         </thead>
                     </form>
@@ -112,6 +116,40 @@
             }
         });
     });
+
+    function umumkan() {
+        swal({
+            title: 'Umumkan Soal!!',
+            text: "Apakah Anda yakin untuk mengumumkan hasil ujian ini?",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonClass: 'btn btn-success',
+            cancelButtonClass: 'btn btn-danger',
+            confirmButtonText: 'Iya!',
+            buttonsStyling: false
+        }).then(function () {
+            $.ajax({
+                url: "<?php echo(base_url() . 'ajax/ambil_data_hasil/ya')?>",
+                type: "POST",
+                dataType: "html",
+                success: function () {
+                    swal({
+                        title: 'Berhasil!',
+                        text: 'Data berhasil di umumkan',
+                        type: 'success',
+                        confirmButtonClass: "btn btn-success",
+                        buttonsStyling: false
+                    });
+                    table.ajax.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    swal("Error!", "Please try again", "error");
+                }
+            });
+
+
+        });
+    }
 </script>
 
 <style>

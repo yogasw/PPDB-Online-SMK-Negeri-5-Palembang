@@ -40,7 +40,11 @@ class Ppdb extends CI_Controller
             $x['nilai_tpa'] = false;
         }
 
+        /** Jika Terjadi Error */
         $x['error'] = $this->input->get('error');
+
+        /** Hasil Ujian */
+        $x['hasil'] = $this->m_ppdb->lihat_hasil($nisn);
 
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');

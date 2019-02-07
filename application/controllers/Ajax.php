@@ -985,17 +985,21 @@ class Ajax extends CI_Controller
         $this->m_ajax->kirim_data_pengaturan($_POST, $id);
     }
 
-    function ambil_data_hasil()
+    function ambil_data_hasil($umumkan = "")
     {
-
+        print_r($umumkan);
         $output = array();
         $output['data'] = array();
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_tpa", 'siswa.nisn=nilai_tpa.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
+        $this->db->where('siswa.no_peserta is NOT NULL', NULL, FALSE);
         $filter = strtoupper($this->session->userdata("filter_jurusan"));
-        if ($filter != "") {
-            $this->db->where("siswa.jurusan", $filter);
+        if ($umumkan == "ya") {
+        } else {
+            if ($filter != "") {
+                $this->db->where("siswa.jurusan", $filter);
+            }
         }
         $query = $this->db->get('siswa');
         $nomor_urut = 1;
@@ -1013,6 +1017,8 @@ class Ajax extends CI_Controller
             } else {
                 $total = 0;
             }
+
+            $status = null;
 
             $output['data'][] = array(
                 $nomor_urut,
@@ -1042,7 +1048,8 @@ class Ajax extends CI_Controller
                 round($tpa, 4),
 
                 /**total hasil perhitungan metode SMART*/
-                $total
+                $total,
+                $status
             );
             $nomor_urut++;
         }
@@ -1067,16 +1074,105 @@ class Ajax extends CI_Controller
                 $sort_rata_rata_usbn[$key] = $isi[15];
                 $sort_tpa[$key] = $isi[16];
                 $sort_hasil[$key] = $isi[17];
+                $sort_status[$key] = $isi[18];
             }
         }
         if (count($hasil) >= 1) {
             array_multisort($sort_hasil, SORT_DESC, $hasil);
         }
+
+        /** @var  $status array ket : akuntansi, administrasiperkantoran, pemasaran, animasi, multimedia, tp4 */
+        $status = array(
+            'akuntansi' => 0,
+            'administrasiperkantoran' => 0,
+            'pemasaran' => 0,
+            'animasi' => 0,
+            'multimedia' => 0,
+            'tp4' => 0
+        );
+
+        /**
+         * Menghitung Lulus Atau Tidak
+         */
         foreach ($hasil as $i => $ii) {
             $hasil[$i][0] = $i + 1;
             $hasil[$i][17] = round($hasil[$i][17], 4);
+            $jurusan = strtolower($hasil[$i][5]);
+            if ($jurusan == 'akuntansi') {
+
+                $status['akuntansi'] = $status['akuntansi'] + 1;
+                if ($status['akuntansi'] <= get_setting('max_akuntansi')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } elseif ($jurusan == 'administrasiperkantoran') {
+
+                $status['administrasiperkantoran'] = $status['administrasiperkantoran'] + 1;
+                if ($status['administrasiperkantoran'] <= get_setting('max_administrasiperkantoran')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } elseif ($jurusan == 'pemasaran') {
+
+                $status['pemasaran'] = $status['pemasaran'] + 1;
+                if ($status['pemasaran'] <= get_setting('max_pemasaran')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } elseif ($jurusan == 'animasi') {
+
+                $status['animasi'] = $status['animasi'] + 1;
+                if ($status['animasi'] <= get_setting('max_animasi')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } elseif ($jurusan == 'multimedia') {
+
+                $status['multimedia'] = $status['multimedia'] + 1;
+                if ($status['multimedia'] <= get_setting('max_multimedia')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } elseif ($jurusan == 'tp4') {
+
+                $status['tp4'] = $status['tp4'] + 1;
+                if ($status['tp4'] <= get_setting('max_tp4')) {
+                    $hasil[$i][18] = "Diterima";
+                } else {
+                    $hasil[$i][18] = "Ditolak";
+                }
+            } else {
+                $hasil[$i][18] = "Ditolak";
+            }
         }
         $newhasil['data'] = $hasil;
+
+        /**
+         * Simpan Hasil Ke DB Hasil Jika Di umumkan
+         */
+        if ($umumkan == "ya") {
+            $simpan_hasil = array();
+            foreach ($hasil as $i_a => $ii_a) {
+                $simpan_hasil1 = array(
+                    'nisn' => $hasil[$i_a][2],
+                    'no_peserta' => $hasil[$i_a][1],
+                    'nama' => $hasil[$i_a][3],
+                    'jurusan' => $hasil[$i_a][5],
+                    'total_nilai' => $hasil[$i_a][17],
+                    'status' => $hasil[$i_a][18]
+                );
+                array_push($simpan_hasil, $simpan_hasil1);
+            }
+            $this->m_ajax->simpan_hasil($simpan_hasil);
+        }
+        /**
+         * Buat JSON Untuk Datables
+         */
         echo json_encode($newhasil);
     }
 
@@ -1092,5 +1188,12 @@ class Ajax extends CI_Controller
         }
 
         echo json_encode($output);
+    }
+
+    function test()
+    {
+        for ($i = 0; $i <= 60; $i++) {
+            echo $i . ",";
+        }
     }
 }

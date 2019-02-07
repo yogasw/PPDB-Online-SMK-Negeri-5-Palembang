@@ -534,8 +534,8 @@
 
             ) {
                 swal({
-                    title: 'Maaf Cuy!',
-                    text: 'Lengkapi semua datanya dulu ya',
+                    title: 'Error!',
+                    text: 'Lengkapi semua data terlebih dahulu',
                     type: 'error',
                     confirmButtonClass: "btn btn-success",
                     buttonsStyling: false
@@ -582,7 +582,7 @@
                     function (data) {
                         if (data["status"]) {
                             (swal({
-                                title: 'Mantap Cuy!',
+                                title: 'Berhasil!',
                                 text: 'Data berhasil di perbarui',
                                 type: 'success',
                                 confirmButtonClass: "btn btn-success",
@@ -593,7 +593,7 @@
                         }
                         else {
                             swal({
-                                title: 'Maaf Cuy!',
+                                title: 'Error',
                                 text: 'Data gagal di perbarui, silahkan hub panitia',
                                 type: 'error',
                                 confirmButtonClass: "btn btn-success",

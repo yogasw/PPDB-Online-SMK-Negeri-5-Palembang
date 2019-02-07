@@ -351,4 +351,10 @@ class M_ajax extends CI_Model
 
 
     }
+
+    function simpan_hasil($data)
+    {
+        $this->db->empty_table("hasil");
+        $this->db->insert_batch('hasil', $data);
+    }
 }

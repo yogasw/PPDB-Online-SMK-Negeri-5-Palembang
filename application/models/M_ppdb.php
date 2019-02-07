@@ -71,4 +71,12 @@ class M_ppdb extends CI_Model
         $this->db->limit(1);
         return $nilai = $this->db->get()->row();
     }
+
+    function lihat_hasil($nisn)
+    {
+        $this->db->select("*");
+        $this->db->from("hasil");
+        $this->db->where("nisn", $nisn);
+        return $this->db->get()->row();
+    }
 }

@@ -536,8 +536,8 @@
                 nilai_ips == ""
             ) {
                 swal({
-                    title: 'Maaf Cuy!',
-                    text: 'Lengkapi semua datanya dulu ya',
+                    title: 'Gagal !',
+                    text: 'Silahan lengkapi semua data yang di perlukan',
                     type: 'error',
                     confirmButtonClass: "btn btn-success",
                     buttonsStyling: false
@@ -584,7 +584,7 @@
                     function (data) {
                         if (data["status"]) {
                             (swal({
-                                title: 'Mantap Cuy!',
+                                title: 'Berhasil!',
                                 text: 'Data berhasil di perbarui',
                                 type: 'success',
                                 confirmButtonClass: "btn btn-success",
@@ -594,7 +594,7 @@
                             window.location = '<?php echo (base_url()) . "admin/pendaftaran"?>';
                         } else {
                             swal({
-                                title: 'Maaf Cuy!',
+                                title: 'Error!',
                                 text: 'Data gagal di perbarui, silahkan hub panitia',
                                 type: 'error',
                                 confirmButtonClass: "btn btn-success",
