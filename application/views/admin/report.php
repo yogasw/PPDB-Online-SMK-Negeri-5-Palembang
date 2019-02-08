@@ -125,29 +125,57 @@
             showCancelButton: true,
             confirmButtonClass: 'btn btn-success',
             cancelButtonClass: 'btn btn-danger',
-            confirmButtonText: 'Iya!',
+            cancelButtonText: 'Batalkan Pengumuman',
+            confirmButtonText: 'Umumkan Sekarang',
             buttonsStyling: false
-        }).then(function () {
-            $.ajax({
-                url: "<?php echo(base_url() . 'ajax/ambil_data_hasil/ya')?>",
-                type: "POST",
-                dataType: "html",
-                success: function () {
-                    swal({
-                        title: 'Berhasil!',
-                        text: 'Data berhasil di umumkan',
-                        type: 'success',
-                        confirmButtonClass: "btn btn-success",
-                        buttonsStyling: false
-                    });
-                    table.ajax.reload();
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    swal("Error!", "Please try again", "error");
-                }
-            });
+        }).then(function (isConfirm) {
+            umumkan_ajax();
+        }).catch(function (reason) {
+            if (reason == 'cancel') {
+                batalkan_ajax();
+            }
+        });
+    }
 
+    function umumkan_ajax() {
+        $.ajax({
+            url: "<?php echo(base_url() . 'ajax/ambil_data_hasil/ya')?>",
+            type: "POST",
+            dataType: "html",
+            success: function () {
+                swal({
+                    title: 'Berhasil!',
+                    text: 'Data berhasil di umumkan',
+                    type: 'success',
+                    confirmButtonClass: "btn btn-success",
+                    buttonsStyling: false
+                });
+                table.ajax.reload();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal("Error!", "Please try again", "error");
+            }
+        });
+    }
 
+    function batalkan_ajax() {
+        $.ajax({
+            url: "<?php echo(base_url() . 'ajax/batalkan_pengumuman')?>",
+            type: "POST",
+            dataType: "html",
+            success: function () {
+                swal({
+                    title: 'Berhasil!',
+                    text: 'Pengumuman berhasil di batalkan, perhitungan di reset',
+                    type: 'success',
+                    confirmButtonClass: "btn btn-success",
+                    buttonsStyling: false
+                });
+                table.ajax.reload();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal("Error!", "Please try again", "error");
+            }
         });
     }
 </script>

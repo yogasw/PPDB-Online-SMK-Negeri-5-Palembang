@@ -142,7 +142,7 @@ class Ppdb extends CI_Controller
         }
 
         $nisn = $this->session->userdata('username');
-        $this->pdf->cetak_bukti($this->m_ppdb->getdatasiswa($nisn)[0]);
+        $this->pdf->cetak_kartu($this->m_ppdb->getdatasiswa($nisn)[0]);
     }
 
     function test($nisn)

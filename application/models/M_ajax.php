@@ -357,4 +357,10 @@ class M_ajax extends CI_Model
         $this->db->empty_table("hasil");
         $this->db->insert_batch('hasil', $data);
     }
+
+    function batalkan_pengumuman()
+    {
+        $this->db->empty_table("hasil");
+    }
+
 }

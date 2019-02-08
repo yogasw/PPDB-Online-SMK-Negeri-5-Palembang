@@ -123,7 +123,6 @@ if (!function_exists('jawaban_to_array')) {
     }
 }
 
-
 if (!function_exists('post_to_array')) {
     function post_to_array($string)
     {
@@ -311,7 +310,6 @@ if (!function_exists('sort_arr_of_obj')) {
     }
 }
 
-
 /**
  * get_setting
  * @return array
@@ -345,3 +343,39 @@ if (!function_exists('spk_smart')) {
         return $hasil;
     }
 }
+
+if (!function_exists('get_name_jurusan')) {
+    function get_name_jurusan($kd_jurusan)
+    {
+        /** @var  $status array ket : akuntansi, administrasiperkantoran, pemasaran, animasi, , tp4 */
+        $hasil = null;
+        log_app(print_r($kd_jurusan), true);
+        switch (strtolower($kd_jurusan)) {
+            case 'akuntansi' :
+                $hasil = 'AKUNTANSI DAN KEUANGAN LEMBAGA';
+                break;
+            case  'administrasiperkantoran' :
+                $hasil = 'OTOMATISASI DAN TATA KELOLA PERKANTORAN';
+                break;
+            case 'pemasaran' :
+                $hasil = 'BISNIS DARING DAN PEMASARAN';
+                break;
+            case 'animasi' :
+                $hasil = 'ANIMASI';
+                break;
+            case 'multimedia' :
+                $hasil = 'MULTIMEDIA';
+                break;
+            case 'tp4':
+                $hasil = 'TEKNIK PRODUKSI PENYIARAN PROGRAM PERTELEVISIAN';
+                break;
+            default :
+                $hasil = false;
+                break;
+        }
+
+        return $hasil;
+    }
+}
+
+
