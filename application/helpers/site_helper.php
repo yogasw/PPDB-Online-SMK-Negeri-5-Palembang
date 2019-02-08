@@ -10,7 +10,7 @@
 if (!function_exists('log_all')) {
     function log_all()
     {
-        if (ENVIRONMENT == 'testing') {
+        if (ENVIRONMENT == 'production') {
 
         } else {
             log_message('error', "________________________________________________ START LOG ________________________________________________");
@@ -38,7 +38,7 @@ if (!function_exists('log_app')) {
      */
     function log_app($string)
     {
-        if (ENVIRONMENT == 'testing') {
+        if (ENVIRONMENT == 'production') {
 
         } else {
             log_message('error', $string);

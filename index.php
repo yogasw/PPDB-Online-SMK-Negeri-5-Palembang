@@ -57,10 +57,13 @@
 
 date_default_timezone_set('Asia/Jakarta');
 switch ($_SERVER['HTTP_HOST']) {
-    case 'localhost':
+    case 'arioki.web':
         $env = 'development';
         break;
     case 'ppdb-smk5palembang.appspot.com':
+        $env = 'production';
+        break;
+	case 'localhost':
         $env = 'testing';
         break;
     default:

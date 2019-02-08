@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-    'dsn' => '',
-    'hostname' => 'localhost',
+    'dsn' => 'mysql:dbname=skripsi;unix_socket=/cloudsql/ppdb-smk5palembang:us-central1:ppdb-smk5-palembang',
+    //'hostname' => '127.0.0.1',
     'username' => 'root',
-    'password' => '',
-    'database' => 'skripsi',
-    'dbdriver' => 'mysqli',
+    'password' => 'ppdb-arioki-2018',
+    //'database' => 'skripsi',
+    'dbdriver' => 'pdo',
     'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),

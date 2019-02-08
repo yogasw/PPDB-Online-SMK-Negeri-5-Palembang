@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/ppdb-smk5/';
+$config['base_url'] = 'https://ppdb-smk5palembang.appspot.com/';
 
 /*
 |--------------------------------------------------------------------------
