@@ -23,7 +23,7 @@
                         </div>
                         <h3 class="card-title">Ubah Data</h3>
                         <p class="card-description">
-                            Ubah data yang telah di masukan
+                            Ubah data yang telah di masukan <br><br>
                         </p>
                         <a href="<?php echo(base_url() . "ubahdata") ?>" class="btn btn-rose btn-round">go</a>
                     </div>
