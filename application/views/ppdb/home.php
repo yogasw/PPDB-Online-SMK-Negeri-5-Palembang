@@ -3,9 +3,9 @@
         <div class="card-content">
 
 
-            <div class="alert alert-<?php rubah_warna() ?> alert-with-icon" data-notify="container">
+            <div class="alert pengumuman alert-<?php rubah_warna() ?> alert-with-icon" data-notify="container">
                 <i class="material-icons" data-notify="icon">notifications</i>
-                <button type="button" aria-hidden="true" class="close">
+                <button type="button" onclick="hide_pengumuman()" aria-hidden="true" class="close">
                     <i class="material-icons">close</i>
                 </button>
                 <?php if ($hasil->status == "Diterima") { ?>
@@ -90,6 +90,9 @@
         });
     }
 
+    function hide_pengumuman() {
+        $(".pengumuman").hide();
+    }
     function soal_error() {
         swal({
             title: 'Maaf!',
