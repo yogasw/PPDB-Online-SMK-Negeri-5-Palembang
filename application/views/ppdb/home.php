@@ -3,7 +3,7 @@
         <div class="card-content">
 
 
-            <div class="alert alert-rose alert-with-icon" data-notify="container">
+            <div class="alert alert-<?php rubah_warna() ?> alert-with-icon" data-notify="container">
                 <i class="material-icons" data-notify="icon">notifications</i>
                 <button type="button" aria-hidden="true" class="close">
                     <i class="material-icons">close</i>
@@ -18,21 +18,22 @@
             <div class="col-md-4">
                 <div class="card card-pricing ">
                     <div class="card-content">
-                        <div class="icon icon-rose">
+                        <div class="icon icon-<?php rubah_warna() ?>">
                             <i class="material-icons">assessment</i>
                         </div>
                         <h3 class="card-title">Ubah Data</h3>
                         <p class="card-description">
                             Ubah data yang telah di masukan <br><br>
                         </p>
-                        <a href="<?php echo(base_url() . "ubahdata") ?>" class="btn btn-rose btn-round">go</a>
+                        <a href="<?php echo(base_url() . "ubahdata") ?>"
+                           class="btn btn-<?php rubah_warna() ?> btn-round">go</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card card-pricing ">
                     <div class="card-content">
-                        <div class="icon icon-rose">
+                        <div class="icon icon-<?php rubah_warna() ?>">
                             <i class="material-icons">import_contacts</i>
                         </div>
                         <h3 class="card-title">Ujian Online</h3>
@@ -42,9 +43,11 @@
                         <?php
                         if (!$nilai_tpa) {
                             ?>
-                            <a href="<?php echo(base_url() . "tpa") ?>" class="btn btn-rose btn-round">go</a>
+                            <a href="<?php echo(base_url() . "tpa") ?>"
+                               class="btn btn-<?php rubah_warna() ?> btn-round">go</a>
                         <?php } else { ?>
-                            <a href="#" onclick="lihat_nilai()" class="btn btn-rose btn-round">Lihat Nilai</a>
+                            <a href="#" onclick="lihat_nilai()" class="btn btn-<?php rubah_warna() ?> btn-round">Lihat
+                                Nilai</a>
                         <?php } ?>
                     </div>
                 </div>
@@ -52,14 +55,15 @@
             <div class="col-md-4">
                 <div class="card card-pricing ">
                     <div class="card-content">
-                        <div class="icon icon-rose">
+                        <div class="icon icon-<?php rubah_warna() ?>">
                             <i class="material-icons">sentiment_satisfied_alt</i>
                         </div>
                         <h3 class="card-title">Cetak Bukti Pendaftaran</h3>
                         <p class="card-description">
                             Cetak Bukti Pendaftaran sebagai bukti anda sudah mendaftar
                         </p>
-                        <a <?php echo 'href="' . base_url() . 'cetak_bukti"' ?> class="btn btn-rose btn-round">go</a>
+                        <a <?php echo 'href="' . base_url() . 'cetak_bukti"' ?>
+                                class="btn btn-<?php rubah_warna() ?> btn-round">go</a>
                     </div>
                 </div>
             </div>

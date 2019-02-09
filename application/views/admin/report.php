@@ -39,8 +39,10 @@
                         </select>
                     </div>
                     <div class="form-group" align="center">
-                        <button type="button" name="filter" id="filter" class="btn btn-info">Filter</button>
-                        <button type="button" onclick="umumkan()" name="umumkan" id="umumkan" class="btn btn-info">
+                        <button type="button" name="filter" id="filter" class="btn btn-<?php rubah_warna() ?>">Filter
+                        </button>
+                        <button type="button" onclick="umumkan()" name="umumkan" id="umumkan"
+                                class="btn btn-<?php rubah_warna() ?>">
                             Umumkan
                         </button>
                     </div>

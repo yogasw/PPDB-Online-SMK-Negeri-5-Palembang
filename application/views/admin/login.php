@@ -7,7 +7,8 @@
                         <img class="img" src="<?php echo(base_url()) ?>assets/img/logo.png">
                     </a>
                 </div>
-                <div class="card-header text-center" data-background-color="rose" data-header-animation="true">
+                <div class="card-header text-center" data-background-color="<?php rubah_warna() ?>"
+                     data-header-animation="true">
                     <h4 class="card-title">Sistem PPDB SMK Negeri 5 Palembang</h4>
                 </div>
                 <div class="card-content">
@@ -36,9 +37,10 @@
                     </div>
                 </div>
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Login</button>
+                    <button type="submit" class="btn btn-<?php rubah_warna() ?> btn-simple btn-wd btn-lg">Login</button>
                     <a href="<?php echo(base_url()) ?>pendaftaran">
-                        <button type="button" name="daftar" class="btn btn-rose btn-simple btn-wd btn-lg">Daftar
+                        <button type="button" name="daftar"
+                                class="btn btn-<?php rubah_warna() ?> btn-simple btn-wd btn-lg">Daftar
                         </button>
                     </a>
                 </div>

@@ -40,7 +40,8 @@
                         </select>
                     </div>
                     <div class="form-group" align="center">
-                        <button type="button" name="filter" id="filter" class="btn btn-info">Filter</button>
+                        <button type="button" name="filter" id="filter" class="btn btn-<?php rubah_warna() ?>">Filter
+                        </button>
                     </div>
                 </div>
                 <div class="col-xs-4 text-right">

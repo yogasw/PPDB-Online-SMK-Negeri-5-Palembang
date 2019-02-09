@@ -67,7 +67,7 @@
                 '<input type="password" class="form-control" name="password_baru_1" id="password_baru_1">' +
                 '</div>' +
                 '<span class="input-group-addon">' +
-                '<div class="icon_done icon icon-rose"  hidden>' +
+                '<div class="icon_done icon icon-<?php rubah_warna() ?>"  hidden>' +
                 '<i class="material-icons">done</i>' +
                 '</div>' +
                 '</span>' +
@@ -79,14 +79,14 @@
                 '<input type="password" class="form-control" name="password_baru_2" id="password_baru_2">' +
                 '</div>' +
                 '<span class="input-group-addon">' +
-                '<div class="icon_done icon icon-rose"  hidden>' +
+                '<div class="icon_done icon icon-<?php rubah_warna() ?>"  hidden>' +
                 '<i class="material-icons">done</i>' +
                 '</div>' +
                 '</span>' +
                 '</div>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button onclick="" id="buttton btn_kirim_password" value="b" name="btn_kirim_password" type="submit" class="btn btn-primary btn-round btn_kirim_password">' +
+                '<button onclick="" id="buttton btn_kirim_password" value="b" name="btn_kirim_password" type="submit" class="btn btn-<?php rubah_warna() ?> btn-round btn_kirim_password">' +
                 'Ganti Password</button>' +
                 '</div>' +
                 '</form>'

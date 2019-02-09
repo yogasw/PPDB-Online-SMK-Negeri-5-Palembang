@@ -162,7 +162,16 @@
     background-color: #f44336;
 }
 
-.fixed-plugin .badge-rose {
+.fixed-plugin .badge-<
+
+?
+php
+
+rubah_warna
+(
+)
+?
+> {
     background-color: #e91e63;
 }
 

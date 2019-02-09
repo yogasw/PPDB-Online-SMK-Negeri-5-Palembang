@@ -1,4 +1,4 @@
-<div class="card wizard-card" data-color="rose" id="wizardProfile">
+<div class="card wizard-card" data-color="<?php rubah_warna() ?>" id="wizardProfile">
     <form action="" method="post" novalidate="novalidate">
                 <?php foreach ($data as $u) { ?>
                     <div class="wizard-header">
@@ -307,8 +307,10 @@
                     </div>
                     <div class="wizard-footer">
                         <div class="pull-right">
-                            <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" value="Next">
-                            <input type="button" class="btn btn-finish btn-fill btn-rose btn-wd" name="finish"
+                            <input type="button" class="btn btn-next btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                                   name="next" value="Next">
+                            <input type="button" class="btn btn-finish btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                                   name="finish"
                                    id="finish"
                                    value="Finish" style="display: none;">
                         </div>

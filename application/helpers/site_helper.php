@@ -378,4 +378,11 @@ if (!function_exists('get_name_jurusan')) {
     }
 }
 
+if (!function_exists('rubah_warna')) {
+    function rubah_warna()
+    {
+        echo "success";
+    }
+}
+
 

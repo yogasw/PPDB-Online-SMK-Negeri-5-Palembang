@@ -1,4 +1,4 @@
-<div class="card wizard-card" data-color="rose" id="wizardProfile">
+<div class="card wizard-card" data-color="<?php rubah_warna() ?>" id="wizardProfile">
     <form>
                     <div class="wizard-header">
                         <h3 class="wizard-title">
@@ -292,9 +292,11 @@
                     </div>
                     <div class="wizard-footer">
                         <div class="pull-right">
-                            <input type="button" class="btn btn-next btn-fill btn-rose btn-wd" name="next" id="next"
+                            <input type="button" class="btn btn-next btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                                   name="next" id="next"
                                    value="Next">
-                            <input type="button" class="btn btn-finish btn-fill btn-rose btn-wd" name="finish"
+                            <input type="button" class="btn btn-finish btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                                   name="finish"
                                    id="finish"
                                    value="Finish" style="display: none;">
                         </div>
@@ -629,7 +631,7 @@
     });
 
     function showNotification(from, align, message) {
-        type = ['', 'info', 'success', 'warning', 'danger', 'rose', 'primary'];
+        type = ['', 'info', 'success', 'warning', 'danger', '<?php rubah_warna() ?>', 'primary'];
 
         color = Math.floor((Math.random() * 6) + 1);
 

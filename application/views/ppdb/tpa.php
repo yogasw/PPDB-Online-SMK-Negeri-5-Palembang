@@ -1,5 +1,5 @@
 <script src="<?php echo(base_url()) ?>assets/js/jquery.simple.timer.js"></script>
-<div class="card wizard-card" data-color="rose" id="wizardProfile">
+<div class="card wizard-card" data-color="<?php rubah_warna() ?>" id="wizardProfile">
     <form id="myform" action="<?php echo(base_url() . 'ajax/kirim_data_tpa') ?>" method="post">
                 <div class="wizard-header">
                     <h3 class="wizard-title">

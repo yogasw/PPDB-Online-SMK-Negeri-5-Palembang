@@ -780,7 +780,7 @@
             var oldStepAnchor = getStepAnchor(wizard, oldIndex);
             oldStepAnchor.parent().addClass("done").removeClass("error")._selectAria(false);
             stepTitles.eq(oldIndex).removeClass("current").next(".body").removeClass("current");
-            currentInfo = oldStepAnchor.find(".current-info");
+            currentInfo = oldStepAnchor.find(".current-<?php rubah_warna() ?>");
             currentOrNewStepAnchor.focus();
         }
 

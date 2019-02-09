@@ -4,14 +4,15 @@
             <div class="col-xs-4"></div>
             <div class="col-xs-4"></div>
             <div class="col-xs-4 text-right">
-                <button class="btn"
+                <button class="btn btn-<?php rubah_warna() ?>"
+                "
                         onclick="tambah()">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
                     Tambah Data
                 </button>
-                <button class="btn"
+                <button class="btn btn-<?php rubah_warna() ?>"
                         onclick="deletemultiple()">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
