@@ -46,23 +46,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-pricing ">
-                        <div class="card-content">
-                            <div class="icon icon-rose">
-                                <i class="material-icons">present_to_all</i>
-                            </div>
-                            <h3 class="card-title">Kelola Admin</h3>
-                            <p class="card-description">
-                                Kelola Akun Admin
-                            </p>
-                            <a href="<?php echo(base_url() . "admin/kelola_admin") ?>"
-                               class="btn btn-rose btn-round">go</a>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-4">
                     <div class="card card-pricing ">
                         <div class="card-content">
