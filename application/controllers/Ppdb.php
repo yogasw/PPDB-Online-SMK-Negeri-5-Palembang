@@ -137,6 +137,7 @@ class Ppdb extends CI_Controller
 
     function cetak_bukti()
     {
+        ob_start();
         if ($this->session->userdata('level') != "siswa") {
             Redirect(base_url() . "login", false);
         }
