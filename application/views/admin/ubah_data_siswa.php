@@ -1,4 +1,4 @@
-<div class="card wizard-card" data-color="<?php rubah_warna() ?>" id="wizardProfile">
+<div class="card wizard-card" data-color="green" id="wizardProfile">
     <form action="<?php echo base_url("ajax/update_data"); ?>" method="post" novalidate="novalidate">
         <?php foreach ($data as $u) { ?>
             <div class="wizard-navigation">

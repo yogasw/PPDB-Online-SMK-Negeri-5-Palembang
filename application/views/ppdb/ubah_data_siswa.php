@@ -1,4 +1,4 @@
-<div class="card wizard-card" data-color="<?php rubah_warna() ?>" id="wizardProfile">
+<div class="card wizard-card" data-color="green" id="wizardProfile">
     <form action="" method="post" novalidate="novalidate">
                 <?php foreach ($data as $u) { ?>
                     <div class="wizard-header">
