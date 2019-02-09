@@ -53,6 +53,7 @@ class Pdf extends TCPDF
 
     public function cetak_bukti(array $result)
     {
+        ob_end_clean();
         $this->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $this->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
         $this->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -101,7 +102,6 @@ class Pdf extends TCPDF
         $file_name = 'formulir-PPDB-SMK5-PLG-' . get_setting('tahun_ajaran_ppdb') . '-' . $result['nisnsiswa'];
         $file_name = strtoupper($file_name) . '.pdf';
         $this->writeHTML($content, true, false, true, false, 'C');
-        ob_end_clean();
         $this->Output($file_name);
 
     }
