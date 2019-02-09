@@ -73,6 +73,7 @@ switch ($_SERVER['HTTP_HOST']) {
         $env = 'development';
         break;
 }
+print_r($env);
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);
 
 /*
