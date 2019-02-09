@@ -37,10 +37,10 @@
                     </div>
                 </div>
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-<?php rubah_warna() ?> btn-simple btn-wd btn-lg">Login</button>
+                    <button type="submit" class="btn btn-<?php rubah_warna() ?> btn-wd btn-small">Login</button>
                     <a href="<?php echo(base_url()) ?>pendaftaran">
                         <button type="button" name="daftar"
-                                class="btn btn-<?php rubah_warna() ?> btn-simple btn-wd btn-lg">Daftar
+                                class="btn btn-<?php rubah_warna() ?> btn-wd btn-small">Daftar
                         </button>
                     </a>
                 </div>
