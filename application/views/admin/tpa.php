@@ -129,11 +129,11 @@
                     "mData": "0",
                     "mRender": function (data, type, full) {
                         if (full[0] == "" || full[0] == null) {
-                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
-                                '<a href="#" onclick=aktifkan("' + full[3] + '")><span class="label label-primary">Aktifkan<span></a>'
+                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-<?php rubah_warna() ?>">Lihat Nilai<span></a>' +
+                                '<a href="#" onclick=aktifkan("' + full[3] + '")><span class="label label-<?php rubah_warna3() ?>">Aktifkan<span></a>'
                         } else {
-                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-primary">Lihat Nilai<span></a>' +
-                                '<a href="#" onclick=reset("' + full[3] + '")><span class="label label-primary">Reset<span></a>'
+                            return '<a href="#" onclick=newswal("' + full[3] + '")><span class="label label-<?php rubah_warna() ?>">Lihat Nilai<span></a>' +
+                                '<a href="#" onclick=reset("' + full[3] + '")><span class="label label-<?php rubah_warna2() ?>">Reset<span></a>'
                         }
                     }
                 }

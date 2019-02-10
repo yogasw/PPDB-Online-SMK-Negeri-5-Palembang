@@ -42,7 +42,7 @@
                         <button type="button" name="filter" id="filter" class="btn btn-<?php rubah_warna() ?>">Filter
                         </button>
                         <button type="button" onclick="umumkan()" name="umumkan" id="umumkan"
-                                class="btn btn-<?php rubah_warna() ?>">
+                                class="btn btn-<?php rubah_warna3() ?>">
                             Umumkan
                         </button>
                     </div>
@@ -93,6 +93,11 @@
                 url: '<?php echo(base_url() . 'ajax/ambil_data_hasil')?>',
                 method: "POST"
             },
+            'rowCallback': function (row, data, index) {
+                if (data[18] == 'Ditolak') {
+                    $(row).addClass("<?php rubah_warna4() ?>");
+                }
+            }
         });
         $('#datatables').DataTable().column(2).visible(false);
         $('#datatables').DataTable().column(6).visible(false);

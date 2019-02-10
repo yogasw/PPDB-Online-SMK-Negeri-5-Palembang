@@ -378,6 +378,7 @@ if (!function_exists('get_name_jurusan')) {
     }
 }
 
+/** pilihan warna : default, primary, info, success, warning, danger, rose */
 if (!function_exists('rubah_warna')) {
     function rubah_warna()
     {
@@ -385,4 +386,27 @@ if (!function_exists('rubah_warna')) {
     }
 }
 
+/** pilihan warna : default, primary, info, success, warning, danger, rose */
+if (!function_exists('rubah_warna2')) {
+    function rubah_warna2()
+    {
+        echo "primary";
+    }
+}
+
+/** pilihan warna : default, primary, info, success, warning, danger, rose */
+if (!function_exists('rubah_warna3')) {
+    function rubah_warna3()
+    {
+        echo "warning";
+    }
+}
+
+/** pilihan warna : default, primary, info, success, warning, danger, rose */
+if (!function_exists('rubah_warna4')) {
+    function rubah_warna4()
+    {
+        echo "danger";
+    }
+}
 

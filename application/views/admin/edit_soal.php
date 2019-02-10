@@ -12,7 +12,7 @@
                                         </span>
                     Tambah Data
                 </button>
-                <button class="btn btn-<?php rubah_warna() ?>"
+                <button class="btn btn-<?php rubah_warna2() ?>"
                         onclick="deletemultiple()">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
@@ -66,8 +66,8 @@
                 {
                     "mData": "0",
                     "mRender": function (data, type, full) {
-                        return '<a href="#" onclick=delete_id("' + full[1] + '")><span class="label label-primary">Hapus<span></a>' +
-                            '<a href="#" onclick=edit_soal("' + full[1] + '")><span class="label label-primary">Edit<span></a>'
+                        return '<a href="#" onclick=delete_id("' + full[1] + '")><span class="label label-<?php rubah_warna2() ?>">Hapus<span></a>' +
+                            '<a href="#" onclick=edit_soal("' + full[1] + '")><span class="label label-<?php rubah_warna() ?>">Edit<span></a>'
                     }
                 }
             ]
@@ -222,7 +222,7 @@
                 '</div></div>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
-                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
+                '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-<?php rubah_warna() ?> btn-round btn_kirim">' +
                 'Kirim Data</button>' +
                 '</div>' +
                 '</form>'

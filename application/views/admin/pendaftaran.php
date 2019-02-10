@@ -45,14 +45,14 @@
                     </div>
                 </div>
                 <div class="col-xs-4 text-right">
-                    <button class="btn"
+                    <button class="btn btn-<?php rubah_warna() ?>"
                             onclick="window.location.href='<?php echo(base_url() . 'admin/tambahdata_siswa') ?>'">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
                         Tambah Data
                     </button>
-                    <button class="btn"
+                    <button class="btn btn-<?php rubah_warna2() ?>"
                             onclick="deletemultiple()">
                                         <span class="btn-label">
                                             <i class="material-icons">control_point</i>
@@ -119,12 +119,12 @@
                     "mData": "0",
                     "mRender": function (data, type, full) {
                         if (full[1] == "" || full[1] == null) {
-                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-primary">Hapus<span></a>' +
-                                '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>' +
-                                '<a href="#" onclick=verifikasi("' + full[2] + '")><span class="label label-primary">Verifikasi<span></a>';
+                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-<?php rubah_warna2() ?>">Hapus<span></a>' +
+                                '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-<?php rubah_warna() ?>">Edit<span></a>' +
+                                '<a href="#" onclick=verifikasi("' + full[2] + '")><span class="label label-<?php rubah_warna3() ?>">Verifikasi<span></a>';
                         } else {
-                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-primary">Hapus<span></a>' +
-                            '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-primary">Edit<span></a>';
+                            return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-<?php rubah_warna2() ?>">Hapus<span></a>' +
+                                '<a href="<?php echo(base_url())?>admin/ubahdata_siswa?nisn=' + full[2] + '" onclick=""><span class="label label-<?php rubah_warna() ?>">Edit<span></a>';
                         }
                     }
                 }

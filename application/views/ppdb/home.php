@@ -3,7 +3,12 @@
         <div class="card-content">
 
 
-            <div class="alert pengumuman alert-<?php rubah_warna() ?> alert-with-icon" data-notify="container">
+            <div class="alert pengumuman alert-<?php
+            if ($hasil->status == "Diterima") {
+                rubah_warna();
+            } else {
+                rubah_warna2();
+            } ?> alert-with-icon" data-notify="container">
                 <i class="material-icons" data-notify="icon">notifications</i>
                 <button type="button" onclick="hide_pengumuman()" aria-hidden="true" class="close">
                     <i class="material-icons">close</i>
@@ -46,7 +51,7 @@
                             <a href="<?php echo(base_url() . "tpa") ?>"
                                class="btn btn-<?php rubah_warna() ?> btn-round">go</a>
                         <?php } else { ?>
-                            <a href="#" onclick="lihat_nilai()" class="btn btn-<?php rubah_warna() ?> btn-round">Lihat
+                            <a href="#" onclick="lihat_nilai()" class="btn btn-<?php rubah_warna3() ?> btn-round">Lihat
                                 Nilai</a>
                         <?php } ?>
                     </div>

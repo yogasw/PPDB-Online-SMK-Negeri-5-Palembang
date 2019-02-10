@@ -35,7 +35,7 @@
                 {
                     "mData": "0",
                     "mRender": function (data, type, full) {
-                        return '<a href="#" onclick=edit_pengaturan("' + full[1] + '")><span class="label label-primary">Edit<span></a>'
+                        return '<a href="#" onclick=edit_pengaturan("' + full[1] + '")><span class="label label-<?php rubah_warna() ?>">Edit<span></a>'
                     }
                 }
             ]

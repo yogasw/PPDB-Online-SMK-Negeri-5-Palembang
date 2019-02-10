@@ -1,4 +1,4 @@
-<body>
+<body class="off-canvas-sidebar">
 <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
     <div class="container">
         <div class="navbar-header">
@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">PPDB SMK N 5 PALEMBANG</a>
+            <a class="navbar-brand" href="<?php echo(base_url()) ?>">PPDB SMK N 5 PALEMBANG</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

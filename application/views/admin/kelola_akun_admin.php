@@ -48,8 +48,8 @@
                 {
                     "mData": "0",
                     "mRender": function (data, type, full) {
-                        return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-primary">Hapus<span></a>' +
-                            '<a href="#" onclick=edit_admin("' + full[2] + '")><span class="label label-primary">Edit<span></a>'
+                        return '<a href="#" onclick=delete_id("' + full[2] + '")><span class="label label-<?php rubah_warna() ?>">Hapus<span></a>' +
+                            '<a href="#" onclick=edit_admin("' + full[2] + '")><span class="label label-<?php rubah_warna() ?>">Edit<span></a>'
                     }
                 }
             ]
