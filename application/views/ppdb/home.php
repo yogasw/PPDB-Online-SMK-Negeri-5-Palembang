@@ -12,8 +12,7 @@
                 <i class="material-icons" data-notify="icon">notifications</i>
                 <button type="button" onclick="hide_pengumuman()" aria-hidden="true" class="close">
                     <i class="material-icons">close</i>
-                </button>
-                <?php if ($hasil->status == "Diterima") { ?>
+                </button> <?php if ($hasil->status == "Diterima") { ?>
                     <span data-notify="message">Selamat anda telah di terima di SMK N 05 Palembang<br>Silahkan datang ke SMK N 5 Palembang untuk registrasi ulang</span>
                 <?php }
                 if ($hasil->status == "Ditolak") { ?>
