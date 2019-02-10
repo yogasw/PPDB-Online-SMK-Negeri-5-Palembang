@@ -21,6 +21,8 @@
                             Step I
                         </div>
                     </div>
+                    <input name="no_peserta" id="no_peserta"
+                           value="<?php echo($u['no_peserta']) ?>" hidden>
                     <div class="tab-content">
                         <div class="tab-pane active" id="step1">
                             <div class="row">

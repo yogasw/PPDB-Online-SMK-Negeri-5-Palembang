@@ -98,6 +98,7 @@ class Ajax extends CI_Controller
             default :
                 $orderby = 'siswa.nama_lengkap';
         }
+        $this->db->select('*,siswa.nisn as nisnsiswa');
         $this->db->order_by($orderby, $dir);
         $this->db->join("nilai_un", 'siswa.nisn=nilai_un.nisn', 'left');
         $this->db->join("nilai_usbn", 'siswa.nisn=nilai_usbn.nisn', 'left');
@@ -130,13 +131,13 @@ class Ajax extends CI_Controller
                 if ($data['jurusan'] == $filter) {
                     $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
                     $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
-                    $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                    $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisnsiswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
                     $nomor_urut++;
                 }
             } else {
                 $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
                 $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
-                $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisn'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
+                $output['data'][] = array($nomor_urut, $data['no_peserta'], $data['nisnsiswa'], $data['nama_lengkap'], $data['asal_sekolah'], $data['jurusan'], $un, $usbn);
                 $nomor_urut++;
             }
         }
