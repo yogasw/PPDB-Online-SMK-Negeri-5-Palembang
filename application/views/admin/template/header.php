@@ -25,7 +25,7 @@
     <script src="<?php echo(base_url()) ?>assets/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery.validate.min.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/moment.min.js"></script>
-    <script src="<?php echo(base_url()) ?>assets/js/chartist.min.js"></script>
+
     <script src="<?php echo(base_url()) ?>assets/js/jquery.bootstrap-wizard.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/bootstrap-notify.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery.sharrre.js"></script>
