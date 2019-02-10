@@ -51,7 +51,7 @@
                     <div class="card card-pricing ">
                         <div class="card-content">
                             <div class="icon icon-<?php rubah_warna() ?>">
-                                <i class="material-icons">present_to_all</i>
+                                <i class="material-icons">school</i>
                             </div>
                             <h3 class="card-title">Report Data</h3>
                             <p class="card-description">
@@ -66,7 +66,7 @@
                     <div class="card card-pricing ">
                         <div class="card-content">
                             <div class="icon icon-<?php rubah_warna() ?>">
-                                <i class="material-icons">present_to_all</i>
+                                <i class="material-icons">settings</i>
                             </div>
                             <h3 class="card-title">Pengaturan</h3>
                             <p class="card-description">

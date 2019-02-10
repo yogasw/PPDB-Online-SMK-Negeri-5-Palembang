@@ -24,12 +24,18 @@
                     </li>
                     <li>
                         <a href="#" onclick="ganti_pasword()">
-                            <i class="material-icons">home</i>Ganti Password
+                            <i class="material-icons">vpn_key</i>Ganti Password
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo(base_url() . "keluar") ?>">
-                            <i class="material-icons">home</i>Keluar
+                            <i class="material-icons">directions_bike</i>Keluar
+                        </a>
+                    </li>
+                <?php } else{ ?>
+                    <li>
+                        <a href="<?php echo(base_url()) ?>">
+                            <i class="material-icons">home</i>Home
                         </a>
                     </li>
                 <?php } ?>
