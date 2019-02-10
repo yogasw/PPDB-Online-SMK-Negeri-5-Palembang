@@ -8,13 +8,13 @@
     <title>PPDB SMK N 5 PALEMBANG</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-    <link href="<?php echo(base_url())?>assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo(base_url())?>assets/css/material-dashboard.css" rel="stylesheet" />
+
     <link href="<?php echo(base_url())?>assets/css/demo.css" rel="stylesheet" />
     <link href="<?php echo(base_url())?>assets/css/font-awesome.css" rel="stylesheet" />
     <link href="<?php echo(base_url())?>assets/css/google-roboto-300-700.css" rel="stylesheet" />
     <link href="<?php echo(base_url()) ?>assets/css/jquery.steps.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo(base_url())?>assets/css/style.css"/>
     <script src="<?php echo(base_url()) ?>assets/js/core.min.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery.steps.js"></script>
