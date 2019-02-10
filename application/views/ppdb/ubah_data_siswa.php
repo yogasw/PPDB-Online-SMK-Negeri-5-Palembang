@@ -27,6 +27,8 @@
                                 <div class="col-sm-12">
                                     <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
                                 </div>
+                                <input name="no_peserta" id="no_peserta"
+                                       value="<?php echo($u['no_peserta']) ?>" hidden>
                                 <input name="tahun_ajaran" id="tahun_ajaran"
                                        value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
                                 <div class="col-sm-5 col-sm-offset-1">

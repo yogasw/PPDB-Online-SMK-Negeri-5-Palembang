@@ -301,6 +301,7 @@ class Ajax extends CI_Controller
     function ubahdata_siswa()
     {
         header('Content-type: application/json');
+
         $data[] = array(
             'nama_lengkap' => strtoupper((string)$_POST['nama_lengkap']),
             'no_peserta' => (string)$_POST['no_peserta'],

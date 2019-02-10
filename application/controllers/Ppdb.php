@@ -44,7 +44,12 @@ class Ppdb extends CI_Controller
         $x['error'] = $this->input->get('error');
 
         /** Hasil Ujian */
-        $x['hasil'] = $this->m_ppdb->lihat_hasil($nisn);
+        if (isset($this->m_ppdb->lihat_hasil($nisn)->status)){
+            $x['hasil'] = $this->m_ppdb->lihat_hasil($nisn)->status;
+        }else{
+            $x['hasil'] = "";
+        }
+
 
         $this->load->view('admin/template/header');
         $this->load->view('admin/template/sidebar');

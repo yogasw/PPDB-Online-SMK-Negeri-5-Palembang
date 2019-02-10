@@ -1,4 +1,4 @@
-<body class="off-canvas-sidebar">
+<body>
 <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
     <div class="container">
         <div class="navbar-header">
