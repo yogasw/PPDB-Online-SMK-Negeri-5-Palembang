@@ -13,8 +13,8 @@
     <div class="card">
         <div class="card-content">
             <div class="row">
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4 table-bordered">
+                <div class="col-sm-4 col-xs-12"></div>
+                <div class="col-sm-4 col-xs-12 table-bordered">
                     <div class="form-group">
                         <select name="filter_jurusan" id="filter_jurusan" class="form-control" required>
                             <option value="" <?php if (isset($filter) && $filter == "") echo "selected" ?>>Semua
@@ -44,7 +44,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-xs-4 text-right">
+                <div class="col-sm-4 col-xs-12 text-right">
                     <button class="btn btn-<?php rubah_warna() ?>"
                             onclick="window.location.href='<?php echo(base_url() . 'admin/tambahdata_siswa') ?>'">
                                         <span class="btn-label">

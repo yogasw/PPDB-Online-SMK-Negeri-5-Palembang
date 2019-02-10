@@ -67,7 +67,7 @@ switch ($_SERVER['HTTP_HOST']) {
         $env = 'testing';
         break;
     default:
-        $env = 'development';
+        $env = 'testing';
         break;
 }
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $env);

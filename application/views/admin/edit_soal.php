@@ -1,9 +1,9 @@
 <div class="col-md-12">
     <div class="card">
         <div class="row">
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4 text-right">
+            <div class="col-sm-4 col-xs-12"></div>
+            <div class="col-sm-4 col-xs-12"></div>
+            <div class="col-sm-4 col-xs-12 text-right">
                 <button class="btn btn-<?php rubah_warna() ?>"
                 "
                         onclick="tambah()">
