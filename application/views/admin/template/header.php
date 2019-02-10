@@ -15,6 +15,7 @@
     <link href="<?php echo(base_url())?>assets/css/google-roboto-300-700.css" rel="stylesheet" />
     <link href="<?php echo(base_url()) ?>assets/css/jquery.steps.css" rel="stylesheet"/>
 
+    <script src="<?php echo(base_url()) ?>assets/js/core.min.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery.steps.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/jquery-ui.min.js" type="text/javascript"></script>
@@ -38,4 +39,5 @@
     <script src="<?php echo(base_url()) ?>assets/js/jquery.tagsinput.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/material-dashboard.js"></script>
     <script src="<?php echo(base_url()) ?>assets/js/demo.js"></script>
+
 </head>
