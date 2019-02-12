@@ -148,15 +148,10 @@
 
     function tambah() {
         swal({
-            title: 'Edit Data',
+            title: 'Tambah Data',
             // language=HTML
             html: '<form id="myform" method="post">' +
                 '<div class="row">' +
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
-                '<label class="control-label">No</label>' +
-                '<input type="number" name="id" class="form-control" required="true"> ' +
-                '</div></div>' +
 
                 '<div class="col-xs-6">' +
                 '<div class="form-group label-floating">' +
@@ -329,15 +324,27 @@
             type: "POST",
             url: "<?php echo(base_url() . 'ajax/kirim_data_soal')?>",
             data: datastring,
-            success: function () {
-                swal({
-                    title: 'Berhasil!',
-                    text: 'Soal Berhasil Di Kirim!!',
-                    type: 'success',
-                    showConfirmButton: false,
-                    buttonsStyling: false
-                });
-                table.ajax.reload();
+            respontype: "json",
+            success: function (data) {
+                var json1 = JSON.parse(data);
+                if (json1['status']) {
+                    swal({
+                        title: 'Berhasil!',
+                        text: 'Soal Berhasil Di Kirim!!',
+                        type: 'success',
+                        showConfirmButton: false,
+                        buttonsStyling: false
+                    });
+                    table.ajax.reload();
+                }else {
+                    swal({
+                        title: 'Error!',
+                        text: 'Data gagal di kirim!!',
+                        type: 'error',
+                        showConfirmButton: false,
+                        buttonsStyling: false
+                    });
+                }
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 swal("Error!", "Please try again", "error");

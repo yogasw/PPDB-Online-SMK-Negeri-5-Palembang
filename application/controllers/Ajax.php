@@ -798,8 +798,22 @@ class Ajax extends CI_Controller
 
     function kirim_data_soal()
     {
-        $id = $this->input->post('id');
-        $this->m_ajax->kirim_data_soal($_POST, $id);
+        $no = $this->m_ajax->no_soal();
+        $id = $this->input->post("id");
+        $soal = $this->input->post("soal");
+        $_POST['key'] = base64_encode($soal);
+        if ($id == ""){
+            $_POST['id'] = $no;
+        }
+
+        if ($this->m_ajax->cek_soal_duplikat($soal) == "1") {
+            $this->m_ajax->kirim_data_soal($_POST, $id);
+            $output = array("status" => true);
+        }else{
+            $output = array("status" => false);
+        }
+
+        echo json_encode($output);
     }
 
     function cek_no_soal()
