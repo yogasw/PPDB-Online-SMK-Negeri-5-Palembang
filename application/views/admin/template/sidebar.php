@@ -32,7 +32,7 @@
                             <i class="material-icons">directions_bike</i>Keluar
                         </a>
                     </li>
-                <?php } else{ ?>
+                <?php } else { ?>
                     <li>
                         <a href="<?php echo(base_url()) ?>">
                             <i class="material-icons">home</i>Home

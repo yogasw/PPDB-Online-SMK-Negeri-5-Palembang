@@ -3,22 +3,22 @@
         <div class="card-content">
 
             <?php if ($hasil != "") { ?>
-            <div class="alert pengumuman alert-<?php
-            if ($hasil == "Diterima") {
-                rubah_warna();
-            } else {
-                rubah_warna2();
-            } ?> alert-with-icon" data-notify="container">
-                <i class="material-icons" data-notify="icon">notifications</i>
-                <button type="button" onclick="hide_pengumuman()" aria-hidden="true" class="close">
-                    <i class="material-icons">close</i>
-                </button> <?php if ($hasil == "Diterima") { ?>
-                    <span data-notify="message">Selamat anda telah di terima di SMK N 05 Palembang<br>Silahkan datang ke SMK N 5 Palembang untuk registrasi ulang</span>
-                <?php }
-                if ($hasil == "Ditolak") { ?>
-                    <span data-notify="message">Maaf anda belum terima di SMK N 05 Palembang</span>
-                <?php } ?>
-            </div>
+                <div class="alert pengumuman alert-<?php
+                if ($hasil == "Diterima") {
+                    rubah_warna();
+                } else {
+                    rubah_warna2();
+                } ?> alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">notifications</i>
+                    <button type="button" onclick="hide_pengumuman()" aria-hidden="true" class="close">
+                        <i class="material-icons">close</i>
+                    </button> <?php if ($hasil == "Diterima") { ?>
+                        <span data-notify="message">Selamat anda telah di terima di SMK N 05 Palembang<br>Silahkan datang ke SMK N 5 Palembang untuk registrasi ulang</span>
+                    <?php }
+                    if ($hasil == "Ditolak") { ?>
+                        <span data-notify="message">Maaf anda belum terima di SMK N 05 Palembang</span>
+                    <?php } ?>
+                </div>
             <?php } ?>
             <div class="col-md-4">
                 <div class="card card-pricing ">
@@ -98,6 +98,7 @@
     function hide_pengumuman() {
         $(".pengumuman").hide();
     }
+
     function soal_error() {
         swal({
             title: 'Maaf!',

@@ -75,9 +75,9 @@
                             <a href="<?php echo(base_url() . "admin/pengaturan") ?>"
                                class="btn btn-<?php rubah_warna() ?> btn-round">go</a>
                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </div>

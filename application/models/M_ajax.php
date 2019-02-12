@@ -103,7 +103,6 @@ class M_ajax extends CI_Model
     }
 
 
-
     function ambil_data_tpa($nisn)
     {
         $this->db->select('*,siswa.nisn as nisn_siswa,siswa.nama_lengkap');
@@ -262,11 +261,11 @@ class M_ajax extends CI_Model
     function login_siswa($username, $password)
     {
         $this->db->select('*');
-            $this->db->from('siswa');
-            $this->db->where('nisn', $username);
+        $this->db->from('siswa');
+        $this->db->where('nisn', $username);
         $this->db->where('tanggal_lahir', $password);
-            $query = $this->db->get();
-            $hasil = $query->result_array();
+        $query = $this->db->get();
+        $hasil = $query->result_array();
         if (count($hasil) >= 1) {
             $data = array(
                 'username' => $hasil[0]['nisn'],
@@ -361,27 +360,31 @@ class M_ajax extends CI_Model
         $this->db->empty_table("hasil");
     }
 
-    function isert_soal($data){
+    function isert_soal($data)
+    {
         $this->db->insert_batch('core_soal', $data);
     }
-    function no_soal(){
+
+    function no_soal()
+    {
         $this->db->select("id");
         $this->db->from("core_soal");
         $this->db->limit("1");
-        $this->db->order_by("id",'DESC');
+        $this->db->order_by("id", 'DESC');
 
         $no = $this->db->get()->row()->id;
         if ($no == "") {
             return 1;
         } else {
-            return $no+1;
+            return $no + 1;
         }
     }
 
-    function cek_soal_duplikat($soal){
+    function cek_soal_duplikat($soal)
+    {
         $this->db->select("key");
         $this->db->from("core_soal");
-        $this->db->where("key",base64_encode($soal));
+        $this->db->where("key", base64_encode($soal));
         $soal = $this->db->get()->result_array();
         if (count($soal) >= 1) {
             return 0;

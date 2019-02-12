@@ -21,8 +21,8 @@ class M_ppdb extends CI_Model
 
     function getsoal($nisn)
     {
-        $id_mapel = array(4,3,2,1);
-        $limit    = array(25,20,30,25);
+        $id_mapel = array(4, 3, 2, 1);
+        $limit = array(25, 20, 30, 25);
         if ($this->cek_nilai_tpa($nisn)) {
             $this->load->model('M_ajax', 'ajax');
             $daftar_soal = $this->ajax->ambil_data_tpa($nisn)[0]['list_soal'];
@@ -86,10 +86,11 @@ class M_ppdb extends CI_Model
         return $this->db->get()->row();
     }
 
-    function test_acak_soal(){
+    function test_acak_soal()
+    {
 
 
-        log_app(print_r($hasil,true));
+        log_app(print_r($hasil, true));
         print_r(count($hasil));
     }
 }

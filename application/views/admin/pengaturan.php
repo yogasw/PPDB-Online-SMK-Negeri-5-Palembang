@@ -18,7 +18,8 @@
         </div>
     </div>
 </div>
-a<script type="text/javascript">
+a
+<script type="text/javascript">
     var table;
     window.onload = function () {
         table = $('#datatables').DataTable({

@@ -6,11 +6,11 @@
             <div class="col-sm-4 col-xs-12 text-right">
                 <button class="btn btn-<?php rubah_warna() ?>"
                 "
-                        onclick="tambah()">
-                                        <span class="btn-label">
+                onclick="tambah()">
+                <span class="btn-label">
                                             <i class="material-icons">control_point</i>
                                         </span>
-                    Tambah Data
+                Tambah Data
                 </button>
                 <button class="btn btn-<?php rubah_warna2() ?>"
                         onclick="deletemultiple()">
@@ -212,7 +212,7 @@
                 '<input type="text" name="opsi_d" class="form-control" required="true">' +
                 '</div></div>' +
 
-                '</div>'+
+                '</div>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
                 '<button onclick="" id="buttton btn_kirim" name="btn_kirim" type="submit" class="btn btn-<?php rubah_warna() ?> btn-round btn_kirim">' +
@@ -305,7 +305,7 @@
                 '<input type="text" name="opsi_d" value="' + data[0].opsi_d + '"  class="form-control" required="true">' +
                 '</div></div>' +
 
-                '</div>'+
+                '</div>' +
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
                 '<button onclick="" id="buttton btn_kirim" value="b' + data[0].opsi_b + '"  name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +

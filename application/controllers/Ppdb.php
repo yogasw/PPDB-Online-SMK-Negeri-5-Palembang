@@ -44,9 +44,9 @@ class Ppdb extends CI_Controller
         $x['error'] = $this->input->get('error');
 
         /** Hasil Ujian */
-        if (isset($this->m_ppdb->lihat_hasil($nisn)->status)){
+        if (isset($this->m_ppdb->lihat_hasil($nisn)->status)) {
             $x['hasil'] = $this->m_ppdb->lihat_hasil($nisn)->status;
-        }else{
+        } else {
             $x['hasil'] = "";
         }
 
@@ -151,7 +151,8 @@ class Ppdb extends CI_Controller
         $this->pdf->cetak_kartu($this->m_ppdb->getdatasiswa($nisn)[0]);
     }
 
-    function test_acak_soal(){
+    function test_acak_soal()
+    {
         //log_app(print_r($this->m_ppdb->test_acak_soal()));
         $this->m_ppdb->test_acak_soal();
     }

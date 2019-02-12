@@ -1218,19 +1218,19 @@ class Ajax extends CI_Controller
                 break;
         }
         $simpan_hasil1 = array(
-                'id' => $this->m_ajax->no_soal(),
-                'id_mapel' => $id_mapel,
-                'soal' => $soal,
-                'opsi_a' => $array_soal[0],
-                'opsi_b' => $array_soal[1],
-                'opsi_c' => $array_soal[2],
-                'opsi_d' => $array_soal[3],
-                'jawaban' => $jawaban,
-                'key' => base64_encode($soal)
-            );
+            'id' => $this->m_ajax->no_soal(),
+            'id_mapel' => $id_mapel,
+            'soal' => $soal,
+            'opsi_a' => $array_soal[0],
+            'opsi_b' => $array_soal[1],
+            'opsi_c' => $array_soal[2],
+            'opsi_d' => $array_soal[3],
+            'jawaban' => $jawaban,
+            'key' => base64_encode($soal)
+        );
 
         array_push($simpan_hasil, $simpan_hasil1);
-        if($this->m_ajax->cek_soal_duplikat($soal) == "1"){
+        if ($this->m_ajax->cek_soal_duplikat($soal) == "1") {
             $this->m_ajax->isert_soal($simpan_hasil);
             $this->m_ajax->cek_soal_duplikat($soal);
         }

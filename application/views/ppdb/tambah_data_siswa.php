@@ -1,313 +1,313 @@
 <div class="card wizard-card" data-color="green" id="wizardProfile">
     <form>
-                    <div class="wizard-header">
-                        <h3 class="wizard-title">
-                            FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
-                        </h3>
-                        <h5>Tambah Data Baru.</h5>
-                    </div>
-                    <div class="wizard-navigation">
-                        <ul class="nav nav-pills">
-                            <li class="active" style="width: 33.3333%;">
-                                <a href="#step1" data-toggle="tab" aria-expanded="true">Step I</a>
-                            </li>
-                            <li style="width: 33.3333%;">
-                                <a href="#step2" data-toggle="tab">Step II</a>
-                            </li>
-                            <li style="width: 33.3333%;">
-                                <a href="#step3" data-toggle="tab">Step III</a>
-                            </li>
-                        </ul>
-                        <div class="moving-tab"
-                             style="width: 222.443px; transform: translate3d(-8px, 0px, 0px); transition: transform 0s ease 0s;">
-                            Step I
-                        </div>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="step1">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
-                                </div>
-                                <input name="tahun_ajaran" id="tahun_ajaran" type="number"
-                                       value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nama Lengkap</label>
-                                        <input name="nama_lengkap" id="nama_lengkap" type="text" rel="tooltip"
-                                               title="Isi Nama dengan Huruf" class="form-control"
-                                               value=""
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">NISN</label>
-                                        <input name="nisn" id="nisn" type="number" class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Isi NISN dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Tahun Lulus</label>
-                                        <input name="tahun_lulus" id="tahun_lulus" type="number" class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Isi Tahun Lulus dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Jurusan Yang di Pilih</label>
-                                        <select name="jurusan" rel="tooltip" title="Pilih salah satu" id="jurusan"
-                                                class="form-control" required="true">
-                                            <option value=""
-                                                    selected>...
-                                            </option>
-                                            <option value="akuntansi">Akuntansi</option>
-                                            <option value="administrasiperkantoran">Administrasi Perkantoran</option>
-                                            <option value="pemasaran">Pemasaran</option>
-                                            <option value="animasi">Animasi</option>
-                                            <option value="multimedia">Multimedia</option>
-                                            <option value="tp4">Teknik Produksi dan Penyiaran Program Pertelevisian
-                                            </option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Asal Sekolah</label>
-                                        <input name="asal_sekolah" id="asal_sekolah" type="text" class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Isi Asal Sekolah dengan Huruf"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Jenis Kelamin</label>
-                                        <select name="jk" id="jk" class="form-control" rel="tooltip"
-                                                title="Pilih salah satu" required="true">
-                                            <option value=""
-                                                    selected>...
-                                            </option>
-                                            <option value="Pria"> Pria</option>
-                                            <option value="Wanita"> Wanita</option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Agama</label>
-                                        <select name="agama" id="agama" class="form-control" rel="tooltip"
-                                                title="Pilih salah satu" required="true">
-                                            <option value=""
-                                                    selected>...
-                                            </option>
-                                            <option value="Islam">Islam</option>
-                                            <option value="Kristen Protestan">Kristen Protestan</option>
-                                            <option value="Kristen Katolik">Kristen Katolik</option>
-                                            <option value="Hindu">Hindu</option>
-                                            <option value="Budha">Budha</option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Tanggal Lahir</label>
-                                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control"
-                                               required="true" style="text-transform: uppercase"
-                                               rel="tooltip" title="Input Tanggal"
-                                               value="">
-                                        <span class="material-input"></span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Tempat Lahir</label>
-                                        <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
-                                               required="true" style="text-transform: uppercase"
-                                               rel="tooltip" title="Input Tempat Lahir dengan Huruf"
-                                               value="">
-                                        <span class="material-input"></span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">No. HP</label>
-                                        <input type="number" name="no_hp" id="no_hp" class="form-control" number="true"
-                                               rel="tooltip" title="Input No. HP dengan Angka"
-                                               required="true" value=""/>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Email</label>
-                                        <input type="text" class="form-control" id="email" email="true" name="email"
-                                               required="true" style="text-transform: lowercase"
-                                               rel="tooltip" title="Input Email contoh: example@example.com"
-                                               value="">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-10 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Alamat</label>
-                                        <input type="text" name="alamat" id="alamat" class="form-control"
-                                               rel="tooltip" title="Input Alamat Lengkap anda"
-                                               value=""
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Negara</label>
-                                        <select name="negara" class="form-control" id="negara" required="true"
-                                                rel="tooltip" title="Pilih Negara anda">
-                                            <option value=""
-                                                    selected></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Provinsi</label>
-                                        <select id="provinsi" name="provinsi" class="form-control" rel="tooltip"
-                                                title="Pilih Provinsi anda" required="true">
-                                            <option value=""
-                                                    selected></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Kota</label>
-                                        <select name="kota" id="kota" class="form-control" rel="tooltip"
-                                                title="Pilih Kota anda" required="true">
-                                            <option value=""
-                                                    selected></option>
-                                        </select>
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="step2">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h4 class="info-text">Nilai UN</h4>
-                                </div>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai IPA</label>
-                                        <input name="nilai_ipa" id="nilai_ipa" type="number" class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai IPA dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai Matematika</label>
-                                        <input name="nilai_matematika" id="nilai_matematika" type="number"
-                                               class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai Matematika dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai Bahasa Indonesia</label>
-                                        <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="number"
-                                               class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai Bahasa Indonesia dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai Bahasa Inggris</label>
-                                        <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="number"
-                                               class="form-control"
-                                               rel="tooltip" title="Input Nilai Bahasa Inggris dengan Angka"
-                                               value=""
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h4 class="info-text">Nilai USBN</h4>
-                                </div>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai PAI</label>
-                                        <input name="nilai_pai" id="nilai_pai" type="number" class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai PAI dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai PKN</label>
-                                        <input name="nilai_pkn" id="nilai_pkn" type="number"
-                                               class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai PKN dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                                <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group label-floating is-empty">
-                                        <label class="label-control">Nilai IPS</label>
-                                        <input name="nilai_ips" id="nilai_ips" type="number"
-                                               class="form-control"
-                                               value=""
-                                               rel="tooltip" title="Input Nilai IPS dengan Angka"
-                                               style="text-transform: uppercase" required="true">
-                                        <span class="material-input"></span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="step3">
-                            <div class="col-sm-12">
-                                <h3 class="info-text">Pernyataan</h3>
-                            </div>
-                            <p>Saya menyatakan dengan sesungguhnya bahwa isian data dalam formulir ini adalah benar.
-                                Apabila ternyata data tersebut tidak benar / palsu, maka saya bersedia menerima sanksi
-                                berupa Pembatalan sebagai Calon Peserta Didik SMA Negeri 5 Palembang
-                            </p>
-                            <row class="text-center">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="terms" class="label-control" id="terms"
-                                               required="true"><a>Saya Setuju</a>
-                                    </label>
-                                </div>
-                            </row>
-                        </div>
-                    </div>
-                    <div class="wizard-footer">
-                        <div class="pull-right">
-                            <input type="button" class="btn btn-next btn-fill btn-<?php rubah_warna() ?> btn-wd"
-                                   name="next" id="next"
-                                   value="Next">
-                            <input type="button" class="btn btn-finish btn-fill btn-<?php rubah_warna() ?> btn-wd"
-                                   name="finish"
-                                   id="finish"
-                                   value="Finish" style="display: none;">
-                        </div>
-                        <div class="pull-left">
-                            <input type="submit" class="btn btn-previous btn-fill btn-default btn-wd disabled"
-                                   name="previous" value="Previous">
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-    </form>
+        <div class="wizard-header">
+            <h3 class="wizard-title">
+                FORM PENDAFTARAN SISWA BARU <br>SMK 05 PALEMBANG
+            </h3>
+            <h5>Tambah Data Baru.</h5>
         </div>
+        <div class="wizard-navigation">
+            <ul class="nav nav-pills">
+                <li class="active" style="width: 33.3333%;">
+                    <a href="#step1" data-toggle="tab" aria-expanded="true">Step I</a>
+                </li>
+                <li style="width: 33.3333%;">
+                    <a href="#step2" data-toggle="tab">Step II</a>
+                </li>
+                <li style="width: 33.3333%;">
+                    <a href="#step3" data-toggle="tab">Step III</a>
+                </li>
+            </ul>
+            <div class="moving-tab"
+                 style="width: 222.443px; transform: translate3d(-8px, 0px, 0px); transition: transform 0s ease 0s;">
+                Step I
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="step1">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="info-text">Form Biodata Calon Siswa Baru</h4>
+                    </div>
+                    <input name="tahun_ajaran" id="tahun_ajaran" type="number"
+                           value="<?php echo(get_setting('tahun_ajaran_ppdb')) ?>" hidden>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nama Lengkap</label>
+                            <input name="nama_lengkap" id="nama_lengkap" type="text" rel="tooltip"
+                                   title="Isi Nama dengan Huruf" class="form-control"
+                                   value=""
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">NISN</label>
+                            <input name="nisn" id="nisn" type="number" class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Isi NISN dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Tahun Lulus</label>
+                            <input name="tahun_lulus" id="tahun_lulus" type="number" class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Isi Tahun Lulus dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Jurusan Yang di Pilih</label>
+                            <select name="jurusan" rel="tooltip" title="Pilih salah satu" id="jurusan"
+                                    class="form-control" required="true">
+                                <option value=""
+                                        selected>...
+                                </option>
+                                <option value="akuntansi">Akuntansi</option>
+                                <option value="administrasiperkantoran">Administrasi Perkantoran</option>
+                                <option value="pemasaran">Pemasaran</option>
+                                <option value="animasi">Animasi</option>
+                                <option value="multimedia">Multimedia</option>
+                                <option value="tp4">Teknik Produksi dan Penyiaran Program Pertelevisian
+                                </option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Asal Sekolah</label>
+                            <input name="asal_sekolah" id="asal_sekolah" type="text" class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Isi Asal Sekolah dengan Huruf"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Jenis Kelamin</label>
+                            <select name="jk" id="jk" class="form-control" rel="tooltip"
+                                    title="Pilih salah satu" required="true">
+                                <option value=""
+                                        selected>...
+                                </option>
+                                <option value="Pria"> Pria</option>
+                                <option value="Wanita"> Wanita</option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Agama</label>
+                            <select name="agama" id="agama" class="form-control" rel="tooltip"
+                                    title="Pilih salah satu" required="true">
+                                <option value=""
+                                        selected>...
+                                </option>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen Protestan">Kristen Protestan</option>
+                                <option value="Kristen Katolik">Kristen Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Tanggal Lahir</label>
+                            <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control"
+                                   required="true" style="text-transform: uppercase"
+                                   rel="tooltip" title="Input Tanggal"
+                                   value="">
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Tempat Lahir</label>
+                            <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control"
+                                   required="true" style="text-transform: uppercase"
+                                   rel="tooltip" title="Input Tempat Lahir dengan Huruf"
+                                   value="">
+                            <span class="material-input"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">No. HP</label>
+                            <input type="number" name="no_hp" id="no_hp" class="form-control" number="true"
+                                   rel="tooltip" title="Input No. HP dengan Angka"
+                                   required="true" value=""/>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Email</label>
+                            <input type="text" class="form-control" id="email" email="true" name="email"
+                                   required="true" style="text-transform: lowercase"
+                                   rel="tooltip" title="Input Email contoh: example@example.com"
+                                   value="">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Alamat</label>
+                            <input type="text" name="alamat" id="alamat" class="form-control"
+                                   rel="tooltip" title="Input Alamat Lengkap anda"
+                                   value=""
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Negara</label>
+                            <select name="negara" class="form-control" id="negara" required="true"
+                                    rel="tooltip" title="Pilih Negara anda">
+                                <option value=""
+                                        selected></option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Provinsi</label>
+                            <select id="provinsi" name="provinsi" class="form-control" rel="tooltip"
+                                    title="Pilih Provinsi anda" required="true">
+                                <option value=""
+                                        selected></option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Kota</label>
+                            <select name="kota" id="kota" class="form-control" rel="tooltip"
+                                    title="Pilih Kota anda" required="true">
+                                <option value=""
+                                        selected></option>
+                            </select>
+                            <span class="material-input"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="step2">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="info-text">Nilai UN</h4>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai IPA</label>
+                            <input name="nilai_ipa" id="nilai_ipa" type="number" class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai IPA dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai Matematika</label>
+                            <input name="nilai_matematika" id="nilai_matematika" type="number"
+                                   class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai Matematika dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai Bahasa Indonesia</label>
+                            <input name="nilai_bhs_indonesia" id="nilai_bhs_indonesia" type="number"
+                                   class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai Bahasa Indonesia dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai Bahasa Inggris</label>
+                            <input name="nilai_bhs_inggris" id="nilai_bhs_inggris" type="number"
+                                   class="form-control"
+                                   rel="tooltip" title="Input Nilai Bahasa Inggris dengan Angka"
+                                   value=""
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="info-text">Nilai USBN</h4>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai PAI</label>
+                            <input name="nilai_pai" id="nilai_pai" type="number" class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai PAI dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai PKN</label>
+                            <input name="nilai_pkn" id="nilai_pkn" type="number"
+                                   class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai PKN dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group label-floating is-empty">
+                            <label class="label-control">Nilai IPS</label>
+                            <input name="nilai_ips" id="nilai_ips" type="number"
+                                   class="form-control"
+                                   value=""
+                                   rel="tooltip" title="Input Nilai IPS dengan Angka"
+                                   style="text-transform: uppercase" required="true">
+                            <span class="material-input"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="step3">
+                <div class="col-sm-12">
+                    <h3 class="info-text">Pernyataan</h3>
+                </div>
+                <p>Saya menyatakan dengan sesungguhnya bahwa isian data dalam formulir ini adalah benar.
+                    Apabila ternyata data tersebut tidak benar / palsu, maka saya bersedia menerima sanksi
+                    berupa Pembatalan sebagai Calon Peserta Didik SMA Negeri 5 Palembang
+                </p>
+                <row class="text-center">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="terms" class="label-control" id="terms"
+                                   required="true"><a>Saya Setuju</a>
+                        </label>
+                    </div>
+                </row>
+            </div>
+        </div>
+        <div class="wizard-footer">
+            <div class="pull-right">
+                <input type="button" class="btn btn-next btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                       name="next" id="next"
+                       value="Next">
+                <input type="button" class="btn btn-finish btn-fill btn-<?php rubah_warna() ?> btn-wd"
+                       name="finish"
+                       id="finish"
+                       value="Finish" style="display: none;">
+            </div>
+            <div class="pull-left">
+                <input type="submit" class="btn btn-previous btn-fill btn-default btn-wd disabled"
+                       name="previous" value="Previous">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#nama_lengkap').keypress(function (e) {
@@ -532,8 +532,7 @@
                                 buttonsStyling: false
                             }))
                             window.location = '<?php echo (base_url()) . "/keluar"?>';
-                        }
-                        else {
+                        } else {
                             swal({
                                 title: 'Maaf',
                                 text: 'Data Gagal Cek Kembali Data Anda',
@@ -569,6 +568,7 @@
                 }
             }
         });
+
         function addElement(str, id) {
             var el = document.createElement('option');
             el.innerHTML = str;
