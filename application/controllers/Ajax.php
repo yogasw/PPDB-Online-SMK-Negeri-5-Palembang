@@ -127,7 +127,6 @@ class Ajax extends CI_Controller
         $nomor_urut = $start + 1;
         foreach ($query->result_array() as $data) {
             if ($filter != "") {
-                log_app($filter);
                 if ($data['jurusan'] == $filter) {
                     $un = round(($data['ipa'] + $data['matematika'] + $data['bhs_indonesia'] + $data['bhs_inggris']) / 4, 2);
                     $usbn = round(($data['pai'] + $data['pkn'] + $data['ips']) / 3, 2);
@@ -479,7 +478,6 @@ class Ajax extends CI_Controller
 
         //mencocokan jawaban dengan kuci jawaban
         foreach ($jawaban as $key => $value) {
-            log_app($key . " " . $kunci_jawaban[$key]['jawaban'] . " " . strtolower($value));
             if ((strtolower($kunci_jawaban[$key]['jawaban'])) == strtolower($value)) {
                 $nilai = $nilai + 1;
                 $jumlah_benar = $jumlah_benar + 1;
@@ -656,23 +654,20 @@ class Ajax extends CI_Controller
                 case 1 :
                     $mapel = "IPA";
                     break;
-                case 2 :
-                    $mapel = "IPS";
-                    break;
                 case 3 :
                     $mapel = "Bahasa Indonesia";
                     break;
                 case 4 :
                     $mapel = "Bahasa Inggris";
                     break;
-                case 5 :
+                case 2 :
                     $mapel = "Matematika";
                     break;
                 default:
                     $mapel = "Dll";
                     break;
             }
-            $output['data'][] = array($nomor_urut, $data['id'], $mapel, $data['soal'],/** $data['bobot'] , $data['gambar']*/);
+            $output['data'][] = array($nomor_urut, $data['id'], $mapel, $data['soal']);
             $nomor_urut++;
         }
         echo json_encode($output);
@@ -977,7 +972,6 @@ class Ajax extends CI_Controller
                 $data[0] += ['tipe' => "text"];
                 break;
         };
-        log_app(print_r($data, true));
         print_r(json_encode($data));
     }
 
@@ -1196,4 +1190,50 @@ class Ajax extends CI_Controller
     {
         $this->m_ajax->batalkan_pengumuman();
     }
+
+    function kirim_soal()
+    {
+        $soal = $this->input->post("soal");
+        $kunci = $this->input->post("jawaban");
+        $jawaban_a = $this->input->post("a");
+        $jawaban_b = $this->input->post("b");
+        $jawaban_c = $this->input->post("c");
+        $id_mapel = $this->input->post("id_mapel");
+
+        $array_soal = array($jawaban_a, $jawaban_b, $jawaban_c, $kunci);
+        shuffle($array_soal);
+        $simpan_hasil = array();
+        switch (array_search($kunci, $array_soal)) {
+            case 0:
+                $jawaban = 'a';
+                break;
+            case 1:
+                $jawaban = 'b';
+                break;
+            case 2:
+                $jawaban = 'c';
+                break;
+            case 3:
+                $jawaban = 'd';
+                break;
+        }
+        $simpan_hasil1 = array(
+                'id' => $this->m_ajax->no_soal(),
+                'id_mapel' => $id_mapel,
+                'soal' => $soal,
+                'opsi_a' => $array_soal[0],
+                'opsi_b' => $array_soal[1],
+                'opsi_c' => $array_soal[2],
+                'opsi_d' => $array_soal[3],
+                'jawaban' => $jawaban,
+                'key' => base64_encode($soal)
+            );
+
+        array_push($simpan_hasil, $simpan_hasil1);
+        if($this->m_ajax->cek_soal_duplikat($soal) == "1"){
+            $this->m_ajax->isert_soal($simpan_hasil);
+            $this->m_ajax->cek_soal_duplikat($soal);
+        }
+    }
+
 }

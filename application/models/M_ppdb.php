@@ -79,4 +79,23 @@ class M_ppdb extends CI_Model
         $this->db->where("nisn", $nisn);
         return $this->db->get()->row();
     }
+
+    function test_acak_soal(){
+
+        $hasil = array();
+
+        $id_mapel = array(4,3,2,1);
+        $limit    = array(25,20,30,25);
+
+        foreach ($id_mapel as $id => $isi) {
+            $this->db->select("id,id_mapel");
+            $this->db->from("core_soal");
+            $this->db->where("id_mapel", $isi);
+            $this->db->order_by("id", "RANDOM");
+            $this->db->limit($limit[$id]);
+            $hasil = array_merge($hasil, $this->db->get()->result_array());
+        }
+        log_app(print_r($hasil,true));
+        print_r(count($hasil));
+    }
 }

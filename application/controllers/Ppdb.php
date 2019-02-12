@@ -151,7 +151,8 @@ class Ppdb extends CI_Controller
         $this->pdf->cetak_kartu($this->m_ppdb->getdatasiswa($nisn)[0]);
     }
 
-    function test($nisn)
-    {
+    function test_acak_soal(){
+        //log_app(print_r($this->m_ppdb->test_acak_soal()));
+        $this->m_ppdb->test_acak_soal();
     }
 }

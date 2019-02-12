@@ -343,9 +343,7 @@ class M_ajax extends CI_Model
         $this->db->update('user');
         if ($this->db->affected_rows()) {
             return true;
-            log_app("berhasil");
         } else {
-            log_app("gagal");
             return false;
         }
 
@@ -363,4 +361,32 @@ class M_ajax extends CI_Model
         $this->db->empty_table("hasil");
     }
 
+    function isert_soal($data){
+        $this->db->insert_batch('core_soal', $data);
+    }
+    function no_soal(){
+        $this->db->select("id");
+        $this->db->from("core_soal");
+        $this->db->limit("1");
+        $this->db->order_by("id",'DESC');
+
+        $no = $this->db->get()->row()->id;
+        if ($no == "") {
+            return 1;
+        } else {
+            return $no+1;
+        }
+    }
+
+    function cek_soal_duplikat($soal){
+        $this->db->select("key");
+        $this->db->from("core_soal");
+        $this->db->where("key",base64_encode($soal));
+        $soal = $this->db->get()->result_array();
+        if (count($soal) >= 1) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
 }

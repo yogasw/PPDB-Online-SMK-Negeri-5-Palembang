@@ -269,7 +269,6 @@ if (!function_exists('is_text')) {
 if (!function_exists('is_nomor')) {
     function is_nomor($string)
     {
-        log_app("masuk" . $string);
         if ($string == "" || $string == " ") {
             return false;
         } elseif (ctype_digit($string)) {
@@ -349,7 +348,6 @@ if (!function_exists('get_name_jurusan')) {
     {
         /** @var  $status array ket : akuntansi, administrasiperkantoran, pemasaran, animasi, , tp4 */
         $hasil = null;
-        log_app(print_r($kd_jurusan), true);
         switch (strtolower($kd_jurusan)) {
             case 'akuntansi' :
                 $hasil = 'AKUNTANSI DAN KEUANGAN LEMBAGA';

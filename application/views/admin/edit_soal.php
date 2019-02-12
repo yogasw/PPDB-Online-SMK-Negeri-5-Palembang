@@ -164,10 +164,9 @@
                 '<select name="id_mapel" id="id_mapel" class="form-control" required="true">' +
                 '<option value="" selected>Mata Pelajaran</option>' +
                 '<option value="1"> Ipa</option>' +
-                '<option value="2"> Ips</option>' +
                 '<option value="3"> B. Indonesia</option>' +
                 '<option value="4"> B. Inggris</option>' +
-                '<option value="5">Matematika</option>' +
+                '<option value="2">Matematika</option>' +
                 '</select>' +
                 '</div></div>' +
 
@@ -180,7 +179,6 @@
                 '<option value="b">B</option>' +
                 '<option value="c">C</option>' +
                 '<option value="d">D</option>' +
-                '<option value="e">E</option>' +
                 '</select>' +
                 '</div></div>' +
 
@@ -214,12 +212,6 @@
                 '<input type="text" name="opsi_d" class="form-control" required="true">' +
                 '</div></div>' +
 
-
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
-                '<label class="control-label">Opsi E</label>' +
-                '<input type="text" name="opsi_e" class="form-control" required="true">' +
-                '</div></div>' +
                 '</div>'+
 
                 '<div class="col-md-6 col-md-offset-3"> ' +
@@ -265,10 +257,9 @@
                 '<select name="id_mapel" id="id_mapel" class="form-control" required="true">' +
                 '<option value="' + data[0].id_mapel + '"  selected>Mata Pelajaran</option>' +
                 '<option value="1"> Ipa</option>' +
-                '<option value="2"> Ips</option>' +
                 '<option value="3"> B. Indonesia</option>' +
                 '<option value="4"> B. Inggris</option>' +
-                '<option value="5">Matematika</option>' +
+                '<option value="2">Matematika</option>' +
                 '</select>' +
                 '</div></div>' +
 
@@ -281,7 +272,6 @@
                 '<option value="b">B</option>' +
                 '<option value="c">C</option>' +
                 '<option value="d">D</option>' +
-                '<option value="e">E</option>' +
                 '</select>' +
                 '</div></div>' +
 
@@ -315,11 +305,6 @@
                 '<input type="text" name="opsi_d" value="' + data[0].opsi_d + '"  class="form-control" required="true">' +
                 '</div></div>' +
 
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
-                '<label class="control-label">Opsi E</label>' +
-                '<input type="text" name="opsi_e" value="' + data[0].opsi_e + '"  class="form-control" required="true">' +
-                '</div></div>' +
                 '</div>'+
 
                 '<div class="col-md-6 col-md-offset-3"> ' +

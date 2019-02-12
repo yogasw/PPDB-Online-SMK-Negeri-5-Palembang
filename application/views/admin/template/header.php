@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link href="<?php echo(base_url())?>assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="<?php echo(base_url())?>assets/css/style.css"/>
     <link href="<?php echo(base_url())?>assets/css/demo.css" rel="stylesheet" />
     <link href="<?php echo(base_url())?>assets/css/font-awesome.css" rel="stylesheet" />

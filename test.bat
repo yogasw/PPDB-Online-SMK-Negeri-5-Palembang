@@ -1,0 +1,1 @@
+curl -X GET http://arioki.web/ppdb/test_acak_soal
