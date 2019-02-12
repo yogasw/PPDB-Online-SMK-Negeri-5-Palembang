@@ -21,6 +21,8 @@ class M_ppdb extends CI_Model
 
     function getsoal($nisn)
     {
+        $id_mapel = array(4,3,2,1);
+        $limit    = array(25,20,30,25);
         if ($this->cek_nilai_tpa($nisn)) {
             $this->load->model('M_ajax', 'ajax');
             $daftar_soal = $this->ajax->ambil_data_tpa($nisn)[0]['list_soal'];
@@ -28,12 +30,16 @@ class M_ppdb extends CI_Model
             $query = $this->db->query($q);
             return $query->result_array();
         } else {
-            $this->db->select('*');
-            $this->db->from('core_soal');
-            $this->db->limit(5);
-            $this->db->order_by('id', 'RANDOM');
-            $query = $this->db->get();
-            return $query->result_array();
+            $hasil = array();
+            foreach ($id_mapel as $id => $isi) {
+                $this->db->select("*");
+                $this->db->from("core_soal");
+                $this->db->where("id_mapel", $isi);
+                $this->db->order_by("id", "RANDOM");
+                $this->db->limit($limit[$id]);
+                $hasil = array_merge($hasil, $this->db->get()->result_array());
+            }
+            return $hasil;
         }
     }
 
@@ -82,19 +88,7 @@ class M_ppdb extends CI_Model
 
     function test_acak_soal(){
 
-        $hasil = array();
 
-        $id_mapel = array(4,3,2,1);
-        $limit    = array(25,20,30,25);
-
-        foreach ($id_mapel as $id => $isi) {
-            $this->db->select("id,id_mapel");
-            $this->db->from("core_soal");
-            $this->db->where("id_mapel", $isi);
-            $this->db->order_by("id", "RANDOM");
-            $this->db->limit($limit[$id]);
-            $hasil = array_merge($hasil, $this->db->get()->result_array());
-        }
         log_app(print_r($hasil,true));
         print_r(count($hasil));
     }
