@@ -29,11 +29,3 @@ if ($REQUEST_PROTOCOL=="http")
     header('Location: ' . $redirect);
     exit();
 }
-
-// compress output
-$hook['display_override'][] = array(
-    'class' => '',
-    'function' => 'compress',
-    'filename' => 'compress.php',
-    'filepath' => 'hooks'
-);
