@@ -63,6 +63,9 @@ switch ($_SERVER['HTTP_HOST']) {
     case 'ppdb-smk5palembang.appspot.com':
         $env = 'production';
         break;
+    case 'smk5palembang.online':
+        $env = 'production';
+        break;
     case 'localhost':
         $env = 'testing';
         break;
