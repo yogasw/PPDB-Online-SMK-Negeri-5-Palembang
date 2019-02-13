@@ -152,7 +152,8 @@
                 data = JSON.parse(data);
                 try {
                     edit(data)
-                } catch {
+                } catch(err) {
+                    console.log(err);
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
