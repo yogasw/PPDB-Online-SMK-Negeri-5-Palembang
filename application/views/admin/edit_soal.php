@@ -240,11 +240,6 @@
             title: 'Edit Data',
             html: '<form id="myform" method="post">' +
                 '<div class="row">' +
-                '<div class="col-xs-6">' +
-                '<div class="form-group label-floating">' +
-                '<label class="control-label">No</label>' +
-                '<input type="number" value="' + data[0].id + '" name="id" class="form-control" required="true"> ' +
-                '</div></div>' +
 
                 '<div class="col-xs-6">' +
                 '<div class="form-group label-floating">' +
@@ -299,9 +294,8 @@
                 '<label class="control-label">Opsi D</label>' +
                 '<input type="text" name="opsi_d" value="' + data[0].opsi_d + '"  class="form-control" required="true">' +
                 '</div></div>' +
-
                 '</div>' +
-
+                '<input value="' + data[0].id + '" name="id" hidden> '+
                 '<div class="col-md-6 col-md-offset-3"> ' +
                 '<button onclick="" id="buttton btn_kirim" value="b' + data[0].opsi_b + '"  name="btn_kirim" type="submit" class="btn btn-primary btn-round btn_kirim">' +
                 'Kirim Data</button>' +
