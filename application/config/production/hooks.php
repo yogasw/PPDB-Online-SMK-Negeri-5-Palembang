@@ -12,6 +12,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
+// compress output
+$hook['display_override'][] = array(
+    'class' => '',
+    'function' => 'compress',
+    'filename' => 'compress.php',
+    'filepath' => 'hooks'
+);
+
 $isSecure = false;
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
     $isSecure = true;
@@ -30,10 +38,3 @@ if ($REQUEST_PROTOCOL=="http")
     exit();
 }
 
-// compress output
-$hook['display_override'][] = array(
-    'class' => '',
-    'function' => 'compress',
-    'filename' => 'compress.php',
-    'filepath' => 'hooks'
-);
