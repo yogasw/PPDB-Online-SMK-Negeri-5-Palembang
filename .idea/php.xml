@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/PHPWord/Section" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/Shared" />
+      <path value="$PROJECT_DIR$/vendor/tcpdf/include" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/_staticDocParts" />
+      <path value="$PROJECT_DIR$/vendor/tcpdf/config" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/Writer" />
+      <path value="$PROJECT_DIR$/vendor/tcpdf/fonts" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/Style" />
+      <path value="$PROJECT_DIR$/vendor/tcpdf/tools" />
+    </include_path>
+  </component>
+</project>

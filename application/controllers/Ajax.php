@@ -995,6 +995,10 @@ class Ajax extends CI_Controller
         $this->m_ajax->kirim_data_pengaturan($_POST, $id);
     }
 
+    /**
+     * @param string $umumkan
+     * Fungsi Ambil Data Hasil
+     */
     function ambil_data_hasil($umumkan = "")
     {
         print_r($umumkan);
