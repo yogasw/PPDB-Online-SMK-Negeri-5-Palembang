@@ -40,6 +40,12 @@
         </div>
     </div>
 </div>
+<style type="text/css">
+    .card img {
+        width: 20%;
+        height: auto;
+    }
+</style>
 <script type="text/javascript">
     var table;
     window.onload = function () {
