@@ -315,7 +315,7 @@ if (!function_exists('sort_arr_of_obj')) {
  * @return array
  */
 if (!function_exists('spk_smart')) {
-    function spk_smart($nilai_un, $nilai_usbn, $nilai_tpa, $nilai_4, $nilai_5)
+    function spk_smart($nilai_un, $nilai_usbn, $nilai_tpa)
     {
 
         /**
@@ -327,8 +327,6 @@ if (!function_exists('spk_smart')) {
             $c_un = null;
             $c_usbn = null;
             $c_tpa = null;
-            $c_4 = null;
-            $c_5 = null;
 
         /**
          * Langkah 2 :  sistem secara default memberikan skala 0-100
@@ -338,16 +336,12 @@ if (!function_exists('spk_smart')) {
             $c_un = 45;
             $c_usbn = 25;
             $c_tpa = 15;
-            $c_4 = 10;
-            $c_5 = 5;
-            $c_total = $c_un + $c_usbn + $c_tpa + $c_4 + $c_5;
+            $c_total = $c_un + $c_usbn + $c_tpa;
 
             //Normalisasi dengan rumus Wj/ΣWj
             $wj_un = $c_un/$c_total;
             $wj_usbn = $c_usbn/$c_total;
             $wj_tpa = $c_tpa/$c_total;
-            $wj_4 = $c_4/$c_total;
-            $wj_5 = $c_5/$c_total;
 
         /**
          * Langkah 3 :  memberikan nilai kriteria untuk setiap alternatif.
@@ -355,8 +349,6 @@ if (!function_exists('spk_smart')) {
             $n_un = $nilai_un;
             $n_usbn = $nilai_usbn;
             $n_tpa = $nilai_tpa;
-            $n_4 = $nilai_4;
-            $n_5 = $nilai_5;
 
         /**
          * hitung nilai utility untuk setiap kriteria masing-masing.
@@ -365,8 +357,6 @@ if (!function_exists('spk_smart')) {
             $u_un = 100*((100-$n_un)/100-0);
             $u_usbn = 100*((100-$n_usbn)/100-0);
             $u_tpa = 100*((100-$n_tpa)/100-0);
-            $u_4 = 100*((100-$n_4)/100-0);
-            $u_5 = 100*((100-$n_5)/100-0);
 
         /**
          * Langkah 5: hitung nilai akhir masing-masing.
@@ -375,41 +365,27 @@ if (!function_exists('spk_smart')) {
             $h_un = $wj_un * $u_un;
             $h_usbn = $wj_usbn * $u_usbn;
             $h_tpa = $wj_tpa * $u_tpa;
-            $h_4= $wj_4 * $u_4;
-            $h_5 = $wj_5 * $u_5;
 
-            $hasil_ahir  = $h_un + $h_usbn + $h_tpa + $h_4 + $h_5;
+            $hasil_ahir  = $h_un + $h_usbn + $h_tpa;
 
             $simulasi = array (
                 "C1"=>"Nilai UN",
                 "C2"=>"Nilai USBN",
                 "C3"=>"Nilai TPA",
-                "C4"=>"Nilai 4",
-                "C5"=>"Nilai 5",
                 "Bobot C1 "=> $wj_un,
                 "Bobot C2 "=> $wj_usbn,
                 "Bobot C3 "=> $wj_tpa,
-                "Bobot C4 "=> $wj_4,
-                "Bobot C5 "=> $wj_5,
                 "Isi Nilai C1 "=> $n_un,
                 "Isi Nilai C2 "=> $n_usbn,
                 "Isi Nilai C3 "=> $n_tpa,
-                "Isi Nilai C4 "=> $n_5,
-                "Isi Nilai C5 "=> $n_5,
                 "Utility C1 "=> $u_un,
                 "Utility C2 "=> $u_usbn,
                 "Utility C3 "=> $u_tpa,
-                "Utility C4 "=> $u_4,
-                "Utility C5 "=> $u_5,
                 "Wj*Ui(ai) C1" => $h_un,
                 "Wj*Ui(ai) C2" => $h_usbn,
                 "Wj*Ui(ai) C3" => $h_tpa,
-                "Wj*Ui(ai) C4" => $h_4,
-                "Wj*Ui(ai) C5" => $h_5,
                 "Hasil Ahir" => $hasil_ahir
             );
-        header('Content-type: application/json');
-            print_r($simulasi);
         return $hasil_ahir;
     }
 
