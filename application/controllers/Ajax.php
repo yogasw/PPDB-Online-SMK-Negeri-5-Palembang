@@ -1018,54 +1018,56 @@ class Ajax extends CI_Controller
         $query = $this->db->get('siswa');
         $nomor_urut = 1;
 
-        $bobot_spk = ['20', '10', '70'];
-
         foreach ($query->result_array() as $data) {
             $un = (($data['ipa'] * 3) + ($data['matematika'] * 4) + ($data['bhs_inggris'] * 3) + ($data['bhs_indonesia'] * 1)) / 11;
             $usbn = (($data['pai'] + $data['pkn'] + $data['ips']) / 3);
             $tpa = $data['nilai'];
 
             if (isset($usbn) && isset($tpa)) {
-                $nilai_spk = [$un, $usbn, $tpa];
-                $total = spk_smart($nilai_spk, $bobot_spk);
+                $total =($un*0.2)+($usbn*0.1)+($tpa*0.7);
+                $smart = spk_smart($un,$usbn,$tpa);
             } else {
                 $total = 0;
+                $smart = 0;
             }
 
             $status = null;
+            if ($smart != 0) {
+                $output['data'][] = array(
+                    $nomor_urut,
+                    /** Data Diri */
+                    $data['no_peserta'],
+                    $data['nisn'],
+                    $data['nama_lengkap'],
+                    $data['asal_sekolah'],
+                    $data['jurusan'],
+                    $data['jk'],
+                    //$data['tahun_lulus']
 
-            $output['data'][] = array(
-                $nomor_urut,
-                /** Data Diri */
-                $data['no_peserta'],
-                $data['nisn'],
-                $data['nama_lengkap'],
-                $data['asal_sekolah'],
-                $data['jurusan'],
-                $data['jk'],
-                //$data['tahun_lulus']
+                    /** Nilai UN */
+                    $data['bhs_indonesia'],
+                    $data['bhs_inggris'],
+                    $data['matematika'],
+                    $data['ipa'],
+                    round($un, 4),
 
-                /** Nilai UN */
-                $data['bhs_indonesia'],
-                $data['bhs_inggris'],
-                $data['matematika'],
-                $data['ipa'],
-                round($un, 4),
+                    /** Nilai USBN */
+                    $data['pai'],
+                    $data['pkn'],
+                    $data['ips'],
+                    round($usbn, 4),
 
-                /** Nilai USBN */
-                $data['pai'],
-                $data['pkn'],
-                $data['ips'],
-                round($usbn, 4),
+                    /** NIlai Potensial Akademik */
+                    round($tpa, 4),
 
-                /** NIlai Potensial Akademik */
-                round($tpa, 4),
+                    /**total hasil perhitungan metode SMART*/
+                    $total,
+                    $status,
+                    round($smart,4)
+                );
+                $nomor_urut++;
+            }
 
-                /**total hasil perhitungan metode SMART*/
-                $total,
-                $status
-            );
-            $nomor_urut++;
         }
 
         foreach ($output as $hasil) {
@@ -1089,10 +1091,11 @@ class Ajax extends CI_Controller
                 $sort_tpa[$key] = $isi[16];
                 $sort_hasil[$key] = $isi[17];
                 $sort_status[$key] = $isi[18];
+                $sort_smart[$key] = $isi[19];
             }
         }
         if (count($hasil) >= 1) {
-            array_multisort($sort_hasil, SORT_DESC, $hasil);
+            array_multisort($sort_smart, SORT_ASC, $hasil);
         }
 
         /** @var  $status array ket : akuntansi, administrasiperkantoran, pemasaran, animasi, multimedia, tp4 */
@@ -1178,7 +1181,8 @@ class Ajax extends CI_Controller
                     'nama' => $hasil[$i_a][3],
                     'jurusan' => $hasil[$i_a][5],
                     'total_nilai' => $hasil[$i_a][17],
-                    'status' => $hasil[$i_a][18]
+                    'status' => $hasil[$i_a][18],
+                    'metode_smart' => $hasil[$i_a][19]
                 );
                 array_push($simpan_hasil, $simpan_hasil1);
             }

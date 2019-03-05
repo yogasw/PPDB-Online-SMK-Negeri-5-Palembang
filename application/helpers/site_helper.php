@@ -333,9 +333,9 @@ if (!function_exists('spk_smart')) {
          * berdasarkan prioritas yang telah diinputkan kemudian dilakukan normalisasi.
          * untuk mencari Wj
          */
-            $c_un = 45;
-            $c_usbn = 25;
-            $c_tpa = 15;
+            $c_un = 20;
+            $c_usbn = 10;
+            $c_tpa = 70;
             $c_total = $c_un + $c_usbn + $c_tpa;
 
             //Normalisasi dengan rumus Wj/ΣWj
@@ -388,7 +388,6 @@ if (!function_exists('spk_smart')) {
             );
         return $hasil_ahir;
     }
-
 }
 
 if (!function_exists('get_name_jurusan')) {

@@ -72,6 +72,7 @@
                             <th>Nilai Potensial Akademik (c)</th>
                             <th>Total Nilai</th>
                             <th>Status</th>
+                            <th>Hasil Smart</th>
                         </tr>
                         </thead>
                     </form>
