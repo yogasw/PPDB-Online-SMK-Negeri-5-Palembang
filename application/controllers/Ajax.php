@@ -1254,4 +1254,7 @@ class Ajax extends CI_Controller
         }
     }
 
+    function uji_spk(){
+        print_r(spk_smart(80,80,80,90,90));
+    }
 }
