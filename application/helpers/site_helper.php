@@ -386,7 +386,9 @@ if (!function_exists('spk_smart')) {
                 "Wj*Ui(ai) C3" => $h_tpa,
                 "Hasil Ahir" => $hasil_ahir
             );
-        return $hasil_ahir;
+
+
+        return array($hasil_ahir,$simulasi);
     }
 }
 

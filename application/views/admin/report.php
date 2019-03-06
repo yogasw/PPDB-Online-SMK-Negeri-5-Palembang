@@ -73,6 +73,7 @@
                             <th>Total Nilai</th>
                             <th>Status</th>
                             <th>Hasil Smart</th>
+                            <th>Simulasi</th>
                         </tr>
                         </thead>
                     </form>

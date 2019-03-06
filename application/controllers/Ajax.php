@@ -401,6 +401,8 @@ class Ajax extends CI_Controller
                 $error[] = "Isi Form Jenis Kelamin";
             } elseif ($data_key == "agama" && $data_isi == "") {
                 $error[] = "isi Form Agama";
+            } elseif ($data_key == "tanggal_lahir" && $data_isi == "") {
+                $error[] = "Isi Form Tanggal Lahir";
             } elseif ($data_key == "tempat_lahir" && $data_isi == "") {
                 $error[] = "Isi Form Tempat Lahir";
             } elseif ($data_key == "no_hp" && !is_nomor($data_isi)) {
@@ -413,6 +415,14 @@ class Ajax extends CI_Controller
                 $error[] = "Isi Form Negara";
             } elseif ($data_key == "kota" && $data_isi == "") {
                 $error[] = "Isi Form Kota";
+            }
+
+            elseif ($data_key == "tanggal_lahir") {
+                $tahun = explode("-",$data_isi)[0];
+                $umur=getdate()['year']-$tahun;
+                if ($umur < 15){
+                    $error[] = "Maaf umur anda tidak memenuhi syarat";
+                }
             }
         }
         foreach ($nilai_un[0] as $un_key => $un_isi) {
@@ -802,14 +812,14 @@ class Ajax extends CI_Controller
         $id = $this->input->post("id");
         $soal = $this->input->post("soal");
         $_POST['key'] = base64_encode($soal);
-        if ($id == ""){
+        if ($id == "") {
             $_POST['id'] = $no;
         }
 
         if ($this->m_ajax->cek_soal_duplikat($soal) == "1") {
             $this->m_ajax->kirim_data_soal($_POST, $id);
             $output = array("status" => true);
-        }else{
+        } else {
             $output = array("status" => false);
         }
 
@@ -1024,11 +1034,13 @@ class Ajax extends CI_Controller
             $tpa = $data['nilai'];
 
             if (isset($usbn) && isset($tpa)) {
-                $total =($un*0.2)+($usbn*0.1)+($tpa*0.7);
-                $smart = spk_smart($un,$usbn,$tpa);
+                $total = ($un * 0.2) + ($usbn * 0.1) + ($tpa * 0.7);
+                $simulasi = spk_smart($un, $usbn, $tpa)[1];
+                $smart = spk_smart($un, $usbn, $tpa)[0];
             } else {
                 $total = 0;
                 $smart = 0;
+                $simulasi = 0;
             }
 
             $status = null;
@@ -1063,7 +1075,8 @@ class Ajax extends CI_Controller
                     /**total hasil perhitungan metode SMART*/
                     $total,
                     $status,
-                    round($smart,4)
+                    round($smart, 4),
+                    print_r($simulasi, true),
                 );
                 $nomor_urut++;
             }
@@ -1092,6 +1105,7 @@ class Ajax extends CI_Controller
                 $sort_hasil[$key] = $isi[17];
                 $sort_status[$key] = $isi[18];
                 $sort_smart[$key] = $isi[19];
+                $sort_report[$key] = $isi[20];
             }
         }
         if (count($hasil) >= 1) {
